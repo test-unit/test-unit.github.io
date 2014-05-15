@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../../test-unit.css" type="text/css" />
@@ -14,9 +14,9 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -61,8 +61,8 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (A)</a> &raquo;
-    <span class="title"><span class="object_link"><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class="title"><span class="object_link"><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
+    <a href="../../alphabetical_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
      &raquo; 
     <span class="title">AttributeMatcher</span>
   
@@ -72,15 +72,18 @@
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../../class_list.html">
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
       Class List
     </a>
   
-    <a class="full_list_link" id="method_list_link" href="../../method_list.html">
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
       Method List
     </a>
   
-    <a class="full_list_link" id="file_list_link" href="../../file_list.html">
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
       File List
     </a>
   
@@ -160,7 +163,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline">
+    <span class="summary_desc"><div class='inline'>
 <p>A new instance of AttributeMatcher.</p>
 </div></span>
   
@@ -184,7 +187,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -206,7 +209,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -220,7 +223,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class="object_link"><a href="" title="Test::Unit::AttributeMatcher (class)">AttributeMatcher</a></span></tt>) <strong>initialize</strong>(test) 
+    - (<tt><span class='object_link'><a href="" title="Test::Unit::AttributeMatcher (class)">AttributeMatcher</a></span></tt>) <strong>initialize</strong>(test) 
   
 
   
@@ -250,9 +253,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute-matcher.rb', line 4</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_test">test</span><span class="rparen">)</span>
-  <span class="ivar">@test</span> <span class="op">=</span> <span class="id identifier rubyid_test">test</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
+  <span class='ivar'>@test</span> <span class='op'>=</span> <span class='id identifier rubyid_test'>test</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -292,13 +295,13 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute-matcher.rb', line 17</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_method_missing">method_missing</span><span class="lparen">(</span><span class="id identifier rubyid_name">name</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_args">args</span><span class="rparen">)</span>
-  <span class="kw">if</span> <span class="id identifier rubyid_args">args</span><span class="period">.</span><span class="id identifier rubyid_empty?">empty?</span>
-    <span class="ivar">@test</span><span class="lbracket">[</span><span class="id identifier rubyid_name">name</span><span class="rbracket">]</span>
-  <span class="kw">else</span>
-    <span class="kw">super</span>
-  <span class="kw">end</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@test</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -334,7 +337,7 @@
     <li>
       
       
-        <span class="type">(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -360,14 +363,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute-matcher.rb', line 8</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_match?">match?</span><span class="lparen">(</span><span class="id identifier rubyid_expression">expression</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_matched">matched</span> <span class="op">=</span> <span class="id identifier rubyid_instance_eval">instance_eval</span><span class="lparen">(</span><span class="id identifier rubyid_expression">expression</span><span class="rparen">)</span>
-  <span class="kw">if</span> <span class="id identifier rubyid_matched">matched</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span>
-    <span class="kw">false</span>
-  <span class="kw">else</span>
-    <span class="id identifier rubyid_matched">matched</span>
-  <span class="kw">end</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_matched'>matched</span> <span class='op'>=</span> <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_matched'>matched</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>false</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_matched'>matched</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -377,17 +380,16 @@
 
 </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+  Generated on Thu May 15 17:55:45 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.1 (ruby-2.1.2).
+</div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/test-unit/">
-          <img src="../../../../rubyforge.png" width="120" height="24" border="0" alt="test-unitプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="http://github.com/test-unit/">
           <img src="../../../../github-logo.png" width="100" height="45" border="0" alt="test-unitプロジェクトはGitHubにホスティングしてもらっています。" />

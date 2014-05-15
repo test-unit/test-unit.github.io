@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../test-unit.css" type="text/css" />
@@ -14,9 +14,9 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -61,8 +61,8 @@
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">索引</a> &raquo; 
-    <span class="title">ファイル: お知らせ</span>
+    <a href="alphabetical_index.html">Index</a> &raquo; 
+    <span class="title">File: news</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -70,15 +70,18 @@
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="class_list.html">
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
       Class List
     </a>
   
-    <a class="full_list_link" id="method_list_link" href="method_list.html">
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
       Method List
     </a>
   
-    <a class="full_list_link" id="file_list_link" href="file_list.html">
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
       File List
     </a>
   
@@ -88,265 +91,340 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id="filecontents"><h1>お知らせ</h1>
-<h2 id="2-5-4">2.5.4 – 2013-01-23</h2>
-<p>バグフィックスリリースです。</p>
-<h3>改良</h3>
+    <div id="content"><div id='filecontents'><h1>News</h1>
+<h2 id="2-5-5">2.5.5 &#8211; 2013-05-18</h2>
+<p>It&#8217;s Ruby 2.0.0 supported release!</p>
+<h3>Improvements</h3>
 <ul>
-	<li>データ駆動テスト機能のドキュメントを追加しました。</li>
-	<li>データ駆動テスト機能で<span class="caps">TSV</span>サポートを追加した。</li>
-	<li>JRubyでタグのインスペクションをサポートした。</li>
+	<li>Supported Ruby 2.0.0. [GitHub#54] [Reported by mtasaka]</li>
+	<li>Accepted screen-256color <span class="caps">TERM</span> as 256 colors available environment.
+    [GitHub#55] [Reported by Tom Miller]</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li>たくさんのテストがあるときにテストをフィルターするのが遅かった問題を修正した。[GitHub#46]</li>
-	<li>無名のテストスイートを使用できなかった問題を修正した。[GitHub:#49] [Matthew Rudy Jacobs さんが報告]</li>
+	<li>Fixed a typo in document.
+    [GitHub#53] [Patch by Baptiste Fontaine]</li>
+	<li>Fixed a bug in <span class='object_link'><a href="Test/Unit/Assertions.html#assert_in_epsilon-instance_method" title="Test::Unit::Assertions#assert_in_epsilon (method)">Test::Unit::Assertions#assert_in_epsilon</a></span>. It doesn&#8217;t work
+    as expected if expected value is negative value.
+    [Ruby Bug #8317] [Reported by Nobuhiro <span class="caps">IMAI</span>]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
+<ul>
+	<li>Baptiste Fontaine</li>
+	<li>mtasaka</li>
+	<li>Tom Miller</li>
+	<li>Nobuhiro <span class="caps">IMAI</span></li>
+</ul>
+<h2 id="2-5-4">2.5.4 &#8211; 2013-01-23</h2>
+<p>It&#8217;s a bug fix release.</p>
+<h3>Improvements</h3>
+<ul>
+	<li>Added documents for data driven test functionality.</li>
+	<li>Added <span class="caps">TSV</span> support for data driven test functionality.</li>
+	<li>Support tag inspection on JRuby.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a bug. It is too slow to filter tests when there are many
+    tests. [GitHub#46]</li>
+	<li>Accept anonymous test suite.
+    [GitHub:#49] [Reported by Matthew Rudy Jacobs]</li>
+</ul>
+<h3>Thanks</h3>
 <ul>
 	<li>Matthew Rudy Jacobs</li>
 </ul>
-<h2 id="2-5-3">2.5.3 – 2012-11-28</h2>
-<p>minitestとの互換とバグフィックスのリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-5-3">2.5.3 &#8211; 2012-11-28</h2>
+<p>It&#8217;s a release for minitest compatibility and bug fix.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>不正なエンコーディング同士のdiffも表示するようにした。</li>
-	<li>minitestとの互換性のために、assert_includes(), refute_*() and refute()を追加した。minitestとの互換性のために入れただけのメソッドなので、もしtest-unitを使っているなら、これらのメソッドははできれば使わないでください。
-[GitHub#40] [Michael Grosserさんが報告]</li>
-	<li>実行するテストを絞り込むための--attributeオプションを追加した。このオプションを使うとテストごとに付加したattirbuteを使って実行するテストを絞り込むことができます。[test-unit-users-en:00098] [Suggested by Piotr Nestorow]</li>
+	<li>Supported diff in invalid encoding.</li>
+	<li>Added some assersion methods just for minitest compatibility.
+    Added methods are assert_includes(), refute_*() and refute().
+    If you are test-unit user, please don&#8217;t use them.
+    [GitHub#40] [Suggested by Michael Grosser]</li>
+	<li>Added &#8212;attribute option to select target tests by attribute.
+    [test-unit-users-en:00098] [Suggested by Piotr Nestorow]</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li>ActionController::TestCaseを継承したテストも実行するようにした。 [GitHub#42] [Patch by David Rasch]</li>
-	<li>at_exitに指定したブロックを確実に実行するようにした。これはirbだとexit()を実行した時にexitメソッドではなくirb_exit()が実行されるためです。 [test-unit-users-en:00089] [Daniel Bergerさんが報告]</li>
-	<li>descriptionメソッドを使ってテストにつけた説明が無視されるバグを修正した。 [GitHub#45] [Piotr Nestorowさんが報告]</li>
+	<li>Allowed use of test for inheritance in ActionController::TestCase.
+    [GitHub#42] [Patch by David Rasch]</li>
+	<li>Ensured evaluating at_exist block in top level.
+    In <span class="caps">IRB</span> context, exit() specifies irb_exit().
+    [test-unit-users-en:00089] [Reported by Daniel Berger]</li>
+	<li>Fixed a bug that decoration style description is ignored.
+    &#8220;decoration style description&#8221; are using description method
+    above &#8220;def test_name&#8221; or with Symbol specifying test_name.
+    [GitHub#45] [Reported by Piotr Nestorow]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Michael Grosserさん</li>
-	<li>David Raschさん</li>
-	<li>Daniel Bergerさん</li>
-	<li>Piotr Nestorowさん</li>
+	<li>Michael Grosser</li>
+	<li>David Rasch</li>
+	<li>Daniel Berger</li>
+	<li>Piotr Nestorow</li>
 </ul>
-<h2 id="2-5-2">2.5.2 – 2012-08-29</h2>
-<p>とみたさん用に改良したリリースです。<code>--location</code>はRSpecの<code>--line_number</code>と似た機能です。<code>sub_test_case</code>はshoulda-contextとRSpecの<code>context</code>と似た機能です。</p>
-<h3>改良</h3>
+<h2 id="2-5-2">2.5.2 &#8211; 2012-08-29</h2>
+<p>It&#8217;s an improvement release for tmtms. <code>--location</code> is a similar
+feature to <code>--line_number</code> in RSpec. <code>sub_test_case</code> is a similar
+feature to <code>context</code> in shoulda-context and RSpec.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>テストをキレイにしました。 [GitHub#34] [Michael Grosserさんが報告]</li>
-	<li>8色しか使えない環境用のカラースキームで指定もれがあった背景色を指定しました。</li>
-	<li>NetBeansで動かない問題の回避策を入れた。 [GitHub#38] [Marc Cooperさんが報告]</li>
-	<li>コマンドラインオプション<code>--location</code>を追加した。このオプションを使うとテストが定義された場所で実行するテストを絞り込める。</li>
-	<li>サブテストケース毎にサブテストスイートを作成するようにした。</li>
-	<li>[ui][console] ネストしたテストスイートに対応。</li>
-	<li>すべてのテストの実行前後のフック<span class="object_link"><a href="Test/Unit.html#at_start-class_method" title="Test::Unit.at_start (method)">Test::Unit.at_start</a></span>と<span class="object_link"><a href="Test/Unit.html#at_exit-class_method" title="Test::Unit.at_exit (method)">Test::Unit.at_exit</a></span>を追加した。 [kdmsnrさんがフックの名前を提案]</li>
-	<li>失敗時のコードスニペット表示機能ではテストメソッドを表示するようにした。 [GitHub#39] [Michael Grosserさんが提案]</li>
-	<li>サブテストケースを作成する<span class="object_link"><a href="Test/Unit/TestCase.html#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">Test::Unit::TestCase.sub_test_case</a></span>を追加した。サブテストケース名はRubyの定数名の規則に縛られないので自由な形式で指定することができる。</li>
+	<li>Cleaned up tests.
+    [GitHub#34] [Patch by Michael Grosser]</li>
+	<li>Added missing background color for 8 color environment.</li>
+	<li>Added workaround for NetBeans.
+    [GitHub#38] [Reported by Marc Cooper]</li>
+	<li>Added <code>--location</code> command line option that selects target tests
+    by test defined location.</li>
+	<li>Created sub test suite for each subclassed test case.</li>
+	<li>[ui][console] Supported nested test suites.</li>
+	<li>Added <span class='object_link'><a href="Test/Unit.html#at_start-class_method" title="Test::Unit.at_start (method)">Test::Unit.at_start</a></span> and <span class='object_link'><a href="Test/Unit.html#at_exit-class_method" title="Test::Unit.at_exit (method)">Test::Unit.at_exit</a></span> hooks that
+    are run before/after all tests are run.
+    [Good hook name is suggested by kdmsnr]</li>
+	<li>Improved code snippet target on failure. Test method is always used
+    for code snippet target.
+    [GitHub#39] [Suggested by Michael Grosser]</li>
+	<li>Added <span class='object_link'><a href="Test/Unit/TestCase.html#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">Test::Unit::TestCase.sub_test_case</a></span> that creates sub test case.
+    The sub test case name isn&#8217;t limited Ruby&#8217;s constant name rule. You can
+    specify the sub test case name in free form.</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Michael Grosserさん</li>
-	<li>Marc Cooperさん</li>
-	<li>kdmsnrさん</li>
+	<li>Michael Grosser</li>
+	<li>Marc Cooper</li>
+	<li>kdmsnr</li>
 </ul>
-<h2 id="2-5-1">2.5.1 – 2012-07-05</h2>
-<p>バグフィックスリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-5-1">2.5.1 &#8211; 2012-07-05</h2>
+<p>It&#8217;s a bug fix release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>GitHubから直接インストールできるようにした。 [GitHub#29] [Michael Grosserさんが提案]</li>
-	<li>ActiveSupport::TestCaseと一緒に使えるようになった。 [GitHub#30] [Michael Grosserさんが報告]</li>
-	<li>[ui][console] 複数行の失敗メッセージをいい感じに表示するようにした。</li>
+	<li>Supported installing from GitHub.
+    [GitHub#29] [Suggested by Michael Grosser]</li>
+	<li>Supported ActiveSupport::TestCase.
+    [GitHub#30] [Reported by Michael Grosser]</li>
+	<li>[ui][console] Improved multiline falut message display.</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li>[ui][console] 期待値と実測値が空になる問題を修正。 [GitHub#31][GitHub#33] [Kendall Buchananさんが報告][Mathieu Martinさんが報告] [Michael Grosserさんがヒントを提供]</li>
-	<li><span class="caps">LANG</span>=Cな環境で.gemspecをロードできない問題を修正。 [RubyForge#29595] [Jean-Denis Koeckさんが報告]</li>
+	<li>[ui][console] Fixed a bug that expected and actual values are
+    empty.
+    [GitHub#31][GitHub#33]
+    [Reported by Kendall Buchanan][Reported by Mathieu Martin]
+    [Hinted by Michael Grosser]</li>
+	<li>Fixed a bug that .gemspec can&#8217;t be loaded on <span class="caps">LANG</span>=C.
+    [RubyForge#29595] [Reported by Jean-Denis Koeck]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Michael Grosserさん</li>
-	<li>Kendall Buchananさん</li>
-	<li>Mathieu Martinさん</li>
-	<li>Jean-Denis Koeckさん</li>
+	<li>Michael Grosser</li>
+	<li>Kendall Buchanan</li>
+	<li>Mathieu Martin</li>
+	<li>Jean-Denis Koeck</li>
 </ul>
-<h2 id="2-5-0">2.5.0 – 2012-06-06</h2>
-<p>バグフィックスリリースです。</p>
-<h3>修正</h3>
+<h2 id="2-5-0">2.5.0 &#8211; 2012-06-06</h2>
+<p>It&#8217;s a bug fix release.</p>
+<h3>Fixes</h3>
 <ul>
-	<li>2.4.9で入った<code>TestUnitMediator#run_suite</code>の後方非互換な変更を修正しました。 [GitHub#28] [Vladislav Rassokhinさんが報告]</li>
+	<li>Fixed a backward incompatibility of <code>TestUnitMediator#run_suite</code>
+    introduced in 2.4.9.
+    [GitHub#28] [Reported by Vladislav Rassokhin]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Vladislav Rassokhinさん</li>
+	<li>Vladislav Rassokhin</li>
 </ul>
-<h2 id="2-4-9">2.4.9 – 2012-06-03</h2>
-<p>バグフィックスリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-4-9">2.4.9 &#8211; 2012-06-03</h2>
+<p>It&#8217;s a bug fix release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li><code>Test::Unit.run?</code> → <code>Test::Unit::AutoRunner.need_auto_run?</code>。<code>Test::Unit.run?</code>は非推奨になりましたが、まだ利用できます。</li>
-	<li>[実験的] <code>"ruby -rtest-unit -e
-    run test/test_*.rb"</code>を実現できるようにするためにトップレベルに「run」メソッドを追加した。この<span class="caps">API</span>はよいAPIでしょうか、それとも汚いAPIでしょうか？</li>
-	<li>色付け出力ができない場合でも失敗時のメッセージを読みやすく表示するようにした。</li>
-	<li>失敗時のメッセージで<span class="caps">ASCII</span>-8BITのdiffを表示できるようにした。</li>
-	<li>[ui][console] <code>ENV["TERM"] == "xterm-256color"</code>を色付けできるターミナルに追加。 [GitHub#26] [Michael Grosserさんが報告]</li>
-	<li>[ui][console] <code>ENV["TERM"]</code>の最後が"-256color"となっているターミナルは256色使えるターミナルとして扱うようにした。</li>
+	<li><code>Test::Unit.run?</code> &#8594;
+    <code>Test::Unit::AutoRunner.need_auto_run?</code>. <code>Test::Unit.run?</code> is marked
+    as deprecated but it is still available.</li>
+	<li>[experimental] Added top level &#8220;run&#8221; method for <code>"ruby -rtest-unit -e
+    run test/test_*.rb"</code>. Is this <span class="caps">API</span> OK or dirty?</li>
+	<li>Made failure output more readable on no color mode.</li>
+	<li>Supported showing <span class="caps">ASCII</span>-8BIT diff in failure message.</li>
+	<li>[ui][console] Supported <code>ENV["TERM"] == "xterm-256color"</code> as color
+    available terminal.
+    [GitHub#26] [Reported by Michael Grosser]</li>
+	<li>[ui][console] Supported &#8220;-256color&#8221; suffix <code>ENV["TERM"]</code> terminal
+    as 256 color supported terminal.</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li><code>--workdir</code>が動かない問題を修正。</li>
-	<li><code>--help</code>に書かれている通り、<code>ARGV</code>から処理済みのコマンドライン引数を削除するようにした。[RubyForge#29554] [Bob Savelandさんが報告]</li>
-	<li>抜けていた<code>require "test/unit/diff"</code>を追加。[GitHub#25] [Stephan Kulowさんが報告]</li>
+	<li>Fixed a bug that <code>--workdir</code> doesn&#8217;t work.</li>
+	<li>Consumed processed command line parameters in <code>ARGV</code> as <code>--help</code>
+    says.
+    [RubyForge#29554] [Reported by Bob Saveland]</li>
+	<li>Added missing <code>require "test/unit/diff"</code>.
+    [GitHub#25] [Reported by Stephan Kulow]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Bob Savelandさん</li>
-	<li>Stephan Kulowさん</li>
-	<li>Michael Grosserさん</li>
+	<li>Bob Saveland</li>
+	<li>Stephan Kulow</li>
+	<li>Michael Grosser</li>
 </ul>
-<h2 id="2-4-8">2.4.8 – 2012-3-6</h2>
-<p>バグフィックスリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-4-8">2.4.8 &#8211; 2012-3-6</h2>
+<p>It&#8217;s a bug fix release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>Test::Unitが使われるまでat_exitの登録を遅延するようにした。 [GitHub:#21] [Jason Lunnさんが報告]</li>
-	<li>test-spec用の回避策を追加。[GitHub:#22] [Cédric Boutillierさんが報告]</li>
+	<li>Delayed at_exit registration until Test::Unit is used.
+    [GitHub:#21] [Reported by Jason Lunn]</li>
+	<li>Added workaround for test-spec.
+    [GitHub:#22] [Reported by Cédric Boutillier]</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li>JRuby上でテスト失敗時のコード表示時に発生していたエラーを修正した。 [GitHub:#19][GitHub:#20] [Jørgen P. Tjernøさんが報告][Junegunn Choiさんがパッチ提供]</li>
+	<li>Fixed an error on code snippet display on JRuby.
+    [GitHub:#19][GitHub:#20]
+    [Reported by Jørgen P. Tjernø][Patch by Junegunn Choi]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Jørgen P. Tjernøさん</li>
-	<li>Junegunn Choiさん</li>
-	<li>Jason Lunnさん</li>
+	<li>Jørgen P. Tjernø</li>
+	<li>Junegunn Choi</li>
+	<li>Jason Lunn</li>
 </ul>
-<h2 id="2-4-7">2.4.7 – 2012-2-10</h2>
-<p>失敗時のコード表示を改良したリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-4-7">2.4.7 &#8211; 2012-2-10</h2>
+<p>It&#8217;s a code snippet improvement release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>失敗時だけでなくエラー時などでもコードの一部を表示するようにした。</li>
+	<li>Supported code snippet display on all faults.</li>
 </ul>
-<h2 id="2-4-6">2.4.6 – 2012-2-9</h2>
-<p><span class="caps">TAP</span>サポートを分離したリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-4-6">2.4.6 &#8211; 2012-2-9</h2>
+<p>It&#8217;s a <span class="caps">TAP</span> runner separated release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li><span class="caps">TAP</span>出力をするテストランナーをtest-unit-runner-tap gemに分離した。</li>
-	<li>失敗時にコードの一部を表示するようにした。</li>
+	<li>Moved <span class="caps">TAP</span> runner to test-unit-runner-tap gem from test-unit gem.</li>
+	<li>Supported code snippet display on failure.</li>
 </ul>
-<h2 id="2-4-5">2.4.5 – 2012-1-16</h2>
-<p>失敗時のメッセージの読みやすさを改良したリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-4-5">2.4.5 &#8211; 2012-1-16</h2>
+<p>It&#8217;s a failure message readability improvement release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>失敗時に例外の内容を示すテキストから不必要な情報を削除した。これは例外の内容を読みやすくするためである。</li>
-	<li>オブジェクトのインスペクト方法をカスタマイズできるようにした。</li>
+	<li>Removed needless information from exception inspected
+    text on failure. It&#8217;s for easy to read.</li>
+	<li>Supported custom inspector.</li>
 </ul>
-<h2 id="2-4-4">2.4.4 – 2012-1-2</h2>
-<p>Railsと一緒に使いやすくなったリリースです。</p>
-<h3>改良</h3>
+<h2 id="2-4-4">2.4.4 &#8211; 2012-1-2</h2>
+<p>It&#8217;s a Rails integration improved release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>[ui][コンソール] テストが失敗してもプログレスの表示が乱れないようにした。</li>
-	<li>[ui][コンソール] 視認性向上のためにプログレス表示時の詳細表示の前後にマーカーを追加した。</li>
-	<li>[travis] テスト対象からRuby 1.8.6を削除。 [GitHub:#13] [Josh Kalderimisさんがパッチを作成]</li>
-	<li>assert_in_epsilonで期待値が0になるケースに対応。 [RubyForge#29485] [Syver Enstadさんが報告]</li>
-	<li>ブロック形式でのsetup/teardown/cleanupに対応。</li>
+	<li>[ui][console] Don&#8217;t break progress display when a test is failed.</li>
+	<li>[ui][console] Added markers betwen a failure detail
+    message in progress to improve visibility.</li>
+	<li>[travis] Dropped Ruby 1.8.6 as a test target. [GitHub:#13]
+    [Patch by Josh Kalderimis]</li>
+	<li>Supported expected value == 0 case in assert_in_epsilon. [RubyForge#29485]
+    [Reported by Syver Enstad]</li>
+	<li>Supported a block style setup/teardown/cleanup.</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Josh Kalderimisさん</li>
-	<li>Syver Enstadさん</li>
+	<li>Josh Kalderimis</li>
+	<li>Syver Enstad</li>
 </ul>
-<h2 id="2-4-3">2.4.3 – 2011-12-11</h2>
-<h3>改良</h3>
+<h2 id="2-4-3">2.4.3 &#8211; 2011-12-11</h2>
+<h3>Improvements</h3>
 <ul>
-	<li>自動テストランナー内で<code>ARGV</code>を変更しないようにしてSimpleCov連携を改良した。 [GitHub:#12] [Nikos Dimitrakopoulosさんが報告]</li>
-	<li>JRuby内部のバックトレースを削除してJRuby連携を改良した。</li>
+	<li>Improved SimpleCov integration by stopping to modify
+    <code>ARGV</code> in auto runner. [GitHub:#12]
+    [Reported by Nikos Dimitrakopoulos]</li>
+	<li>Improved JRuby integration by removing JRuby internal backtrace.</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>Nikos Dimitrakopoulosさん</li>
+	<li>Nikos Dimitrakopoulos</li>
 </ul>
-<h2 id="2-4-2">2.4.2 – 2011-11-26</h2>
-<h3>改良</h3>
+<h2 id="2-4-2">2.4.2 &#8211; 2011-11-26</h2>
+<h3>Improvements</h3>
 <ul>
-	<li><code>--name</code>がデータのラベルも比較するようになった。</li>
+	<li><code>--name</code> supported data label.</li>
 </ul>
-<h2>2.4.1 – 2011-11-09</h2>
-<h3>改良</h3>
+<h2>2.4.1 &#8211; 2011-11-09</h2>
+<h3>Improvements</h3>
 <ul>
-	<li>アサーションに指定するメッセージにAssertionMessageも使えるようにした。これはactionpack内のassert_selectで使われている。 [David Heathさんが報告]</li>
+	<li>Accepted AssertionMessage as assertion&#8217;s user message.
+    It is used in assert_select in actionpack.
+    [Reported by David Heath]</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li><span class="caps">LANG</span>=Cでもテストがパスするようにした。 #11 [boutilさんが報告]</li>
-	<li>Ruby 1.9.2で警告がでないようにした。</li>
+	<li>Fixed test failure on <span class="caps">LANG</span>=C. #11 [Reported by boutil]</li>
+	<li>Suppress warnings on Ruby 1.9.2.</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>boutilさん</li>
-	<li>David Heathさん</li>
+	<li>boutil</li>
+	<li>David Heath</li>
 </ul>
-<h2>2.4.0 – 2011-09-18</h2>
-<h3>改良</h3>
+<h2>2.4.0 &#8211; 2011-09-18</h2>
+<h3>Improvements</h3>
 <ul>
-	<li>Travis CI対応。 #5 [James Meadさんが提案]</li>
-	<li>Gemfileを追加。#6 [James Meadさんが提案]</li>
-	<li>[ui][console] show-detail-immediatelyモードで通知をサポート。</li>
-	<li>[ui][console] デフォルトで--show-detail-immediatelyを有効にした。</li>
-	<li>[ui] --max-diff-target-string-sizeを追加。</li>
-	<li>[ui][console] 256色に対応。</li>
+	<li>Supported Travis CI. #5 [Suggested by James Mead]</li>
+	<li>Added Gemfile. #6 [Suggested by James Mead]</li>
+	<li>[ui][console] Supported notification in show-detail-immediately.</li>
+	<li>[ui][console] enable &#8212;show-detail-immediately by default.</li>
+	<li>[ui] Added &#8212;max-diff-target-string-size option.</li>
+	<li>[ui][console] Supported 256 colors.</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li>抜けていたフィクスチャーファイルを追加。 #7 [grafi-ttさんが報告]</li>
-	<li>[ui][console] progress出力レベルで足りなかった最後の改行を追加。</li>
-	<li>再定義した通知で正しくバックトレースを取得できるようにした。</li>
-	<li>Ruby 1.8ではTimeout::Errorを処理するようにした。 #8 [Marc Seeger (Acquia)さんが報告]</li>
+	<li>Added missing fixture file. #7 [Reported by grafi-tt]</li>
+	<li>[ui][console] Added missing the last newline for progress level.</li>
+	<li>Supported correct backtrace for redefined notification.</li>
+	<li>Don&#8217;t handle Timeout::Error as pass through exception on Ruby 1.8. #8
+    [Reported by Marc Seeger (Acquia)]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>James Meadさん</li>
-	<li>grafi-ttさん</li>
-	<li>Marc Seeger (Acquia)さん</li>
+	<li>James Mead</li>
+	<li>grafi-tt</li>
+	<li>Marc Seeger (Acquia)</li>
 </ul>
-<h2>2.3.2 – 2011-08-15</h2>
-<p>バグフィックスリリース。</p>
-<h3>改良</h3>
+<h2>2.3.2 &#8211; 2011-08-15</h2>
+<p>A bug fix release.</p>
+<h3>Improvements</h3>
 <ul>
-	<li>[ui][console] 読み易くするために改行を追加。</li>
+	<li>[ui][console] Added some newlines to improve readability.</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
-	<li>[ui][console] --verboseが動くようにした。</li>
-	<li>Ruby 1.8.6を再サポート。 [James Meadさんが報告]</li>
+	<li>[ui][console] Worked &#8212;verbose again.</li>
+	<li>Re-supported Ruby 1.8.6. [Reported by James Mead]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>James Meadさん</li>
+	<li>James Mead</li>
 </ul>
-<h2>2.3.1 – 2011-08-06</h2>
+<h2 id="2-3-1">2.3.1 &#8211; 2011-08-06</h2>
 <p>Output improvement release!</p>
-<h3>改良</h3>
+<h3>Improvements</h3>
 <ul>
 	<li>[ui][console] Outputs omissions and notifications in short.</li>
-	<li>[ui][console] Added “important-only” verbose level.</li>
+	<li>[ui][console] Added &#8220;important-only&#8221; verbose level.</li>
 	<li>Intelligence diff supports recursive references.</li>
 	<li>[rubyforge #29325] Supported Ruby Enterprise Edition.
     [Reported by Hans de Graaff]</li>
 	<li>[rubyforge #29326] Supported JRuby.
     [Reported by Hans de Graaff]</li>
-	<li>Added —show-detail-immediately option that shows
+	<li>Added &#8212;show-detail-immediately option that shows
     fault details when a fault is occurred.</li>
 </ul>
-<h3>修正</h3>
+<h3>Fixes</h3>
 <ul>
 	<li>[pull request #1] Fixed a problem that load collector
-    can’t load a test file on Ruby 1.9. [Patch by grafi-tt]</li>
+    can&#8217;t load a test file on Ruby 1.9. [Patch by grafi-tt]</li>
 	<li>[issue #3] Fixed a problem that implicit method name
     override by declarative style test definition.
     [Reported by Jeremy Stephens]</li>
 </ul>
-<h3>感謝</h3>
+<h3>Thanks</h3>
 <ul>
-	<li>grafi-ttさん</li>
+	<li>grafi-tt</li>
 	<li>Jeremy Stephens</li>
 	<li>Hans de Graaff</li>
 </ul>
@@ -361,17 +439,17 @@
 	<li>add result finished and pass assertion notifications.</li>
 	<li>add TestSuite#passed? public.</li>
 	<li>add <span class="caps">XML</span> test runner.</li>
-	<li>add —output-file-descriptor option.</li>
+	<li>add &#8212;output-file-descriptor option.</li>
 	<li>measure elapsed time for each test.</li>
-	<li>add —collector option.</li>
+	<li>add &#8212;collector option.</li>
 	<li>support test driven test.
     [Haruka Yoshihara]</li>
 	<li>add cleanup hook it runs between after test and before teardown.</li>
 	<li>support recursive collection sort for diff.</li>
 </ul>
 <ul>
-	<li>感謝</li>
-	<li>Daniel Bergerさん</li>
+	<li>Thanks</li>
+	<li>Daniel Berger</li>
 	<li>Haruka Yoshihara</li>
 </ul>
 <h2>2.2.0 / 2011-02-14</h2>
@@ -408,13 +486,13 @@
 	<li>support not <span class="caps">ASCII</span> compatible string diff.</li>
 	<li>support colorized diff on encoding different string.</li>
 	<li>normalize entry order of Hash for readable diff.</li>
-	<li>add —ignore-name option.</li>
-	<li>add —ignore-testcase option.</li>
+	<li>add &#8212;ignore-name option.</li>
+	<li>add &#8212;ignore-testcase option.</li>
 	<li>add assert_not_send.</li>
 </ul>
 <ul>
-	<li>感謝</li>
-	<li>Daniel Bergerさん</li>
+	<li>Thanks</li>
+	<li>Daniel Berger</li>
 	<li>Nobuyoshi Nakada</li>
 </ul>
 <h2>2.1.2 / 2010-11-25</h2>
@@ -429,8 +507,8 @@
     [Daniel Berger]</li>
 </ul>
 <ul>
-	<li>感謝</li>
-	<li>Daniel Bergerさん</li>
+	<li>Thanks</li>
+	<li>Daniel Berger</li>
 </ul>
 <p>=== 2.1.0 / 2010-07-17</p>
 <ul>
@@ -439,8 +517,8 @@
     [Daniel Berger]</li>
 </ul>
 <ul>
-	<li>感謝</li>
-	<li>Daniel Bergerさん</li>
+	<li>Thanks</li>
+	<li>Daniel Berger</li>
 </ul>
 <h2>2.0.8 / 2010-06-02</h2>
 <ul>
@@ -463,7 +541,7 @@
     [Reported by Florian Frank]</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 	<li>Florian Frank</li>
 	<li>David <span class="caps">MARCHALAND</span></li>
 </ul>
@@ -471,17 +549,17 @@
 <ul>
 	<li>4 major enhancements</li>
 	<li>detect redefined test methods.</li>
-	<li>[<span class="caps">INTERFACE</span> <span class="caps">IMCOMPATIBLE</span>] multiple —name and —testcase
+	<li>[<span class="caps">INTERFACE</span> <span class="caps">IMCOMPATIBLE</span>] multiple &#8212;name and &#8212;testcase
     options narrow down targets instead of adding targets.</li>
 	<li>[#27764] accept custom test_order for each test case.
     [Suggested by David <span class="caps">MARCHALAND</span>]</li>
-	<li>[#27790] ignore omitted tests from ‘n% passed’ report.
+	<li>[#27790] ignore omitted tests from &#8216;n% passed&#8217; report.
     [Suggested by Daniel Berger]</li>
 </ul>
 <ul>
 	<li>2 minor enchancements</li>
 	<li>[#27832] ignore .git directory. [Suggested by Daniel Berger]</li>
-	<li>[#27792] require ‘fileutils’ and ‘tmpdir’ lazily for non-priority
+	<li>[#27792] require &#8216;fileutils&#8217; and &#8216;tmpdir&#8217; lazily for non-priority
     mode users. [Suggested by David <span class="caps">MARCHALAND</span>]</li>
 </ul>
 <ul>
@@ -492,10 +570,10 @@
     [Reported by Champak Ch]</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 	<li>David <span class="caps">MARCHALAND</span></li>
-	<li>Daniel Bergerさん</li>
-	<li>Bob Savelandさん</li>
+	<li>Daniel Berger</li>
+	<li>Bob Saveland</li>
 	<li>Champak Ch</li>
 </ul>
 <h2>2.0.6 / 2010-01-09</h2>
@@ -504,14 +582,14 @@
 	<li>[#27380] Declarative syntax? [Daniel Berger]
     support declarative syntax:</li>
 </ul>
-test “test description in natural language” do
-…
+test &#8220;test description in natural language&#8221; do
+&#8230;
 end
 <ul>
 	<li>support test description:
-      description “test description in natural language”
+      description &#8220;test description in natural language&#8221;
       def test_my_test
-         …
+         &#8230;
       end</li>
 	<li>make max diff target string size customizable by
     TEST_UNIT_MAX_DIFF_TARGET_STRING_SIZE environment variable.</li>
@@ -519,13 +597,13 @@ end
 <ul>
 	<li>2 bug fixes</li>
 	<li>[#27374] omit_if unexpected behavior [David <span class="caps">MARCHALAND</span>]</li>
-	<li>fix a bug that tests in sub directories aren’t load with —basedir.
+	<li>fix a bug that tests in sub directories aren&#8217;t load with &#8212;basedir.
     [Daniel Berger]</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 	<li>David <span class="caps">MARCHALAND</span></li>
-	<li>Daniel Bergerさん</li>
+	<li>Daniel Berger</li>
 </ul>
 <h2>2.0.5 / 2009-10-18</h2>
 <ul>
@@ -533,14 +611,14 @@ end
 	<li>[#27314] fix diff may raise an exception. [Erik Hollensbe]</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 	<li>Erik Hollensbe</li>
 </ul>
 <h2>2.0.4 / 2009-10-17</h2>
 <ul>
 	<li>4 major enhancements</li>
 	<li>use ~/.test-unit.yml as global configuration file.</li>
-	<li>add <span class="caps">TAP</span> runner. (—runner tap)</li>
+	<li>add <span class="caps">TAP</span> runner. (&#8212;runner tap)</li>
 	<li>support colorized diff:
     http://test-unit.rubyforge.org/svn/trunk/images/color-diff.png</li>
 	<li>add Test::Unit::AutoRunner.default_runner= to specify default test runner.</li>
@@ -550,7 +628,7 @@ end
 	<li>improve verbose mode output format. (use indent)</li>
 	<li>support NOT_PASS_THROUGH_EXCEPTIONS.</li>
 	<li>support arguments option in <code>#{runner}</code>_options.</li>
-	<li>TC_ → Test in sample test case name.</li>
+	<li>TC_ &#8594; Test in sample test case name.</li>
 </ul>
 <ul>
 	<li>1 bug fixes</li>
@@ -558,7 +636,7 @@ end
     DelegateClass subclasses [Mike Pomraning]</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 	<li>Mike Pomraning</li>
 </ul>
 <h2>2.0.3 / 2009-07-19</h2>
@@ -569,25 +647,25 @@ end
 	<li>[#24210] assert_kind_of supports an array of classes or modules.
     [Daniel Berger]</li>
 	<li>assert_instance_of supports an array of classes or modules.</li>
-	<li>add —default-priority option.</li>
-	<li>[#26627] add —order option. [Daniel Berger]</li>
+	<li>add &#8212;default-priority option.</li>
+	<li>[#26627] add &#8212;order option. [Daniel Berger]</li>
 </ul>
 <ul>
 	<li>4 minor enhancements</li>
 	<li>use yellow foreground + black background for error.</li>
-	<li>don’t show diff for long string.</li>
-	<li>accept “*term-color” <span class="caps">TERM</span> environment as colorizable terminal.
-    (e.g. Apple’s Terminal)</li>
-	<li>[#26268] add a workaround for test-spec’s after_all. [Angelo Lakra]</li>
+	<li>don&#8217;t show diff for long string.</li>
+	<li>accept &#8220;*term-color&#8221; <span class="caps">TERM</span> environment as colorizable terminal.
+    (e.g. Apple&#8217;s Terminal)</li>
+	<li>[#26268] add a workaround for test-spec&#8217;s after_all. [Angelo Lakra]</li>
 </ul>
 <ul>
 	<li>1 bug fix</li>
 	<li>[#23586] re-support ruby 1.9.1. [Diego Pettenò]</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 	<li>Diego Pettenò</li>
-	<li>Daniel Bergerさん</li>
+	<li>Daniel Berger</li>
 	<li>Angelo Lakra</li>
 </ul>
 <h2>2.0.2 / 2008-12-21</h2>
@@ -603,15 +681,15 @@ end
 </ul>
 <ul>
 	<li>[#22723]: collector fails on anonymous classes</li>
-	<li>[#22986]: Test names with ‘?’ blow up on Windows</li>
-	<li>[#22988]: don’t create .test-result on non-priority mode.</li>
+	<li>[#22986]: Test names with &#8216;?&#8217; blow up on Windows</li>
+	<li>[#22988]: don&#8217;t create .test-result on non-priority mode.</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 </ul>
 <ul>
 	<li>Erik Hollensbe</li>
-	<li>Daniel Bergerさん</li>
+	<li>Daniel Berger</li>
 	<li>Bill Lear</li>
 </ul>
 <h2>2.0.1 / 2008-11-09</h2>
@@ -635,16 +713,16 @@ end
 	<li>support assert_raise with no arguments that asserts any
     exception is raised. [#22602] [Daniel Berger]</li>
 	<li>support folded dot progress.</li>
-	<li>add —progress-row-max option.</li>
+	<li>add &#8212;progress-row-max option.</li>
 	<li>support color scheme customize.</li>
 	<li>support configuration file. (<span class="caps">YAML</span>)</li>
 	<li>recognize test-<span class="caps">XXX</span>.rb files as test files not only test_XXX.rb</li>
 </ul>
 <ul>
-	<li>感謝</li>
+	<li>Thanks</li>
 </ul>
 <ul>
-	<li>Daniel Bergerさん</li>
+	<li>Daniel Berger</li>
 	<li>Designing Patterns</li>
 </ul>
 <h2>2.0.0 / 2008-06-18</h2>
@@ -663,8 +741,8 @@ end
 	<li>add assert_boolean.</li>
 	<li>add assert_true.</li>
 	<li>add assert_false.</li>
-	<li>add —priority-mode option.</li>
-	<li>don’t use ObjectSpace to collect test cases.</li>
+	<li>add &#8212;priority-mode option.</li>
+	<li>don&#8217;t use ObjectSpace to collect test cases.</li>
 	<li>make more customizable. (additional options, exception handling and so on)</li>
 	<li>improve Emacs integration.</li>
 </ul>
@@ -685,17 +763,16 @@ end
 	<li>Birthday (as a gem)!</li>
 </ul></div></div>
 
-    <div id="footer"></div>
+    <div id="footer">
+  Generated on Thu May 15 17:55:42 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.1 (ruby-2.1.2).
+</div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/test-unit/">
-          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="test-unitプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="http://github.com/test-unit/">
           <img src="../../github-logo.png" width="100" height="45" border="0" alt="test-unitプロジェクトはGitHubにホスティングしてもらっています。" />
