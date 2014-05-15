@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../../../test-unit.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../favicon.ico" />
+    <link rel="icon" href="../../../../../favicon.png" />
+    <title>
+  Module: Test::Unit::UI::TestRunnerUtilities
+  
+    &mdash; test-unit
+  
+ - test-unit</title>
+
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../../';
+  framesUrl = "../../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../../../index.html.ja">
+      <span class="title">
+  Module: Test::Unit::UI::TestRunnerUtilities
+  
+    &mdash; test-unit
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">test-unit</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../../../test-unit/en/Test/Unit/UI/TestRunnerUtilities.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../../../test-unit/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-install"><a href="../../../../../index.html.ja#test-unit-install">インストール</a></li>
+    <li id="menu-developer"><a href="../../../../../index.html.ja#developer">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (T)</a> &raquo;
+    <span class="title"><span class="object_link"><a href="../../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class="title"><span class="object_link"><a href="../../Unit.html" title="Test::Unit (module)">Unit</a></span></span> &raquo; <span class="title"><span class="object_link"><a href="../UI.html" title="Test::Unit::UI (module)">UI</a></span></span>
+     &raquo; 
+    <span class="title">TestRunnerUtilities</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="../../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link" href="../../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link" href="../../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Test::Unit::UI::TestRunnerUtilities
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1">Included in:</dt>
+    <dd class="r1"><span class="object_link"><a href="TestRunner.html" title="Test::Unit::UI::TestRunner (class)">TestRunner</a></span></dd>
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/test/unit/ui/testrunnerutilities.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides some utilities common to most, if not all, TestRunners.</p>
+
+<p>--</p>
+
+<p>Perhaps there ought to be a TestRunner superclass? There seems to be a
+decent amount of shared code between test runners.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong>(suite, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Creates a new TestRunner and runs the suite.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_command_line_test-instance_method" title="#start_command_line_test (instance method)">- (Object) <strong>start_command_line_test</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Takes care of the ARGV parsing and suite determination necessary for
+running one of the TestRunners from the command line.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run</strong>(suite, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new TestRunner and runs the suite.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/testrunnerutilities.rb', line 23</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_run">run</span><span class="lparen">(</span><span class="id identifier rubyid_suite">suite</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="kw">return</span> <span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_suite">suite</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_start">start</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_command_line_test-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_command_line_test</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Takes care of the ARGV parsing and suite determination necessary for
+running one of the TestRunners from the command line.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/testrunnerutilities.rb', line 30</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_start_command_line_test">start_command_line_test</span>
+  <span class="kw">if</span> <span class="const">ARGV</span><span class="period">.</span><span class="id identifier rubyid_empty?">empty?</span>
+    <span class="id identifier rubyid_puts">puts</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">You should supply the name of a test suite file to the runner</span><span class="tstring_end">"</span></span>
+    <span class="id identifier rubyid_exit">exit</span>
+  <span class="kw">end</span>
+  <span class="id identifier rubyid_require">require</span> <span class="const">ARGV</span><span class="lbracket">[</span><span class="int">0</span><span class="rbracket">]</span><span class="period">.</span><span class="id identifier rubyid_gsub">gsub</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">.+::</span><span class="regexp_end">/</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
+  <span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_eval">eval</span><span class="lparen">(</span><span class="const">ARGV</span><span class="lbracket">[</span><span class="int">0</span><span class="rbracket">]</span><span class="rparen">)</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_start">start</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/test-unit/">
+          <img src="../../../../../rubyforge.png" width="120" height="24" border="0" alt="test-unitプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/test-unit/">
+          <img src="../../../../../github-logo.png" width="100" height="45" border="0" alt="test-unitプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.comの国旗を利用しています。" src="../../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

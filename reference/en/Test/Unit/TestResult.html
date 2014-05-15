@@ -1,0 +1,1203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Test::Unit::TestResult
+  
+    &mdash; test-unit
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
+     &raquo; 
+    <span class="title">TestResult</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Test::Unit::TestResult
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Test::Unit::TestResult</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="NullResultContainerInitializer.html" title="Test::Unit::NullResultContainerInitializer (module)">NullResultContainerInitializer</a></span>, <span class='object_link'><a href="TestResultErrorSupport.html" title="Test::Unit::TestResultErrorSupport (module)">TestResultErrorSupport</a></span>, <span class='object_link'><a href="TestResultFailureSupport.html" title="Test::Unit::TestResultFailureSupport (module)">TestResultFailureSupport</a></span>, <span class='object_link'><a href="TestResultNotificationSupport.html" title="Test::Unit::TestResultNotificationSupport (module)">TestResultNotificationSupport</a></span>, <span class='object_link'><a href="TestResultOmissionSupport.html" title="Test::Unit::TestResultOmissionSupport (module)">TestResultOmissionSupport</a></span>, <span class='object_link'><a href="TestResultPendingSupport.html" title="Test::Unit::TestResultPendingSupport (module)">TestResultPendingSupport</a></span>, <span class='object_link'><a href="Util/Observable.html" title="Test::Unit::Util::Observable (module)">Util::Observable</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/test/unit/testresult.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Collects Test::Unit::Failure and Test::Unit::Error so that they can be
+displayed to the user. To this end, observers can be added to it, allowing
+the dynamic updating of, say, a UI.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="FINISHED-constant" class="">FINISHED =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="CHANGED-constant" class="">CHANGED =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::CHANGED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="PASS_ASSERTION-constant" class="">PASS_ASSERTION =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::PASS_ASSERTION</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="FAULT-constant" class="">FAULT =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FAULT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Util/Observable.html" title="Test::Unit::Util::Observable (module)">Util::Observable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Util/Observable.html#NOTHING-constant" title="Test::Unit::Util::Observable::NOTHING (constant)">Util::Observable::NOTHING</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assertion_count-instance_method" title="#assertion_count (instance method)">- (Object) <strong>assertion_count</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute assertion_count.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#faults-instance_method" title="#faults (instance method)">- (Object) <strong>faults</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute faults.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pass_count-instance_method" title="#pass_count (instance method)">- (Object) <strong>pass_count</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute pass_count.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run_count-instance_method" title="#run_count (instance method)">- (Object) <strong>run_count</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute run_count.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="TestResultNotificationSupport.html" title="Test::Unit::TestResultNotificationSupport (module)">TestResultNotificationSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultNotificationSupport.html#notifications-instance_method" title="Test::Unit::TestResultNotificationSupport#notifications (method)">#notifications</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="TestResultOmissionSupport.html" title="Test::Unit::TestResultOmissionSupport (module)">TestResultOmissionSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultOmissionSupport.html#omissions-instance_method" title="Test::Unit::TestResultOmissionSupport#omissions (method)">#omissions</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="TestResultPendingSupport.html" title="Test::Unit::TestResultPendingSupport (module)">TestResultPendingSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultPendingSupport.html#pendings-instance_method" title="Test::Unit::TestResultPendingSupport#pendings (method)">#pendings</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="TestResultErrorSupport.html" title="Test::Unit::TestResultErrorSupport (module)">TestResultErrorSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultErrorSupport.html#errors-instance_method" title="Test::Unit::TestResultErrorSupport#errors (method)">#errors</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="TestResultFailureSupport.html" title="Test::Unit::TestResultFailureSupport (module)">TestResultFailureSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultFailureSupport.html#failures-instance_method" title="Test::Unit::TestResultFailureSupport#failures (method)">#failures</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_assertion-instance_method" title="#add_assertion (instance method)">- (Object) <strong>add_assertion</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Records an individual assertion.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_pass-instance_method" title="#add_pass (instance method)">- (Object) <strong>add_pass</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_run-instance_method" title="#add_run (instance method)">- (Object) <strong>add_run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Records a test run.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (TestResult) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Constructs a new, empty TestResult.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pass_percentage-instance_method" title="#pass_percentage (instance method)">- (Object) <strong>pass_percentage</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#passed%3F-instance_method" title="#passed? (instance method)">- (Boolean) <strong>passed?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns whether or not this TestResult represents successful completion.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-instance_method" title="#status (instance method)">- (Object) <strong>status</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returnes a string that shows result status.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#summary-instance_method" title="#summary (instance method)">- (Object) <strong>summary</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a string contain the recorded runs, assertions, failures and errors
+in this TestResult.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TestResultNotificationSupport.html" title="Test::Unit::TestResultNotificationSupport (module)">TestResultNotificationSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultNotificationSupport.html#add_notification-instance_method" title="Test::Unit::TestResultNotificationSupport#add_notification (method)">#add_notification</a></span>, <span class='object_link'><a href="TestResultNotificationSupport.html#notification_count-instance_method" title="Test::Unit::TestResultNotificationSupport#notification_count (method)">#notification_count</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TestResultOmissionSupport.html" title="Test::Unit::TestResultOmissionSupport (module)">TestResultOmissionSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultOmissionSupport.html#add_omission-instance_method" title="Test::Unit::TestResultOmissionSupport#add_omission (method)">#add_omission</a></span>, <span class='object_link'><a href="TestResultOmissionSupport.html#omission_count-instance_method" title="Test::Unit::TestResultOmissionSupport#omission_count (method)">#omission_count</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TestResultPendingSupport.html" title="Test::Unit::TestResultPendingSupport (module)">TestResultPendingSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultPendingSupport.html#add_pending-instance_method" title="Test::Unit::TestResultPendingSupport#add_pending (method)">#add_pending</a></span>, <span class='object_link'><a href="TestResultPendingSupport.html#pending_count-instance_method" title="Test::Unit::TestResultPendingSupport#pending_count (method)">#pending_count</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TestResultErrorSupport.html" title="Test::Unit::TestResultErrorSupport (module)">TestResultErrorSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultErrorSupport.html#add_error-instance_method" title="Test::Unit::TestResultErrorSupport#add_error (method)">#add_error</a></span>, <span class='object_link'><a href="TestResultErrorSupport.html#error_count-instance_method" title="Test::Unit::TestResultErrorSupport#error_count (method)">#error_count</a></span>, <span class='object_link'><a href="TestResultErrorSupport.html#error_occurred%3F-instance_method" title="Test::Unit::TestResultErrorSupport#error_occurred? (method)">#error_occurred?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="TestResultFailureSupport.html" title="Test::Unit::TestResultFailureSupport (module)">TestResultFailureSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="TestResultFailureSupport.html#add_failure-instance_method" title="Test::Unit::TestResultFailureSupport#add_failure (method)">#add_failure</a></span>, <span class='object_link'><a href="TestResultFailureSupport.html#failure_count-instance_method" title="Test::Unit::TestResultFailureSupport#failure_count (method)">#failure_count</a></span>, <span class='object_link'><a href="TestResultFailureSupport.html#failure_occurred%3F-instance_method" title="Test::Unit::TestResultFailureSupport#failure_occurred? (method)">#failure_occurred?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Util/Observable.html" title="Test::Unit::Util::Observable (module)">Util::Observable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Util/Observable.html#add_listener-instance_method" title="Test::Unit::Util::Observable#add_listener (method)">#add_listener</a></span>, <span class='object_link'><a href="Util/Observable.html#notify_listeners-instance_method" title="Test::Unit::Util::Observable#notify_listeners (method)">#notify_listeners</a></span>, <span class='object_link'><a href="Util/Observable.html#remove_listener-instance_method" title="Test::Unit::Util::Observable#remove_listener (method)">#remove_listener</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Test::Unit::TestResult (class)">TestResult</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Constructs a new, empty TestResult.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@run_count</span><span class='comma'>,</span> <span class='ivar'>@pass_count</span><span class='comma'>,</span> <span class='ivar'>@assertion_count</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
+  <span class='ivar'>@summary_generators</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@problem_checkers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@faults</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_initialize_containers'>initialize_containers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="assertion_count-instance_method">
+  
+    - (<tt>Object</tt>) <strong>assertion_count</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute assertion_count</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assertion_count'>assertion_count</span>
+  <span class='ivar'>@assertion_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="faults-instance_method">
+  
+    - (<tt>Object</tt>) <strong>faults</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute faults</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_faults'>faults</span>
+  <span class='ivar'>@faults</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="pass_count-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pass_count</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute pass_count</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pass_count'>pass_count</span>
+  <span class='ivar'>@pass_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="run_count-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run_count</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute run_count</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run_count'>run_count</span>
+  <span class='ivar'>@run_count</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_assertion-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_assertion</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Records an individual assertion.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_assertion'>add_assertion</span>
+  <span class='ivar'>@assertion_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='const'>PASS_ASSERTION</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_notify_changed'>notify_changed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_pass-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_pass</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_pass'>add_pass</span>
+  <span class='ivar'>@pass_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_run</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Records a test run.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_run'>add_run</span>
+  <span class='ivar'>@run_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='const'>FINISHED</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_notify_changed'>notify_changed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pass_percentage-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pass_percentage</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pass_percentage'>pass_percentage</span>
+  <span class='id identifier rubyid_n_tests'>n_tests</span> <span class='op'>=</span> <span class='ivar'>@run_count</span> <span class='op'>-</span> <span class='id identifier rubyid_omission_count'>omission_count</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_n_tests'>n_tests</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+    <span class='int'>0</span>
+  <span class='kw'>else</span>
+    <span class='float'>100.0</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='ivar'>@pass_count</span> <span class='op'>/</span> <span class='id identifier rubyid_n_tests'>n_tests</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="passed?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>passed?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns whether or not this TestResult represents successful completion.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
+  <span class='ivar'>@problem_checkers</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_checker'>checker</span><span class='op'>|</span> <span class='kw'>not</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_checker'>checker</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="status-instance_method">
+  
+    - (<tt>Object</tt>) <strong>status</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returnes a string that shows result status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_passed?'>passed?</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_pending_count'>pending_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_omission_count'>omission_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>omission</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_notification_count'>notification_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>notification</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pass</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_error_count'>error_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_failure_count'>failure_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>failure</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="summary-instance_method">
+  
+    - (<tt>Object</tt>) <strong>summary</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a string contain the recorded runs, assertions, failures and errors
+in this TestResult.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_summary'>summary</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_run_count'>run_count</span><span class='rbrace'>}</span><span class='tstring_content'> tests</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_assertion_count'>assertion_count</span><span class='rbrace'>}</span><span class='tstring_content'> assertions</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='op'>*</span><span class='ivar'>@summary_generators</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_generator'>generator</span><span class='op'>|</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_generator'>generator</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_summary'>summary</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  </body>
+</html>

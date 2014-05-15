@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Test::Unit::Diff
+  
+    &mdash; test-unit
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (D)</a> &raquo;
+    <span class="title"><span class="object_link"><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class="title"><span class="object_link"><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
+     &raquo; 
+    <span class="title">Diff</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link" href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link" href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Test::Unit::Diff
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/test/unit/diff.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class="object_link"><a href="Diff/Differ.html" title="Test::Unit::Diff::Differ (class)">Differ</a></span>, <span class="object_link"><a href="Diff/ReadableDiffer.html" title="Test::Unit::Diff::ReadableDiffer (class)">ReadableDiffer</a></span>, <span class="object_link"><a href="Diff/SequenceMatcher.html" title="Test::Unit::Diff::SequenceMatcher (class)">SequenceMatcher</a></span>, <span class="object_link"><a href="Diff/UTF8Line.html" title="Test::Unit::Diff::UTF8Line (class)">UTF8Line</a></span>, <span class="object_link"><a href="Diff/UnifiedDiffer.html" title="Test::Unit::Diff::UnifiedDiffer (class)">UnifiedDiffer</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#diff-class_method" title="diff (class method)">+ (Object) <strong>diff</strong>(differ_class, from, to, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fold-class_method" title="fold (class method)">+ (Object) <strong>fold</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#folded_readable-class_method" title="folded_readable (class method)">+ (Object) <strong>folded_readable</strong>(from, to, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#need_fold%3F-class_method" title="need_fold? (class method)">+ (Boolean) <strong>need_fold?</strong>(diff) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#readable-class_method" title="readable (class method)">+ (Object) <strong>readable</strong>(from, to, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unified-class_method" title="unified (class method)">+ (Object) <strong>unified</strong>(from, to, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="diff-class_method">
+  
+    + (<tt>Object</tt>) <strong>diff</strong>(differ_class, from, to, options = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/diff.rb', line 725</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_diff">diff</span><span class="lparen">(</span><span class="id identifier rubyid_differ_class">differ_class</span><span class="comma">,</span> <span class="id identifier rubyid_from">from</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id identifier rubyid_from">from</span><span class="period">.</span><span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:valid_encoding?</span><span class="rparen">)</span> <span class="kw">and</span> <span class="kw">not</span> <span class="id identifier rubyid_from">from</span><span class="period">.</span><span class="id identifier rubyid_valid_encoding?">valid_encoding?</span>
+    <span class="id identifier rubyid_from">from</span> <span class="op">=</span> <span class="id identifier rubyid_from">from</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span><span class="period">.</span><span class="id identifier rubyid_force_encoding">force_encoding</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ASCII-8BIT</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+  <span class="kw">end</span>
+  <span class="kw">if</span> <span class="id identifier rubyid_to">to</span><span class="period">.</span><span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:valid_encoding?</span><span class="rparen">)</span> <span class="kw">and</span> <span class="kw">not</span> <span class="id identifier rubyid_to">to</span><span class="period">.</span><span class="id identifier rubyid_valid_encoding?">valid_encoding?</span>
+    <span class="id identifier rubyid_to">to</span> <span class="op">=</span> <span class="id identifier rubyid_to">to</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span><span class="period">.</span><span class="id identifier rubyid_force_encoding">force_encoding</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ASCII-8BIT</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+  <span class="kw">end</span>
+  <span class="id identifier rubyid_differ">differ</span> <span class="op">=</span> <span class="id identifier rubyid_differ_class">differ_class</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_from">from</span><span class="period">.</span><span class="id identifier rubyid_split">split</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">\r?\n</span><span class="regexp_end">/</span></span><span class="rparen">)</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="period">.</span><span class="id identifier rubyid_split">split</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">\r?\n</span><span class="regexp_end">/</span></span><span class="rparen">)</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_lines">lines</span> <span class="op">=</span> <span class="id identifier rubyid_differ">differ</span><span class="period">.</span><span class="id identifier rubyid_diff">diff</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="const">Object</span><span class="period">.</span><span class="id identifier rubyid_const_defined?">const_defined?</span><span class="lparen">(</span><span class="symbol">:EncodingError</span><span class="rparen">)</span>
+    <span class="kw">begin</span>
+      <span class="id identifier rubyid_lines">lines</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">\n</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+    <span class="kw">rescue</span> <span class="const">EncodingError</span>
+      <span class="id identifier rubyid_lines">lines</span><span class="period">.</span><span class="id identifier rubyid_collect">collect</span> <span class="lbrace">{</span><span class="op">|</span><span class="id identifier rubyid_line">line</span><span class="op">|</span> <span class="id identifier rubyid_line">line</span><span class="period">.</span><span class="id identifier rubyid_force_encoding">force_encoding</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ASCII-8BIT</span><span class="tstring_end">"</span></span><span class="rparen">)</span><span class="rbrace">}</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">\n</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+    <span class="kw">end</span>
+  <span class="kw">else</span>
+    <span class="id identifier rubyid_lines">lines</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">\n</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fold-class_method">
+  
+    + (<tt>Object</tt>) <strong>fold</strong>(string) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+707
+708
+709
+710
+711</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/diff.rb', line 707</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fold">fold</span><span class="lparen">(</span><span class="id identifier rubyid_string">string</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_string">string</span><span class="period">.</span><span class="id identifier rubyid_split">split</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">\r?\n</span><span class="regexp_end">/</span></span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_line">line</span><span class="op">|</span>
+    <span class="id identifier rubyid_line">line</span><span class="period">.</span><span class="id identifier rubyid_gsub">gsub</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">(.{78})</span><span class="regexp_end">/</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">\\1\n</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+  <span class="kw">end</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">\n</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="folded_readable-class_method">
+  
+    + (<tt>Object</tt>) <strong>folded_readable</strong>(from, to, options = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+713
+714
+715</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/diff.rb', line 713</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_folded_readable">folded_readable</span><span class="lparen">(</span><span class="id identifier rubyid_from">from</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_readable">readable</span><span class="lparen">(</span><span class="id identifier rubyid_fold">fold</span><span class="lparen">(</span><span class="id identifier rubyid_from">from</span><span class="rparen">)</span><span class="comma">,</span> <span class="id identifier rubyid_fold">fold</span><span class="lparen">(</span><span class="id identifier rubyid_to">to</span><span class="rparen">)</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="need_fold?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>need_fold?</strong>(diff) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+703
+704
+705</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/diff.rb', line 703</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_need_fold?">need_fold?</span><span class="lparen">(</span><span class="id identifier rubyid_diff">diff</span><span class="rparen">)</span>
+  <span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">^[-+].{79}</span><span class="regexp_end">/</span></span> <span class="op">=~</span> <span class="id identifier rubyid_diff">diff</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="readable-class_method">
+  
+    + (<tt>Object</tt>) <strong>readable</strong>(from, to, options = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+717
+718
+719</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/diff.rb', line 717</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_readable">readable</span><span class="lparen">(</span><span class="id identifier rubyid_from">from</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_diff">diff</span><span class="lparen">(</span><span class="const">ReadableDiffer</span><span class="comma">,</span> <span class="id identifier rubyid_from">from</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unified-class_method">
+  
+    + (<tt>Object</tt>) <strong>unified</strong>(from, to, options = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+721
+722
+723</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/diff.rb', line 721</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_unified">unified</span><span class="lparen">(</span><span class="id identifier rubyid_from">from</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_diff">diff</span><span class="lparen">(</span><span class="const">UnifiedDiffer</span><span class="comma">,</span> <span class="id identifier rubyid_from">from</span><span class="comma">,</span> <span class="id identifier rubyid_to">to</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  </body>
+</html>

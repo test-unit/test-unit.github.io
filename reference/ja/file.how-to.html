@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: How To
+  
+    &mdash; test-unit
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">索引</a> &raquo; 
+    <span class="title">ファイル: 一歩進んだ使い方</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link" href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link" href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id="filecontents"><ol>
+	<li><span class="caps">HTML</span> の meta charset を <span class="caps">UTF</span>-8 にするためのコメント</li>
+</ol>
+<h1>一歩進んだ使い方</h1>
+<h2>すべてのテストを実行する</h2>
+<p>すべてのテストを簡単に実行するために、<code>run_test.rb</code>スクリプトを<code>test</code>ディレクトリにおきます。スクリプトは以下のようにします。</p>
+<pre class="code ruby"><code>
+<span class="id identifier rubyid_base_dir">base_dir</span> <span class="op">=</span> <span class="const">File</span><span class="period">.</span><span class="id identifier rubyid_expand_path">expand_path</span><span class="lparen">(</span><span class="const">File</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="const">File</span><span class="period">.</span><span class="id identifier rubyid_dirname">dirname</span><span class="lparen">(</span><span class="kw">__FILE__</span><span class="rparen">)</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">..</span><span class="tstring_end">"</span></span><span class="rparen">)</span><span class="rparen">)</span>
+<span class="id identifier rubyid_lib_dir">lib_dir</span>  <span class="op">=</span> <span class="const">File</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="id identifier rubyid_base_dir">base_dir</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">lib</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_test_dir">test_dir</span> <span class="op">=</span> <span class="const">File</span><span class="period">.</span><span class="id identifier rubyid_join">join</span><span class="lparen">(</span><span class="id identifier rubyid_base_dir">base_dir</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">test</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+
+<span class="gvar">$LOAD_PATH</span><span class="period">.</span><span class="id identifier rubyid_unshift">unshift</span><span class="lparen">(</span><span class="id identifier rubyid_lib_dir">lib_dir</span><span class="rparen">)</span>
+
+<span class="id identifier rubyid_require">require</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">test/unit</span><span class="tstring_end">'</span></span>
+
+<span class="id identifier rubyid_exit">exit</span> <span class="const">Test</span><span class="op">::</span><span class="const">Unit</span><span class="op">::</span><span class="const">AutoRunner</span><span class="period">.</span><span class="id identifier rubyid_run">run</span><span class="lparen">(</span><span class="kw">true</span><span class="comma">,</span> <span class="id identifier rubyid_test_dir">test_dir</span><span class="rparen">)</span>
+</code></pre>
+<p>これで以下のコマンドで簡単にテストを実行できます。</p>
+<pre class="code ruby"><code>
+$ ruby test/run_test.rb
+</code></pre>
+<h2>コマンドラインでテストランナーを変更する</h2>
+<p>テスト結果の出力フォーマットはコマンドラインで<code>--runner</code>オプションを指定すると変更できます。単純にこのオプションを最後に追加してください。</p>
+<pre class="code ruby"><code>
+ruby test/run_test.rb --runner tap
+</code></pre>
+<h2>プロジェクトごとにtest-unitを設定する</h2>
+<p>Test::Unitは<code>test-unit.yml</code>または現在のワーキングディレクトリにある<code>.test-unit.yml</code>をTest::Unitの設定ファイルとして読み込みます。このファイルには以下のような設定をすることができます。</p>
+<ul>
+	<li>カラースキーム定義</li>
+	<li>使用するテストランナー</li>
+	<li>テストランナーのオプション</li>
+	<li>使用するテスト収集方法</li>
+</ul>
+<p>カラースキーム定義以外はコマンドラインオプションで指定することができます。</p>
+<p>以下はカラースキームの定義例です。</p>
+<pre class="code ruby"><code>
+color_schemes:
+  inverted:
+    success:
+      name: red
+      bold: true
+    failure:
+      name: green
+      bold: true
+  other_scheme:
+    ...
+</code></pre>
+<p>Here are the syntax of color scheme definitions:</p>
+<pre class="code ruby"><code>
+color_schemes:
+  SCHEME_NAME:
+    EVENT_NAME:
+      name: COLOR_NAME
+      intensity: BOOLEAN
+      bold: BOOLEAN
+      italic: BOOLEAN
+      underline: BOOLEAN
+    ...
+  ...
+</code></pre>
+<table>
+	<tr>
+		<td> SCHEME_NAME </td>
+		<td>カラースキームの名前</td>
+	</tr>
+	<tr>
+		<td> EVENT_NAME  </td>
+		<td> success, failure, pending, omission, notification, error </td>
+	</tr>
+	<tr>
+		<td> COLOR_NAME  </td>
+		<td> black, red, green, yellow, blue, magenta, cyan, white    </td>
+	</tr>
+	<tr>
+		<td> <span class="caps">BOOLEAN</span>     </td>
+		<td>trueまたはfalse</td>
+	</tr>
+</table>
+<p>上で定義した'inverted'カラースキムを使う設定は以下の通りです。</p>
+<pre class="code ruby"><code>
+runner: console
+console_options:
+  color_scheme: inverted
+color_schemes:
+  inverted:
+    success:
+      name: red
+      bold: true
+    failure:
+      name: green
+      bold: true
+</code></pre></div></div>
+
+    <div id="footer"></div>
+
+  </body>
+</html>
