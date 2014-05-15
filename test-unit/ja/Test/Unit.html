@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  framesUrl = "../frames.html#!Test/Unit.html";
 </script>
 
 
@@ -34,7 +34,7 @@
   <body>
 <div class="header">
   <div class="title">
-    <a href="../../../index.html.ja">
+    <a href="../../../index.ja.html">
       <span class="title">
   Module: Test::Unit
   
@@ -50,8 +50,8 @@
   </ul>
   <ul class="menu">
     <li id="menu-reference"><a href="../../../test-unit/ja/">リファレンスマニュアル</a></li>
-    <li id="menu-install"><a href="../../../index.html.ja#test-unit-install">インストール</a></li>
-    <li id="menu-developer"><a href="../../../index.html.ja#developer">開発者向け情報</a></li>
+    <li id="menu-install"><a href="../../../index.ja.html#test-unit-install">インストール</a></li>
+    <li id="menu-developer"><a href="../../../index.ja.html#developer">開発者向け情報</a></li>
   </ul>
 </div>
 
@@ -342,9 +342,7 @@ suite using the console TestRunner.</p>
 
 <h2 id="label-Configuration+file">Configuration file</h2>
 
-<p>Test::Unit reads &#39;test-unit.yml&#39; in the current working directory
-as Test::Unit&#39;s configuration file. It can contain the following
-configurations:</p>
+<p>Test::Unitは現在のワーキングディレクトリにある&#39;test-unit.yml&#39;をTest::Unitの設定ファイルとして読み込みます。このファイルには以下のような設定をすることができます。</p>
 <ul><li>
 <p>color scheme definitions</p>
 </li><li>
@@ -355,10 +353,9 @@ configurations:</p>
 <p>test collector to be used</p>
 </li></ul>
 
-<p>Except color scheme definitions, all of them are specified by command line
-option.</p>
+<p>カラースキーム定義以外はコマンドラインオプションで指定することができます。</p>
 
-<p>Here are sample color scheme definitions:</p>
+<p>以下はカラースキームの定義例です。</p>
 
 <pre class="code ruby"><code class="ruby">color_schemes:
   inverted:
@@ -397,8 +394,7 @@ option.</p>
 <p>true or false</p>
 </dd></dl>
 
-<p>You can use the above &#39;inverted&#39; color scheme with the following
-configuration:</p>
+<p>上で定義した&#39;inverted&#39;カラースキムを使う設定は以下の通りです。</p>
 
 <pre class="code ruby"><code class="ruby">runner: console
 console_options:
@@ -1189,9 +1185,9 @@ automatically run at exit.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu May 15 17:55:42 2014 by
+  Generated on Thu May 15 18:06:24 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.1 (ruby-2.1.2).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   
