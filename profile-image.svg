@@ -17,8 +17,8 @@
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="profile-image.svg"
    inkscape:export-filename="profile-image.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-xdpi="360"
+   inkscape:export-ydpi="360">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -406,9 +406,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="43.380043"
-     inkscape:cy="33.392501"
+     inkscape:zoom="3.959798"
+     inkscape:cx="53.656108"
+     inkscape:cy="27.475017"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -452,19 +452,19 @@
     <image
        sodipodi:absref="/home/kou/work/www/test-unit.github.io/kinotan-pass.png"
        xlink:href="kinotan-pass.png"
-       width="20.519176"
-       height="20.519176"
-       id="image2847"
+       y="273.18433"
        x="197.15251"
-       y="273.18433" />
+       id="image2847"
+       height="20.519176"
+       width="20.519176" />
     <image
        sodipodi:absref="/home/kou/work/www/test-unit.github.io/kinotan-failure.png"
        xlink:href="kinotan-failure.png"
-       width="20.519176"
-       height="20.519176"
-       id="image2861"
+       y="273.53214"
        x="162.13127"
-       y="273.53214" />
+       id="image2861"
+       height="20.519176"
+       width="20.519176" />
     <g
        inkscape:label="Layer 1"
        id="layer1-2"
