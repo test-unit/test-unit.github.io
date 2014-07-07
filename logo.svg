@@ -451,14 +451,14 @@
        id="image2847"
        height="30.352503"
        width="30.352503"
-       xlink:href="kinotan-pass.png" />
+       xlink:href="file:///home/kou/work/ruby/test-unit/html/kinotan-pass.png" />
     <image
        y="264.94879"
        x="245.87198"
        id="image2861"
        height="30.352503"
        width="30.352503"
-       xlink:href="kinotan-failure.png" />
+       xlink:href="file:///home/kou/work/ruby/test-unit/html/kinotan-failure.png" />
     <g
        inkscape:label="Layer 1"
        id="layer1-2"

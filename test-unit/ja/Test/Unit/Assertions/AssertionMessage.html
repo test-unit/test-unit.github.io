@@ -1,0 +1,1319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Test::Unit::Assertions::AssertionMessage
+  
+    &mdash; test-unit
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../../';
+  framesUrl = "../../../frames.html#!Test/Unit/Assertions/AssertionMessage.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Unit.html" title="Test::Unit (module)">Unit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Assertions.html" title="Test::Unit::Assertions (module)">Assertions</a></span></span>
+     &raquo; 
+    <span class="title">AssertionMessage</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Test::Unit::Assertions::AssertionMessage
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Test::Unit::Assertions::AssertionMessage</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../Util/BacktraceFilter.html" title="Test::Unit::Util::BacktraceFilter (module)">Util::BacktraceFilter</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/test/unit/assertions.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="AssertionMessage/ArrayInspector.html" title="Test::Unit::Assertions::AssertionMessage::ArrayInspector (class)">ArrayInspector</a></span>, <span class='object_link'><a href="AssertionMessage/DelayedLiteral.html" title="Test::Unit::Assertions::AssertionMessage::DelayedLiteral (class)">DelayedLiteral</a></span>, <span class='object_link'><a href="AssertionMessage/HashInspector.html" title="Test::Unit::Assertions::AssertionMessage::HashInspector (class)">HashInspector</a></span>, <span class='object_link'><a href="AssertionMessage/Inspector.html" title="Test::Unit::Assertions::AssertionMessage::Inspector (class)">Inspector</a></span>, <span class='object_link'><a href="AssertionMessage/Literal.html" title="Test::Unit::Assertions::AssertionMessage::Literal (class)">Literal</a></span>, <span class='object_link'><a href="AssertionMessage/MaybeContainer.html" title="Test::Unit::Assertions::AssertionMessage::MaybeContainer (class)">MaybeContainer</a></span>, <span class='object_link'><a href="AssertionMessage/NumericInspector.html" title="Test::Unit::Assertions::AssertionMessage::NumericInspector (class)">NumericInspector</a></span>, <span class='object_link'><a href="AssertionMessage/Template.html" title="Test::Unit::Assertions::AssertionMessage::Template (class)">Template</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="MAX_DIFF_TARGET_STRING_SIZE-constant" class="">MAX_DIFF_TARGET_STRING_SIZE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1000</span></pre></dd>
+      
+        <dt id="max_diff_target_string_size-classvariable" class="">@@max_diff_target_string_size =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Util/BacktraceFilter.html" title="Test::Unit::Util::BacktraceFilter (module)">Util::BacktraceFilter</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Util/BacktraceFilter.html#TESTUNIT_FILE_SEPARATORS-constant" title="Test::Unit::Util::BacktraceFilter::TESTUNIT_FILE_SEPARATORS (constant)">Util::BacktraceFilter::TESTUNIT_FILE_SEPARATORS</a></span>, <span class='object_link'><a href="../Util/BacktraceFilter.html#TESTUNIT_PREFIX-constant" title="Test::Unit::Util::BacktraceFilter::TESTUNIT_PREFIX (constant)">Util::BacktraceFilter::TESTUNIT_PREFIX</a></span>, <span class='object_link'><a href="../Util/BacktraceFilter.html#TESTUNIT_RB_FILE-constant" title="Test::Unit::Util::BacktraceFilter::TESTUNIT_RB_FILE (constant)">Util::BacktraceFilter::TESTUNIT_RB_FILE</a></span></p>
+
+
+  <h2>Class Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_pp-class_method" title="use_pp (class method)">+ (Object) <strong>use_pp</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute use_pp.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#convert-class_method" title="convert (class method)">+ (Object) <strong>convert</strong>(object) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delayed_diff-class_method" title="delayed_diff (class method)">+ (Object) <strong>delayed_diff</strong>(from, to) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delayed_literal-class_method" title="delayed_literal (class method)">+ (Object) <strong>delayed_literal</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#diff_target_string%3F-class_method" title="diff_target_string? (class method)">+ (Boolean) <strong>diff_target_string?</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ensure_diffable_string-class_method" title="ensure_diffable_string (class method)">+ (Object) <strong>ensure_diffable_string</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#literal-class_method" title="literal (class method)">+ (Object) <strong>literal</strong>(value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_diff_target_string_size-class_method" title="max_diff_target_string_size (class method)">+ (Object) <strong>max_diff_target_string_size</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_diff_target_string_size%3D-class_method" title="max_diff_target_string_size= (class method)">+ (Object) <strong>max_diff_target_string_size=</strong>(size) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#maybe_container-class_method" title="maybe_container (class method)">+ (Object) <strong>maybe_container</strong>(value, &amp;formatter) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#normalize_tag-class_method" title="normalize_tag (class method)">+ (Object) <strong>normalize_tag</strong>(tag) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepare_for_diff-class_method" title="prepare_for_diff (class method)">+ (Object) <strong>prepare_for_diff</strong>(from, to) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_period-instance_method" title="#add_period (instance method)">- (Object) <strong>add_period</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#convert-instance_method" title="#convert (instance method)">- (Object) <strong>convert</strong>(object) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (AssertionMessage) <strong>initialize</strong>(head, template_string, parameters) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of AssertionMessage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#template-instance_method" title="#template (instance method)">- (Object) <strong>template</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Util/BacktraceFilter.html" title="Test::Unit::Util::BacktraceFilter (module)">Util::BacktraceFilter</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Util/BacktraceFilter.html#filter_backtrace-class_method" title="Test::Unit::Util::BacktraceFilter.filter_backtrace (method)">filter_backtrace</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Test::Unit::Assertions::AssertionMessage (class)">AssertionMessage</a></span></tt>) <strong>initialize</strong>(head, template_string, parameters) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of AssertionMessage</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2050
+2051
+2052
+2053
+2054</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2050</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='comma'>,</span> <span class='id identifier rubyid_template_string'>template_string</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='rparen'>)</span>
+  <span class='ivar'>@head</span> <span class='op'>=</span> <span class='id identifier rubyid_head'>head</span>
+  <span class='ivar'>@template_string</span> <span class='op'>=</span> <span class='id identifier rubyid_template_string'>template_string</span>
+  <span class='ivar'>@parameters</span> <span class='op'>=</span> <span class='id identifier rubyid_parameters'>parameters</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id="use_pp=-class_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="use_pp-class_method">
+  
+    + (<tt>Object</tt>) <strong>use_pp</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute use_pp</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1665
+1666
+1667</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1665</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_pp'>use_pp</span>
+  <span class='ivar'>@use_pp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="convert-class_method">
+  
+    + (<tt>Object</tt>) <strong>convert</strong>(object) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1766
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1776
+1777
+1778
+1779
+1780
+1781
+1782
+1783</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1766</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Exception</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='const'>AssertExceptionHelper</span><span class='op'>::</span><span class='const'>WrappedException</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_inspector'>inspector</span> <span class='op'>=</span> <span class='const'>Inspector</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_use_pp'>use_pp</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pp</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>PP</span><span class='rparen'>)</span>
+      <span class='kw'>begin</span>
+        <span class='kw'>return</span> <span class='const'>PP</span><span class='period'>.</span><span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='id identifier rubyid_inspector'>inspector</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
+      <span class='kw'>rescue</span> <span class='const'>NameError</span>
+      <span class='kw'>end</span>
+    <span class='kw'>rescue</span> <span class='const'>LoadError</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_use_pp'>use_pp</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_inspector'>inspector</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delayed_diff-class_method">
+  
+    + (<tt>Object</tt>) <strong>delayed_diff</strong>(from, to) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1743
+1744
+1745
+1746
+1747
+1748
+1749
+1750
+1751
+1752
+1753
+1754
+1755
+1756
+1757
+1758
+1759
+1760
+1761
+1762
+1763
+1764</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1743</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delayed_diff'>delayed_diff</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delayed_literal'>delayed_literal</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span> <span class='op'>=</span> <span class='id identifier rubyid_prepare_for_diff'>prepare_for_diff</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_diff'>diff</span> <span class='op'>||=</span> <span class='const'>Diff</span><span class='period'>.</span><span class='id identifier rubyid_readable'>readable</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[-+]</span><span class='regexp_end'>/</span></span> <span class='op'>!~</span> <span class='id identifier rubyid_diff'>diff</span>
+      <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[ ?]</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_diff'>diff</span> <span class='kw'>or</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:.*\n){2,}</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_diff'>diff</span>
+      <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\ndiff:\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diff'>diff</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='const'>Diff</span><span class='period'>.</span><span class='id identifier rubyid_need_fold?'>need_fold?</span><span class='lparen'>(</span><span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_folded_diff'>folded_diff</span> <span class='op'>=</span> <span class='const'>Diff</span><span class='period'>.</span><span class='id identifier rubyid_folded_readable'>folded_readable</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_diff'>diff</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\nfolded diff:\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_folded_diff'>folded_diff</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_diff'>diff</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delayed_literal-class_method">
+  
+    + (<tt>Object</tt>) <strong>delayed_literal</strong>(&amp;block) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1671
+1672
+1673</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1671</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delayed_literal'>delayed_literal</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='const'>DelayedLiteral</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="diff_target_string?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>diff_target_string?</strong>(string) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1712
+1713
+1714
+1715
+1716
+1717
+1718</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1712</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_diff_target_string?'>diff_target_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:bytesize</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_bytesize'>bytesize</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_diff_target_string_size'>max_diff_target_string_size</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_diff_target_string_size'>max_diff_target_string_size</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ensure_diffable_string-class_method">
+  
+    + (<tt>Object</tt>) <strong>ensure_diffable_string</strong>(string) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1720
+1721
+1722
+1723
+1724
+1725
+1726</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1720</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ensure_diffable_string'>ensure_diffable_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:encoding</span><span class='rparen'>)</span> <span class='kw'>and</span>
+      <span class='op'>!</span><span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_encoding'>encoding</span><span class='period'>.</span><span class='id identifier rubyid_ascii_compatible?'>ascii_compatible?</span>
+    <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ASCII-8BIT</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_string'>string</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="literal-class_method">
+  
+    + (<tt>Object</tt>) <strong>literal</strong>(value) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1667
+1668
+1669</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1667</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_literal'>literal</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='const'>Literal</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_diff_target_string_size-class_method">
+  
+    + (<tt>Object</tt>) <strong>max_diff_target_string_size</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1693
+1694
+1695
+1696
+1697
+1698
+1699
+1700
+1701
+1702
+1703
+1704
+1705</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1693</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_diff_target_string_size'>max_diff_target_string_size</span>
+  <span class='kw'>return</span> <span class='cvar'>@@max_diff_target_string_size</span> <span class='kw'>if</span> <span class='cvar'>@@max_diff_target_string_size</span>
+
+  <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TEST_UNIT_MAX_DIFF_TARGET_STRING_SIZE</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_size'>size</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>ArgumentError</span>
+      <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_size'>size</span> <span class='op'>||</span> <span class='const'>MAX_DIFF_TARGET_STRING_SIZE</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_diff_target_string_size=-class_method">
+  
+    + (<tt>Object</tt>) <strong>max_diff_target_string_size=</strong>(size) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1708
+1709
+1710</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1708</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_diff_target_string_size='>max_diff_target_string_size=</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+  <span class='cvar'>@@max_diff_target_string_size</span> <span class='op'>=</span> <span class='id identifier rubyid_size'>size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="maybe_container-class_method">
+  
+    + (<tt>Object</tt>) <strong>maybe_container</strong>(value, &amp;formatter) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1675
+1676
+1677</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1675</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_maybe_container'>maybe_container</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
+  <span class='const'>MaybeContainer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_tag-class_method">
+  
+    + (<tt>Object</tt>) <strong>normalize_tag</strong>(tag) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1679
+1680
+1681
+1682
+1683
+1684
+1685
+1686
+1687
+1688
+1689
+1690</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1679</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_normalize_tag'>normalize_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tag'>tag</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_tag'>tag</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A:</span><span class='regexp_end'>/</span></span>
+    <span class='id identifier rubyid_tag'>tag</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_intern'>intern</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A`(.+)&#39;\z</span><span class='regexp_end'>/</span></span>
+    <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_intern'>intern</span>
+  <span class='kw'>when</span> <span class='const'>String</span>
+    <span class='id identifier rubyid_tag'>tag</span><span class='period'>.</span><span class='id identifier rubyid_intern'>intern</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_tag'>tag</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prepare_for_diff-class_method">
+  
+    + (<tt>Object</tt>) <strong>prepare_for_diff</strong>(from, to) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1728
+1729
+1730
+1731
+1732
+1733
+1734
+1735
+1736
+1737
+1738
+1739
+1740
+1741</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1728</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prepare_for_diff'>prepare_for_diff</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='op'>!</span><span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_from'>from</span> <span class='op'>=</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_to'>to</span> <span class='op'>=</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_diff_target_string?'>diff_target_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_diff_target_string?'>diff_target_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_from'>from</span> <span class='op'>=</span> <span class='id identifier rubyid_ensure_diffable_string'>ensure_diffable_string</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_to'>to</span> <span class='op'>=</span> <span class='id identifier rubyid_ensure_diffable_string'>ensure_diffable_string</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_period-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_period</strong>(string) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2064
+2065
+2066</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2064</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_period'>add_period</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.\Z</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> <span class='id identifier rubyid_string'>string</span> <span class='op'>:</span> <span class='id identifier rubyid_string'>string</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="convert-instance_method">
+  
+    - (<tt>Object</tt>) <strong>convert</strong>(object) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2056
+2057
+2058</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2056</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="template-instance_method">
+  
+    - (<tt>Object</tt>) <strong>template</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2060
+2061
+2062</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2060</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_template'>template</span>
+  <span class='ivar'>@template</span> <span class='op'>||=</span> <span class='const'>Template</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='ivar'>@template_string</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2068
+2069
+2070
+2071
+2072
+2073
+2074
+2075
+2076
+2077
+2078
+2079</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2068</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_message_parts'>message_parts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@head</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='ivar'>@head</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_message_parts'>message_parts</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_add_period'>add_period</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_tail'>tail</span> <span class='op'>=</span> <span class='id identifier rubyid_template'>template</span><span class='period'>.</span><span class='id identifier rubyid_result'>result</span><span class='lparen'>(</span><span class='ivar'>@parameters</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message_parts'>message_parts</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_tail'>tail</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_tail'>tail</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message_parts'>message_parts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Jul  7 16:21:43 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.2).
+</div>
+
+  </body>
+</html>

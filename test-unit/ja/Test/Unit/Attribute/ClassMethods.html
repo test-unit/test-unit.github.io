@@ -1,18 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../../../../../test-unit.css" type="text/css" />
-    <link rel="shortcut icon" href="../../../../../favicon.ico" />
-    <link rel="icon" href="../../../../../favicon.png" />
-    <title>
+<title>
   Module: Test::Unit::Attribute::ClassMethods
   
     &mdash; test-unit
   
- - test-unit</title>
-
+</title>
 
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
 
@@ -32,36 +28,10 @@
 
   </head>
   <body>
-<div class="header">
-  <div class="title">
-    <a href="../../../../../ja/index.html">
-      <span class="title">
-  Module: Test::Unit::Attribute::ClassMethods
-  
-    &mdash; test-unit
-  
-</span>
-      <span class="title-separator">-</span>
-      <span class="title-project">test-unit</span>
-    </a>
-  </div>
-  <ul class="other-languages">
-    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../../../test-unit/en/Test/Unit/Attribute/ClassMethods.html">English</a></li>
-  </ul>
-  <ul class="menu">
-    <li id="menu-reference"><a href="../../../../../test-unit/ja/">リファレンスマニュアル</a></li>
-    <li id="menu-install"><a href="../../../../../ja/index.html#test-unit-install">インストール</a></li>
-    <li id="menu-developer"><a href="../../../../../ja/index.html#developer">開発者向け情報</a></li>
-  </ul>
-</div>
-
-<div class="content">
-
-
     <div id="header">
       <div id="menu">
   
-    <a href="../../../alphabetical_index.html">Index (C)</a> &raquo;
+    <a href="../../../_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Unit.html" title="Test::Unit (module)">Unit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Attribute.html" title="Test::Unit::Attribute (module)">Attribute</a></span></span>
      &raquo; 
     <span class="title">ClassMethods</span>
@@ -413,12 +383,12 @@
       <pre class="lines">
 
 
-115
 116
-117</pre>
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attribute_observers'>attribute_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
   <span class='cvar'>@@attribute_observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rbracket'>]</span>
@@ -457,14 +427,16 @@
 104
 105
 106
-107</pre>
+107
+108</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes_table'>attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_ancestors'>ancestors</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
+  <span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>==</span> <span class='kw'>self</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>Attribute</span>
       <span class='id identifier rubyid_parent_attributes'>parent_attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
       <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span>
@@ -639,13 +611,13 @@
       <pre class="lines">
 
 
-110
 111
 112
-113</pre>
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_attribute_observer'>register_attribute_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='comma'>,</span> <span class='id identifier rubyid_observer'>observer</span><span class='op'>=</span><span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
   <span class='cvar'>@@attribute_observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -719,45 +691,10 @@
 </div>
 
     <div id="footer">
-  Generated on Thu May 15 18:22:30 2014 by
+  Generated on Mon Jul  7 16:21:42 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>
 
-  
-    </div>
-
-    <div class="sponsors">
-      <p id="sponsor-github">
-        <a href="http://github.com/test-unit/">
-          <img src="../../../../../github-logo.png" width="100" height="45" border="0" alt="test-unitプロジェクトはGitHubにホスティングしてもらっています。" />
-        </a>
-      </p>
-      <p id="sponsor-tango">
-	<a href="http://tango.freedesktop.org/">
-          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../../../tango-logo.png" />
-        </a>
-      </p>
-      <p id="sponsor-famfamfam">
-	<a href="http://www.famfamfam.com/">
-          <img width="120" height="18" border="0" alt="famfamfam.comの国旗を利用しています。" src="../../../../../famfamfam-logo.png" />
-        </a>
-      </p>
-
-<!-- Piwik -->
-<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
-<script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-piwik_action_name = '';
-piwik_idsite = 2;
-piwik_url = pkBaseURL + "piwik.php";
-piwik_log(piwik_action_name, piwik_idsite, piwik_url);
-</script>
-<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
-<!-- End Piwik Tag -->
-    </div>
-
-</body>
+  </body>
 </html>
