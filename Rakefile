@@ -12,14 +12,6 @@ test-unit-rr
 base_dir = Pathname(__FILE__).realpath.dirname.parent
 publish_base = Pathname(__FILE__).realpath.dirname
 
-def html_files(project_dir)
-  FileList["#{project_dir}/doc/html/**/*"]
-end
-
-def reference_files(project_dir)
-  FileList["#{project_dir}/doc/reference/**/*"]
-end
-
 task :update do
   projects.each do |project|
     project_dir = base_dir + project
