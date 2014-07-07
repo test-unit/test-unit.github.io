@@ -12,6 +12,7 @@ test-unit-rr
 base_dir = Pathname(__FILE__).realpath.dirname.parent
 publish_base = Pathname(__FILE__).realpath.dirname
 
+desc "Update documents"
 task :update do
   projects.each do |project|
     project_dir = base_dir + project
@@ -28,6 +29,7 @@ task :update do
   end
 end
 
+desc "Publish documents"
 task :publish => :update do
   sh "git", "add", "-u"
   sh "git", "commit", "-m", "Update documents"
