@@ -91,12 +91,11 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1 id="how-to">How To</h1>
+    <div id="content"><div id='filecontents'><h1 id="section">一歩進んだ使い方</h1>
 
-<h2 id="run-all-tests">Run all tests</h2>
+<h2 id="section-1">すべてのテストを実行する</h2>
 
-<p>To make it easy to run all your tests, you can add a <code>run_test.rb</code> script
-to your <code>test</code> directory. A simple example might look like:</p>
+<p>すべてのテストを簡単に実行するために、 <code>run_test.rb</code> スクリプトを <code>test</code> ディレクトリにおきます。スクリプトは以下のようにします。</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_base_dir'>base_dir</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>..</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_lib_dir'>lib_dir</span>  <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lib</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -109,24 +108,21 @@ to your <code>test</code> directory. A simple example might look like:</p>
 <span class='id identifier rubyid_exit'>exit</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>AutoRunner</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_test_dir'>test_dir</span><span class='rparen'>)</span>
 </code></pre>
 
-<p>Then it’s easy to run tests via the command line with,</p>
+<p>これで以下のコマンドで簡単にテストを実行できます。</p>
 
 <pre class="code ruby"><code class="ruby">$ ruby test/run_test.rb
 </code></pre>
 
-<h2 id="change-test-runner-via-the-command-line">Change test runner via the command line</h2>
+<h2 id="section-2">コマンドラインでテストランナーを変更する</h2>
 
-<p>The output format can be changed via the command line with
-the <code>--runner</code> option. Simply tack it to the end:</p>
+<p>テスト結果の出力フォーマットはコマンドラインで <code>--runner</code> オプションを指定すると変更できます。単純にこのオプションを最後に追加してください。</p>
 
 <pre class="code ruby"><code class="ruby">ruby test/run_test.rb --runner tap
 </code></pre>
 
-<h2 id="configure-test-unit-per-project">Configure test-unit per-project</h2>
+<h2 id="test-unit">プロジェクトごとにtest-unitを設定する</h2>
 
-<p>Test::Unit reads <code>test-unit.yml</code> or <code>.test-unit.yml</code> in the current working
-directory as Test::Unit’s configuration file. It can contain the following
-settings:</p>
+<p>Test::Unitは <code>test-unit.yml</code> または現在のワーキングディレクトリにある <code>.test-unit.yml</code> をTest::Unitの設定ファイルとして読み込みます。このファイルには以下のような設定をすることができます。</p>
 
 <ul>
   <li>color scheme definitions</li>
@@ -135,10 +131,9 @@ settings:</p>
   <li>test collector to be used</li>
 </ul>
 
-<p>Except color scheme definitions, all of them can be specified by command
-line option.</p>
+<p>カラースキーム定義以外はコマンドラインオプションで指定することができます。</p>
 
-<p>Here are sample color scheme definitions:</p>
+<p>以下はカラースキームの定義例です。</p>
 
 <pre class="code ruby"><code class="ruby">color_schemes:
   inverted:
@@ -187,7 +182,7 @@ line option.</p>
   </tbody>
 </table>
 
-<p>You can use the above ‘inverted’ color scheme with the following configuration:</p>
+<p>上で定義した’inverted’カラースキムを使う設定は以下の通りです。</p>
 
 <pre class="code ruby"><code class="ruby">runner: console
 console_options:
@@ -204,7 +199,7 @@ color_schemes:
 </div></div>
 
     <div id="footer">
-  Generated on Tue Aug  5 12:24:43 2014 by
+  Generated on Tue Aug  5 12:32:38 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>
