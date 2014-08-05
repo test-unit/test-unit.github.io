@@ -3,12 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>
+    <link rel="stylesheet" href="../../../../../../test-unit.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../../favicon.ico" />
+    <link rel="icon" href="../../../../../../favicon.png" />
+    <title>
   Class: Test::Unit::Data::ClassMethods::Loader
   
     &mdash; test-unit
   
-</title>
+ - test-unit</title>
+
 
   <link rel="stylesheet" href="../../../../css/style.css" type="text/css" charset="utf-8" />
 
@@ -28,10 +32,36 @@
 
   </head>
   <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../../../../">
+      <span class="title">
+  Class: Test::Unit::Data::ClassMethods::Loader
+  
+    &mdash; test-unit
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">test-unit</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../../../../test-unit/ja/Test/Unit/Data/ClassMethods/Loader.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../../../../test-unit/en/">Reference Manual</a></li>
+    <li id="menu-install"><a href="../../../../../../#test-unit-install">Install</a></li>
+    <li id="menu-developer"><a href="../../../../../../#developer">Developers</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
     <div id="header">
       <div id="menu">
   
-    <a href="../../../../_index.html">Index (L)</a> &raquo;
+    <a href="../../../../alphabetical_index.html">Index (L)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../Unit.html" title="Test::Unit (module)">Unit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Data.html" title="Test::Unit::Data (module)">Data</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../ClassMethods.html" title="Test::Unit::Data::ClassMethods (module)">ClassMethods</a></span></span>
      &raquo; 
     <span class="title">Loader</span>
@@ -133,8 +163,7 @@
   <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Loader.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of Loader.</p>
 </div></span>
   
 </li>
@@ -157,8 +186,7 @@
   <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Load data from file.</p>
+    <span class="summary_desc"><div class='inline'><p>Load data from file.</p>
 </div></span>
   
 </li>
@@ -181,8 +209,7 @@
   <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Load data from CSV file.</p>
+    <span class="summary_desc"><div class='inline'><p>Load data from CSV file.</p>
 </div></span>
   
 </li>
@@ -205,8 +232,7 @@
   <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Load data from TSV file.</p>
+    <span class="summary_desc"><div class='inline'><p>Load data from TSV file.</p>
 </div></span>
   
 </li>
@@ -233,7 +259,6 @@
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-
 <p>Returns a new instance of Loader</p>
 
 
@@ -285,7 +310,6 @@
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-
 <p>Load data from file.</p>
 
 
@@ -305,9 +329,8 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>full path to test data file. File format is automatically detected from
-filename extension.</p>
+        <div class='inline'><p>full path to test data file.
+File format is automatically detected from filename extension.</p>
 </div>
       
     </li>
@@ -325,8 +348,7 @@ filename extension.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>if <code>file_name</code> is not supported file format.</p>
+        <div class='inline'><p>if +file_name+ is not supported file format.</p>
 </div>
       
     </li>
@@ -392,12 +414,11 @@ filename extension.</p>
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-
 <p>Load data from CSV file.</p>
 
-<p>There are 2 types of CSV file as following examples. First, there is a
-header on first row and it&#39;s first column is “label”. Another, there is
-no header in the file.</p>
+<p>There are 2 types of CSV file as following examples.
+First, there is a header on first row and it’s first column is “label”.
+Another, there is no header in the file.</p>
 
 
   </div>
@@ -408,8 +429,7 @@ no header in the file.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'>
-<p>Load data from CSV file with header</p>
+        <p class="example_title"><div class='inline'><p>Load data from CSV file with header</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># test-data.csv:
@@ -423,8 +443,7 @@ no header in the file.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'>
-<p>Load data from CSV file without header</p>
+        <p class="example_title"><div class='inline'><p>Load data from CSV file without header</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># test-data-without-header.csv:
@@ -502,12 +521,11 @@ no header in the file.</p>
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-
 <p>Load data from TSV file.</p>
 
-<p>There are 2 types of TSV file as following examples. First, there is a
-header on first row and it&#39;s first column is “label”. Another, there is
-no header in the file.</p>
+<p>There are 2 types of TSV file as following examples.
+First, there is a header on first row and it’s first column is “label”.
+Another, there is no header in the file.</p>
 
 
   </div>
@@ -518,8 +536,7 @@ no header in the file.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'>
-<p>Load data from TSV file with header</p>
+        <p class="example_title"><div class='inline'><p>Load data from TSV file with header</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># test-data.tsv:
@@ -533,8 +550,7 @@ no header in the file.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'>
-<p>Load data from TSV file without header</p>
+        <p class="example_title"><div class='inline'><p>Load data from TSV file without header</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># test-data-without-header.tsv:
@@ -637,5 +653,45 @@ no header in the file.</p>
 
     <div id="footer"></div>
 
-  </body>
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="https://github.com/test-unit/">
+          <img src="../../../../../../github-logo.png" width="100" height="45" border="0" alt="The test-unit project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
 </html>

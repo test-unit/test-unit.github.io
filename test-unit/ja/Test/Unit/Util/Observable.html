@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>
+    <link rel="stylesheet" href="../../../../../test-unit.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../favicon.ico" />
+    <link rel="icon" href="../../../../../favicon.png" />
+    <title>
   Module: Test::Unit::Util::Observable
   
     &mdash; test-unit
   
-</title>
+ - test-unit</title>
+
 
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
 
@@ -28,10 +32,36 @@
 
   </head>
   <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../../../ja/index.html">
+      <span class="title">
+  Module: Test::Unit::Util::Observable
+  
+    &mdash; test-unit
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">test-unit</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../../../test-unit/en/Test/Unit/Util/Observable.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../../../test-unit/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-install"><a href="../../../../../ja/index.html#test-unit-install">インストール</a></li>
+    <li id="menu-developer"><a href="../../../../../ja/index.html#developer">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
     <div id="header">
       <div id="menu">
   
-    <a href="../../../_index.html">Index (O)</a> &raquo;
+    <a href="../../../alphabetical_index.html">Index (O)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Unit.html" title="Test::Unit (module)">Unit</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Test::Unit::Util (module)">Util</a></span></span>
      &raquo; 
     <span class="title">Observable</span>
@@ -90,9 +120,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>This is a utility class that allows anything mixing it in to notify a set
-of listeners about interesting events.</p>
+    <p>This is a utility class that allows anything mixing
+it in to notify a set of listeners about interesting
+events.</p>
 
 
   </div>
@@ -108,8 +138,7 @@ of listeners about interesting events.</p>
         <dt id="NOTHING-constant" class="">NOTHING =
           <div class="docstring">
   <div class="discussion">
-    
-<p>We use this for defaults since nil might mean something</p>
+    <p>We use this for defaults since nil might mean something</p>
 
 
   </div>
@@ -155,9 +184,7 @@ of listeners about interesting events.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Adds the passed proc as a listener on the channel indicated by
-channel_name.</p>
+    <span class="summary_desc"><div class='inline'><p>Adds the passed proc as a listener on the channel indicated by channel_name.</p>
 </div></span>
   
 </li>
@@ -180,8 +207,7 @@ channel_name.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Calls all the procs registered on the channel indicated by channel_name.</p>
+    <span class="summary_desc"><div class='inline'><p>Calls all the procs registered on the channel indicated by channel_name.</p>
 </div></span>
   
 </li>
@@ -204,9 +230,7 @@ channel_name.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Removes the listener indicated by listener_key from the channel indicated
-by channel_name.</p>
+    <span class="summary_desc"><div class='inline'><p>Removes the listener indicated by listener_key from the channel indicated by channel_name.</p>
 </div></span>
   
 </li>
@@ -232,16 +256,17 @@ by channel_name.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Adds the passed proc as a listener on the channel indicated by
-channel_name. listener_key is used to remove the listener later; if none is
+    <p>Adds the passed proc as a listener on the
+channel indicated by channel_name. listener_key
+is used to remove the listener later; if none is
 specified, the proc itself is used.</p>
 
-<p>Whatever is used as the listener_key is returned, making it very easy to
-use the proc itself as the listener_key:</p>
+<p>Whatever is used as the listener_key is
+returned, making it very easy to use the proc
+itself as the listener_key:</p>
 
-<pre class="code ruby"><code class="ruby">listener = add_listener(&quot;Channel&quot;) { ... }
-remove_listener(&quot;Channel&quot;, listener)</code></pre>
+<p>listener = add_listener(“Channel”) { … }
+ remove_listener(“Channel”, listener)</p>
 
 
   </div>
@@ -305,15 +330,16 @@ remove_listener(&quot;Channel&quot;, listener)</code></pre>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Calls all the procs registered on the channel indicated by channel_name. If
-value is specified, it is passed in to the procs, otherwise they are called
-with no arguments.</p>
+    <p>Calls all the procs registered on the channel
+indicated by channel_name. If value is
+specified, it is passed in to the procs,
+otherwise they are called with no arguments.</p>
 
 <p>–</p>
 
-<p>Perhaps this should be private? Would it ever make sense for an external
-class to call this method directly?</p>
+<p>Perhaps this should be private? Would it ever
+make sense for an external class to call this
+method directly?</p>
 
 
   </div>
@@ -361,9 +387,10 @@ class to call this method directly?</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Removes the listener indicated by listener_key from the channel indicated
-by channel_name. Returns the registered proc, or nil if none was found.</p>
+    <p>Removes the listener indicated by listener_key
+from the channel indicated by
+channel_name. Returns the registered proc, or
+nil if none was found.</p>
 
 
   </div>
@@ -415,10 +442,45 @@ by channel_name. Returns the registered proc, or nil if none was found.</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Jul  7 16:21:43 2014 by
+  Generated on Tue Aug  5 12:24:44 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>
 
-  </body>
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="http://github.com/test-unit/">
+          <img src="../../../../../github-logo.png" width="100" height="45" border="0" alt="test-unitプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.comの国旗を利用しています。" src="../../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
 </html>

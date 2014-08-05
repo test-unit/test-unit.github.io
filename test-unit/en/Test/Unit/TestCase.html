@@ -3,12 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>
+    <link rel="stylesheet" href="../../../../test-unit.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <link rel="icon" href="../../../../favicon.png" />
+    <title>
   Class: Test::Unit::TestCase
   
     &mdash; test-unit
   
-</title>
+ - test-unit</title>
+
 
   <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
 
@@ -28,10 +32,36 @@
 
   </head>
   <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../../">
+      <span class="title">
+  Class: Test::Unit::TestCase
+  
+    &mdash; test-unit
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">test-unit</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../../test-unit/ja/Test/Unit/TestCase.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../../test-unit/en/">Reference Manual</a></li>
+    <li id="menu-install"><a href="../../../../#test-unit-install">Install</a></li>
+    <li id="menu-developer"><a href="../../../../#developer">Developers</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (T)</a> &raquo;
+    <a href="../../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
      &raquo; 
     <span class="title">TestCase</span>
@@ -105,71 +135,58 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>Ties everything together. If you subclass and add your own test methods, it
-takes care of making them into tests and wrapping those tests into a suite.
-It also does the nitty-gritty of actually running an individual test and
+    <p>Ties everything together. If you subclass and add your own
+test methods, it takes care of making them into tests and
+wrapping those tests into a suite. It also does the
+nitty-gritty of actually running an individual test and
 collecting its results into a Test::Unit::TestResult object.</p>
 
 <p>You can run two hooks before/after a TestCase run.</p>
 
-<p>Example:</p>
+<p>Example:
+  class TestMyClass &lt; Test::Unit::TestCase
+    class « self
+      def startup
+        …
+      end</p>
 
-<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
-  class &lt;&lt; self
-    def startup
-      ...
-    end
-
-    def shutdown
-      ...
-    end
-  end
-
-  def setup
-    ...
-  end
-
-  def cleanup
-    ...
-  end
-
-  def teardown
-    ...
-  end
-
-  def test_my_method1
-    ...
-  end
-
-  def test_my_method2
+<pre class="code ruby"><code class="ruby">  def shutdown
     ...
   end
 end
+
+def setup
+  ...
+end
+
+def cleanup
+  ...
+end
+
+def teardown
+  ...
+end
+
+def test_my_method1
+  ...
+end
+
+def test_my_method2
+  ...
+end   end
 </code></pre>
 
-<p>Here is a call order:</p>
-<ul><li>
-<p>startup</p>
-</li><li>
-<p>setup</p>
-</li><li>
-<p>test_my_method1</p>
-</li><li>
-<p>cleanup</p>
-</li><li>
-<p>teardown</p>
-</li><li>
-<p>setup</p>
-</li><li>
-<p>test_my_method2</p>
-</li><li>
-<p>cleanup</p>
-</li><li>
-<p>teardown</p>
-</li><li>
-<p>shutdown</p>
-</li></ul>
+<p>Here is a call order:
+* startup
+* setup
+* test_my_method1
+* cleanup
+* teardown
+* setup
+* test_my_method2
+* cleanup
+* teardown
+* shutdown</p>
 
 
   </div>
@@ -195,8 +212,7 @@ end
         <dt id="STARTED-constant" class="">STARTED =
           <div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -211,8 +227,7 @@ end
         <dt id="FINISHED-constant" class="">FINISHED =
           <div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -227,8 +242,7 @@ end
         <dt id="STARTED_OBJECT-constant" class="">STARTED_OBJECT =
           <div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -243,8 +257,7 @@ end
         <dt id="FINISHED_OBJECT-constant" class="">FINISHED_OBJECT =
           <div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -259,8 +272,7 @@ end
         <dt id="DESCENDANTS-constant" class="">DESCENDANTS =
           <div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -275,8 +287,7 @@ end
         <dt id="AVAILABLE_ORDERS-constant" class="">AVAILABLE_ORDERS =
           <div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -312,12 +323,6 @@ end
   
   
   <h3 class="inherited">Constants included
-     from <span class='object_link'><a href="Assertions.html" title="Test::Unit::Assertions (module)">Assertions</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Assertions.html#NOT_SPECIFIED-constant" title="Test::Unit::Assertions::NOT_SPECIFIED (constant)">Assertions::NOT_SPECIFIED</a></span>, <span class='object_link'><a href="Assertions.html#UncaughtThrow-constant" title="Test::Unit::Assertions::UncaughtThrow (constant)">Assertions::UncaughtThrow</a></span></p>
-
-  
-  
-  <h3 class="inherited">Constants included
      from <span class='object_link'><a href="ErrorHandler.html" title="Test::Unit::ErrorHandler (module)">ErrorHandler</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="ErrorHandler.html#NOT_PASS_THROUGH_EXCEPTIONS-constant" title="Test::Unit::ErrorHandler::NOT_PASS_THROUGH_EXCEPTIONS (constant)">ErrorHandler::NOT_PASS_THROUGH_EXCEPTIONS</a></span>, <span class='object_link'><a href="ErrorHandler.html#NOT_PASS_THROUGH_EXCEPTION_NAMES-constant" title="Test::Unit::ErrorHandler::NOT_PASS_THROUGH_EXCEPTION_NAMES (constant)">ErrorHandler::NOT_PASS_THROUGH_EXCEPTION_NAMES</a></span>, <span class='object_link'><a href="ErrorHandler.html#PASS_THROUGH_EXCEPTIONS-constant" title="Test::Unit::ErrorHandler::PASS_THROUGH_EXCEPTIONS (constant)">ErrorHandler::PASS_THROUGH_EXCEPTIONS</a></span>, <span class='object_link'><a href="ErrorHandler.html#PASS_THROUGH_EXCEPTION_NAMES-constant" title="Test::Unit::ErrorHandler::PASS_THROUGH_EXCEPTION_NAMES (constant)">ErrorHandler::PASS_THROUGH_EXCEPTION_NAMES</a></span></p>
 
@@ -347,8 +352,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute method_name.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute method_name.</p>
 </div></span>
   
 </li>
@@ -384,8 +388,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
+    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
 </div></span>
   
 </li>
@@ -408,8 +411,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Describes a test.</p>
+    <span class="summary_desc"><div class='inline'><p>Describes a test.</p>
 </div></span>
   
 </li>
@@ -432,8 +434,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
+    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
 </div></span>
   
 </li>
@@ -456,8 +457,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
+    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
 </div></span>
   
 </li>
@@ -480,8 +480,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Called after every test case runs.</p>
+    <span class="summary_desc"><div class='inline'><p>Called after every test case runs.</p>
 </div></span>
   
 </li>
@@ -504,8 +503,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Called before every test case runs.</p>
+    <span class="summary_desc"><div class='inline'><p>Called before every test case runs.</p>
 </div></span>
   
 </li>
@@ -528,8 +526,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Defines a sub test case.</p>
+    <span class="summary_desc"><div class='inline'><p>Defines a sub test case.</p>
 </div></span>
   
 </li>
@@ -552,9 +549,7 @@ end
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Rolls up all of the test* methods in the fixture into one suite, creating a
-new instance of the fixture for each method.</p>
+    <span class="summary_desc"><div class='inline'><p>Rolls up all of the test* methods in the fixture into one suite, creating a new instance of the fixture for each method.</p>
 </div></span>
   
 </li>
@@ -577,9 +572,7 @@ new instance of the fixture for each method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Defines a test in declarative syntax or marks following method as a test
-method.</p>
+    <span class="summary_desc"><div class='inline'><p>Defines a test in declarative syntax or marks following method as a test method.</p>
 </div></span>
   
 </li>
@@ -602,8 +595,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Checkes whether a test that is mathched the query is defined.</p>
+    <span class="summary_desc"><div class='inline'><p>Checkes whether a test that is mathched the query is defined.</p>
 </div></span>
   
 </li>
@@ -626,8 +618,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the current test order.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the current test order.</p>
 </div></span>
   
 </li>
@@ -650,8 +641,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Sets the current test order.</p>
+    <span class="summary_desc"><div class='inline'><p>Sets the current test order.</p>
 </div></span>
   
 </li>
@@ -683,8 +673,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>It&#39;s handy to be able to compare TestCase instances.</p>
+    <span class="summary_desc"><div class='inline'><p>It’s handy to be able to compare TestCase instances.</p>
 </div></span>
   
 </li>
@@ -707,8 +696,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Notify that the test is passed.</p>
+    <span class="summary_desc"><div class='inline'><p>Notify that the test is passed.</p>
 </div></span>
   
 </li>
@@ -731,8 +719,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Assigns test data to the test.</p>
+    <span class="summary_desc"><div class='inline'><p>Assigns test data to the test.</p>
 </div></span>
   
 </li>
@@ -755,9 +742,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Called after every test method runs but the test method isn&#39;t marked as
-&#39;passed&#39;.</p>
+    <span class="summary_desc"><div class='inline'><p>Called after every test method runs but the test method isn’t marked as ‘passed’.</p>
 </div></span>
   
 </li>
@@ -780,8 +765,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a label of test data for the test.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a label of test data for the test.</p>
 </div></span>
   
 </li>
@@ -804,7 +788,8 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -826,8 +811,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a description for the test.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a description for the test.</p>
 </div></span>
   
 </li>
@@ -850,8 +834,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns elapsed time for the test was ran.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns elapsed time for the test was ran.</p>
 </div></span>
   
 </li>
@@ -876,9 +859,7 @@ method.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Creates a new instance of the fixture for running the test represented by
-test_method_name.</p>
+    <span class="summary_desc"><div class='inline'><p>Creates a new instance of the fixture for running the test represented by test_method_name.</p>
 </div></span>
   
 </li>
@@ -901,8 +882,7 @@ test_method_name.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns whether the test is interrupted.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns whether the test is interrupted.</p>
 </div></span>
   
 </li>
@@ -925,9 +905,7 @@ test_method_name.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a human-readable name for the specific test that this instance of
-TestCase represents.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a human-readable name for the specific test that this instance of TestCase represents.</p>
 </div></span>
   
 </li>
@@ -950,8 +928,7 @@ TestCase represents.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns whether this individual test passed or not.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns whether this individual test passed or not.</p>
 </div></span>
   
 </li>
@@ -974,8 +951,7 @@ TestCase represents.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Notify that a problem is occurred in the test.</p>
+    <span class="summary_desc"><div class='inline'><p>Notify that a problem is occurred in the test.</p>
 </div></span>
   
 </li>
@@ -998,9 +974,7 @@ TestCase represents.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Runs the individual test method represented by this instance of the
-fixture, collecting statistics, failures and errors in result.</p>
+    <span class="summary_desc"><div class='inline'><p>Runs the individual test method represented by this instance of the fixture, collecting statistics, failures and errors in result.</p>
 </div></span>
   
 </li>
@@ -1023,8 +997,7 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Called before every test method runs.</p>
+    <span class="summary_desc"><div class='inline'><p>Called before every test method runs.</p>
 </div></span>
   
 </li>
@@ -1047,7 +1020,8 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -1069,8 +1043,7 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns a Time at the test was started.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns a Time at the test was started.</p>
 </div></span>
   
 </li>
@@ -1093,8 +1066,7 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Called after every test method runs.</p>
+    <span class="summary_desc"><div class='inline'><p>Called after every test method runs.</p>
 </div></span>
   
 </li>
@@ -1117,8 +1089,7 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Overridden to return #name.</p>
+    <span class="summary_desc"><div class='inline'><p>Overridden to return #name.</p>
 </div></span>
   
 </li>
@@ -1141,8 +1112,7 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the test is valid test.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the test is valid test.</p>
 </div></span>
   
 </li>
@@ -1293,9 +1263,8 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Creates a new instance of the fixture for running the test represented by
-test_method_name.</p>
+    <p>Creates a new instance of the fixture for running the
+test represented by test_method_name.</p>
 
 
   </div>
@@ -1344,8 +1313,7 @@ test_method_name.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute method_name</p>
+    <p>Returns the value of attribute method_name</p>
 
 
   </div>
@@ -1392,8 +1360,7 @@ test_method_name.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -1433,17 +1400,16 @@ test_method_name.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Describes a test.</p>
+    <p>Describes a test.</p>
 
-<p>The following example associates “register a normal user” description with
-“test_register” test.</p>
+<p>The following example associates “register a
+normal user” description with “test_register”
+test.</p>
 
-<pre class="code ruby"><code class="ruby">description &quot;register a normal user&quot;
-def test_register
-  ...
-end
-</code></pre>
+<p>description “register a normal user”
+  def test_register
+    …
+  end</p>
 
 
   </div>
@@ -1485,8 +1451,7 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -1530,8 +1495,7 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>:nodoc:</p>
+    <p>:nodoc:</p>
 
 
   </div>
@@ -1609,48 +1573,39 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Called after every test case runs. Can be used to tear down fixture
-information used in test case scope.</p>
+    <p>Called after every test case runs. Can be used to tear
+down fixture information used in test case scope.</p>
 
-<p>Here is an example test case:</p>
+<p>Here is an example test case:
+  class TestMyClass &lt; Test::Unit::TestCase
+    class « self
+      def shutdown
+        …
+      end
+    end</p>
 
-<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
-  class &lt;&lt; self
-    def shutdown
-      ...
-    end
-  end
-
-  def teardown
-    ...
-  end
-
-  def test_my_class1
-    ...
-  end
-
-  def test_my_class2
-    ...
-  end
+<pre class="code ruby"><code class="ruby">def teardown
+  ...
 end
+
+def test_my_class1
+  ...
+end
+
+def test_my_class2
+  ...
+end   end
 </code></pre>
 
-<p>Here is a call order:</p>
-<ul><li>
-<p>test_my_class1 (or test_my_class2)</p>
-</li><li>
-<p>teardown</p>
-</li><li>
-<p>test_my_class2 (or test_my_class1)</p>
-</li><li>
-<p>teardown</p>
-</li><li>
-<p>shutdown</p>
-</li></ul>
+<p>Here is a call order:
+* test_my_class1 (or test_my_class2)
+* teardown
+* test_my_class2 (or test_my_class1)
+* teardown
+* shutdown</p>
 
-<p>Note that you should not assume test order. Tests should be worked in any
-order.</p>
+<p>Note that you should not assume test order. Tests
+should be worked in any order.</p>
 
 
   </div>
@@ -1688,48 +1643,40 @@ order.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Called before every test case runs. Can be used to set up fixture
-information used in test case scope.</p>
+    <p>Called before every test case runs. Can be used
+to set up fixture information used in test case
+scope.</p>
 
-<p>Here is an example test case:</p>
+<p>Here is an example test case:
+  class TestMyClass &lt; Test::Unit::TestCase
+    class « self
+      def startup
+        …
+      end
+    end</p>
 
-<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
-  class &lt;&lt; self
-    def startup
-      ...
-    end
-  end
-
-  def setup
-    ...
-  end
-
-  def test_my_class1
-    ...
-  end
-
-  def test_my_class2
-    ...
-  end
+<pre class="code ruby"><code class="ruby">def setup
+  ...
 end
+
+def test_my_class1
+  ...
+end
+
+def test_my_class2
+  ...
+end   end
 </code></pre>
 
-<p>Here is a call order:</p>
-<ul><li>
-<p>startup</p>
-</li><li>
-<p>setup</p>
-</li><li>
-<p>test_my_class1 (or test_my_class2)</p>
-</li><li>
-<p>setup</p>
-</li><li>
-<p>test_my_class2 (or test_my_class1)</p>
-</li></ul>
+<p>Here is a call order:
+* startup
+* setup
+* test_my_class1 (or test_my_class2)
+* setup
+* test_my_class2 (or test_my_class1)</p>
 
-<p>Note that you should not assume test order. Tests should be worked in any
-order.</p>
+<p>Note that you should not assume test order. Tests
+should be worked in any order.</p>
 
 
   </div>
@@ -1767,41 +1714,37 @@ order.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Defines a sub test case.</p>
+    <p>Defines a sub test case.</p>
 
-<p>This is a syntax sugar. The both of the following codes are the same in
-meaning:</p>
+<p>This is a syntax sugar. The both of the following codes are
+the same in meaning:</p>
 
-<p>Standard:</p>
+<p>Standard:
+  class TestParent &lt; Test::UnitTestCase
+    class TestChild &lt; self
+      def test_in_child
+      end
+    end
+  end</p>
 
-<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>TestParent</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>UnitTestCase</span>
-  <span class='kw'>class</span> <span class='const'>TestChild</span> <span class='op'>&lt;</span> <span class='kw'>self</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_test_in_child'>test_in_child</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
-
-<p>Syntax sugar:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>TestParent</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>UnitTestCase</span>
-  <span class='id identifier rubyid_sub_test_case'>sub_test_case</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TestChild</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_test_in_child'>test_in_child</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
+<p>Syntax sugar:
+  class TestParent &lt; Test::UnitTestCase
+    sub_test_case(“TestChild”) do
+      def test_in_child
+      end
+    end
+  end</p>
 
 <p>The diffrence of them are the following:</p>
-<ul><li>
-<p>Test case created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> is an anonymous class. So you
-can&#39;t refer the test case by name.</p>
-</li><li>
-<p>The class name of class style must follow constant naming rule in Ruby. But
-the name of test case created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> doesn&#39;t need to follow
-the rule. For example, you can use a space in name such as “child test”.</p>
-</li></ul>
+
+<ul>
+  <li>Test case created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> is an anonymous class.
+So you can’t refer the test case by name.</li>
+  <li>The class name of class style must follow
+constant naming rule in Ruby. But the name of test case
+created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> doesn’t need to follow the rule.
+For example, you can use a space in name such as “child test”.</li>
+</ul>
 
 
   </div>
@@ -1820,8 +1763,7 @@ the rule. For example, you can use a space in name such as “child test”.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The name of newly created sub test case.</p>
+        <div class='inline'><p>The name of newly created sub test case.</p>
 </div>
       
     </li>
@@ -1839,9 +1781,8 @@ the rule. For example, you can use a space in name such as “child test”.</p>
       
       
         
-        <div class='inline'>
-<p>The block is evaludated under the newly created sub test case class
-context.</p>
+        <div class='inline'><p>The block is evaludated under the newly created sub test
+case class context.</p>
 </div>
       
     </li>
@@ -1858,8 +1799,7 @@ context.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Created sub test case class.</p>
+        <div class='inline'><p>Created sub test case class.</p>
 </div>
       
     </li>
@@ -1914,9 +1854,9 @@ context.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Rolls up all of the test* methods in the fixture into one suite, creating a
-new instance of the fixture for each method.</p>
+    <p>Rolls up all of the test* methods in the fixture into
+one suite, creating a new instance of the fixture for
+each method.</p>
 
 
   </div>
@@ -1958,31 +1898,28 @@ new instance of the fixture for each method.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Defines a test in declarative syntax or marks following method as a test
-method.</p>
+    <p>Defines a test in declarative syntax or marks
+following method as a test method.</p>
 
-<p>In declarative syntax usage, the following two test definitions are the
-almost same:</p>
+<p>In declarative syntax usage, the following two
+test definitions are the almost same:</p>
 
-<pre class="code ruby"><code class="ruby">description &quot;register user&quot;
-def test_register_user
-  ...
-end
+<p>description “register user”
+  def test_register_user
+    …
+  end</p>
 
-test &quot;register user&quot; do
-  ...
-end
-</code></pre>
+<p>test “register user” do
+    …
+  end</p>
 
-<p>In test method mark usage, the “my_test_method” is treated as a test
-method:</p>
+<p>In test method mark usage, the “my_test_method” is
+treated as a test method:</p>
 
-<pre class="code ruby"><code class="ruby">test
-def my_test_method
-  assert_equal(&quot;call me&quot;, ...)
-end
-</code></pre>
+<p>test
+  def my_test_method
+    assert_equal(“call me”, …)
+  end</p>
 
 
   </div>
@@ -2062,8 +1999,8 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Checkes whether a test that is mathched the query is defined.</p>
+    <p>Checkes whether a test that is mathched the query is
+defined.</p>
 
 
   </div>
@@ -2082,8 +2019,7 @@ end
       
       
         &mdash;
-        <div class='inline'>
-<p>a customizable set of options</p>
+        <div class='inline'><p>a customizable set of options</p>
 </div>
       
     </li>
@@ -2106,8 +2042,7 @@ end
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>the path where a test is defined in.</p>
+            &mdash; <div class='inline'><p>the path where a test is defined in.</p>
 </div>
           
         </li>
@@ -2122,8 +2057,7 @@ end
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>the line number where a test is defined at.</p>
+            &mdash; <div class='inline'><p>the line number where a test is defined at.</p>
 </div>
           
         </li>
@@ -2138,8 +2072,7 @@ end
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>the method name for a test.</p>
+            &mdash; <div class='inline'><p>the method name for a test.</p>
 </div>
           
         </li>
@@ -2243,9 +2176,8 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the current test order. This returns <code>:alphabetic</code> by
-default.</p>
+    <p>Returns the current test order. This returns
++:alphabetic+ by default.</p>
 
 
   </div>
@@ -2285,20 +2217,15 @@ default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Sets the current test order.</p>
+    <p>Sets the current test order.</p>
 
-<p>Here are the available <em>order</em>:</p>
-<dl class="rdoc-list label-list"><dt>:alphabetic
-<dd>
-<p>Default. Tests are sorted in alphabetic order.</p>
-</dd><dt>:random
-<dd>
-<p>Tests are sorted in random order.</p>
-</dd><dt>:defined
-<dd>
-<p>Tests are sorted in defined order.</p>
-</dd></dl>
+<p>Here are the available <em>order</em>:
+[:alphabetic]
+  Default. Tests are sorted in alphabetic order.
+[:random]
+  Tests are sorted in random order.
+[:defined]
+  Tests are sorted in defined order.</p>
 
 
   </div>
@@ -2344,8 +2271,7 @@ default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>It&#39;s handy to be able to compare TestCase instances.</p>
+    <p>It’s handy to be able to compare TestCase instances.</p>
 
 
   </div>
@@ -2391,11 +2317,11 @@ default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Notify that the test is passed. Normally, it is not needed because #run
-calls it automatically. If you want to override #run, it is not a good
-idea. Please contact test-unit developers. We will help you without your
-custom #run. For example, we may add a new hook in #run.</p>
+    <p class="note returns_void">This method returns an undefined value.</p><p>Notify that the test is passed. Normally, it is not needed
+because #run calls it automatically. If you want to override
+#run, it is not a good idea. Please contact test-unit
+developers. We will help you without your custom #run. For
+example, we may add a new hook in #run.</p>
 
 <p>This is a public API for developers who extend test-unit.</p>
 
@@ -2437,8 +2363,7 @@ custom #run. For example, we may add a new hook in #run.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Assigns test data to the test. It is used in internal.</p>
+    <p>Assigns test data to the test. It is used in internal.</p>
 
 
   </div>
@@ -2478,56 +2403,48 @@ custom #run. For example, we may add a new hook in #run.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Called after every test method runs but the test method isn&#39;t marked as
-&#39;passed&#39;. Can be used to clean up and/or verify tested condition.
+    <p>Called after every test method runs but the test
+method isn’t marked as ‘passed’. Can be used to
+clean up and/or verify tested condition.
 e.g. Can be used to verify mock.</p>
 
-<p>You can add additional cleanup tasks by the following code:</p>
+<p>You can add additional cleanup tasks by the following
+code:
+  class TestMyClass &lt; Test::Unit::TestCase
+    def cleanup
+      …
+    end</p>
 
-<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
-  def cleanup
-    ...
-  end
-
-  cleanup
-  def my_cleanup1
-    ...
-  end
-
-  cleanup do
-    ... # cleanup callback1
-  end
-
-  cleanup
-  def my_cleanup2
-    ...
-  end
-
-  cleanup do
-    ... # cleanup callback2
-  end
-
-  def test_my_class
-    ...
-  end
+<pre class="code ruby"><code class="ruby">cleanup
+def my_cleanup1
+  ...
 end
+
+cleanup do
+  ... # cleanup callback1
+end
+
+cleanup
+def my_cleanup2
+  ...
+end
+
+cleanup do
+  ... # cleanup callback2
+end
+
+def test_my_class
+  ...
+end   end
 </code></pre>
 
-<p>Here is a call order:</p>
-<ul><li>
-<p>test_my_class</p>
-</li><li>
-<p>cleanup callback2</p>
-</li><li>
-<p>my_cleanup2</p>
-</li><li>
-<p>cleanup callback1</p>
-</li><li>
-<p>my_cleanup1</p>
-</li><li>
-<p>cleanup</p>
-</li></ul>
+<p>Here is a call order:
+* test_my_class
+* cleanup callback2
+* my_cleanup2
+* cleanup callback1
+* my_cleanup1
+* cleanup</p>
 
 
   </div>
@@ -2565,9 +2482,9 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a label of test data for the test. If the test isn&#39;t associated
-with any test data, it returns <code>nil</code>.</p>
+    <p>Returns a label of test data for the test. If the
+test isn’t associated with any test data, it returns
++nil+.</p>
 
 
   </div>
@@ -2637,9 +2554,9 @@ with any test data, it returns <code>nil</code>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a description for the test. A description will be associated by
-Test::Unit::TestCase.test or Test::Unit::TestCase.description.</p>
+    <p>Returns a description for the test. A description
+will be associated by Test::Unit::TestCase.test or
+Test::Unit::TestCase.description.</p>
 
 <p>Returns a name for the test for no description test.</p>
 
@@ -2681,8 +2598,7 @@ Test::Unit::TestCase.test or Test::Unit::TestCase.description.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns elapsed time for the test was ran.</p>
+    <p>Returns elapsed time for the test was ran.</p>
 
 
   </div>
@@ -2722,8 +2638,7 @@ Test::Unit::TestCase.test or Test::Unit::TestCase.description.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns whether the test is interrupted.</p>
+    <p>Returns whether the test is interrupted.</p>
 
 
   </div>
@@ -2776,9 +2691,8 @@ Test::Unit::TestCase.test or Test::Unit::TestCase.description.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a human-readable name for the specific test that this instance of
-TestCase represents.</p>
+    <p>Returns a human-readable name for the specific test that
+this instance of TestCase represents.</p>
 
 
   </div>
@@ -2826,9 +2740,9 @@ TestCase represents.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns whether this individual test passed or not. Primarily for use in
-teardown so that artifacts can be left behind if the test fails.</p>
+    <p>Returns whether this individual test passed or
+not. Primarily for use in teardown so that artifacts
+can be left behind if the test fails.</p>
 
 
   </div>
@@ -2881,10 +2795,9 @@ teardown so that artifacts can be left behind if the test fails.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Notify that a problem is occurred in the test. It means that the test is a
-failed test. If any failed tests exist in test suites, the test process
-exits with failure exit status.</p>
+    <p class="note returns_void">This method returns an undefined value.</p><p>Notify that a problem is occurred in the test. It means that
+the test is a failed test. If any failed tests exist in test
+suites, the test process exits with failure exit status.</p>
 
 <p>This is a public API for developers who extend test-unit.</p>
 
@@ -2926,9 +2839,9 @@ exits with failure exit status.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Runs the individual test method represented by this instance of the
-fixture, collecting statistics, failures and errors in result.</p>
+    <p>Runs the individual test method represented by this
+instance of the fixture, collecting statistics, failures
+and errors in result.</p>
 
 
   </div>
@@ -3020,55 +2933,46 @@ fixture, collecting statistics, failures and errors in result.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Called before every test method runs. Can be used to set up fixture
-information.</p>
+    <p>Called before every test method runs. Can be used
+to set up fixture information.</p>
 
-<p>You can add additional setup tasks by the following code:</p>
+<p>You can add additional setup tasks by the following
+code:
+  class TestMyClass &lt; Test::Unit::TestCase
+    def setup
+      …
+    end</p>
 
-<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
-  def setup
-    ...
-  end
-
-  setup
-  def my_setup1
-    ...
-  end
-
-  setup do
-    ... # setup callback1
-  end
-
-  setup
-  def my_setup2
-    ...
-  end
-
-  setup do
-    ... # setup callback2
-  end
-
-  def test_my_class
-    ...
-  end
+<pre class="code ruby"><code class="ruby">setup
+def my_setup1
+  ...
 end
+
+setup do
+  ... # setup callback1
+end
+
+setup
+def my_setup2
+  ...
+end
+
+setup do
+  ... # setup callback2
+end
+
+def test_my_class
+  ...
+end   end
 </code></pre>
 
-<p>Here is a call order:</p>
-<ul><li>
-<p>setup</p>
-</li><li>
-<p>my_setup1</p>
-</li><li>
-<p>setup callback1</p>
-</li><li>
-<p>my_setup2</p>
-</li><li>
-<p>setup callback2</p>
-</li><li>
-<p>test_my_class</p>
-</li></ul>
+<p>Here is a call order:
+* setup
+* my_setup1
+* setup callback1
+* my_setup2
+* setup callback2
+* test_my_class</p>
 
 
   </div>
@@ -3136,8 +3040,7 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a Time at the test was started.</p>
+    <p>Returns a Time at the test was started.</p>
 
 
   </div>
@@ -3177,55 +3080,46 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Called after every test method runs. Can be used to tear down fixture
-information.</p>
+    <p>Called after every test method runs. Can be used to tear
+down fixture information.</p>
 
-<p>You can add additional teardown tasks by the following code:</p>
+<p>You can add additional teardown tasks by the following
+code:
+  class TestMyClass &lt; Test::Unit::TestCase
+    def teardown
+      …
+    end</p>
 
-<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
-  def teardown
-    ...
-  end
-
-  teardown
-  def my_teardown1
-    ...
-  end
-
-  teardown do
-    ... # teardown callback1
-  end
-
-  teardown
-  def my_teardown2
-    ...
-  end
-
-  teardown do
-    ... # teardown callback2
-  end
-
-  def test_my_class
-    ...
-  end
+<pre class="code ruby"><code class="ruby">teardown
+def my_teardown1
+  ...
 end
+
+teardown do
+  ... # teardown callback1
+end
+
+teardown
+def my_teardown2
+  ...
+end
+
+teardown do
+  ... # teardown callback2
+end
+
+def test_my_class
+  ...
+end   end
 </code></pre>
 
-<p>Here is a call order:</p>
-<ul><li>
-<p>test_my_class</p>
-</li><li>
-<p>teardown callback2</p>
-</li><li>
-<p>my_teardown2</p>
-</li><li>
-<p>teardown callback1</p>
-</li><li>
-<p>my_teardown1</p>
-</li><li>
-<p>teardown</p>
-</li></ul>
+<p>Here is a call order:
+* test_my_class
+* teardown callback2
+* my_teardown2
+* teardown callback1
+* my_teardown1
+* teardown</p>
 
 
   </div>
@@ -3263,8 +3157,7 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Overridden to return #name.</p>
+    <p>Overridden to return #name.</p>
 
 
   </div>
@@ -3304,8 +3197,7 @@ end
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the test is valid test. It is used in internal.</p>
+    <p>Returns the test is valid test. It is used in internal.</p>
 
 
   </div>
@@ -3375,5 +3267,45 @@ end
 
     <div id="footer"></div>
 
-  </body>
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="https://github.com/test-unit/">
+          <img src="../../../../github-logo.png" width="100" height="45" border="0" alt="The test-unit project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
 </html>
