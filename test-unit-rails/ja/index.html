@@ -63,36 +63,40 @@
 
     <div id="content"><div id='filecontents'><h1>test-unit-rails</h1>
 <p><a href="http://test-unit.github.io/#test-unit-rails">Web site</a></p>
-<h2>Description</h2>
-<p>test-unit-rails is a Rails adapter for test-unit 3. You can use full test-unit 3 features, <a href="https://rubygems.org/gems/rr">RR</a> integration and <a href="https://rubygems.org/gems/capybara">Capybara</a> integration with test-unit-rails.</p>
-<p>Rails supports Test::Unit bundled in Ruby 1.8 and MiniTest but doesn&#8217;t support test-unit 2. Rails with test-unit 2 works but is not fully worked.</p>
-<h2>Install</h2>
-<p>Add the following codes to your Gemfile:</p>
+<h2>説明</h2>
+<p>test-unit-railsはtest-unit 3用のRailsアダプターです。test-unit-railsを使うとtest-unit 3のフル機能と&quot;RR&quot;:https://rubygems.org/gems/rr や&quot;Capybara&quot;:https://rubygems.org/gems/capybara との連携機能を使うことができます。</p>
+<p>RailsはRuby 1.8に同梱されているTest::UnitとMiniTestをサポートしていますがtest-unit 2はサポートしていません。Railsとtest-unit 2の組み合わせは動きますが、完全に動くというわけではありません。</p>
+<h2>インストール</h2>
+<p>以下のコードをGemfileに追加してください。</p>
 <pre class="code ruby"><code class="ruby">
 <span class='id identifier rubyid_group'>group</span> <span class='symbol'>:development</span><span class='comma'>,</span> <span class='symbol'>:test</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test-unit-rails</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span>
 </code></pre>
-<p>Update bundled gems:</p>
+<p>バンドルするgemをアップデートします。</p>
 <pre class="code ruby"><code class="ruby">
 % bundle update
 </code></pre>
-<p>Replace <code>"require 'rails/test_help'"</code> in your test/test_helper.rb with the following codes:</p>
+<p>test/test_helper.rb内の <code>"require 'rails/test_help'"</code> を以下のコードで置き換えます。</p>
 <pre class="code ruby"><code class="ruby">
 <span class='comment'># require &#39;rails/test_help&#39;
 </span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test/unit/rails/test_help</span><span class='tstring_end'>&#39;</span></span>
 </code></pre>
-<p>Now you can use full test-unit 3.x features, RR integration and Capybara integration.</p>
-<h2>License</h2>
-<p>LGPLv2.1 or later.</p>
-<p>(Kouhei Sutou has a right to change the license including contributed patches.)</p>
-<h2>Authors</h2>
+<p>これでTest::Unit 2.xのフル機能とRR・Capybaraとの連携機能を使えます。</p>
+<h2>ライセンス</h2>
+<p>LGPLv2.1またはそれ以降のバージョン。</p>
+<p>（コントリビュートされたパッチなども含み、Kouhei Sutouがライセンスを変更する権利を持ちます。）</p>
+<h2>作者</h2>
 <ul>
 	<li>Kouhei Sutou</li>
 	<li>Haruka Yoshihara</li>
 </ul></div></div>
 
-    <div id="footer"></div>
+    <div id="footer">
+  Generated on Sun Sep  7 21:51:43 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.2).
+</div>
 
   </body>
 </html>

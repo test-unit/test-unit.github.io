@@ -63,45 +63,39 @@
 
     <div id="content"><div id='filecontents'><h1>News</h1>
 <h2 id="1-0-4">1.0.4 &#8211; 2014-09-07</h2>
-<p>Bug fixes release.</p>
-<h3>Fixes</h3>
+<p>バグフィックスリリースです。</p>
+<h3>修正</h3>
 <ul>
-	<li>Used the correct class to be extended for running tests by <code>Test::Unit</code> .
-    <code>ActiveSupport::TestCase</code> is used now but before <code>Test::Unit::TestCase</code> was.
-    <code>ActiveSupport::TestCase</code> (but <code>TestUnit::TestCase</code> ) is inherited
-    by <code>ActionController::TestCase</code> (for controller tests) and
-    <code>ActionDispatch::IntegrationTest</code> (for integration tests).</li>
+	<li><code>Test::Unit</code> でテストするための正しいクラスを拡張するようにしました。
+    以前は <code>Test::Unit::TestCase</code> を拡張していましたが、 今は <code>ActiveSupport::TestCase</code> を拡張しています。
+    <code>ActiveSupport::TestCase</code> ( <code>TestUnit::TestCase</code> ではなく) は <code>ActionController::TestCase</code> (コントローラテスト用) や <code>ActionDispatch::IntegrationTest</code> (インテグレーションテスト用) に継承されているからです。</li>
 </ul>
 <h2 id="1-0-3">1.0.3 &#8211; 2014-09-04</h2>
-<h3>Improvements</h3>
+<h3>改良</h3>
 <ul>
-	<li>Supported Rails 4.0.0.
-    After this version, test-unit-rails requires test-unit-activesupport
-    1.0.2 or later.
-    In this version, test-unit-rails drops to support rails 3.2.16 or older.
-    If you want to use this gem with Rails 3.2.16 or older, please use
-    1.0.2 version.</li>
+	<li>Rails4.0.0をサポート。
+このバージョン意向。test-unit-railsはtest-unit-active-supportの1.0.2以上を必須とします。
+このバージョンで、Rails3.2.16以前をサポートしなくなりました。
+もし3.2.16以前のRailsで使用したい場合は、test-unit-railsの1.0.2をお使いください。</li>
 </ul>
 <h2 id="1-0-2">1.0.2 &#8211; 2012-07-05</h2>
-<h3>Improvements</h3>
+<h3>改良</h3>
+<p>Bundler 1.2.0.pre.1対応。 [GitHub#1] [Michael D.W. Prendergastさんが報告]</p>
+<h3>感謝</h3>
 <ul>
-	<li>Supported Bundler 1.2.0.pre.1.
-    [GitHub#1] [Reported by Michael D.W. Prendergast]</li>
-</ul>
-<h3>Thanks</h3>
-<ul>
-	<li>Michael D.W. Prendergast</li>
+	<li>Michael D.W. Prendergastさん</li>
 </ul>
 <h2 id="1-0-1">1.0.1 &#8211; 2012-06-03</h2>
-<h3>Improvements</h3>
-<ul>
-	<li>Extracted ActiveSupport related codes into test-unit-activesupport
-    gem and depended on it.</li>
-</ul>
+<h3>改良</h3>
+<p>ActiveSupport関連のコードをtest-unit-activesupport gemに抽出してそのgemを使うようにした。</p>
 <h2 id="1-0-0">1.0.0 &#8211; 2012-1-2</h2>
-<p>The first release!!!</p></div></div>
+<p>最初のリリース！</p></div></div>
 
-    <div id="footer"></div>
+    <div id="footer">
+  Generated on Sun Sep  7 21:51:43 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.2).
+</div>
 
   </body>
 </html>
