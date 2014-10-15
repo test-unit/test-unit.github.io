@@ -752,12 +752,16 @@
       <pre class="lines">
 
 
-1811</pre>
+1811
+1812
+1813</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1811</span>
 
-<span class='id identifier rubyid_alias_method'>alias_method</span> <span class='symbol'>:native_inspect</span><span class='comma'>,</span> <span class='symbol'>:inspect</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='ivar'>@inspect_target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
