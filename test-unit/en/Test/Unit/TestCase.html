@@ -309,6 +309,11 @@ end   end
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
       
+        <dt id="added_method_names-classvariable" class="">@@added_method_names =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+      
     </dl>
   
 
@@ -370,6 +375,29 @@ end   end
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#added_method_names-class_method" title="added_method_names (class method)">+ (Object) <strong>added_method_names</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -1350,7 +1378,47 @@ test represented by test_method_name.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="added_methods-class_method">
+  <h3 class="signature first" id="added_method_names-class_method">
+  
+    + (<tt>Object</tt>) <strong>added_method_names</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_added_method_names'>added_method_names</span> <span class='comment'># :nodoc:
+</span>  <span class='lparen'>(</span><span class='cvar'>@@added_method_names</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="added_methods-class_method">
   
     + (<tt>Object</tt>) <strong>added_methods</strong> 
   

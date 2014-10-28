@@ -109,7 +109,9 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/test/unit/attribute.rb</dd>
+    <dd class="r1 last">lib/test/unit/attribute.rb<span class="defines">,<br />
+  lib/test/unit/attribute.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -260,6 +262,29 @@
   <span class="summary_signature">
     
       <a href="#current_attributes-instance_method" title="#current_attributes (instance method)">- (Object) <strong>current_attributes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_attribute-instance_method" title="#find_attribute (instance method)">- (Object) <strong>find_attribute</strong>(method_name, name) </a>
     
 
     
@@ -586,6 +611,68 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="find_attribute-instance_method">
+  
+    - (<tt>Object</tt>) <strong>find_attribute</strong>(method_name, name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>if</span> <span class='ivar'>@attributes_table</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='ivar'>@attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>TestCase</span>
+
+  <span class='ivar'>@cached_parent_test_case</span> <span class='op'>||=</span> <span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>!=</span> <span class='kw'>self</span> <span class='kw'>and</span>
+      <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='kw'>and</span>
+      <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>Attribute</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@cached_parent_test_case</span><span class='period'>.</span><span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="method_added-instance_method">
   
     - (<tt>Object</tt>) <strong>method_added</strong>(name) 
@@ -730,7 +817,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Oct 15 20:59:33 2014 by
+  Generated on Tue Oct 28 23:52:28 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.3).
 </div>
