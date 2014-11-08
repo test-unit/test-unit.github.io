@@ -1,0 +1,6 @@
+markdown: kramdown
+test_unit_version: 3.0.5
+test_unit_release_date: 2014-11-08
+
+kramdown:
+  enable_rouge: true
