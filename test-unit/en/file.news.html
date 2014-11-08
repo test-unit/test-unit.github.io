@@ -93,11 +93,47 @@
 
     <div id="content"><div id='filecontents'><h1 id="news">News</h1>
 
-<h2 id="version-3-0-3">3.0.3 - 2014-10-29</h2>
+<h2 id="version-3-0-5">3.0.5 - 2014-11-08</h2>
+
+<p>It’s a minor update release.</p>
+
+<h3 id="fixes">Fixes</h3>
+
+<ul>
+  <li>Fixed a bug that startup/shutdown of parent test case isn’t called
+when the test case includes one or more modules.
+[GitHub#83][Reported by Chadderton Odwazny]</li>
+</ul>
+
+<h3 id="thanks">Thanks</h3>
+
+<ul>
+  <li>Chadderton Odwazny</li>
+</ul>
+
+<h2 id="version-3-0-4">3.0.4 - 2014-11-01</h2>
 
 <p>It’s a minor update release.</p>
 
 <h3 id="improvements">Improvements</h3>
+
+<ul>
+  <li>Stopped to remove JRuby and Rubinius internal backtrace entries from
+backtrace on failure/error.
+[GitHub#82][Patch by Charles Oliver Nutter]</li>
+</ul>
+
+<h3 id="thanks-1">Thanks</h3>
+
+<ul>
+  <li>Charles Oliver Nutter</li>
+</ul>
+
+<h2 id="version-3-0-3">3.0.3 - 2014-10-29</h2>
+
+<p>It’s a minor update release.</p>
+
+<h3 id="improvements-1">Improvements</h3>
 
 <ul>
   <li>Improved <code>Test::Unit::TestCase.test</code> performance.
@@ -106,14 +142,14 @@
 [Sugested by Nobuyoshi Nakada]</li>
 </ul>
 
-<h3 id="fixes">Fixes</h3>
+<h3 id="fixes-1">Fixes</h3>
 
 <ul>
   <li>Fixed markup in document.
 [GitHub#81][Patch by Masafumi Yokoyama]</li>
 </ul>
 
-<h3 id="thanks">Thanks</h3>
+<h3 id="thanks-2">Thanks</h3>
 
 <ul>
   <li>Masafumi Yokoyama</li>
@@ -124,7 +160,7 @@
 
 <p>It’s a minor update release.</p>
 
-<h3 id="improvements-1">Improvements</h3>
+<h3 id="improvements-2">Improvements</h3>
 
 <ul>
   <li>Supported broken <code>==</code> implementation.
@@ -138,14 +174,14 @@
 [GitHub#78][Patch by Vít Ondruch]</li>
 </ul>
 
-<h3 id="fixes-1">Fixes</h3>
+<h3 id="fixes-2">Fixes</h3>
 
 <ul>
   <li>Removed needless executable bit from README file.
 [GitHub#79][Patch by Vít Ondruch]</li>
 </ul>
 
-<h3 id="thanks-1">Thanks</h3>
+<h3 id="thanks-3">Thanks</h3>
 
 <ul>
   <li>Emily</li>
@@ -157,7 +193,7 @@
 
 <p>It’s a minor update release.</p>
 
-<h3 id="improvements-2">Improvements</h3>
+<h3 id="improvements-3">Improvements</h3>
 
 <ul>
   <li>Improved Ruby 1.8.7 support. Note that we don’t support Ruby 1.8.7
@@ -165,7 +201,7 @@ actively. We just support if its support is painless.
 [GitHub#71][Patch by estolfo]</li>
 </ul>
 
-<h3 id="thanks-2">Thanks</h3>
+<h3 id="thanks-4">Thanks</h3>
 
 <ul>
   <li>estolfo</li>
@@ -175,7 +211,7 @@ actively. We just support if its support is painless.
 
 <p>It’s Power Assert supported release!</p>
 
-<h3 id="improvements-3">Improvements</h3>
+<h3 id="improvements-4">Improvements</h3>
 
 <ul>
   <li>Improved Rubinius support. [Ryo Onodera]</li>
@@ -217,7 +253,7 @@ recommend using Power Assert for equality check assertion.
 [Kazuki Tsujimoto]</li>
 </ul>
 
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 
 <ul>
   <li>Fixed a bug that test case defined by block has wrong location.
@@ -227,7 +263,7 @@ super-class are also collected.
 [GitHub#62][GitHub#63][Patch by Karol Bucek]</li>
 </ul>
 
-<h3 id="thanks-3">Thanks</h3>
+<h3 id="thanks-5">Thanks</h3>
 
 <ul>
   <li>Ryo Onodera</li>
@@ -243,7 +279,7 @@ super-class are also collected.
 
 <p>It’s Ruby 2.0.0 supported release!</p>
 
-<h3 id="improvements-4">Improvements</h3>
+<h3 id="improvements-5">Improvements</h3>
 
 <ul>
   <li>Supported Ruby 2.0.0. [GitHub#54] [Reported by mtasaka]</li>
@@ -251,7 +287,7 @@ super-class are also collected.
 [GitHub#55] [Reported by Tom Miller]</li>
 </ul>
 
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 
 <ul>
   <li>Fixed a typo in document.
@@ -261,7 +297,7 @@ as expected if expected value is negative value.
 [Ruby Bug #8317] [Reported by Nobuhiro IMAI]</li>
 </ul>
 
-<h3 id="thanks-4">Thanks</h3>
+<h3 id="thanks-6">Thanks</h3>
 
 <ul>
   <li>Baptiste Fontaine</li>
@@ -274,7 +310,7 @@ as expected if expected value is negative value.
 
 <p>It’s a bug fix release.</p>
 
-<h3 id="improvements-5">Improvements</h3>
+<h3 id="improvements-6">Improvements</h3>
 
 <ul>
   <li>Added documents for data driven test functionality.</li>
@@ -282,7 +318,7 @@ as expected if expected value is negative value.
   <li>Support tag inspection on JRuby.</li>
 </ul>
 
-<h3 id="fixes-4">Fixes</h3>
+<h3 id="fixes-5">Fixes</h3>
 
 <ul>
   <li>Fixed a bug. It is too slow to filter tests when there are many
@@ -291,7 +327,7 @@ tests. [GitHub#46]</li>
 [GitHub:#49] [Reported by Matthew Rudy Jacobs]</li>
 </ul>
 
-<h3 id="thanks-5">Thanks</h3>
+<h3 id="thanks-7">Thanks</h3>
 
 <ul>
   <li>Matthew Rudy Jacobs</li>
@@ -301,7 +337,7 @@ tests. [GitHub#46]</li>
 
 <p>It’s a release for minitest compatibility and bug fix.</p>
 
-<h3 id="improvements-6">Improvements</h3>
+<h3 id="improvements-7">Improvements</h3>
 
 <ul>
   <li>Supported diff in invalid encoding.</li>
@@ -313,7 +349,7 @@ If you are test-unit user, please don’t use them.
 [test-unit-users-en:00098] [Suggested by Piotr Nestorow]</li>
 </ul>
 
-<h3 id="fixes-5">Fixes</h3>
+<h3 id="fixes-6">Fixes</h3>
 
 <ul>
   <li>Allowed use of test for inheritance in ActionController::TestCase.
@@ -327,7 +363,7 @@ above “def test_name” or with Symbol specifying test_name.
 [GitHub#45] [Reported by Piotr Nestorow]</li>
 </ul>
 
-<h3 id="thanks-6">Thanks</h3>
+<h3 id="thanks-8">Thanks</h3>
 
 <ul>
   <li>Michael Grosser</li>
@@ -342,7 +378,7 @@ above “def test_name” or with Symbol specifying test_name.
 feature to <code>--line_number</code> in RSpec. <code>sub_test_case</code> is a similar
 feature to <code>context</code> in shoulda-context and RSpec.</p>
 
-<h3 id="improvements-7">Improvements</h3>
+<h3 id="improvements-8">Improvements</h3>
 
 <ul>
   <li>Cleaned up tests.
@@ -365,7 +401,7 @@ The sub test case name isn’t limited Ruby’s constant name rule. You can
 specify the sub test case name in free form.</li>
 </ul>
 
-<h3 id="thanks-7">Thanks</h3>
+<h3 id="thanks-9">Thanks</h3>
 
 <ul>
   <li>Michael Grosser</li>
@@ -377,7 +413,7 @@ specify the sub test case name in free form.</li>
 
 <p>It’s a bug fix release.</p>
 
-<h3 id="improvements-8">Improvements</h3>
+<h3 id="improvements-9">Improvements</h3>
 
 <ul>
   <li>Supported installing from GitHub.
@@ -387,7 +423,7 @@ specify the sub test case name in free form.</li>
   <li>[ui][console] Improved multiline falut message display.</li>
 </ul>
 
-<h3 id="fixes-6">Fixes</h3>
+<h3 id="fixes-7">Fixes</h3>
 
 <ul>
   <li>[ui][console] Fixed a bug that expected and actual values are
@@ -399,7 +435,7 @@ empty.
 [RubyForge#29595] [Reported by Jean-Denis Koeck]</li>
 </ul>
 
-<h3 id="thanks-8">Thanks</h3>
+<h3 id="thanks-10">Thanks</h3>
 
 <ul>
   <li>Michael Grosser</li>
@@ -412,7 +448,7 @@ empty.
 
 <p>It’s a bug fix release.</p>
 
-<h3 id="fixes-7">Fixes</h3>
+<h3 id="fixes-8">Fixes</h3>
 
 <ul>
   <li>Fixed a backward incompatibility of <code>TestUnitMediator#run_suite</code>
@@ -420,7 +456,7 @@ introduced in 2.4.9.
 [GitHub#28] [Reported by Vladislav Rassokhin]</li>
 </ul>
 
-<h3 id="thanks-9">Thanks</h3>
+<h3 id="thanks-11">Thanks</h3>
 
 <ul>
   <li>Vladislav Rassokhin</li>
@@ -430,7 +466,7 @@ introduced in 2.4.9.
 
 <p>It’s a bug fix release.</p>
 
-<h3 id="improvements-9">Improvements</h3>
+<h3 id="improvements-10">Improvements</h3>
 
 <ul>
   <li><code>Test::Unit.run?</code> -&gt;
@@ -447,7 +483,7 @@ available terminal.
 as 256 color supported terminal.</li>
 </ul>
 
-<h3 id="fixes-8">Fixes</h3>
+<h3 id="fixes-9">Fixes</h3>
 
 <ul>
   <li>Fixed a bug that <code>--workdir</code> doesn’t work.</li>
@@ -458,7 +494,7 @@ says.
 [GitHub#25] [Reported by Stephan Kulow]</li>
 </ul>
 
-<h3 id="thanks-10">Thanks</h3>
+<h3 id="thanks-12">Thanks</h3>
 
 <ul>
   <li>Bob Saveland</li>
@@ -470,7 +506,7 @@ says.
 
 <p>It’s a bug fix release.</p>
 
-<h3 id="improvements-10">Improvements</h3>
+<h3 id="improvements-11">Improvements</h3>
 
 <ul>
   <li>Delayed at_exit registration until Test::Unit is used.
@@ -479,7 +515,7 @@ says.
 [GitHub:#22] [Reported by Cédric Boutillier]</li>
 </ul>
 
-<h3 id="fixes-9">Fixes</h3>
+<h3 id="fixes-10">Fixes</h3>
 
 <ul>
   <li>Fixed an error on code snippet display on JRuby.
@@ -487,7 +523,7 @@ says.
 [Reported by Jørgen P. Tjernø][Patch by Junegunn Choi]</li>
 </ul>
 
-<h3 id="thanks-11">Thanks</h3>
+<h3 id="thanks-13">Thanks</h3>
 
 <ul>
   <li>Jørgen P. Tjernø</li>
@@ -499,7 +535,7 @@ says.
 
 <p>It’s a code snippet improvement release.</p>
 
-<h3 id="improvements-11">Improvements</h3>
+<h3 id="improvements-12">Improvements</h3>
 
 <ul>
   <li>Supported code snippet display on all faults.</li>
@@ -509,7 +545,7 @@ says.
 
 <p>It’s a TAP runner separated release.</p>
 
-<h3 id="improvements-12">Improvements</h3>
+<h3 id="improvements-13">Improvements</h3>
 
 <ul>
   <li>Moved TAP runner to test-unit-runner-tap gem from test-unit gem.</li>
@@ -520,7 +556,7 @@ says.
 
 <p>It’s a failure message readability improvement release.</p>
 
-<h3 id="improvements-13">Improvements</h3>
+<h3 id="improvements-14">Improvements</h3>
 
 <ul>
   <li>Removed needless information from exception inspected
@@ -532,7 +568,7 @@ text on failure. It’s for easy to read.</li>
 
 <p>It’s a Rails integration improved release.</p>
 
-<h3 id="improvements-14">Improvements</h3>
+<h3 id="improvements-15">Improvements</h3>
 
 <ul>
   <li>[ui][console] Don’t break progress display when a test is failed.</li>
@@ -545,7 +581,7 @@ message in progress to improve visibility.</li>
   <li>Supported a block style setup/teardown/cleanup.</li>
 </ul>
 
-<h3 id="thanks-12">Thanks</h3>
+<h3 id="thanks-14">Thanks</h3>
 
 <ul>
   <li>Josh Kalderimis</li>
@@ -554,7 +590,7 @@ message in progress to improve visibility.</li>
 
 <h2 id="version-2-4-3">2.4.3 - 2011-12-11</h2>
 
-<h3 id="improvements-15">Improvements</h3>
+<h3 id="improvements-16">Improvements</h3>
 
 <ul>
   <li>Improved SimpleCov integration by stopping to modify
@@ -563,7 +599,7 @@ message in progress to improve visibility.</li>
   <li>Improved JRuby integration by removing JRuby internal backtrace.</li>
 </ul>
 
-<h3 id="thanks-13">Thanks</h3>
+<h3 id="thanks-15">Thanks</h3>
 
 <ul>
   <li>Nikos Dimitrakopoulos</li>
@@ -571,7 +607,7 @@ message in progress to improve visibility.</li>
 
 <h2 id="version-2-4-2">2.4.2 - 2011-11-26</h2>
 
-<h3 id="improvements-16">Improvements</h3>
+<h3 id="improvements-17">Improvements</h3>
 
 <ul>
   <li><code>--name</code> supported data label.</li>
@@ -579,7 +615,7 @@ message in progress to improve visibility.</li>
 
 <h2 id="section">2.4.1 - 2011-11-09</h2>
 
-<h3 id="improvements-17">Improvements</h3>
+<h3 id="improvements-18">Improvements</h3>
 
 <ul>
   <li>Accepted AssertionMessage as assertion’s user message.
@@ -587,14 +623,14 @@ It is used in assert_select in actionpack.
 [Reported by David Heath]</li>
 </ul>
 
-<h3 id="fixes-10">Fixes</h3>
+<h3 id="fixes-11">Fixes</h3>
 
 <ul>
   <li>Fixed test failure on LANG=C. #11 [Reported by boutil]</li>
   <li>Suppress warnings on Ruby 1.9.2.</li>
 </ul>
 
-<h3 id="thanks-14">Thanks</h3>
+<h3 id="thanks-16">Thanks</h3>
 
 <ul>
   <li>boutil</li>
@@ -603,7 +639,7 @@ It is used in assert_select in actionpack.
 
 <h2 id="section-1">2.4.0 - 2011-09-18</h2>
 
-<h3 id="improvements-18">Improvements</h3>
+<h3 id="improvements-19">Improvements</h3>
 
 <ul>
   <li>Supported Travis CI. #5 [Suggested by James Mead]</li>
@@ -614,7 +650,7 @@ It is used in assert_select in actionpack.
   <li>[ui][console] Supported 256 colors.</li>
 </ul>
 
-<h3 id="fixes-11">Fixes</h3>
+<h3 id="fixes-12">Fixes</h3>
 
 <ul>
   <li>Added missing fixture file. #7 [Reported by grafi-tt]</li>
@@ -624,7 +660,7 @@ It is used in assert_select in actionpack.
 [Reported by Marc Seeger (Acquia)]</li>
 </ul>
 
-<h3 id="thanks-15">Thanks</h3>
+<h3 id="thanks-17">Thanks</h3>
 
 <ul>
   <li>James Mead</li>
@@ -636,20 +672,20 @@ It is used in assert_select in actionpack.
 
 <p>A bug fix release.</p>
 
-<h3 id="improvements-19">Improvements</h3>
+<h3 id="improvements-20">Improvements</h3>
 
 <ul>
   <li>[ui][console] Added some newlines to improve readability.</li>
 </ul>
 
-<h3 id="fixes-12">Fixes</h3>
+<h3 id="fixes-13">Fixes</h3>
 
 <ul>
   <li>[ui][console] Worked –verbose again.</li>
   <li>Re-supported Ruby 1.8.6. [Reported by James Mead]</li>
 </ul>
 
-<h3 id="thanks-16">Thanks</h3>
+<h3 id="thanks-18">Thanks</h3>
 
 <ul>
   <li>James Mead</li>
@@ -659,7 +695,7 @@ It is used in assert_select in actionpack.
 
 <p>Output improvement release!</p>
 
-<h3 id="improvements-20">Improvements</h3>
+<h3 id="improvements-21">Improvements</h3>
 
 <ul>
   <li>[ui][console] Outputs omissions and notifications in short.</li>
@@ -673,7 +709,7 @@ It is used in assert_select in actionpack.
 fault details when a fault is occurred.</li>
 </ul>
 
-<h3 id="fixes-13">Fixes</h3>
+<h3 id="fixes-14">Fixes</h3>
 
 <ul>
   <li>[pull request #1] Fixed a problem that load collector
@@ -683,7 +719,7 @@ override by declarative style test definition.
 [Reported by Jeremy Stephens]</li>
 </ul>
 
-<h3 id="thanks-17">Thanks</h3>
+<h3 id="thanks-19">Thanks</h3>
 
 <ul>
   <li>grafi-tt</li>

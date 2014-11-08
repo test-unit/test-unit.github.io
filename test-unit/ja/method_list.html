@@ -20,7 +20,11 @@
   </head>
   <body>
     <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) {
+      var hasFrames = false;
+      try {
+        hasFrames = window.top.frames.main ? true : false;
+      } catch (e) { }
+      if (hasFrames) {
         document.getElementById('base_target').target = 'main';
         document.body.className = 'frames';
       }
@@ -2460,7 +2464,7 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="#run-instance_method" title="#run (method)">#run</a></span>
+    <span class='object_link'><a href="top-level-namespace.html#run-instance_method" title="#run (method)">#run</a></span>
     <small>Top Level Namespace</small>
   </li>
   
