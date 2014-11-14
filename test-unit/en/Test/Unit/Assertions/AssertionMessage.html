@@ -128,9 +128,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/test/unit/assertions.rb<span class="defines">,<br />
-  lib/test/unit/assertions.rb</span>
-</dd>
+    <dd class="r1 last">lib/test/unit/assertions.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -635,14 +633,14 @@
       <pre class="lines">
 
 
-2044
 2045
 2046
 2047
-2048</pre>
+2048
+2049</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2044</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2045</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='comma'>,</span> <span class='id identifier rubyid_template_string'>template_string</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='rparen'>)</span>
   <span class='ivar'>@head</span> <span class='op'>=</span> <span class='id identifier rubyid_head'>head</span>
@@ -686,12 +684,12 @@
       <pre class="lines">
 
 
-1659
 1660
-1661</pre>
+1661
+1662</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1659</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1660</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_use_pp'>use_pp</span>
   <span class='ivar'>@use_pp</span>
@@ -723,7 +721,6 @@
       <pre class="lines">
 
 
-1760
 1761
 1762
 1763
@@ -740,10 +737,11 @@
 1774
 1775
 1776
-1777</pre>
+1777
+1778</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1760</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1761</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Exception</span><span class='rparen'>)</span>
@@ -783,7 +781,6 @@
       <pre class="lines">
 
 
-1737
 1738
 1739
 1740
@@ -804,10 +801,11 @@
 1755
 1756
 1757
-1758</pre>
+1758
+1759</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1737</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1738</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delayed_diff'>delayed_diff</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_delayed_literal'>delayed_literal</span> <span class='kw'>do</span>
@@ -851,12 +849,12 @@
       <pre class="lines">
 
 
-1665
 1666
-1667</pre>
+1667
+1668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1665</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1666</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delayed_literal'>delayed_literal</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='const'>DelayedLiteral</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -904,16 +902,16 @@
       <pre class="lines">
 
 
-1706
 1707
 1708
 1709
 1710
 1711
-1712</pre>
+1712
+1713</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1706</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1707</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_diff_target_string?'>diff_target_string?</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:bytesize</span><span class='rparen'>)</span>
@@ -942,16 +940,16 @@
       <pre class="lines">
 
 
-1714
 1715
 1716
 1717
 1718
 1719
-1720</pre>
+1720
+1721</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1714</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1715</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ensure_diffable_string'>ensure_diffable_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:encoding</span><span class='rparen'>)</span> <span class='kw'>and</span>
@@ -980,12 +978,12 @@
       <pre class="lines">
 
 
-1661
 1662
-1663</pre>
+1663
+1664</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1661</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1662</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_literal'>literal</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='const'>Literal</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -1010,7 +1008,6 @@
       <pre class="lines">
 
 
-1687
 1688
 1689
 1690
@@ -1022,10 +1019,11 @@
 1696
 1697
 1698
-1699</pre>
+1699
+1700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1687</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1688</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max_diff_target_string_size'>max_diff_target_string_size</span>
   <span class='kw'>return</span> <span class='cvar'>@@max_diff_target_string_size</span> <span class='kw'>if</span> <span class='cvar'>@@max_diff_target_string_size</span>
@@ -1060,12 +1058,12 @@
       <pre class="lines">
 
 
-1702
 1703
-1704</pre>
+1704
+1705</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1702</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1703</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max_diff_target_string_size='>max_diff_target_string_size=</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
   <span class='cvar'>@@max_diff_target_string_size</span> <span class='op'>=</span> <span class='id identifier rubyid_size'>size</span>
@@ -1090,12 +1088,12 @@
       <pre class="lines">
 
 
-1669
 1670
-1671</pre>
+1671
+1672</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1669</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1670</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_maybe_container'>maybe_container</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
   <span class='const'>MaybeContainer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
@@ -1120,7 +1118,6 @@
       <pre class="lines">
 
 
-1673
 1674
 1675
 1676
@@ -1131,10 +1128,11 @@
 1681
 1682
 1683
-1684</pre>
+1684
+1685</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1673</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1674</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normalize_tag'>normalize_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tag'>tag</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_tag'>tag</span>
@@ -1168,7 +1166,6 @@
       <pre class="lines">
 
 
-1722
 1723
 1724
 1725
@@ -1181,10 +1178,11 @@
 1732
 1733
 1734
-1735</pre>
+1735
+1736</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1722</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1723</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare_for_diff'>prepare_for_diff</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='op'>!</span><span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -1226,12 +1224,12 @@
       <pre class="lines">
 
 
-2058
 2059
-2060</pre>
+2060
+2061</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2058</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2059</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_period'>add_period</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.\Z</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> <span class='id identifier rubyid_string'>string</span> <span class='op'>:</span> <span class='id identifier rubyid_string'>string</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1256,12 +1254,12 @@
       <pre class="lines">
 
 
-2050
 2051
-2052</pre>
+2052
+2053</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2050</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2051</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
@@ -1286,12 +1284,12 @@
       <pre class="lines">
 
 
-2054
 2055
-2056</pre>
+2056
+2057</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2054</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2055</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_template'>template</span>
   <span class='ivar'>@template</span> <span class='op'>||=</span> <span class='const'>Template</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='ivar'>@template_string</span><span class='rparen'>)</span>
@@ -1316,7 +1314,6 @@
       <pre class="lines">
 
 
-2062
 2063
 2064
 2065
@@ -1327,15 +1324,20 @@
 2070
 2071
 2072
-2073</pre>
+2073
+2074
+2075
+2076</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2062</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2063</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_message_parts'>message_parts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@head</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='ivar'>@head</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='ivar'>@head</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='id identifier rubyid_head'>head</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='kw'>if</span> <span class='id identifier rubyid_head'>head</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='id identifier rubyid_head'>head</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
     <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_message_parts'>message_parts</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_add_period'>add_period</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
     <span class='kw'>end</span>

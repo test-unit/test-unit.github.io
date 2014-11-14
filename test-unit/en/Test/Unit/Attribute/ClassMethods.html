@@ -109,9 +109,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/test/unit/attribute.rb<span class="defines">,<br />
-  lib/test/unit/attribute.rb</span>
-</dd>
+    <dd class="r1 last">lib/test/unit/attribute.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -397,10 +395,6 @@
       <pre class="lines">
 
 
-48
-49
-50
-51
 52
 53
 54
@@ -409,10 +403,14 @@
 57
 58
 59
-60</pre>
+60
+61
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_method_names'>method_names</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
@@ -447,12 +445,12 @@
       <pre class="lines">
 
 
-116
-117
-118</pre>
+140
+141
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attribute_observers'>attribute_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
   <span class='cvar'>@@attribute_observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rbracket'>]</span>
@@ -477,10 +475,6 @@
       <pre class="lines">
 
 
-93
-94
-95
-96
 97
 98
 99
@@ -492,10 +486,14 @@
 105
 106
 107
-108</pre>
+108
+109
+110
+111
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes_table'>attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span>
@@ -533,13 +531,13 @@
       <pre class="lines">
 
 
-70
-71
-72
-73</pre>
+74
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes_table'>attributes_table</span>
   <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -565,12 +563,12 @@
       <pre class="lines">
 
 
-66
-67
-68</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_current_attribute'>current_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_current_attributes'>current_attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -595,12 +593,12 @@
       <pre class="lines">
 
 
-62
-63
-64</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_current_attributes'>current_attributes</span>
   <span class='ivar'>@current_attributes</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -687,10 +685,6 @@
       <pre class="lines">
 
 
-34
-35
-36
-37
 38
 39
 40
@@ -699,10 +693,14 @@
 43
 44
 45
-46</pre>
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_added'>method_added</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -737,13 +735,13 @@
       <pre class="lines">
 
 
-111
-112
-113
-114</pre>
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_attribute_observer'>register_attribute_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='comma'>,</span> <span class='id identifier rubyid_observer'>observer</span><span class='op'>=</span><span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
   <span class='cvar'>@@attribute_observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -769,10 +767,6 @@
       <pre class="lines">
 
 
-75
-76
-77
-78
 79
 80
 81
@@ -785,10 +779,14 @@
 88
 89
 90
-91</pre>
+91
+92
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_attributes'>set_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_attributes'>new_attributes</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_new_attributes'>new_attributes</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
