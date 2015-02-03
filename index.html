@@ -144,14 +144,14 @@ require 'test/unit/rails/test_help'</pre>
         </p>
         <h3 id="test-unit-activesupport-install">test-unit-activesupport: Install</h3>
         <p>
-          Require test/unit/active_support before using ActiveSupport:
+          Require test/unit/active_support:
           <pre class="code">require "test/unit/active_support"
 require "active_support"</pre>
         </p>
         <p>
           Now you can use full test-unit features with ActiveSupport::TestCase.
           <pre class="code">require "test/unit/active_support"
-# require "active_support" ...
+require "active_support"
 class YourTest &lt; ActiveSupport::TestCase
   # ...
 end</pre>
