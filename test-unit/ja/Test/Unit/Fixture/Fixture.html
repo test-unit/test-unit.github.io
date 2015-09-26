@@ -576,29 +576,19 @@
       <pre class="lines">
 
 
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63</pre>
+49
+50
+51
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_callbacks'>after_callbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_prepend_callbacks'>prepend_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_append_callbacks'>append_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_target_test_cases'>target_test_cases</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
-    <span class='id identifier rubyid_prepend_callbacks'>prepend_callbacks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_fixture'>fixture</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_after_prepend_callbacks'>after_prepend_callbacks</span>
-    <span class='id identifier rubyid_append_callbacks'>append_callbacks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_fixture'>fixture</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_after_append_callbacks'>after_append_callbacks</span>
+  <span class='id identifier rubyid_target_test_cases'>target_test_cases</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_callbacks'>callbacks</span><span class='comma'>,</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_callbacks'>callbacks</span> <span class='op'>|</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_fixture'>fixture</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_after_callbacks'>after_callbacks</span>
   <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_merge_callbacks'>merge_callbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_prepend_callbacks'>prepend_callbacks</span><span class='comma'>,</span> <span class='id identifier rubyid_append_callbacks'>append_callbacks</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -624,25 +614,15 @@
 44
 45
 46
-47
-48
-49
-50
-51
-52</pre>
+47</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_callbacks'>before_callbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_prepend_callbacks'>prepend_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_append_callbacks'>append_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_target_test_cases'>target_test_cases</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
-    <span class='id identifier rubyid_prepend_callbacks'>prepend_callbacks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_fixture'>fixture</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_before_prepend_callbacks'>before_prepend_callbacks</span>
-    <span class='id identifier rubyid_append_callbacks'>append_callbacks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_fixture'>fixture</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_before_append_callbacks'>before_append_callbacks</span>
+  <span class='id identifier rubyid_target_test_cases'>target_test_cases</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_callbacks'>callbacks</span><span class='comma'>,</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_callbacks'>callbacks</span> <span class='op'>|</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_fixture'>fixture</span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_before_callbacks'>before_callbacks</span>
   <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_merge_callbacks'>merge_callbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_prepend_callbacks'>prepend_callbacks</span><span class='comma'>,</span> <span class='id identifier rubyid_append_callbacks'>append_callbacks</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -654,9 +634,9 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Nov 14 09:49:11 2014 by
+  Generated on Sat Sep 26 11:54:34 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.4).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   
