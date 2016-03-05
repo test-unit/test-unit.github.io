@@ -91,42 +91,61 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>test-unit-activesupport</h1>
-<p><a href="https://travis-ci.org/test-unit/test-unit-activesupport"><img src="https://travis-ci.org/test-unit/test-unit-activesupport.svg?branch=master" alt="" /></a></p>
-<p><a href="https://test-unit.github.io/#test-unit-activesupport">Web site</a></p>
-<h2>説明</h2>
-<p>test-unit-activesupportはtest-unit 3をActiveSupportと使えるようにするためのライブラリです。 <code>ActiveSupport::TestCase</code> でtest-unit 3の機能を使えるようになります。</p>
-<h2>インストール</h2>
-<p><code>test/unit/acitve_support</code> をrequireしてください。</p>
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test/unit/active_support</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>active_support</span><span class='tstring_end'>&quot;</span></span>
-</code></pre>
-<p>こうすることでActiveSupportでtest-unit3.xの機能を使うことができます。</p>
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test/unit/active_support</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>active_support</span><span class='tstring_end'>&quot;</span></span>
+    <div id="content"><div id='filecontents'><h1 id="test-unit-activesupport">test-unit-activesupport</h1>
 
-<span class='kw'>class</span> <span class='const'>YourTest</span> <span class='op'>&lt;</span> <span class='const'>ActiveSupport</span><span class='op'>::</span><span class='const'>TestCase</span>
-  <span class='comment'># ...
-</span><span class='kw'>end</span>
-</code></pre>
-<h2>ライセンス</h2>
+<p><a href="https://travis-ci.org/test-unit/test-unit-activesupport"><img src="https://travis-ci.org/test-unit/test-unit-activesupport.svg?branch=master" alt="" /></a></p>
+
+<p><a href="https://test-unit.github.io/#test-unit-activesupport">Web site</a></p>
+
+<h2 id="description">Description</h2>
+
+<p>test-unit-activesupport is an ActiveSupport adapter for test-unit 3. You can use full test-unit 3 features with <code>ActiveSupport::TestCase</code>.</p>
+
+<h2 id="install">Install</h2>
+
+<p>Require <code>test/unit/active_support</code>:</p>
+
+<p><code>
+require "test/unit/active_support"
+require "active_support"
+</code></p>
+
+<p>こうすることでActiveSupportでtest-unit3.xの機能を使うことができます。</p>
+
+<p>```
+require “test/unit/active_support”
+require “active_support”</p>
+
+<p>class YourTest &lt; ActiveSupport::TestCase
+  # …
+end
+```</p>
+
+<h2 id="license">License</h2>
+
 <p>LGPLv2.1かそれ以降のバージョン。</p>
+
 <p>（コントリビュートされたパッチなども含み、Kouhei Sutouがライセンスを変更する権利を持ちます。）</p>
-<h2>作者</h2>
+
+<h2 id="authors">Authors</h2>
+
 <ul>
-	<li>Kouhei Sutou</li>
-	<li>Haruka Yoshihara</li>
+  <li>Kouhei Sutou</li>
+  <li>Haruka Yoshihara</li>
 </ul>
-<h2>感謝</h2>
+
+<h2 id="thanks">Thanks</h2>
+
 <ul>
-	<li>Michael Grosser</li>
-	<li>Shinta Koyanagi</li>
-</ul></div></div>
+  <li>Michael Grosser</li>
+  <li>Shinta Koyanagi</li>
+</ul>
+</div></div>
 
     <div id="footer">
-  Generated on Tue Feb  3 22:40:07 2015 by
+  Generated on Sat Mar  5 12:40:46 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.1).
+  0.8.7.6 (ruby-2.3.0).
 </div>
 
   

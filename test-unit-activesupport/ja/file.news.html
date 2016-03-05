@@ -91,46 +91,107 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>News</h1>
-<h2 id="1-0-3">1.0.3 &#8211; 2015-02-03</h2>
+    <div id="content"><div id='filecontents'><h1 id="news">News</h1>
+
+<h2 id="section">1.0.5 - 2016-03-05 #1-0-5</h2>
+
+<p>Action Dispatch support fix release.</p>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+  <li>Supported Action Dispatch.
+[GitHub#10][Patch by Philip Müller]</li>
+</ul>
+
+<h3 id="thanks">Thanks</h3>
+
+<ul>
+  <li>Philip Müller</li>
+</ul>
+
+<h2 id="section-1">1.0.4 - 2015-08-28 #1-0-4</h2>
+
+<p>Action Mailer support fix release.</p>
+
+<h3 id="improvements-1">Improvements</h3>
+
+<ul>
+  <li>Migrated document markup to Markdown from Textile.
+[GitHub#5][GitHub#7][GitHub#8][Patch by Shinta Koyanagi]</li>
+  <li>Supported Action Mailer. [GitHub#9][Patch by Akira Matsuda]</li>
+</ul>
+
+<h3 id="thanks-1">Thanks</h3>
+
+<ul>
+  <li>Shinta Koyanagi</li>
+  <li>Akira Matsuda</li>
+</ul>
+
+<h2 id="section-2">1.0.3 - 2015-02-03 #1-0-3</h2>
+
 <p>バグフィックスリリース。</p>
-<h3>修正</h3>
+
+<h3 id="fixes">Fixes</h3>
+
 <ul>
-	<li><code>ActiveSupport::Testing::Assertions</code> にある次のアサーションメソッドをサポートできていなかったのをサポートするようにしました。
-  [GitHub#4][Shinta Koyanagiさんがパッチ提供]
-	<ul>
-		<li><code>assert_not</code></li>
-		<li><code>assert_difference</code></li>
-		<li><code>assert_no_difference</code></li>
-	</ul></li>
+  <li>Supported below missing assertions from
+<code>ActiveSupport::Testing::Assertions</code>.
+[GitHub#4][Patch by Shinta Koyanagi]
+    <ul>
+      <li><code>assert_not</code></li>
+      <li><code>assert_difference</code></li>
+      <li><code>assert_no_difference</code></li>
+    </ul>
+  </li>
 </ul>
-<h3>感謝</h3>
+
+<h3 id="thanks-2">Thanks</h3>
+
 <ul>
-	<li>Shinta Koyanagiさん</li>
+  <li>Shinta Koyanagi</li>
 </ul>
-<h2 id="1-0-2">1.0.2 &#8211; 2014-09-04</h2>
+
+<h2 id="section-3">1.0.2 - 2014-09-04 #1-0-2</h2>
+
 <p>ActiveSupport 4.0.0をサポートしたリリース。</p>
-<h3>改善</h3>
-<p>ActiveSupport 4.0.0以降をサポートしました。Rails3.2以下はこのリリースからサポートしません。もしお使いの方はtest-unit-activesupport 1.0.1を使用してください。</p>
-<h2 id="1-0-1">1.0.1 &#8211; 2012-07-20</h2>
+
+<h3 id="improvements-2">Improvements</h3>
+
+<ul>
+  <li>Supported ActiveSupport 4.0.0 later.
+Rails &lt;~ 3.2 isn’t supported in this release, so if you use it,
+please use test-unit-activesupport 1.0.1.</li>
+</ul>
+
+<h2 id="section-4">1.0.1 - 2012-07-20 #1-0-1</h2>
+
 <p>ActiveSpport 2.3.14をサポートしたリリース。</p>
-<h3>改善</h3>
+
+<h3 id="improvements-3">Improvements</h3>
+
 <ul>
-	<li>ActiveSpport 2.3.14をサポートした。
-  [GitHub#1] [GitHub#2]
-  [Michael Grosserさんが報告]</li>
+  <li>Supported ActiveSupport 2.3.14.
+[GitHub#1] [GitHub#2]
+[Reported by Michael Grosser]</li>
 </ul>
-<h3>感謝</h3>
+
+<h3 id="thanks-3">Thanks</h3>
+
 <ul>
-	<li>Michael Grosserさん</li>
+  <li>Michael Grosser</li>
 </ul>
-<h2 id="1-0-0">1.0.0 &#8211; 2012-06-03</h2>
-<p>最初のリリース!!!</p></div></div>
+
+<h2 id="section-5">1.0.0 - 2012-06-03 #1-0-0</h2>
+
+<p>最初のリリース!!!</p>
+</div></div>
 
     <div id="footer">
-  Generated on Tue Feb  3 22:40:07 2015 by
+  Generated on Sat Mar  5 12:40:46 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.1).
+  0.8.7.6 (ruby-2.3.0).
 </div>
 
   

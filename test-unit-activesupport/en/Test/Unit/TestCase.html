@@ -1,27 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../../test-unit.css" type="text/css" />
     <link rel="shortcut icon" href="../../../../favicon.ico" />
     <link rel="icon" href="../../../../favicon.png" />
     <title>
-  Module: Test::Unit::ActiveSupport
+  Class: Test::Unit::TestCase
   
     &mdash; test-unit-activesupport
   
  - test-unit-activesupport</title>
 
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../';
-  framesUrl = "../../frames.html#!Test/Unit/ActiveSupport.html";
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
 
 
@@ -34,9 +34,9 @@
   <body>
 <div class="header">
   <div class="title">
-    <a href="../../../../index.html.ja">
+    <a href="../../../../">
       <span class="title">
-  Module: Test::Unit::ActiveSupport
+  Class: Test::Unit::TestCase
   
     &mdash; test-unit-activesupport
   
@@ -46,12 +46,12 @@
     </a>
   </div>
   <ul class="other-languages">
-    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../../test-unit-activesupport/en/Test/Unit/ActiveSupport.html">English</a></li>
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../../test-unit-activesupport/ja/Test/Unit/TestCase.html">日本語</a></li>
   </ul>
   <ul class="menu">
-    <li id="menu-reference"><a href="../../../../test-unit-activesupport/ja/">リファレンスマニュアル</a></li>
-    <li id="menu-install"><a href="../../../../index.html.ja#test-unit-activesupport-install">インストール</a></li>
-    <li id="menu-developer"><a href="../../../../index.html.ja#developer">開発者向け情報</a></li>
+    <li id="menu-reference"><a href="../../../../test-unit-activesupport/en/">Reference Manual</a></li>
+    <li id="menu-install"><a href="../../../../#test-unit-activesupport-install">Install</a></li>
+    <li id="menu-developer"><a href="../../../../#developer">Developers</a></li>
   </ul>
 </div>
 
@@ -61,10 +61,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../alphabetical_index.html">Index (A)</a> &raquo;
+    <a href="../../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
      &raquo; 
-    <span class="title">ActiveSupport</span>
+    <span class="title">TestCase</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -93,7 +93,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Module: Test::Unit::ActiveSupport
+    <div id="content"><h1>Class: Test::Unit::TestCase
   
   
   
@@ -101,6 +101,21 @@
 
 <dl class="box">
   
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Test::Unit::TestCase</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
   
     
   
@@ -108,25 +123,13 @@
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/test/unit/active_support/version.rb</dd>
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/test/unit/active_support.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
 
-  <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="VERSION-constant" class="">VERSION =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.0.6</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-    </dl>
-  
-
 
 
 
@@ -137,29 +140,30 @@
 
 </div>
 
-    <div id="footer">
-  Generated on Sat Mar  5 12:40:46 2016 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.0).
-</div>
+    <div id="footer"></div>
 
   
     </div>
 
     <div class="sponsors">
       <p id="sponsor-github">
-        <a href="http://github.com/test-unit/">
-          <img src="../../../../github-logo.png" width="100" height="45" border="0" alt="test-unitプロジェクトはGitHubにホスティングしてもらっています。" />
+        <a href="https://github.com/test-unit/">
+          <img src="../../../../github-logo.png" width="100" height="45" border="0" alt="The test-unit project uses GitHub's git repositories." />
         </a>
       </p>
       <p id="sponsor-tango">
 	<a href="http://tango.freedesktop.org/">
-          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../../tango-logo.png" />
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../../tango-logo.png" />
         </a>
       </p>
       <p id="sponsor-famfamfam">
 	<a href="http://www.famfamfam.com/">
-          <img width="120" height="18" border="0" alt="famfamfam.comの国旗を利用しています。" src="../../../../famfamfam-logo.png" />
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../famfamfam-logo.png" />
         </a>
       </p>
 
