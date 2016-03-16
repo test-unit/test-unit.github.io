@@ -1,6 +1,8 @@
 markdown: kramdown
 test_unit_version: 3.1.7
 test_unit_release_date: 2016-01-17
+test_unit_rails_version: 5.0.1
+test_unit_rails_release_date: 2016-02-27
 test_unit_activesupport_version: 1.0.5
 test_unit_activesupport_release_date: 2016-03-05
 
