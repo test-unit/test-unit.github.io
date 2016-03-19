@@ -298,6 +298,32 @@ UI.</p>
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop_tag-instance_method" title="#stop_tag (instance method)">- (Object) <strong>stop_tag</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute stop_tag.</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -494,6 +520,29 @@ UI.</p>
 
   
     <span class="summary_desc"><div class='inline'><p>Returnes a string that shows result status.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop-instance_method" title="#stop (instance method)">- (Object) <strong>stop</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -844,6 +893,48 @@ UI.</p>
 </table>
 </div>
     
+      
+      <span id="stop_tag=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="stop_tag-instance_method">
+  
+    - (<tt>Object</tt>) <strong>stop_tag</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute stop_tag</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop_tag'>stop_tag</span>
+  <span class='ivar'>@stop_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 
@@ -1132,6 +1223,36 @@ successful completion.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="stop-instance_method">
+  
+    - (<tt>Object</tt>) <strong>stop</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop'>stop</span>
+  <span class='id identifier rubyid_throw'>throw</span> <span class='ivar'>@stop_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="summary-instance_method">
   
     - (<tt>Object</tt>) <strong>summary</strong> 
@@ -1211,9 +1332,9 @@ failures and errors in this TestResult.</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Oct  9 23:36:20 2015 by
+  Generated on Sat Mar 19 23:23:15 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.2.4).
 </div>
 
   

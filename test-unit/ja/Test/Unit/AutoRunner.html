@@ -124,11 +124,23 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/test/unit/autorunner.rb</dd>
+    <dd class="r2 last">lib/test/unit/autorunner.rb<span class="defines">,<br />
+  lib/test/unit/autorunner.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
 
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="AutoRunner/StopOnFailureListener.html" title="Test::Unit::AutoRunner::StopOnFailureListener (class)">StopOnFailureListener</a></span>
+    
+  
+</p>
 
   <h2>Constant Summary</h2>
   
@@ -248,6 +260,32 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Returns the value of attribute color_scheme.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_test_paths-instance_method" title="#default_test_paths (instance method)">- (Object) <strong>default_test_paths</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute default_test_paths.</p>
 </div></span>
   
 </li>
@@ -408,6 +446,34 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Returns the value of attribute runner_options.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop_on_failuere%3D-instance_method" title="#stop_on_failuere= (instance method)">- (Object) <strong>stop_on_failuere</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the attribute stop_on_failuere.</p>
 </div></span>
   
 </li>
@@ -977,6 +1043,29 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop_on_failure%3F-instance_method" title="#stop_on_failure? (instance method)">- (Boolean) <strong>stop_on_failure?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -1231,6 +1320,48 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_color_scheme'>color_scheme</span>
   <span class='ivar'>@color_scheme</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="default_test_paths=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="default_test_paths-instance_method">
+  
+    - (<tt>Object</tt>) <strong>default_test_paths</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute default_test_paths</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_test_paths'>default_test_paths</span>
+  <span class='ivar'>@default_test_paths</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1502,6 +1633,67 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_runner_options'>runner_options</span>
   <span class='ivar'>@runner_options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="stop_on_failuere=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>stop_on_failuere=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the attribute stop_on_failuere</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the value to set the attribute stop_on_failuere to.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop_on_failuere='>stop_on_failuere=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@stop_on_failuere</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2793,14 +2985,67 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="stop_on_failure?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>stop_on_failure?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop_on_failure?'>stop_on_failure?</span>
+  <span class='ivar'>@stop_on_failure</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on Fri Oct  9 23:36:19 2015 by
+  Generated on Sat Mar 19 23:23:14 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.2.4).
 </div>
 
   

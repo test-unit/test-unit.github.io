@@ -148,6 +148,38 @@
 
   
     <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_method%3F-class_method" title="test_method? (class method)">+ (Boolean) <strong>test_method?</strong>(test_case, method_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
@@ -250,6 +282,67 @@
   
 </div>
 
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="test_method?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>test_method?</strong>(test_case, method_name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/test-suite-creator.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_method?'>test_method?</span><span class='lparen'>(</span><span class='id identifier rubyid_test_case'>test_case</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\Atest.</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>or</span>
+    <span class='id identifier rubyid_test_case'>test_case</span><span class='period'>.</span><span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='symbol'>:test</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>

@@ -113,7 +113,9 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/test/unit/util/backtracefilter.rb</dd>
+    <dd class="r2 last">lib/test/unit/util/backtracefilter.rb<span class="defines">,<br />
+  lib/test/unit/util/backtracefilter.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -137,6 +139,13 @@
           
         </dt>
         <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.rb\Z</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="POWERASSERT_PREFIX-constant" class="">POWERASSERT_PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>PowerAssert</span><span class='rparen'>)</span> <span class='op'>?</span>
+<span class='const'>PowerAssert</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:start</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_source_location'>source_location</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>TESTUNIT_FILE_SEPARATORS</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>:</span>
+<span class='kw'>nil</span></pre></dd>
       
     </dl>
   
