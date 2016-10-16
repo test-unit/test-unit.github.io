@@ -5,6 +5,8 @@ test_unit_rails_version: 5.0.1
 test_unit_rails_release_date: 2016-02-27
 test_unit_activesupport_version: 1.0.6
 test_unit_activesupport_release_date: 2016-05-20
+test_unit_full_version: 0.0.5
+test_unit_full_release_date: 2016-10-16
 
 kramdown:
   enable_rouge: true
