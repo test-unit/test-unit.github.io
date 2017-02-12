@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../test-unit.css" type="text/css" />
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="icon" href="../../favicon.png" />
     <title>
-  File: README
+  Module: TestUnitRails
   
     &mdash; test-unit-rails
   
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "README";
+  pathId = "TestUnitRails";
   relpath = '';
 </script>
 
@@ -41,7 +41,7 @@
   <div class="title">
     <a href="../../index.html.ja">
       <span class="title">
-  File: README
+  Module: TestUnitRails
   
     &mdash; test-unit-rails
   
@@ -51,7 +51,7 @@
     </a>
   </div>
   <ul class="other-languages">
-    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../test-unit-rails/en/.">English</a></li>
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../test-unit-rails/en/TestUnitRails.html">English</a></li>
   </ul>
   <ul class="menu">
     <li id="menu-reference"><a href="../../test-unit-rails/ja/">リファレンスマニュアル</a></li>
@@ -66,8 +66,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="alphabetical_index.html">Index</a> &raquo; 
-    <span class="title">File: README</span>
+    <a href="alphabetical_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TestUnitRails</span>
   
 </div>
 
@@ -87,54 +89,74 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="test-unit-rails">test-unit-rails</h1>
+      <div id="content"><h1>Module: TestUnitRails
+  
+  
+  
+</h1>
+<div class="box_info">
+  
 
-<p><a href="http://test-unit.github.io/#test-unit-rails">Web site</a></p>
+  
+  
+  
+  
+  
 
-<h2 id="section">説明</h2>
+  
 
-<p>test-unit-railsはtest-unit 3用のRailsアダプターです。test-unit-railsを使うとtest-unit 3のフル機能と <a href="https://rubygems.org/gems/rr">RR</a> や <a href="https://rubygems.org/gems/capybara">Capybara</a> との連携機能を使うことができます。</p>
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/test/unit/rails/railtie.rb</dd>
+  </dl>
+  
+</div>
 
-<p>RailsはRuby 1.8に同梱されているTest::UnitとMiniTestをサポートしていますがtest-unit 2はサポートしていません。Railsとtest-unit 2の組み合わせは動きますが、完全に動くというわけではありません。</p>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Copyright (C) 2016  Kouhei Sutou <a href="mailto:kou@clear-code.com">kou@clear-code.com</a></p>
 
-<h2 id="section-1">インストール</h2>
+<p>This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.</p>
 
-<p>以下のコードをGemfileに追加してください。</p>
+<p>This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.</p>
 
-<p><code>ruby
-group :development, :test do
-  gem 'test-unit-rails'
-end
-</code></p>
+<p>You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA</p>
 
-<p>バンドルするgemをアップデートします。</p>
 
-<p><code>sh
-% bundle update
-</code></p>
+  </div>
+</div>
+<div class="tags">
+  
 
-<p>test/test_helper.rb内の <code>"require 'rails/test_help'"</code> を以下のコードで置き換えます。</p>
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="TestUnitRails/TestUnitRailtie.html" title="TestUnitRails::TestUnitRailtie (class)">TestUnitRailtie</a></span>
+    
+  
+</p>
 
-<p><code>ruby
-# require 'rails/test_help'
-require 'test/unit/rails/test_help'
-</code></p>
 
-<p>これでTest::Unit 2.xのフル機能とRR・Capybaraとの連携機能を使えます。</p>
 
-<h2 id="section-2">ライセンス</h2>
 
-<p>LGPLv2.1またはそれ以降のバージョン。</p>
 
-<p>（コントリビュートされたパッチなども含み、Kouhei Sutouがライセンスを変更する権利を持ちます。）</p>
 
-<h2 id="section-3">作者</h2>
 
-<ul>
-  <li>Kouhei Sutou</li>
-  <li>Haruka Yoshihara</li>
-</ul>
-</div></div>
+
+
+</div>
 
       <div id="footer">
   Generated on Sat Jan 21 22:02:37 2017 by
