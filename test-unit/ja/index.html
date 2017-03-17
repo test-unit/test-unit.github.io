@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../test-unit.css" type="text/css" />
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="icon" href="../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "README";
   relpath = '';
-  framesUrl = "frames.html#!file.README.html";
 </script>
 
 
@@ -32,6 +31,12 @@
 
   </head>
   <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
 <div class="header">
   <div class="title">
     <a href="../../ja/index.html">
@@ -58,40 +63,33 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+      <div id="header">
+        <div id="menu">
   
     <a href="alphabetical_index.html">Index</a> &raquo; 
     <span class="title">File: README</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="class_list.html"></iframe>
 
-    <div id="content"><div id='filecontents'><h1 id="test-unit">test-unit</h1>
+      <div id="content"><div id='filecontents'><h1 id="test-unit">test-unit</h1>
 
 <p><a href="http://badge.fury.io/rb/test-unit"><img src="https://badge.fury.io/rb/test-unit.png" alt="" /></a>
 <a href="https://travis-ci.org/test-unit/test-unit"><img src="https://travis-ci.org/test-unit/test-unit.png?branch=master" alt="" /></a></p>
@@ -105,7 +103,7 @@
 
 <p>An xUnit family unit testing framework for Ruby.</p>
 
-<p>Test::Unit (test-unit) is unit testing framework for Ruby, based on xUnit
+<p>test-unit (Test::Unit) is unit testing framework for Ruby, based on xUnit
 principles. These were originally designed by Kent Beck, creator of extreme
 programming software development methodology, for Smalltalk’s SUnit. It allows
 writing tests, checking results and automated testing in Ruby.</p>
@@ -114,7 +112,7 @@ writing tests, checking results and automated testing in Ruby.</p>
 
 <ul>
   <li>
-    <p>Test::Unit 1.2.3 is the original Test::Unit, taken
+    <p>test-unit 1.2.3 is the original test-unit, taken
 straight from the ruby distribution. It is being
 distributed as a gem to allow tool builders to use it as a
 stand-alone package. (The test framework in ruby is going
@@ -122,13 +120,13 @@ to radically change very soon).</p>
   </li>
   <li>
     <p>test-unit will be improved actively and may break
-compatiblity with Test::Unit 1.2.3. (We will not hope it
+compatiblity with test-unit 1.2.3. (We will not hope it
 if it isn’t needed.)</p>
   </li>
   <li>
     <p>Some features exist as separated gems like GUI test
 runner. (Tk, GTK+ and Fox) test-unit-full gem package
-provides for installing all Test::Unit related gems
+provides for installing all test-unit related gems
 easily.</p>
   </li>
 </ul>
@@ -146,7 +144,7 @@ easily.</p>
 % sudo gem install test-unit
 </code></pre>
 
-<p>If you want to use full Test::Unit features:</p>
+<p>If you want to use full test-unit features:</p>
 
 <pre class="code ruby"><code class="ruby">
 % sudo gem install test-unit-full
@@ -162,8 +160,8 @@ easily.</p>
 
 <ul>
   <li>
-    <p>lib/test/unit/diff.rb is a double license of the Ruby license and
-PSF license.</p>
+    <p>lib/test/unit/diff.rb is a triple license of the Ruby license,
+PSF license and LGPLv2.1 or later.</p>
   </li>
   <li>
     <p>lib/test-unit.rb is a dual license of the Ruby license and LGPLv2.1
@@ -190,7 +188,7 @@ or later.</p>
 <h3 id="images">Images</h3>
 
 <ul>
-  <li>Mayu &amp; Co.: kinotan icons: http://cocooooooon.com/kinotan/</li>
+  <li>Mayu &amp; Co.: kinotan icons</li>
 </ul>
 
 <h2 id="section-3">感謝</h2>
@@ -217,13 +215,13 @@ or later.</p>
 </ul>
 </div></div>
 
-    <div id="footer">
-  Generated on Sat Mar 19 23:23:13 2016 by
+      <div id="footer">
+  Generated on Fri Mar 17 21:47:40 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.4).
+  0.9.5 (ruby-2.3.3).
 </div>
 
-  
+    
     </div>
 
     <div class="sponsors">
@@ -258,5 +256,6 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
     </div>
 
-</body>
+</div>
+  </body>
 </html>

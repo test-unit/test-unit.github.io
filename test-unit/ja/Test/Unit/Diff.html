@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../test-unit.css" type="text/css" />
     <link rel="shortcut icon" href="../../../../favicon.ico" />
     <link rel="icon" href="../../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Test::Unit::Diff";
   relpath = '../../';
-  framesUrl = "../../frames.html#!Test/Unit/Diff.html";
 </script>
 
 
@@ -32,6 +31,12 @@
 
   </head>
   <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
 <div class="header">
   <div class="title">
     <a href="../../../../ja/index.html">
@@ -58,61 +63,57 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+      <div id="header">
+        <div id="menu">
   
     <a href="../../alphabetical_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
      &raquo; 
     <span class="title">Diff</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
-    <div id="content"><h1>Module: Test::Unit::Diff
+      <div id="content"><h1>Module: Test::Unit::Diff
   
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
-  
-  
-    
-  
-    
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/test/unit/diff.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/test/unit/diff.rb</dd>
+  </dl>
+  
+</div>
 
 <h2>Defined Under Namespace</h2>
 <p class="children">
@@ -134,7 +135,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -142,7 +143,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#diff-class_method" title="diff (class method)">+ (Object) <strong>diff</strong>(differ_class, from, to, options = {}) </a>
+      <a href="#diff-class_method" title="diff (class method)">.<strong>diff</strong>(differ_class, from, to, options = {})  &#x21d2; Object </a>
     
 
     
@@ -165,7 +166,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fold-class_method" title="fold (class method)">+ (Object) <strong>fold</strong>(string) </a>
+      <a href="#fold-class_method" title="fold (class method)">.<strong>fold</strong>(string)  &#x21d2; Object </a>
     
 
     
@@ -188,7 +189,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#folded_readable-class_method" title="folded_readable (class method)">+ (Object) <strong>folded_readable</strong>(from, to, options = {}) </a>
+      <a href="#folded_readable-class_method" title="folded_readable (class method)">.<strong>folded_readable</strong>(from, to, options = {})  &#x21d2; Object </a>
     
 
     
@@ -211,7 +212,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#need_fold%3F-class_method" title="need_fold? (class method)">+ (Boolean) <strong>need_fold?</strong>(diff) </a>
+      <a href="#need_fold%3F-class_method" title="need_fold? (class method)">.<strong>need_fold?</strong>(diff)  &#x21d2; Boolean </a>
     
 
     
@@ -234,7 +235,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#readable-class_method" title="readable (class method)">+ (Object) <strong>readable</strong>(from, to, options = {}) </a>
+      <a href="#readable-class_method" title="readable (class method)">.<strong>readable</strong>(from, to, options = {})  &#x21d2; Object </a>
     
 
     
@@ -257,7 +258,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unified-class_method" title="unified (class method)">+ (Object) <strong>unified</strong>(from, to, options = {}) </a>
+      <a href="#unified-class_method" title="unified (class method)">.<strong>unified</strong>(from, to, options = {})  &#x21d2; Object </a>
     
 
     
@@ -289,7 +290,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="diff-class_method">
   
-    + (<tt>Object</tt>) <strong>diff</strong>(differ_class, from, to, options = {}) 
+    .<strong>diff</strong>(differ_class, from, to, options = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -351,7 +352,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fold-class_method">
   
-    + (<tt>Object</tt>) <strong>fold</strong>(string) 
+    .<strong>fold</strong>(string)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -385,7 +386,7 @@
       <div class="method_details ">
   <h3 class="signature " id="folded_readable-class_method">
   
-    + (<tt>Object</tt>) <strong>folded_readable</strong>(from, to, options = {}) 
+    .<strong>folded_readable</strong>(from, to, options = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -415,7 +416,7 @@
       <div class="method_details ">
   <h3 class="signature " id="need_fold?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>need_fold?</strong>(diff) 
+    .<strong>need_fold?</strong>(diff)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -468,7 +469,7 @@
       <div class="method_details ">
   <h3 class="signature " id="readable-class_method">
   
-    + (<tt>Object</tt>) <strong>readable</strong>(from, to, options = {}) 
+    .<strong>readable</strong>(from, to, options = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -498,7 +499,7 @@
       <div class="method_details ">
   <h3 class="signature " id="unified-class_method">
   
-    + (<tt>Object</tt>) <strong>unified</strong>(from, to, options = {}) 
+    .<strong>unified</strong>(from, to, options = {})  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -529,13 +530,13 @@
 
 </div>
 
-    <div id="footer">
-  Generated on Sat Mar 19 23:23:13 2016 by
+      <div id="footer">
+  Generated on Fri Mar 17 21:47:40 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.4).
+  0.9.5 (ruby-2.3.3).
 </div>
 
-  
+    
     </div>
 
     <div class="sponsors">
@@ -570,5 +571,6 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
     </div>
 
-</body>
+</div>
+  </body>
 </html>

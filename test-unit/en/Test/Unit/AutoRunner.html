@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../test-unit.css" type="text/css" />
     <link rel="shortcut icon" href="../../../../favicon.ico" />
     <link rel="icon" href="../../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Test::Unit::AutoRunner";
   relpath = '../../';
-  framesUrl = "../../frames.html#!Test/Unit/AutoRunner.html";
 </script>
 
 
@@ -32,6 +31,12 @@
 
   </head>
   <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
 <div class="header">
   <div class="title">
     <a href="../../../../">
@@ -58,51 +63,44 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+      <div id="header">
+        <div id="menu">
   
     <a href="../../alphabetical_index.html">Index (A)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
      &raquo; 
     <span class="title">AutoRunner</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
-    <div id="content"><h1>Class: Test::Unit::AutoRunner
+      <div id="content"><h1>Class: Test::Unit::AutoRunner
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -113,23 +111,27 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/test/unit/autorunner.rb<span class="defines">,<br />
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/test/unit/autorunner.rb<span class="defines">,<br />
   lib/test/unit/autorunner.rb</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Defined Under Namespace</h2>
 <p class="children">
@@ -143,52 +145,50 @@
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="RUNNERS-constant" class="">RUNNERS =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-      
-        <dt id="COLLECTORS-constant" class="">COLLECTORS =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-      
-        <dt id="ADDITIONAL_OPTIONS-constant" class="">ADDITIONAL_OPTIONS =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="PREPARE_HOOKS-constant" class="">PREPARE_HOOKS =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="default_runner-classvariable" class="">@@default_runner =
-          
-        </dt>
-        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
-      
-        <dt id="need_auto_run-classvariable" class="">@@need_auto_run =
-          
-        </dt>
-        <dd><pre class="code"><span class='kw'>true</span></pre></dd>
-      
-    </dl>
-  
+  <dl class="constants">
+    
+      <dt id="RUNNERS-constant" class="">RUNNERS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="COLLECTORS-constant" class="">COLLECTORS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="ADDITIONAL_OPTIONS-constant" class="">ADDITIONAL_OPTIONS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="PREPARE_HOOKS-constant" class="">PREPARE_HOOKS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="default_runner-classvariable" class="">@@default_runner =
+        
+      </dt>
+      <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+    
+      <dt id="need_auto_run-classvariable" class="">@@need_auto_run =
+        
+      </dt>
+      <dd><pre class="code"><span class='kw'>true</span></pre></dd>
+    
+  </dl>
 
 
 
 
-  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
     
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#base-instance_method" title="#base (instance method)">- (Object) <strong>base</strong> </a>
+      <a href="#base-instance_method" title="#base (instance method)">#<strong>base</strong>  &#x21d2; Object </a>
     
 
     
@@ -214,7 +214,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#collector%3D-instance_method" title="#collector= (instance method)">- (Object) <strong>collector</strong> </a>
+      <a href="#collector%3D-instance_method" title="#collector= (instance method)">#<strong>collector</strong>  &#x21d2; Object </a>
     
 
     
@@ -242,7 +242,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#color_scheme-instance_method" title="#color_scheme (instance method)">- (Object) <strong>color_scheme</strong> </a>
+      <a href="#color_scheme-instance_method" title="#color_scheme (instance method)">#<strong>color_scheme</strong>  &#x21d2; Object </a>
     
 
     
@@ -268,7 +268,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_test_paths-instance_method" title="#default_test_paths (instance method)">- (Object) <strong>default_test_paths</strong> </a>
+      <a href="#default_test_paths-instance_method" title="#default_test_paths (instance method)">#<strong>default_test_paths</strong>  &#x21d2; Object </a>
     
 
     
@@ -294,7 +294,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#exclude-instance_method" title="#exclude (instance method)">- (Object) <strong>exclude</strong> </a>
+      <a href="#exclude-instance_method" title="#exclude (instance method)">#<strong>exclude</strong>  &#x21d2; Object </a>
     
 
     
@@ -320,7 +320,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#filters-instance_method" title="#filters (instance method)">- (Object) <strong>filters</strong> </a>
+      <a href="#filters-instance_method" title="#filters (instance method)">#<strong>filters</strong>  &#x21d2; Object </a>
     
 
     
@@ -346,7 +346,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#listeners-instance_method" title="#listeners (instance method)">- (Object) <strong>listeners</strong> </a>
+      <a href="#listeners-instance_method" title="#listeners (instance method)">#<strong>listeners</strong>  &#x21d2; Object </a>
     
 
     
@@ -372,7 +372,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pattern-instance_method" title="#pattern (instance method)">- (Object) <strong>pattern</strong> </a>
+      <a href="#pattern-instance_method" title="#pattern (instance method)">#<strong>pattern</strong>  &#x21d2; Object </a>
     
 
     
@@ -398,7 +398,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#runner%3D-instance_method" title="#runner= (instance method)">- (Object) <strong>runner</strong> </a>
+      <a href="#runner%3D-instance_method" title="#runner= (instance method)">#<strong>runner</strong>  &#x21d2; Object </a>
     
 
     
@@ -426,7 +426,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#runner_options-instance_method" title="#runner_options (instance method)">- (Object) <strong>runner_options</strong> </a>
+      <a href="#runner_options-instance_method" title="#runner_options (instance method)">#<strong>runner_options</strong>  &#x21d2; Object </a>
     
 
     
@@ -454,7 +454,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stop_on_failuere%3D-instance_method" title="#stop_on_failuere= (instance method)">- (Object) <strong>stop_on_failuere</strong> </a>
+      <a href="#stop_on_failuere%3D-instance_method" title="#stop_on_failuere= (instance method)">#<strong>stop_on_failuere</strong>  &#x21d2; Object </a>
     
 
     
@@ -482,7 +482,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#suite-instance_method" title="#suite (instance method)">- (Object) <strong>suite</strong> </a>
+      <a href="#suite-instance_method" title="#suite (instance method)">#<strong>suite</strong>  &#x21d2; Object </a>
     
 
     
@@ -510,7 +510,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_run-instance_method" title="#to_run (instance method)">- (Object) <strong>to_run</strong> </a>
+      <a href="#to_run-instance_method" title="#to_run (instance method)">#<strong>to_run</strong>  &#x21d2; Object </a>
     
 
     
@@ -536,7 +536,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#workdir-instance_method" title="#workdir (instance method)">- (Object) <strong>workdir</strong> </a>
+      <a href="#workdir-instance_method" title="#workdir (instance method)">#<strong>workdir</strong>  &#x21d2; Object </a>
     
 
     
@@ -567,7 +567,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -575,7 +575,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#collector-class_method" title="collector (class method)">+ (Object) <strong>collector</strong>(id) </a>
+      <a href="#collector-class_method" title="collector (class method)">.<strong>collector</strong>(id)  &#x21d2; Object </a>
     
 
     
@@ -598,7 +598,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_runner-class_method" title="default_runner (class method)">+ (Object) <strong>default_runner</strong> </a>
+      <a href="#default_runner-class_method" title="default_runner (class method)">.<strong>default_runner</strong>  &#x21d2; Object </a>
     
 
     
@@ -621,7 +621,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_runner%3D-class_method" title="default_runner= (class method)">+ (Object) <strong>default_runner=</strong>(id) </a>
+      <a href="#default_runner%3D-class_method" title="default_runner= (class method)">.<strong>default_runner=</strong>(id)  &#x21d2; Object </a>
     
 
     
@@ -644,7 +644,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#need_auto_run%3D-class_method" title="need_auto_run= (class method)">+ (Object) <strong>need_auto_run=</strong>(need) </a>
+      <a href="#need_auto_run%3D-class_method" title="need_auto_run= (class method)">.<strong>need_auto_run=</strong>(need)  &#x21d2; Object </a>
     
 
     
@@ -667,7 +667,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#need_auto_run%3F-class_method" title="need_auto_run? (class method)">+ (Boolean) <strong>need_auto_run?</strong> </a>
+      <a href="#need_auto_run%3F-class_method" title="need_auto_run? (class method)">.<strong>need_auto_run?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -690,7 +690,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepare-class_method" title="prepare (class method)">+ (Object) <strong>prepare</strong>(hook = Proc.new) </a>
+      <a href="#prepare-class_method" title="prepare (class method)">.<strong>prepare</strong>(hook = Proc.new)  &#x21d2; Object </a>
     
 
     
@@ -713,7 +713,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#register_collector-class_method" title="register_collector (class method)">+ (Object) <strong>register_collector</strong>(id, collector_builder = Proc.new) </a>
+      <a href="#register_collector-class_method" title="register_collector (class method)">.<strong>register_collector</strong>(id, collector_builder = Proc.new)  &#x21d2; Object </a>
     
 
     
@@ -736,7 +736,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#register_color_scheme-class_method" title="register_color_scheme (class method)">+ (Object) <strong>register_color_scheme</strong>(id, scheme) </a>
+      <a href="#register_color_scheme-class_method" title="register_color_scheme (class method)">.<strong>register_color_scheme</strong>(id, scheme)  &#x21d2; Object </a>
     
 
     
@@ -759,7 +759,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#register_runner-class_method" title="register_runner (class method)">+ (Object) <strong>register_runner</strong>(id, runner_builder = Proc.new) </a>
+      <a href="#register_runner-class_method" title="register_runner (class method)">.<strong>register_runner</strong>(id, runner_builder = Proc.new)  &#x21d2; Object </a>
     
 
     
@@ -782,7 +782,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-class_method" title="run (class method)">+ (Object) <strong>run</strong>(force_standalone = false, default_dir = nil, argv = ARGV, &amp;block) </a>
+      <a href="#run-class_method" title="run (class method)">.<strong>run</strong>(force_standalone = false, default_dir = nil, argv = ARGV, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -805,7 +805,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#runner-class_method" title="runner (class method)">+ (Object) <strong>runner</strong>(id) </a>
+      <a href="#runner-class_method" title="runner (class method)">.<strong>runner</strong>(id)  &#x21d2; Object </a>
     
 
     
@@ -828,7 +828,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setup_option-class_method" title="setup_option (class method)">+ (Object) <strong>setup_option</strong>(option_builder = Proc.new) </a>
+      <a href="#setup_option-class_method" title="setup_option (class method)">.<strong>setup_option</strong>(option_builder = Proc.new)  &#x21d2; Object </a>
     
 
     
@@ -851,7 +851,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#standalone%3F-class_method" title="standalone? (class method)">+ (Boolean) <strong>standalone?</strong> </a>
+      <a href="#standalone%3F-class_method" title="standalone? (class method)">.<strong>standalone?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -875,7 +875,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -883,7 +883,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (AutoRunner) <strong>initialize</strong>(standalone) {|_self| ... }</a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(standalone) {|_self| ... } &#x21d2; AutoRunner </a>
     
 
     
@@ -908,7 +908,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#keyword_display-instance_method" title="#keyword_display (instance method)">- (Object) <strong>keyword_display</strong>(keywords) </a>
+      <a href="#keyword_display-instance_method" title="#keyword_display (instance method)">#<strong>keyword_display</strong>(keywords)  &#x21d2; Object </a>
     
 
     
@@ -931,7 +931,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#load_config-instance_method" title="#load_config (instance method)">- (Object) <strong>load_config</strong>(file) </a>
+      <a href="#load_config-instance_method" title="#load_config (instance method)">#<strong>load_config</strong>(file)  &#x21d2; Object </a>
     
 
     
@@ -954,7 +954,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#options-instance_method" title="#options (instance method)">- (Object) <strong>options</strong> </a>
+      <a href="#options-instance_method" title="#options (instance method)">#<strong>options</strong>  &#x21d2; Object </a>
     
 
     
@@ -977,7 +977,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+      <a href="#prepare-instance_method" title="#prepare (instance method)">#<strong>prepare</strong>  &#x21d2; Object </a>
     
 
     
@@ -1000,7 +1000,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#process_args-instance_method" title="#process_args (instance method)">- (Object) <strong>process_args</strong>(args = ARGV) </a>
+      <a href="#process_args-instance_method" title="#process_args (instance method)">#<strong>process_args</strong>(args = ARGV)  &#x21d2; Object </a>
     
 
     
@@ -1023,7 +1023,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>  &#x21d2; Object </a>
     
 
     
@@ -1046,7 +1046,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stop_on_failure%3F-instance_method" title="#stop_on_failure? (instance method)">- (Boolean) <strong>stop_on_failure?</strong> </a>
+      <a href="#stop_on_failure%3F-instance_method" title="#stop_on_failure? (instance method)">#<strong>stop_on_failure?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -1075,7 +1075,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Test::Unit::AutoRunner (class)">AutoRunner</a></span></tt>) <strong>initialize</strong>(standalone) {|_self| ... }
+    #<strong>initialize</strong>(standalone) {|_self| ... } &#x21d2; <tt><span class='object_link'><a href="" title="Test::Unit::AutoRunner (class)">AutoRunner</a></span></tt> 
   
 
   
@@ -1186,7 +1186,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="base-instance_method">
   
-    - (<tt>Object</tt>) <strong>base</strong> 
+    #<strong>base</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1228,7 +1228,7 @@
       <div class="method_details ">
   <h3 class="signature " id="collector=-instance_method">
   
-    - (<tt>Object</tt>) <strong>collector=</strong>(value)  <span class="extras">(writeonly)</span>
+    #<strong>collector=</strong>(value)  &#x21d2; <tt>Object</tt>  <span class="extras">(writeonly)</span>
   
 
   
@@ -1289,7 +1289,7 @@
       <div class="method_details ">
   <h3 class="signature " id="color_scheme-instance_method">
   
-    - (<tt>Object</tt>) <strong>color_scheme</strong> 
+    #<strong>color_scheme</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1331,7 +1331,7 @@
       <div class="method_details ">
   <h3 class="signature " id="default_test_paths-instance_method">
   
-    - (<tt>Object</tt>) <strong>default_test_paths</strong> 
+    #<strong>default_test_paths</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1373,7 +1373,7 @@
       <div class="method_details ">
   <h3 class="signature " id="exclude-instance_method">
   
-    - (<tt>Object</tt>) <strong>exclude</strong> 
+    #<strong>exclude</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1415,7 +1415,7 @@
       <div class="method_details ">
   <h3 class="signature " id="filters-instance_method">
   
-    - (<tt>Object</tt>) <strong>filters</strong> 
+    #<strong>filters</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1457,7 +1457,7 @@
       <div class="method_details ">
   <h3 class="signature " id="listeners-instance_method">
   
-    - (<tt>Object</tt>) <strong>listeners</strong> 
+    #<strong>listeners</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1499,7 +1499,7 @@
       <div class="method_details ">
   <h3 class="signature " id="pattern-instance_method">
   
-    - (<tt>Object</tt>) <strong>pattern</strong> 
+    #<strong>pattern</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1541,7 +1541,7 @@
       <div class="method_details ">
   <h3 class="signature " id="runner=-instance_method">
   
-    - (<tt>Object</tt>) <strong>runner=</strong>(value)  <span class="extras">(writeonly)</span>
+    #<strong>runner=</strong>(value)  &#x21d2; <tt>Object</tt>  <span class="extras">(writeonly)</span>
   
 
   
@@ -1602,7 +1602,7 @@
       <div class="method_details ">
   <h3 class="signature " id="runner_options-instance_method">
   
-    - (<tt>Object</tt>) <strong>runner_options</strong>  <span class="extras">(readonly)</span>
+    #<strong>runner_options</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1644,7 +1644,7 @@
       <div class="method_details ">
   <h3 class="signature " id="stop_on_failuere=-instance_method">
   
-    - (<tt>Object</tt>) <strong>stop_on_failuere=</strong>(value)  <span class="extras">(writeonly)</span>
+    #<strong>stop_on_failuere=</strong>(value)  &#x21d2; <tt>Object</tt>  <span class="extras">(writeonly)</span>
   
 
   
@@ -1705,7 +1705,7 @@
       <div class="method_details ">
   <h3 class="signature " id="suite-instance_method">
   
-    - (<tt>Object</tt>) <strong>suite</strong>  <span class="extras">(readonly)</span>
+    #<strong>suite</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1747,7 +1747,7 @@
       <div class="method_details ">
   <h3 class="signature " id="to_run-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_run</strong> 
+    #<strong>to_run</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1789,7 +1789,7 @@
       <div class="method_details ">
   <h3 class="signature " id="workdir-instance_method">
   
-    - (<tt>Object</tt>) <strong>workdir</strong> 
+    #<strong>workdir</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1836,7 +1836,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="collector-class_method">
   
-    + (<tt>Object</tt>) <strong>collector</strong>(id) 
+    .<strong>collector</strong>(id)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1866,7 +1866,7 @@
       <div class="method_details ">
   <h3 class="signature " id="default_runner-class_method">
   
-    + (<tt>Object</tt>) <strong>default_runner</strong> 
+    .<strong>default_runner</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1896,7 +1896,7 @@
       <div class="method_details ">
   <h3 class="signature " id="default_runner=-class_method">
   
-    + (<tt>Object</tt>) <strong>default_runner=</strong>(id) 
+    .<strong>default_runner=</strong>(id)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1926,7 +1926,7 @@
       <div class="method_details ">
   <h3 class="signature " id="need_auto_run=-class_method">
   
-    + (<tt>Object</tt>) <strong>need_auto_run=</strong>(need) 
+    .<strong>need_auto_run=</strong>(need)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1956,7 +1956,7 @@
       <div class="method_details ">
   <h3 class="signature " id="need_auto_run?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>need_auto_run?</strong> 
+    .<strong>need_auto_run?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -2009,7 +2009,7 @@
       <div class="method_details ">
   <h3 class="signature " id="prepare-class_method">
   
-    + (<tt>Object</tt>) <strong>prepare</strong>(hook = Proc.new) 
+    .<strong>prepare</strong>(hook = Proc.new)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2039,7 +2039,7 @@
       <div class="method_details ">
   <h3 class="signature " id="register_collector-class_method">
   
-    + (<tt>Object</tt>) <strong>register_collector</strong>(id, collector_builder = Proc.new) 
+    .<strong>register_collector</strong>(id, collector_builder = Proc.new)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2071,7 +2071,7 @@
       <div class="method_details ">
   <h3 class="signature " id="register_color_scheme-class_method">
   
-    + (<tt>Object</tt>) <strong>register_color_scheme</strong>(id, scheme) 
+    .<strong>register_color_scheme</strong>(id, scheme)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2101,7 +2101,7 @@
       <div class="method_details ">
   <h3 class="signature " id="register_runner-class_method">
   
-    + (<tt>Object</tt>) <strong>register_runner</strong>(id, runner_builder = Proc.new) 
+    .<strong>register_runner</strong>(id, runner_builder = Proc.new)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2133,7 +2133,7 @@
       <div class="method_details ">
   <h3 class="signature " id="run-class_method">
   
-    + (<tt>Object</tt>) <strong>run</strong>(force_standalone = false, default_dir = nil, argv = ARGV, &amp;block) 
+    .<strong>run</strong>(force_standalone = false, default_dir = nil, argv = ARGV, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2171,7 +2171,7 @@
       <div class="method_details ">
   <h3 class="signature " id="runner-class_method">
   
-    + (<tt>Object</tt>) <strong>runner</strong>(id) 
+    .<strong>runner</strong>(id)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2201,7 +2201,7 @@
       <div class="method_details ">
   <h3 class="signature " id="setup_option-class_method">
   
-    + (<tt>Object</tt>) <strong>setup_option</strong>(option_builder = Proc.new) 
+    .<strong>setup_option</strong>(option_builder = Proc.new)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2231,7 +2231,7 @@
       <div class="method_details ">
   <h3 class="signature " id="standalone?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>standalone?</strong> 
+    .<strong>standalone?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -2298,7 +2298,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="keyword_display-instance_method">
   
-    - (<tt>Object</tt>) <strong>keyword_display</strong>(keywords) 
+    #<strong>keyword_display</strong>(keywords)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2356,7 +2356,7 @@
       <div class="method_details ">
   <h3 class="signature " id="load_config-instance_method">
   
-    - (<tt>Object</tt>) <strong>load_config</strong>(file) 
+    #<strong>load_config</strong>(file)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2422,7 +2422,7 @@
       <div class="method_details ">
   <h3 class="signature " id="options-instance_method">
   
-    - (<tt>Object</tt>) <strong>options</strong> 
+    #<strong>options</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2856,7 +2856,7 @@
       <div class="method_details ">
   <h3 class="signature " id="prepare-instance_method">
   
-    - (<tt>Object</tt>) <strong>prepare</strong> 
+    #<strong>prepare</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2890,7 +2890,7 @@
       <div class="method_details ">
   <h3 class="signature " id="process_args-instance_method">
   
-    - (<tt>Object</tt>) <strong>process_args</strong>(args = ARGV) 
+    #<strong>process_args</strong>(args = ARGV)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2936,7 +2936,7 @@
       <div class="method_details ">
   <h3 class="signature " id="run-instance_method">
   
-    - (<tt>Object</tt>) <strong>run</strong> 
+    #<strong>run</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2988,7 +2988,7 @@
       <div class="method_details ">
   <h3 class="signature " id="stop_on_failure?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>stop_on_failure?</strong> 
+    #<strong>stop_on_failure?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3042,9 +3042,7 @@
 
 </div>
 
-    <div id="footer"></div>
-
-  
+      <div id="footer">
     </div>
 
     <div class="sponsors">
@@ -3084,5 +3082,6 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
     </div>
 
-</body>
+</div>
+  </body>
 </html>

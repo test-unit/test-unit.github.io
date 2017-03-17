@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../test-unit.css" type="text/css" />
     <link rel="shortcut icon" href="../../../../favicon.ico" />
     <link rel="icon" href="../../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Test::Unit::TestCase";
   relpath = '../../';
-  framesUrl = "../../frames.html#!Test/Unit/TestCase.html";
 </script>
 
 
@@ -32,6 +31,12 @@
 
   </head>
   <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
 <div class="header">
   <div class="title">
     <a href="../../../../">
@@ -58,51 +63,44 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+      <div id="header">
+        <div id="menu">
   
     <a href="../../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span>
      &raquo; 
     <span class="title">TestCase</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
-    <div id="content"><h1>Class: Test::Unit::TestCase
+      <div id="content"><h1>Class: Test::Unit::TestCase
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -113,27 +111,32 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
-      <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="Assertions.html" title="Test::Unit::Assertions (module)">Assertions</a></span>, <span class='object_link'><a href="Attribute.html" title="Test::Unit::Attribute (module)">Attribute</a></span>, <span class='object_link'><a href="Data.html" title="Test::Unit::Data (module)">Data</a></span>, <span class='object_link'><a href="ErrorHandler.html" title="Test::Unit::ErrorHandler (module)">ErrorHandler</a></span>, <span class='object_link'><a href="ExceptionHandler.html" title="Test::Unit::ExceptionHandler (module)">ExceptionHandler</a></span>, <span class='object_link'><a href="FailureHandler.html" title="Test::Unit::FailureHandler (module)">FailureHandler</a></span>, <span class='object_link'><a href="Fixture.html" title="Test::Unit::Fixture (module)">Fixture</a></span>, <span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span>, <span class='object_link'><a href="TestCaseNotificationSupport.html" title="Test::Unit::TestCaseNotificationSupport (module)">TestCaseNotificationSupport</a></span>, <span class='object_link'><a href="TestCaseOmissionSupport.html" title="Test::Unit::TestCaseOmissionSupport (module)">TestCaseOmissionSupport</a></span>, <span class='object_link'><a href="TestCasePendingSupport.html" title="Test::Unit::TestCasePendingSupport (module)">TestCasePendingSupport</a></span>, <span class='object_link'><a href="Util/BacktraceFilter.html" title="Test::Unit::Util::BacktraceFilter (module)">Util::BacktraceFilter</a></span>, <span class='object_link'><a href="Util/Output.html" title="Test::Unit::Util::Output (module)">Util::Output</a></span></dd>
-      
-    
+
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/test/unit/testcase.rb<span class="defines">,<br />
-  lib/test/unit/testcase.rb</span>
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Assertions.html" title="Test::Unit::Assertions (module)">Assertions</a></span>, <span class='object_link'><a href="Attribute.html" title="Test::Unit::Attribute (module)">Attribute</a></span>, <span class='object_link'><a href="Data.html" title="Test::Unit::Data (module)">Data</a></span>, <span class='object_link'><a href="ErrorHandler.html" title="Test::Unit::ErrorHandler (module)">ErrorHandler</a></span>, <span class='object_link'><a href="ExceptionHandler.html" title="Test::Unit::ExceptionHandler (module)">ExceptionHandler</a></span>, <span class='object_link'><a href="FailureHandler.html" title="Test::Unit::FailureHandler (module)">FailureHandler</a></span>, <span class='object_link'><a href="Fixture.html" title="Test::Unit::Fixture (module)">Fixture</a></span>, <span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span>, <span class='object_link'><a href="TestCaseNotificationSupport.html" title="Test::Unit::TestCaseNotificationSupport (module)">TestCaseNotificationSupport</a></span>, <span class='object_link'><a href="TestCaseOmissionSupport.html" title="Test::Unit::TestCaseOmissionSupport (module)">TestCaseOmissionSupport</a></span>, <span class='object_link'><a href="TestCasePendingSupport.html" title="Test::Unit::TestCasePendingSupport (module)">TestCasePendingSupport</a></span>, <span class='object_link'><a href="Util/BacktraceFilter.html" title="Test::Unit::Util::BacktraceFilter (module)">Util::BacktraceFilter</a></span>, <span class='object_link'><a href="Util/Output.html" title="Test::Unit::Util::Output (module)">Util::Output</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/test/unit/testcase.rb<span class="defines">,<br />
+  lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -145,50 +148,55 @@ collecting its results into a Test::Unit::TestResult object.</p>
 
 <p>You can run two hooks before/after a TestCase run.</p>
 
-<p>Example:
-  class TestMyClass &lt; Test::Unit::TestCase
-    class « self
-      def startup
-        …
-      end</p>
+<p>Example:</p>
 
-<pre class="code ruby"><code class="ruby">  def shutdown
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  class &lt;&lt; self
+    def startup
+      ...
+    end
+
+    def shutdown
+      ...
+    end
+  end
+
+  def setup
+    ...
+  end
+
+  def cleanup
+    ...
+  end
+
+  def teardown
+    ...
+  end
+
+  def test_my_method1
+    ...
+  end
+
+  def test_my_method2
     ...
   end
 end
-
-def setup
-  ...
-end
-
-def cleanup
-  ...
-end
-
-def teardown
-  ...
-end
-
-def test_my_method1
-  ...
-end
-
-def test_my_method2
-  ...
-end   end
 </code></pre>
 
-<p>Here is a call order:
-* startup
-* setup
-* test_my_method1
-* cleanup
-* teardown
-* setup
-* test_my_method2
-* cleanup
-* teardown
-* shutdown</p>
+<p>Here is a call order:</p>
+
+<ol>
+  <li>startup</li>
+  <li>setup</li>
+  <li>test_my_method1</li>
+  <li>cleanup</li>
+  <li>teardown</li>
+  <li>setup</li>
+  <li>test_my_method2</li>
+  <li>cleanup</li>
+  <li>teardown</li>
+  <li>shutdown</li>
+</ol>
 
 
   </div>
@@ -208,11 +216,10 @@ end   end
 </p>
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="STARTED-constant" class="">STARTED =
-          <div class="docstring">
+  <dl class="constants">
+    
+      <dt id="STARTED-constant" class="">STARTED =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -223,11 +230,11 @@ end   end
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-        <dt id="FINISHED-constant" class="">FINISHED =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="FINISHED-constant" class="">FINISHED =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -238,11 +245,11 @@ end   end
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-        <dt id="STARTED_OBJECT-constant" class="">STARTED_OBJECT =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="STARTED_OBJECT-constant" class="">STARTED_OBJECT =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -253,11 +260,11 @@ end   end
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-        <dt id="FINISHED_OBJECT-constant" class="">FINISHED_OBJECT =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="FINISHED_OBJECT-constant" class="">FINISHED_OBJECT =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -268,11 +275,11 @@ end   end
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
-        <dt id="DESCENDANTS-constant" class="">DESCENDANTS =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="DESCENDANTS-constant" class="">DESCENDANTS =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -283,11 +290,11 @@ end   end
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="AVAILABLE_ORDERS-constant" class="">AVAILABLE_ORDERS =
-          <div class="docstring">
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="AVAILABLE_ORDERS-constant" class="">AVAILABLE_ORDERS =
+        <div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -298,26 +305,25 @@ end   end
   
 
 </div>
-        </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:alphabetic</span><span class='comma'>,</span> <span class='symbol'>:random</span><span class='comma'>,</span> <span class='symbol'>:defined</span><span class='rbracket'>]</span></pre></dd>
-      
-        <dt id="added_methods-classvariable" class="">@@added_methods =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-      
-        <dt id="test_orders-classvariable" class="">@@test_orders =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-      
-        <dt id="added_method_names-classvariable" class="">@@added_method_names =
-          
-        </dt>
-        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-      
-    </dl>
-  
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:alphabetic</span><span class='comma'>,</span> <span class='symbol'>:random</span><span class='comma'>,</span> <span class='symbol'>:defined</span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="added_methods-classvariable" class="">@@added_methods =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="test_orders-classvariable" class="">@@test_orders =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="added_method_names-classvariable" class="">@@added_method_names =
+        
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -334,13 +340,13 @@ end   end
   <p class="inherited"><span class='object_link'><a href="ErrorHandler.html#NOT_PASS_THROUGH_EXCEPTIONS-constant" title="Test::Unit::ErrorHandler::NOT_PASS_THROUGH_EXCEPTIONS (constant)">ErrorHandler::NOT_PASS_THROUGH_EXCEPTIONS</a></span>, <span class='object_link'><a href="ErrorHandler.html#NOT_PASS_THROUGH_EXCEPTION_NAMES-constant" title="Test::Unit::ErrorHandler::NOT_PASS_THROUGH_EXCEPTION_NAMES (constant)">ErrorHandler::NOT_PASS_THROUGH_EXCEPTION_NAMES</a></span>, <span class='object_link'><a href="ErrorHandler.html#PASS_THROUGH_EXCEPTIONS-constant" title="Test::Unit::ErrorHandler::PASS_THROUGH_EXCEPTIONS (constant)">ErrorHandler::PASS_THROUGH_EXCEPTIONS</a></span>, <span class='object_link'><a href="ErrorHandler.html#PASS_THROUGH_EXCEPTION_NAMES-constant" title="Test::Unit::ErrorHandler::PASS_THROUGH_EXCEPTION_NAMES (constant)">ErrorHandler::PASS_THROUGH_EXCEPTION_NAMES</a></span></p>
 
 
-  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
     
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#method_name-instance_method" title="#method_name (instance method)">- (Object) <strong>method_name</strong> </a>
+      <a href="#method_name-instance_method" title="#method_name (instance method)">#<strong>method_name</strong>  &#x21d2; Object </a>
     
 
     
@@ -373,7 +379,7 @@ end   end
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -381,7 +387,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#added_method_names-class_method" title="added_method_names (class method)">+ (Object) <strong>added_method_names</strong> </a>
+      <a href="#added_method_names-class_method" title="added_method_names (class method)">.<strong>added_method_names</strong>  &#x21d2; Object </a>
     
 
     
@@ -404,7 +410,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#added_methods-class_method" title="added_methods (class method)">+ (Object) <strong>added_methods</strong> </a>
+      <a href="#added_methods-class_method" title="added_methods (class method)">.<strong>added_methods</strong>  &#x21d2; Object </a>
     
 
     
@@ -427,7 +433,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#description-class_method" title="description (class method)">+ (Object) <strong>description</strong>(value, target = nil) </a>
+      <a href="#description-class_method" title="description (class method)">.<strong>description</strong>(value, target = nil)  &#x21d2; Object </a>
     
 
     
@@ -450,7 +456,30 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inherited-class_method" title="inherited (class method)">+ (Object) <strong>inherited</strong>(sub_class) </a>
+      <a href="#find_locations-class_method" title="find_locations (class method)">.<strong>find_locations</strong>(query)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inherited-class_method" title="inherited (class method)">.<strong>inherited</strong>(sub_class)  &#x21d2; Object </a>
     
 
     
@@ -473,7 +502,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#method_added-class_method" title="method_added (class method)">+ (Object) <strong>method_added</strong>(name) </a>
+      <a href="#method_added-class_method" title="method_added (class method)">.<strong>method_added</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -496,7 +525,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#shutdown-class_method" title="shutdown (class method)">+ (Object) <strong>shutdown</strong> </a>
+      <a href="#shutdown-class_method" title="shutdown (class method)">.<strong>shutdown</strong>  &#x21d2; Object </a>
     
 
     
@@ -519,7 +548,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#startup-class_method" title="startup (class method)">+ (Object) <strong>startup</strong> </a>
+      <a href="#startup-class_method" title="startup (class method)">.<strong>startup</strong>  &#x21d2; Object </a>
     
 
     
@@ -542,7 +571,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sub_test_case-class_method" title="sub_test_case (class method)">+ (Test::Unit::TestCase) <strong>sub_test_case</strong>(name) { ... }</a>
+      <a href="#sub_test_case-class_method" title="sub_test_case (class method)">.<strong>sub_test_case</strong>(name) { ... } &#x21d2; Test::Unit::TestCase </a>
     
 
     
@@ -565,7 +594,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#suite-class_method" title="suite (class method)">+ (Object) <strong>suite</strong> </a>
+      <a href="#suite-class_method" title="suite (class method)">.<strong>suite</strong>  &#x21d2; Object </a>
     
 
     
@@ -588,7 +617,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#test-class_method" title="test (class method)">+ (Object) <strong>test</strong>(*test_description_or_targets, &amp;block) </a>
+      <a href="#test-class_method" title="test (class method)">.<strong>test</strong>(*test_description_or_targets, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -611,7 +640,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#test_defined%3F-class_method" title="test_defined? (class method)">+ (Boolean) <strong>test_defined?</strong>(query) </a>
+      <a href="#test_defined%3F-class_method" title="test_defined? (class method)">.<strong>test_defined?</strong>(query)  &#x21d2; Boolean </a>
     
 
     
@@ -634,7 +663,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#test_order-class_method" title="test_order (class method)">+ (Object) <strong>test_order</strong> </a>
+      <a href="#test_order-class_method" title="test_order (class method)">.<strong>test_order</strong>  &#x21d2; Object </a>
     
 
     
@@ -657,7 +686,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#test_order%3D-class_method" title="test_order= (class method)">+ (Object) <strong>test_order=</strong>(order) </a>
+      <a href="#test_order%3D-class_method" title="test_order= (class method)">.<strong>test_order=</strong>(order)  &#x21d2; Object </a>
     
 
     
@@ -681,7 +710,7 @@ end   end
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -689,7 +718,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong>(other) </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -712,7 +741,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_pass-instance_method" title="#add_pass (instance method)">- (void) <strong>add_pass</strong> </a>
+      <a href="#add_pass-instance_method" title="#add_pass (instance method)">#<strong>add_pass</strong>  &#x21d2; void </a>
     
 
     
@@ -735,7 +764,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assign_test_data-instance_method" title="#assign_test_data (instance method)">- (Object) <strong>assign_test_data</strong>(label, data) </a>
+      <a href="#assign_test_data-instance_method" title="#assign_test_data (instance method)">#<strong>assign_test_data</strong>(label, data)  &#x21d2; Object </a>
     
 
     
@@ -758,7 +787,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#cleanup-instance_method" title="#cleanup (instance method)">- (Object) <strong>cleanup</strong> </a>
+      <a href="#cleanup-instance_method" title="#cleanup (instance method)">#<strong>cleanup</strong>  &#x21d2; Object </a>
     
 
     
@@ -781,7 +810,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#data_label-instance_method" title="#data_label (instance method)">- (Object) <strong>data_label</strong> </a>
+      <a href="#data_label-instance_method" title="#data_label (instance method)">#<strong>data_label</strong>  &#x21d2; Object </a>
     
 
     
@@ -804,7 +833,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_test-instance_method" title="#default_test (instance method)">- (Object) <strong>default_test</strong> </a>
+      <a href="#default_test-instance_method" title="#default_test (instance method)">#<strong>default_test</strong>  &#x21d2; Object </a>
     
 
     
@@ -827,7 +856,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#description-instance_method" title="#description (instance method)">- (Object) <strong>description</strong> </a>
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>  &#x21d2; Object </a>
     
 
     
@@ -850,7 +879,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#elapsed_time-instance_method" title="#elapsed_time (instance method)">- (Object) <strong>elapsed_time</strong> </a>
+      <a href="#elapsed_time-instance_method" title="#elapsed_time (instance method)">#<strong>elapsed_time</strong>  &#x21d2; Object </a>
     
 
     
@@ -873,7 +902,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (TestCase) <strong>initialize</strong>(test_method_name) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(test_method_name)  &#x21d2; TestCase </a>
     
 
     
@@ -898,7 +927,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#interrupted%3F-instance_method" title="#interrupted? (instance method)">- (Boolean) <strong>interrupted?</strong> </a>
+      <a href="#interrupted%3F-instance_method" title="#interrupted? (instance method)">#<strong>interrupted?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -921,7 +950,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+      <a href="#local_name-instance_method" title="#local_name (instance method)">#<strong>local_name</strong>  &#x21d2; Object </a>
     
 
     
@@ -944,7 +973,30 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#passed%3F-instance_method" title="#passed? (instance method)">- (Boolean) <strong>passed?</strong> </a>
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a human-readable name for the specific test that this instance of TestCase represents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#passed%3F-instance_method" title="#passed? (instance method)">#<strong>passed?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -967,7 +1019,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#problem_occurred-instance_method" title="#problem_occurred (instance method)">- (void) <strong>problem_occurred</strong> </a>
+      <a href="#problem_occurred-instance_method" title="#problem_occurred (instance method)">#<strong>problem_occurred</strong>  &#x21d2; void </a>
     
 
     
@@ -990,7 +1042,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong>(result) </a>
+      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>(result)  &#x21d2; Object </a>
     
 
     
@@ -1013,7 +1065,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#setup-instance_method" title="#setup (instance method)">- (Object) <strong>setup</strong> </a>
+      <a href="#setup-instance_method" title="#setup (instance method)">#<strong>setup</strong>  &#x21d2; Object </a>
     
 
     
@@ -1036,7 +1088,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#size-instance_method" title="#size (instance method)">- (Object) <strong>size</strong> </a>
+      <a href="#size-instance_method" title="#size (instance method)">#<strong>size</strong>  &#x21d2; Object </a>
     
 
     
@@ -1059,7 +1111,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#start_time-instance_method" title="#start_time (instance method)">- (Object) <strong>start_time</strong> </a>
+      <a href="#start_time-instance_method" title="#start_time (instance method)">#<strong>start_time</strong>  &#x21d2; Object </a>
     
 
     
@@ -1082,7 +1134,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#teardown-instance_method" title="#teardown (instance method)">- (Object) <strong>teardown</strong> </a>
+      <a href="#teardown-instance_method" title="#teardown (instance method)">#<strong>teardown</strong>  &#x21d2; Object </a>
     
 
     
@@ -1105,7 +1157,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
     
 
     
@@ -1128,7 +1180,7 @@ end   end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#valid%3F-instance_method" title="#valid? (instance method)">- (Boolean) <strong>valid?</strong> </a>
+      <a href="#valid%3F-instance_method" title="#valid? (instance method)">#<strong>valid?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -1285,7 +1337,7 @@ end   end
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Test::Unit::TestCase (class)">TestCase</a></span></tt>) <strong>initialize</strong>(test_method_name) 
+    #<strong>initialize</strong>(test_method_name)  &#x21d2; <tt><span class='object_link'><a href="" title="Test::Unit::TestCase (class)">TestCase</a></span></tt> 
   
 
   
@@ -1335,7 +1387,7 @@ test represented by test_method_name.</p>
       <div class="method_details first">
   <h3 class="signature first" id="method_name-instance_method">
   
-    - (<tt>Object</tt>) <strong>method_name</strong>  <span class="extras">(readonly)</span>
+    #<strong>method_name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1382,7 +1434,7 @@ test represented by test_method_name.</p>
       <div class="method_details first">
   <h3 class="signature first" id="added_method_names-class_method">
   
-    + (<tt>Object</tt>) <strong>added_method_names</strong> 
+    .<strong>added_method_names</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1422,7 +1474,7 @@ test represented by test_method_name.</p>
       <div class="method_details ">
   <h3 class="signature " id="added_methods-class_method">
   
-    + (<tt>Object</tt>) <strong>added_methods</strong> 
+    .<strong>added_methods</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1462,7 +1514,7 @@ test represented by test_method_name.</p>
       <div class="method_details ">
   <h3 class="signature " id="description-class_method">
   
-    + (<tt>Object</tt>) <strong>description</strong>(value, target = nil) 
+    .<strong>description</strong>(value, target = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1511,9 +1563,87 @@ test.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="find_locations-class_method">
+  
+    .<strong>find_locations</strong>(query)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 378</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_locations'>find_locations</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query_path'>query_path</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_query_line'>query_line</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:line</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_query_method_name'>query_method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='id identifier rubyid_target_method_locations'>target_method_locations</span><span class='lparen'>(</span><span class='id identifier rubyid_query_path'>query_path</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_query_line'>query_line</span>
+    <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
+      <span class='op'>-</span><span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:line</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_available_location'>available_location</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
+      <span class='id identifier rubyid_query_line'>query_line</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:line</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_available_location'>available_location</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_available_location'>available_location</span><span class='lbracket'>[</span><span class='symbol'>:test_case</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>self</span>
+    <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_available_location'>available_location</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_query_method_name'>query_method_name</span>
+    <span class='id identifier rubyid_available_location'>available_location</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
+      <span class='id identifier rubyid_query_method_name'>query_method_name</span> <span class='op'>==</span> <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_available_location'>available_location</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_available_location'>available_location</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_available_locations'>available_locations</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="inherited-class_method">
   
-    + (<tt>Object</tt>) <strong>inherited</strong>(sub_class) 
+    .<strong>inherited</strong>(sub_class)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1557,7 +1687,7 @@ test.</p>
       <div class="method_details ">
   <h3 class="signature " id="method_added-class_method">
   
-    + (<tt>Object</tt>) <strong>method_added</strong>(name) 
+    .<strong>method_added</strong>(name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1635,7 +1765,7 @@ test.</p>
       <div class="method_details ">
   <h3 class="signature " id="shutdown-class_method">
   
-    + (<tt>Object</tt>) <strong>shutdown</strong> 
+    .<strong>shutdown</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1705,7 +1835,7 @@ should be worked in any order.</p>
       <div class="method_details ">
   <h3 class="signature " id="startup-class_method">
   
-    + (<tt>Object</tt>) <strong>startup</strong> 
+    .<strong>startup</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1776,7 +1906,7 @@ should be worked in any order.</p>
       <div class="method_details ">
   <h3 class="signature " id="sub_test_case-class_method">
   
-    + (<tt><span class='object_link'><a href="" title="Test::Unit::TestCase (class)">Test::Unit::TestCase</a></span></tt>) <strong>sub_test_case</strong>(name) { ... }
+    .<strong>sub_test_case</strong>(name) { ... } &#x21d2; <tt><span class='object_link'><a href="" title="Test::Unit::TestCase (class)">Test::Unit::TestCase</a></span></tt> 
   
 
   
@@ -1790,7 +1920,7 @@ should be worked in any order.</p>
 the same in meaning:</p>
 
 <p>Standard:
-  class TestParent &lt; Test::UnitTestCase
+  class TestParent &lt; Test::Unit::TestCase
     class TestChild &lt; self
       def test_in_child
       end
@@ -1798,7 +1928,7 @@ the same in meaning:</p>
   end</p>
 
 <p>Syntax sugar:
-  class TestParent &lt; Test::UnitTestCase
+  class TestParent &lt; Test::Unit::TestCase
     sub_test_case(“TestChild”) do
       def test_in_child
       end
@@ -1916,7 +2046,7 @@ case class context.</p>
       <div class="method_details ">
   <h3 class="signature " id="suite-class_method">
   
-    + (<tt>Object</tt>) <strong>suite</strong> 
+    .<strong>suite</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1960,7 +2090,7 @@ each method.</p>
       <div class="method_details ">
   <h3 class="signature " id="test-class_method">
   
-    + (<tt>Object</tt>) <strong>test</strong>(*test_description_or_targets, &amp;block) 
+    .<strong>test</strong>(*test_description_or_targets, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2061,7 +2191,7 @@ treated as a test method:</p>
       <div class="method_details ">
   <h3 class="signature " id="test_defined?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>test_defined?</strong>(query) 
+    .<strong>test_defined?</strong>(query)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -2238,7 +2368,7 @@ defined.</p>
       <div class="method_details ">
   <h3 class="signature " id="test_order-class_method">
   
-    + (<tt>Object</tt>) <strong>test_order</strong> 
+    .<strong>test_order</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2279,7 +2409,7 @@ defined.</p>
       <div class="method_details ">
   <h3 class="signature " id="test_order=-class_method">
   
-    + (<tt>Object</tt>) <strong>test_order=</strong>(order) 
+    .<strong>test_order=</strong>(order)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2333,7 +2463,7 @@ defined.</p>
       <div class="method_details first">
   <h3 class="signature first" id="==-instance_method">
   
-    - (<tt>Object</tt>) <strong>==</strong>(other) 
+    #<strong>==</strong>(other)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2379,7 +2509,7 @@ defined.</p>
       <div class="method_details ">
   <h3 class="signature " id="add_pass-instance_method">
   
-    - (<tt>void</tt>) <strong>add_pass</strong> 
+    #<strong>add_pass</strong>  &#x21d2; <tt>void</tt> 
   
 
   
@@ -2425,7 +2555,7 @@ example, we may add a new hook in #run.</p>
       <div class="method_details ">
   <h3 class="signature " id="assign_test_data-instance_method">
   
-    - (<tt>Object</tt>) <strong>assign_test_data</strong>(label, data) 
+    #<strong>assign_test_data</strong>(label, data)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2465,7 +2595,7 @@ example, we may add a new hook in #run.</p>
       <div class="method_details ">
   <h3 class="signature " id="cleanup-instance_method">
   
-    - (<tt>Object</tt>) <strong>cleanup</strong> 
+    #<strong>cleanup</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2544,7 +2674,7 @@ end   end
       <div class="method_details ">
   <h3 class="signature " id="data_label-instance_method">
   
-    - (<tt>Object</tt>) <strong>data_label</strong> 
+    #<strong>data_label</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2586,7 +2716,7 @@ test isn’t associated with any test data, it returns
       <div class="method_details ">
   <h3 class="signature " id="default_test-instance_method">
   
-    - (<tt>Object</tt>) <strong>default_test</strong> 
+    #<strong>default_test</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2616,7 +2746,7 @@ test isn’t associated with any test data, it returns
       <div class="method_details ">
   <h3 class="signature " id="description-instance_method">
   
-    - (<tt>Object</tt>) <strong>description</strong> 
+    #<strong>description</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2660,7 +2790,7 @@ Test::Unit::TestCase.description.</p>
       <div class="method_details ">
   <h3 class="signature " id="elapsed_time-instance_method">
   
-    - (<tt>Object</tt>) <strong>elapsed_time</strong> 
+    #<strong>elapsed_time</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2700,7 +2830,7 @@ Test::Unit::TestCase.description.</p>
       <div class="method_details ">
   <h3 class="signature " id="interrupted?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>interrupted?</strong> 
+    #<strong>interrupted?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -2751,9 +2881,61 @@ Test::Unit::TestCase.description.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="local_name-instance_method">
+  
+    #<strong>local_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a human-readable name for the specific test that this
+instance of TestCase represents.</p>
+
+<p><code>#local_name</code> doesn’t include class name. <code>#name</code> includes
+class name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+672
+673
+674
+675
+676
+677
+678</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 672</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_local_name'>local_name</span>
+  <span class='kw'>if</span> <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_have_test_data?'>have_test_data?</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@method_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_data_label'>data_label</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@method_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="name-instance_method">
   
-    - (<tt>Object</tt>) <strong>name</strong> 
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2802,7 +2984,7 @@ this instance of TestCase represents.</p>
       <div class="method_details ">
   <h3 class="signature " id="passed?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>passed?</strong> 
+    #<strong>passed?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -2857,7 +3039,7 @@ can be left behind if the test fails.</p>
       <div class="method_details ">
   <h3 class="signature " id="problem_occurred-instance_method">
   
-    - (<tt>void</tt>) <strong>problem_occurred</strong> 
+    #<strong>problem_occurred</strong>  &#x21d2; <tt>void</tt> 
   
 
   
@@ -2901,7 +3083,7 @@ suites, the test process exits with failure exit status.</p>
       <div class="method_details ">
   <h3 class="signature " id="run-instance_method">
   
-    - (<tt>Object</tt>) <strong>run</strong>(result) 
+    #<strong>run</strong>(result)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2995,7 +3177,7 @@ and errors in result.</p>
       <div class="method_details ">
   <h3 class="signature " id="setup-instance_method">
   
-    - (<tt>Object</tt>) <strong>setup</strong> 
+    #<strong>setup</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3072,7 +3254,7 @@ end   end
       <div class="method_details ">
   <h3 class="signature " id="size-instance_method">
   
-    - (<tt>Object</tt>) <strong>size</strong> 
+    #<strong>size</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3102,7 +3284,7 @@ end   end
       <div class="method_details ">
   <h3 class="signature " id="start_time-instance_method">
   
-    - (<tt>Object</tt>) <strong>start_time</strong> 
+    #<strong>start_time</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3142,7 +3324,7 @@ end   end
       <div class="method_details ">
   <h3 class="signature " id="teardown-instance_method">
   
-    - (<tt>Object</tt>) <strong>teardown</strong> 
+    #<strong>teardown</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3219,7 +3401,7 @@ end   end
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_s</strong> 
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3259,7 +3441,7 @@ end   end
       <div class="method_details ">
   <h3 class="signature " id="valid?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>valid?</strong> 
+    #<strong>valid?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3335,9 +3517,7 @@ end   end
 
 </div>
 
-    <div id="footer"></div>
-
-  
+      <div id="footer">
     </div>
 
     <div class="sponsors">
@@ -3377,5 +3557,6 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
     </div>
 
-</body>
+</div>
+  </body>
 </html>
