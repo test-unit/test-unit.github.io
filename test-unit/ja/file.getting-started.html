@@ -89,237 +89,267 @@
 
       <iframe id="search_frame" src="file_list.html"></iframe>
 
-      <div id="content"><div id='filecontents'><h2 id="first-step-of-the-test-unit">1. First step of the <code>test-unit</code></h2>
+      <div id="content"><div id='filecontents'><h2 id="test-unit">1. <code>test-unit</code>はじめの一歩</h2>
 
-<p>Let’s getting start <code>test-unit</code>.</p>
+<p>テストユニットを使ってみましょう。</p>
 
-<p>This document creates an example gem package called <code>sample</code> with the <code>test-unit</code> testing framework.</p>
+<p>この文書は<code>sample</code>というgemパッケージを作成し<code>test-unit</code>を利用する方法について解説します。</p>
 
-<h2 id="install-bundler-and-test-unit">2. Install bundler and test-unit.</h2>
-
-<ul>
-  <li>First, install the <code>bundler</code> gem for generating gem template.</li>
-  <li>Second, install the <code>test-unit</code> itself.</li>
-</ul>
-
-<p><code>
-gem install bundler
-gem install test-unit
-</code></p>
-
-<p>The <code>gem list</code> command output installed packages.
-You will find the following lines.</p>
-
-<p><code>
-gem list
-...
-bundler (1.14.6)
-...
-test-unit (3.2.3)
-</code></p>
-
-<h2 id="create-gem-template">3. Create gem template.</h2>
-
-<p>Next, create a gem template using <code>bundler</code> command.
-This command generates package skeleton with a testing framework.
-However, this command can’t generate test templates for <code>test-unit</code>.</p>
-
-<p>So, First create gem template with the <code>minitest</code> testing framework.
-(It’s similar to <code>unit-test</code>).
-After that, replace some files for <code>test-unit</code>.</p>
-
-<p>The <code>bundle gem -t minitest sample</code> command will generate the following files.</p>
-
-<p><code>
-.
-|-- Gemfile
-|-- README.md
-|-- Rakefile
-|-- bin
-|   |-- console
-|   `-- setup
-|-- lib
-|   |-- sample
-|   |   `-- version.rb
-|   `-- sample.rb
-|-- sample.gemspec  # &lt;- Modify
-`-- test
-    |-- sample_test.rb # &lt;- Modify
-    `-- test_helper.rb # &lt;- Modify
-</code></p>
-
-<h2 id="edit-files-for-test-unit">4. Edit files for <code>test-unit</code></h2>
-
-<h3 id="edit-gemspec">4.1. Edit gemspec</h3>
-
-<p>Edit <code>sample.gemspec</code> like the below.
-Replace <code>minitest</code> line to <code>test-unit</code>.</p>
-
-<p>Before
-<code>ruby
-  spec.add_development_dependency "minitest", "~&gt; 5.0"
-</code></p>
-
-<p>After</p>
-
-<p><code>ruby
-  spec.add_development_dependency "test-unit", "~&gt; 3.2.3"
-</code></p>
-
-<h3 id="edit-gemspec-1">4.2. Edit gemspec</h3>
-
-<p>Next, edit the <code>test/test_helper</code> file.</p>
-
-<p>Before</p>
-
-<p>```ruby
-$LOAD_PATH.unshift File.expand_path(‘../../lib’, <strong>FILE</strong>)
-require ‘sample’</p>
-
-<p>require ‘minitest/autorun’ # &lt;– Modify this line.
-```</p>
-
-<p>After</p>
-
-<p>```ruby
-$LOAD_PATH.unshift File.expand_path(‘../../lib’, <strong>FILE</strong>)
-require ‘sample’</p>
-
-<p>require ‘test/unit’　# &lt;– After modification.
-```</p>
-
-<h3 id="rakefile-no-edit">4.3 Rakefile (No edit)</h3>
-
-<p>This file doesn’t need to modify.
-The output is the below.</p>
-
-<p>```ruby
-require “bundler/gem_tasks”
-require “rake/testtask”</p>
-
-<p>Rake::TestTask.new(:test) do |t|
-  t.libs « “test”
-  t.libs « “lib”
-  t.test_files = FileList[‘test/<em>*/</em>_test.rb’]
-end</p>
-
-<p>task :default =&gt; :test
-```</p>
-
-<h3 id="edit-testsampletestrb">4.4 Edit <code>test/sample_test.rb</code></h3>
-
-<p>The bundler generate the file <code>test/sample_test.rb</code>.
-This file originally templates for <code>minitest</code>.</p>
-
-<p>Let’s modify this file for <code>test-unit</code></p>
-
-<p>before</p>
-
-<p>```ruby
-require ‘test_helper’</p>
-
-<p>class SampleTest &lt; Minitest::Test # &lt;- Modify here
-  def test_that_it_has_a_version_number
-    refute_nil ::Sample::VERSION
-  end</p>
-
-<p>def test_it_does_something_useful
-    assert false
-  end
-end
-```</p>
-
-<p>After</p>
-
-<p>```ruby
-require ‘test_helper’</p>
-
-<p>class SampleTest &lt; Test::Unit::TestCase # &lt;- After modification
-  def test_that_it_has_a_version_number
-    refute_nil ::Sample::VERSION
-  end</p>
-
-<p>def test_it_does_something_useful
-    assert false
-  end
-end
-```</p>
-
-<h2 id="execute-test">5. Execute test.</h2>
-
-<p>The <code>rake test</code> command execute test scenarios in the <code>test</code> directory.
-Now it tries to two tests. One will success the other one fails.</p>
-
-<p>```
-rake test
-Loaded suite
-/path/to/ruby/lib/ruby/gems/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader
-Started
-F
-============================================================================================================================================================
-Failure: <false> is not true.
-test_it_does_something_useful(SampleTest)
-/path/to/sample/test/sample_test.rb:9:in `test_it_does_something_useful'
-      6:   end
-      7:
-      8:   def test_it_does_something_useful
-  =&gt;  9:     assert false
-     10:   end
-     11: end
-============================================================================================================================================================
-.</false></p>
-
-<h2 id="finished-in-0011521-seconds">Finished in 0.011521 seconds.</h2>
-<p>2 tests, 2 assertions, 1 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
-50% passed
-————————————————————————————————————————————————————
-173.60 tests/s, 173.60 assertions/s
-rake aborted!
-Command failed with status (1)</p>
-
-<p>Tasks: TOP =&gt; test
-(See full trace by running task with –trace)
-```</p>
-
-<h2 id="create-original-tests">6. Create original tests.</h2>
-
-<p>Let’s create your original tests with the following rules.</p>
+<h2 id="bundlertest-unit">2. bundlerとtest-unitのインストール</h2>
 
 <ul>
-  <li>Create a test file in the <code>test</code> directory.</li>
-  <li>The file needs suffix  <code>xxx_test.rb</code>.</li>
-  <li>You can put test file into the subdirectory like <code>test/sub</code>.</li>
+  <li>最初にgemの雛形を生成する<code>bundler</code>をインストールします。</li>
+  <li>次に、<code>test-unit</code>をインストールします。</li>
 </ul>
 
-<p>Example directory layout.</p>
+<div class="language-text highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;gem install bundler
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;gem install test-unit
+</code></pre></div>
+</div>
+</div>
 
-<p><code>
-test
-|-- sample_test.rb
-|-- sub
-|   `-- sample2_test.rb
-`-- test_helper.rb
-</code></p>
+<p><code>gem list</code>コマンドでインストールしたパッケージを確認します。
+インストールが成功すると、次のような行が出力されます。</p>
 
-<p>Example test file in the sub directory.</p>
+<div class="language-text highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;gem list
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;...
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;bundler (1.14.6)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;...
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;test-unit (3.2.3)
+</code></pre></div>
+</div>
+</div>
 
-<p>```ruby
-require ‘test_helper’</p>
+<h2 id="gem">3. gemテンプレートの作成</h2>
 
-<p>module Sub
-  class Sample2Test &lt; Test::Unit::TestCase
-    def test_that_it_has_a_version_number
-      refute_nil ::Sample::VERSION
-    end</p>
+<p>次に<code>bundler</code>コマンドを使ってgemの雛形を作成します。
+このコマンドはテストに必要な雛形も生成することができますが、
+現在は、<code>test-unit</code>のためのテンプレートを生成することはできません。</p>
 
-<pre class="code ruby"><code class="ruby">def test_it_does_something_useful
-  assert false
-end   end end ```
-</code></pre>
+<p>そのため、まず<code>minitest</code>というテストフレームワークのテンプレートを作成し
+(このフレームワークは<code>unit-test</code>に似ています。)
+その後いくつかのファイルを<code>test-unit</code>用に修正します。</p>
 
-<h2 id="for-more-inforomation">7. For more inforomation</h2>
+<p><code>bundle gem -t minitest sample</code>を実行すると次のファイルを生成します。</p>
 
-<p>Let’s read the official document.</p>
+<div class="language-text highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;.
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;|-- Gemfile
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;|-- README.md
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;|-- Rakefile
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;|-- bin
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;|   |-- console
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;|   `-- setup
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;|-- lib
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;|   |-- sample
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;|   |   `-- version.rb
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;|   `-- sample.rb
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;|-- sample.gemspec  # &lt;- 修正
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;`-- test
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n14&quot; name=&quot;n14&quot;&gt;14&lt;/a&gt;&lt;/span&gt;    |-- sample_test.rb # &lt;- 修正
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n15&quot; name=&quot;n15&quot;&gt;15&lt;/a&gt;&lt;/span&gt;    `-- test_helper.rb # &lt;- 修正
+</code></pre></div>
+</div>
+</div>
+
+<h2 id="test-unit-1">4. <code>test-unit</code>用にファイルを修正する</h2>
+
+<h3 id="gemspec">4.1 gemspecの編集</h3>
+
+<p><code>sample.gemspec</code>ファイルを次のように修正します。
+<code>minitest</code>の行を、<code>test-unit</code>に修正します。</p>
+
+<p>修正前</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;  spec.add_development_dependency &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;minitest&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;, &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;~&gt; 5.0&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<p>修正後</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;  spec.add_development_dependency &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test-unit&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;, &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;~&gt; 3.2.3&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<h3 id="testtesthelperrb">4.2 <code>test/test_helper.rb</code>の修正</h3>
+
+<p>次に<code>test/test_helper</code>ファイルを修正します。</p>
+
+<p>修正前</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#d70&quot;&gt;$LOAD_PATH&lt;/span&gt;.unshift &lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;File&lt;/span&gt;.expand_path(&lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;../../lib&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;, &lt;span style=&quot;color:#069&quot;&gt;__FILE__&lt;/span&gt;)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;sample&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;minitest/autorun&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt; &lt;span style=&quot;color:#777&quot;&gt;# &lt;-- この行を修正します。&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<p>修正後</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#d70&quot;&gt;$LOAD_PATH&lt;/span&gt;.unshift &lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;File&lt;/span&gt;.expand_path(&lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;../../lib&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;, &lt;span style=&quot;color:#069&quot;&gt;__FILE__&lt;/span&gt;)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;sample&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test/unit&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt; &lt;span style=&quot;color:#777&quot;&gt;# &lt;-- 修正後&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<h3 id="rakefile">4.3 Rakefile(修正不要)</h3>
+
+<p>このファイルは修正不要です。
+ファイルの中身は次のようになっています。</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;bundler/gem_tasks&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;rake/testtask&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Rake&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;TestTask&lt;/span&gt;.new(&lt;span style=&quot;color:#A60&quot;&gt;:test&lt;/span&gt;) &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;do&lt;/span&gt; |t|
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;  t.libs &lt;&lt; &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;  t.libs &lt;&lt; &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;lib&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;  t.test_files = &lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;FileList&lt;/span&gt;[&lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test/**/*_test.rb&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;]
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;task &lt;span style=&quot;color:#A60&quot;&gt;:default&lt;/span&gt; =&gt; &lt;span style=&quot;color:#A60&quot;&gt;:test&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<h3 id="testsampletestrb">4.4 <code>test/sample_test.rb</code>の修正</h3>
+
+<p>bundlerコマンドは、<code>test/sample_test.rb</code>を作成します。
+このファイルは<code>minitest</code>用のテンプレートになっています。</p>
+
+<p><code>test-unit</code>用に修正します</p>
+
+<p>修正前</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test_helper&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color:#B06;font-weight:bold&quot;&gt;SampleTest&lt;/span&gt; &lt; &lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Minitest&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Test&lt;/span&gt; &lt;span style=&quot;color:#777&quot;&gt;# &lt;- ここを修正します&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;def&lt;/span&gt; &lt;span style=&quot;color:#06B;font-weight:bold&quot;&gt;test_that_it_has_a_version_number&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;    refute_nil ::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Sample&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;VERSION&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;def&lt;/span&gt; &lt;span style=&quot;color:#06B;font-weight:bold&quot;&gt;test_it_does_something_useful&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;    assert &lt;span style=&quot;color:#069&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<p>修正後</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test_helper&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color:#B06;font-weight:bold&quot;&gt;SampleTest&lt;/span&gt; &lt; &lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Test&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Unit&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;TestCase&lt;/span&gt; &lt;span style=&quot;color:#777&quot;&gt;# &lt;- 修正後&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;def&lt;/span&gt; &lt;span style=&quot;color:#06B;font-weight:bold&quot;&gt;test_that_it_has_a_version_number&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;    refute_nil ::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Sample&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;VERSION&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;def&lt;/span&gt; &lt;span style=&quot;color:#06B;font-weight:bold&quot;&gt;test_it_does_something_useful&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;    assert &lt;span style=&quot;color:#069&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<h2 id="section">5. テストの実行</h2>
+
+<p><code>rake test</code>コマンドを実行すると<code>test</code>ディレクトリの下にあるテストを実行します。
+二つのテストを実行し、一つは成功、もう一つは失敗します。</p>
+
+<div class="language-text highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;rake test
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;Loaded suite
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;/path/to/ruby/lib/ruby/gems/2.3.0/gems/rake-12.0.0/lib/rake/rake_test_loader
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;Started
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;F
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;================================================================================
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;Failure: &lt;false&gt; is not true.
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;test_it_does_something_useful(SampleTest)
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;/path/to/sample/test/sample_test.rb:9:in `test_it_does_something_useful&#39;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;      6:   end
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;      7:
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;      8:   def test_it_does_something_useful
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;  =&gt;  9:     assert false
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n14&quot; name=&quot;n14&quot;&gt;14&lt;/a&gt;&lt;/span&gt;     10:   end
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n15&quot; name=&quot;n15&quot;&gt;15&lt;/a&gt;&lt;/span&gt;     11: end
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n16&quot; name=&quot;n16&quot;&gt;16&lt;/a&gt;&lt;/span&gt;================================================================================
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n17&quot; name=&quot;n17&quot;&gt;17&lt;/a&gt;&lt;/span&gt;.
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n18&quot; name=&quot;n18&quot;&gt;18&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n19&quot; name=&quot;n19&quot;&gt;19&lt;/a&gt;&lt;/span&gt;Finished in 0.011521 seconds.
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n20&quot; name=&quot;n20&quot;&gt;20&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;--------------------------------------------------------------------------------
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n21&quot; name=&quot;n21&quot;&gt;21&lt;/a&gt;&lt;/span&gt;2 tests, 2 assertions, 1 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n22&quot; name=&quot;n22&quot;&gt;22&lt;/a&gt;&lt;/span&gt;50% passed
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n23&quot; name=&quot;n23&quot;&gt;23&lt;/a&gt;&lt;/span&gt;--------------------------------------------------------------------------------
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n24&quot; name=&quot;n24&quot;&gt;24&lt;/a&gt;&lt;/span&gt;173.60 tests/s, 173.60 assertions/s
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n25&quot; name=&quot;n25&quot;&gt;25&lt;/a&gt;&lt;/span&gt;rake aborted!
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n26&quot; name=&quot;n26&quot;&gt;26&lt;/a&gt;&lt;/span&gt;Command failed with status (1)
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n27&quot; name=&quot;n27&quot;&gt;27&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n28&quot; name=&quot;n28&quot;&gt;28&lt;/a&gt;&lt;/span&gt;Tasks: TOP =&gt; test
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n29&quot; name=&quot;n29&quot;&gt;29&lt;/a&gt;&lt;/span&gt;(See full trace by running task with --trace)
+</code></pre></div>
+</div>
+</div>
+
+<h2 id="section-1">6. オリジナルのテストを作る</h2>
+
+<p>次のルールに従ってオリジナルのテストを作成します。</p>
+
+<ul>
+  <li><code>test</code>ディレクトリの下にテストを作成します。</li>
+  <li>ファイルの名前は、xxx_test.rbのようにします。</li>
+  <li>テストは<code>sub/test</code>のようなサブディレクトリに置くこともできます。</li>
+</ul>
+
+<p>ディレクトリレイアウトの例</p>
+
+<div class="language-text highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;test
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;|-- sample_test.rb
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;|-- sub
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;|   `-- sample2_test.rb
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;`-- test_helper.rb
+</code></pre></div>
+</div>
+</div>
+
+<p>サブディレクトリ内のテスト例</p>
+
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre class="code ruby"><code class="ruby">&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n1&quot; name=&quot;n1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;require &lt;span style=&quot;background-color:hsla(0,100%,50%,0.05)&quot;&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color:#D20&quot;&gt;test_helper&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n2&quot; name=&quot;n2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n3&quot; name=&quot;n3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;module&lt;/span&gt; &lt;span style=&quot;color:#B06;font-weight:bold&quot;&gt;Sub&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n4&quot; name=&quot;n4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color:#B06;font-weight:bold&quot;&gt;Sample2Test&lt;/span&gt; &lt; &lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Test&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Unit&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;TestCase&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n5&quot; name=&quot;n5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;    &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;def&lt;/span&gt; &lt;span style=&quot;color:#06B;font-weight:bold&quot;&gt;test_that_it_has_a_version_number&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n6&quot; name=&quot;n6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;      refute_nil ::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;Sample&lt;/span&gt;::&lt;span style=&quot;color:#036;font-weight:bold&quot;&gt;VERSION&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n7&quot; name=&quot;n7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;    &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n8&quot; name=&quot;n8&quot;&gt;8&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt; &lt;a href=&quot;#n9&quot; name=&quot;n9&quot;&gt;9&lt;/a&gt;&lt;/span&gt;    &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;def&lt;/span&gt; &lt;span style=&quot;color:#06B;font-weight:bold&quot;&gt;test_it_does_something_useful&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;strong&gt;&lt;a href=&quot;#n10&quot; name=&quot;n10&quot;&gt;10&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;      assert &lt;span style=&quot;color:#069&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n11&quot; name=&quot;n11&quot;&gt;11&lt;/a&gt;&lt;/span&gt;    &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n12&quot; name=&quot;n12&quot;&gt;12&lt;/a&gt;&lt;/span&gt;  &lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;line-numbers&quot;&gt;&lt;a href=&quot;#n13&quot; name=&quot;n13&quot;&gt;13&lt;/a&gt;&lt;/span&gt;&lt;span style=&quot;color:#080;font-weight:bold&quot;&gt;end&lt;/span&gt;
+</code></pre></div>
+</div>
+</div>
+
+<h2 id="section-2">7. 詳細な情報</h2>
+
+<p>公式のドキュメントを参照してください。</p>
 
 <ul>
   <li><a href="http://test-unit.github.io/index.html">test-unit</a></li>
@@ -327,7 +357,7 @@ end   end end ```
 </div></div>
 
       <div id="footer">
-  Generated on Fri Mar 17 21:47:40 2017 by
+  Generated on Fri Mar 31 17:05:12 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.3).
 </div>
