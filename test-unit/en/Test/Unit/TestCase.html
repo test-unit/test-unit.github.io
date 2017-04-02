@@ -132,7 +132,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/test/unit/testcase.rb<span class="defines">,<br />
-  lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb</span>
+  lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb</span>
 </dd>
   </dl>
   
@@ -197,6 +197,26 @@ end
   <li>teardown</li>
   <li>shutdown</li>
 </ol>
+
+<p>You can set an attribute to each test.</p>
+
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  attribute :speed, :fast
+  def test_my_fast_method
+    # You can get the attribute via `self[]`
+    self[:speed] # =&gt; :fast
+    ...
+  end
+
+  attribute :speed, :slow
+  def test_my_slow_method
+    self[:speed] # =&gt; :slow
+    ...
+  end
+end
+</code></pre>
 
 
   </div>

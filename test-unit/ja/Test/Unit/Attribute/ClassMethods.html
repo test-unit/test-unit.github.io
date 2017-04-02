@@ -159,7 +159,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>Set an attribute to test methods.</p>
 </div></span>
   
 </li>
@@ -384,34 +384,386 @@
       <div class="method_details first">
   <h3 class="signature first" id="attribute-instance_method">
   
-    #<strong>attribute</strong>(name, value, options = {}, *method_names)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">#<strong>attribute</strong>(name, value)  &#x21d2; <tt>void</tt> </span>
+    
+      <span class="overload">#<strong>attribute</strong>(name, value, *method_names)  &#x21d2; <tt>void</tt> </span>
+    
+      <span class="overload">#<strong>attribute</strong>(name, value, options)  &#x21d2; <tt>void</tt> </span>
+    
+      <span class="overload">#<strong>attribute</strong>(name, value, options, *method_names)  &#x21d2; <tt>void</tt> </span>
+    
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Set an attribute to test methods.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>attribute</strong>(name, value)  &#x21d2; <tt>void</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_attribute'>attribute</span> <span class='symbol'>:speed</span><span class='comma'>,</span> <span class='symbol'>:slow</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method'>test_my_slow_method</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; :slow
+</span><span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute value</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>attribute</strong>(name, value, *method_names)  &#x21d2; <tt>void</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method1'>test_my_slow_method1</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; :slow
+</span><span class='kw'>end</span>
+
+<span class='id identifier rubyid_attribute'>attribute</span> <span class='symbol'>:speed</span><span class='comma'>,</span> <span class='symbol'>:slow</span><span class='comma'>,</span> <span class='symbol'>:test_my_slow_method1</span><span class='comma'>,</span> <span class='symbol'>:test_my_slow_method2</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method2'>test_my_slow_method2</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; :slow
+</span><span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>method_names</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol, String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the test method names set the attribute</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>attribute</strong>(name, value, options)  &#x21d2; <tt>void</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_attribute'>attribute</span> <span class='symbol'>:speed</span><span class='comma'>,</span> <span class='symbol'>:slow</span><span class='comma'>,</span> <span class='label'>keep:</span> <span class='kw'>true</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method1'>test_my_slow_method1</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; :slow
+</span><span class='kw'>end</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method2'>test_my_slow_method2</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; :slow
+</span><span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute value</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:keep</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>whether or not to set attribute to following test methods</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>attribute</strong>(name, value, options, *method_names)  &#x21d2; <tt>void</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method1'>test_my_slow_method1</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; :slow
+</span><span class='kw'>end</span>
+
+<span class='comment'># There are no valid options for now.
+</span><span class='id identifier rubyid_attribute'>attribute</span> <span class='symbol'>:speed</span><span class='comma'>,</span> <span class='symbol'>:slow</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='symbol'>:test_my_slow_method1</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_my_slow_method2'>test_my_slow_method2</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:speed</span><span class='rbracket'>]</span> <span class='comment'># =&gt; nil
+</span><span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>ignored</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>method_names</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol, String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the test method names set the attribute</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60</pre>
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_method_names'>method_names</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
@@ -816,7 +1168,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 31 17:13:47 2017 by
+  Generated on Sun Apr  2 14:00:56 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.3).
 </div>
