@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,8 +89,6 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="../../../class_list.html"></iframe>
-
       <div id="content"><h1>Module: Test::Unit::Attribute::ClassMethods
   
   
@@ -124,7 +122,7 @@
       <dt id="attribute_observers-classvariable" class="">@@attribute_observers =
         
       </dt>
-      <dd><pre class="code"><span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></pre></dd>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></pre></dd>
     
   </dl>
 
@@ -852,7 +850,7 @@
   <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes_table'>attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
     <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>==</span> <span class='kw'>self</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>Attribute</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Attribute.html" title="Test::Unit::Attribute (module)">Attribute</a></span></span>
       <span class='id identifier rubyid_parent_attributes'>parent_attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
       <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span>
         <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_parent_attributes'>parent_attributes</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
@@ -862,7 +860,7 @@
       <span class='kw'>break</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>||</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -893,7 +891,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes_table'>attributes_table</span>
-  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='kw'>super</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='ivar'>@attributes_table</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -924,7 +922,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_current_attribute'>current_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_current_attributes'>current_attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_current_attributes'>current_attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -954,7 +952,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_current_attributes'>current_attributes</span>
-  <span class='ivar'>@current_attributes</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@current_attributes</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1000,7 +998,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='kw'>if</span> <span class='ivar'>@attributes_table</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='ivar'>@attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1008,12 +1006,12 @@
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'>TestCase</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='kw'>self</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
 
   <span class='ivar'>@cached_parent_test_case</span> <span class='op'>||=</span> <span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
     <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>!=</span> <span class='kw'>self</span> <span class='kw'>and</span>
       <span class='id identifier rubyid_ancestor'>ancestor</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='kw'>and</span>
-      <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>Attribute</span>
+      <span class='id identifier rubyid_ancestor'>ancestor</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Attribute.html" title="Test::Unit::Attribute (module)">Attribute</a></span></span>
   <span class='kw'>end</span>
 
   <span class='ivar'>@cached_parent_test_case</span><span class='period'>.</span><span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1060,7 +1058,7 @@
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@current_attributes</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_kept_attributes'>kept_attributes</span> <span class='op'>=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_kept_attributes'>kept_attributes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='ivar'>@current_attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='comma'>,</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='op'>|</span>
     <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='lbracket'>[</span><span class='symbol'>:value</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_kept_attributes'>kept_attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span> <span class='kw'>if</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='lbracket'>[</span><span class='symbol'>:keep</span><span class='rbracket'>]</span>
@@ -1143,14 +1141,14 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_attributes'>set_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_attributes'>new_attributes</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_new_attributes'>new_attributes</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-  <span class='ivar'>@attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@attributes_table</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='id identifier rubyid_current_attributes'>current_attributes</span> <span class='op'>=</span> <span class='ivar'>@attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_new_attributes'>new_attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
     <span class='id identifier rubyid_observers'>observers</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute_observers'>attribute_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_observers'>observers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_observer'>observer</span><span class='op'>|</span>
       <span class='id identifier rubyid_observer'>observer</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span>
-                    <span class='const'>StringifyKeyHash</span><span class='period'>.</span><span class='id identifier rubyid_stringify'>stringify</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='comma'>,</span>
+                    <span class='const'><span class='object_link'><a href="StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stringify'><span class='object_link'><a href="StringifyKeyHash.html#stringify-class_method" title="Test::Unit::Attribute::StringifyKeyHash.stringify (method)">stringify</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='comma'>,</span>
                     <span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='comma'>,</span>
                     <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span>
                     <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
@@ -1168,9 +1166,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:56 2017 by
+  Generated on Tue May 23 12:38:48 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

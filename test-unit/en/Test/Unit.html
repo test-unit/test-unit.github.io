@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Module: Test::Unit
   
@@ -294,7 +292,7 @@ commented out to indicate that they are completely optional):</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test/unit</span><span class='tstring_end'>&#39;</span></span>
 
-<span class='kw'>class</span> <span class='const'>MyTest</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>TestCase</span>
+<span class='kw'>class</span> <span class='const'>MyTest</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
   <span class='comment'># def setup
 </span>  <span class='comment'># end
 </span>
@@ -547,7 +545,7 @@ missing points, etc., in this document (or any other).</p>
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#run%3D-class_method" title="run= (class method)">.<strong>run=</strong>(have_run)  &#x21d2; Object </a>
+      <a href="#run=-class_method" title="run= (class method)">.<strong>run=</strong>(have_run)  &#x21d2; Object </a>
     
 
     
@@ -726,7 +724,7 @@ end   end
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='period'>.</span><span class='id identifier rubyid_at_exit'>at_exit</span> <span class='kw'>do</span>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit (module)">Unit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_at_exit'>at_exit</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Exit!</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></code></pre>
     
@@ -879,7 +877,7 @@ end   end
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='period'>.</span><span class='id identifier rubyid_at_start'>at_start</span> <span class='kw'>do</span>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit (module)">Unit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_at_start'>at_start</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Start!</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></code></pre>
     
@@ -988,7 +986,7 @@ will not automatically run at exit.</p>
       <pre class="code"><span class="info file"># File 'lib/test/unit.rb', line 316</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run='>run=</span><span class='lparen'>(</span><span class='id identifier rubyid_have_run'>have_run</span><span class='rparen'>)</span>
-  <span class='const'>AutoRunner</span><span class='period'>.</span><span class='id identifier rubyid_need_auto_run'>need_auto_run</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='kw'>not</span> <span class='id identifier rubyid_have_run'>have_run</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Unit/AutoRunner.html" title="Test::Unit::AutoRunner (class)">AutoRunner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_need_auto_run'>need_auto_run</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='kw'>not</span> <span class='id identifier rubyid_have_run'>have_run</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1043,7 +1041,7 @@ will not automatically run at exit.</p>
       <pre class="code"><span class="info file"># File 'lib/test/unit.rb', line 323</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run?'>run?</span>
-  <span class='kw'>not</span> <span class='const'>AutoRunner</span><span class='period'>.</span><span class='id identifier rubyid_need_auto_run?'>need_auto_run?</span>
+  <span class='kw'>not</span> <span class='const'><span class='object_link'><a href="Unit/AutoRunner.html" title="Test::Unit::AutoRunner (class)">AutoRunner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_need_auto_run?'><span class='object_link'><a href="Unit/AutoRunner.html#need_auto_run%3F-class_method" title="Test::Unit::AutoRunner.need_auto_run? (method)">need_auto_run?</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>

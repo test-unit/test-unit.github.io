@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::AutoRunner
   
@@ -214,7 +212,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#collector%3D-instance_method" title="#collector= (instance method)">#<strong>collector</strong>  &#x21d2; Object </a>
+      <a href="#collector=-instance_method" title="#collector= (instance method)">#<strong>collector</strong>  &#x21d2; Object </a>
     
 
     
@@ -398,7 +396,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#runner%3D-instance_method" title="#runner= (instance method)">#<strong>runner</strong>  &#x21d2; Object </a>
+      <a href="#runner=-instance_method" title="#runner= (instance method)">#<strong>runner</strong>  &#x21d2; Object </a>
     
 
     
@@ -454,7 +452,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#stop_on_failuere%3D-instance_method" title="#stop_on_failuere= (instance method)">#<strong>stop_on_failuere</strong>  &#x21d2; Object </a>
+      <a href="#stop_on_failuere=-instance_method" title="#stop_on_failuere= (instance method)">#<strong>stop_on_failuere</strong>  &#x21d2; Object </a>
     
 
     
@@ -621,7 +619,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_runner%3D-class_method" title="default_runner= (class method)">.<strong>default_runner=</strong>(id)  &#x21d2; Object </a>
+      <a href="#default_runner=-class_method" title="default_runner= (class method)">.<strong>default_runner=</strong>(id)  &#x21d2; Object </a>
     
 
     
@@ -644,7 +642,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#need_auto_run%3D-class_method" title="need_auto_run= (class method)">.<strong>need_auto_run=</strong>(need)  &#x21d2; Object </a>
+      <a href="#need_auto_run=-class_method" title="need_auto_run= (class method)">.<strong>need_auto_run=</strong>(need)  &#x21d2; Object </a>
     
 
     
@@ -1158,7 +1156,7 @@
   <span class='ivar'>@collector</span> <span class='op'>=</span> <span class='id identifier rubyid_default_collector'>default_collector</span>
   <span class='ivar'>@filters</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@to_run</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@color_scheme</span> <span class='op'>=</span> <span class='const'>ColorScheme</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
+  <span class='ivar'>@color_scheme</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ColorScheme.html" title="Test::Unit::ColorScheme (class)">ColorScheme</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="ColorScheme.html#default-class_method" title="Test::Unit::ColorScheme.default (method)">default</a></span></span>
   <span class='ivar'>@runner_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='ivar'>@default_arguments</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@workdir</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -1856,7 +1854,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collector'>collector</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-  <span class='const'>COLLECTORS</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+  <span class='const'><span class='object_link'><a href="#COLLECTORS-constant" title="Test::Unit::AutoRunner::COLLECTORS (constant)">COLLECTORS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2029,7 +2027,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='op'>=</span><span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
-  <span class='const'>PREPARE_HOOKS</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_hook'>hook</span>
+  <span class='const'><span class='object_link'><a href="#PREPARE_HOOKS-constant" title="Test::Unit::AutoRunner::PREPARE_HOOKS (constant)">PREPARE_HOOKS</a></span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_hook'>hook</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2060,8 +2058,8 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_collector'>register_collector</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_collector_builder'>collector_builder</span><span class='op'>=</span><span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
-  <span class='const'>COLLECTORS</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_collector_builder'>collector_builder</span>
-  <span class='const'>COLLECTORS</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_collector_builder'>collector_builder</span>
+  <span class='const'><span class='object_link'><a href="#COLLECTORS-constant" title="Test::Unit::AutoRunner::COLLECTORS (constant)">COLLECTORS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_collector_builder'>collector_builder</span>
+  <span class='const'><span class='object_link'><a href="#COLLECTORS-constant" title="Test::Unit::AutoRunner::COLLECTORS (constant)">COLLECTORS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_collector_builder'>collector_builder</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2091,7 +2089,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_color_scheme'>register_color_scheme</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_scheme'>scheme</span><span class='rparen'>)</span>
-  <span class='const'>ColorScheme</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_scheme'>scheme</span>
+  <span class='const'><span class='object_link'><a href="ColorScheme.html" title="Test::Unit::ColorScheme (class)">ColorScheme</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_scheme'>scheme</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2122,8 +2120,8 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_runner'>register_runner</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_runner_builder'>runner_builder</span><span class='op'>=</span><span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
-  <span class='const'>RUNNERS</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_runner_builder'>runner_builder</span>
-  <span class='const'>RUNNERS</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_runner_builder'>runner_builder</span>
+  <span class='const'><span class='object_link'><a href="#RUNNERS-constant" title="Test::Unit::AutoRunner::RUNNERS (constant)">RUNNERS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_runner_builder'>runner_builder</span>
+  <span class='const'><span class='object_link'><a href="#RUNNERS-constant" title="Test::Unit::AutoRunner::RUNNERS (constant)">RUNNERS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_runner_builder'>runner_builder</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2156,7 +2154,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 54</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_force_standalone'>force_standalone</span><span class='op'>=</span><span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_default_dir'>default_dir</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_argv'>argv</span><span class='op'>=</span><span class='const'>ARGV</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'><span class='object_link'><a href="../../top-level-namespace.html#run-instance_method" title="#run (method)">run</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_force_standalone'>force_standalone</span><span class='op'>=</span><span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_default_dir'>default_dir</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_argv'>argv</span><span class='op'>=</span><span class='const'>ARGV</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_force_standalone'>force_standalone</span> <span class='op'>||</span> <span class='id identifier rubyid_standalone?'>standalone?</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='id identifier rubyid_default_dir'>default_dir</span>
   <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_prepare'>prepare</span>
@@ -2191,7 +2189,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_runner'>runner</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-  <span class='const'>RUNNERS</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+  <span class='const'><span class='object_link'><a href="#RUNNERS-constant" title="Test::Unit::AutoRunner::RUNNERS (constant)">RUNNERS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2221,7 +2219,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setup_option'>setup_option</span><span class='lparen'>(</span><span class='id identifier rubyid_option_builder'>option_builder</span><span class='op'>=</span><span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
-  <span class='const'>ADDITIONAL_OPTIONS</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_option_builder'>option_builder</span>
+  <span class='const'><span class='object_link'><a href="#ADDITIONAL_OPTIONS-constant" title="Test::Unit::AutoRunner::ADDITIONAL_OPTIONS (constant)">ADDITIONAL_OPTIONS</a></span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_option_builder'>option_builder</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2280,7 +2278,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_standalone?'>standalone?</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-e</span><span class='tstring_end'>&quot;</span></span> <span class='op'>==</span> <span class='gvar'>$0</span><span class='rparen'>)</span>
   <span class='const'>ObjectSpace</span><span class='period'>.</span><span class='id identifier rubyid_each_object'>each_object</span><span class='lparen'>(</span><span class='const'>Class</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_klass'>klass</span><span class='op'>|</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>&lt;</span> <span class='const'>TestCase</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
   <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
@@ -2400,12 +2398,12 @@
   <span class='ivar'>@runner</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_runner'>runner</span><span class='lparen'>(</span><span class='id identifier rubyid_runner_name'>runner_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@runner</span>
   <span class='ivar'>@collector</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_collector'>collector</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>collector</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@collector</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>color_schemes</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>|</span>
-    <span class='const'>ColorScheme</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
+    <span class='const'><span class='object_link'><a href="ColorScheme.html" title="Test::Unit::ColorScheme (class)">ColorScheme</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_runner_options'>runner_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_runner_name'>runner_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>_options</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
     <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-    <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'>ColorScheme</span><span class='lbracket'>[</span><span class='id identifier rubyid_value'>value</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='symbol'>:color_scheme</span>
+    <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ColorScheme.html" title="Test::Unit::ColorScheme (class)">ColorScheme</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_value'>value</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='symbol'>:color_scheme</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='symbol'>:arguments</span>
       <span class='ivar'>@default_arguments</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='rparen'>)</span>
     <span class='kw'>else</span>
@@ -2648,15 +2646,15 @@
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_banner'>banner</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test::Unit automatic runner.</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_banner'>banner</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nUsage: </span><span class='embexpr_beg'>#{</span><span class='gvar'>$0</span><span class='embexpr_end'>}</span><span class='tstring_content'> [options] [-- untouched arguments]</span><span class='tstring_end'>&quot;</span></span>
 
-    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-r</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--runner=RUNNER</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'>RUNNERS</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-r</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--runner=RUNNER</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#RUNNERS-constant" title="Test::Unit::AutoRunner::RUNNERS (constant)">RUNNERS</a></span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use the given RUNNER.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'>RUNNERS</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RUNNERS-constant" title="Test::Unit::AutoRunner::RUNNERS (constant)">RUNNERS</a></span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
       <span class='ivar'>@runner</span> <span class='op'>=</span> <span class='id identifier rubyid_r'>r</span>
     <span class='kw'>end</span>
 
-    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--collector=COLLECTOR</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'>COLLECTORS</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--collector=COLLECTOR</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#COLLECTORS-constant" title="Test::Unit::AutoRunner::COLLECTORS (constant)">COLLECTORS</a></span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use the given COLLECTOR.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'>COLLECTORS</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_collector'>collector</span><span class='op'>|</span>
+         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#COLLECTORS-constant" title="Test::Unit::AutoRunner::COLLECTORS (constant)">COLLECTORS</a></span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_collector'>collector</span><span class='op'>|</span>
       <span class='ivar'>@collector</span> <span class='op'>=</span> <span class='id identifier rubyid_collector'>collector</span>
     <span class='kw'>end</span>
 
@@ -2757,14 +2755,14 @@
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  !slow</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  tag == &#39;important&#39; and !slow</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_expression'>expression</span><span class='op'>|</span>
       <span class='ivar'>@filters</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_test'>test</span><span class='op'>|</span>
-        <span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='const'>AttributeMatcher</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_matcher'>matcher</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AttributeMatcher.html" title="Test::Unit::AttributeMatcher (class)">AttributeMatcher</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AttributeMatcher.html#initialize-instance_method" title="Test::Unit::AttributeMatcher#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_matcher'>matcher</span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_priority_filter'>priority_filter</span> <span class='op'>=</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_test'>test</span><span class='op'>|</span>
       <span class='kw'>if</span> <span class='ivar'>@filters</span> <span class='op'>==</span> <span class='lbracket'>[</span><span class='id identifier rubyid_priority_filter'>priority_filter</span><span class='rbracket'>]</span>
-        <span class='const'>Priority</span><span class='op'>::</span><span class='const'>Checker</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_need_to_run?'>need_to_run?</span>
+        <span class='const'><span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Priority/Checker.html" title="Test::Unit::Priority::Checker (class)">Checker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Priority/Checker.html#initialize-instance_method" title="Test::Unit::Priority::Checker#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_need_to_run?'><span class='object_link'><a href="Priority/Checker.html#need_to_run%3F-class_method" title="Test::Unit::Priority::Checker.need_to_run? (method)">need_to_run?</a></span></span>
       <span class='kw'>else</span>
         <span class='kw'>nil</span>
       <span class='kw'>end</span>
@@ -2772,19 +2770,19 @@
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--[no-]priority-mode</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Runs some tests based on their priority.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_priority_mode'>priority_mode</span><span class='op'>|</span>
       <span class='kw'>if</span> <span class='id identifier rubyid_priority_mode'>priority_mode</span>
-        <span class='const'>Priority</span><span class='period'>.</span><span class='id identifier rubyid_enable'>enable</span>
+        <span class='const'><span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enable'><span class='object_link'><a href="Priority.html#enable-class_method" title="Test::Unit::Priority.enable (method)">enable</a></span></span>
         <span class='ivar'>@filters</span> <span class='op'>|=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_priority_filter'>priority_filter</span><span class='rbracket'>]</span>
       <span class='kw'>else</span>
-        <span class='const'>Priority</span><span class='period'>.</span><span class='id identifier rubyid_disable'>disable</span>
+        <span class='const'><span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='period'>.</span><span class='id identifier rubyid_disable'><span class='object_link'><a href="Priority.html#disable-class_method" title="Test::Unit::Priority.disable (method)">disable</a></span></span>
         <span class='ivar'>@filters</span> <span class='op'>-=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_priority_filter'>priority_filter</span><span class='rbracket'>]</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--default-priority=PRIORITY</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-         <span class='const'>Priority</span><span class='period'>.</span><span class='id identifier rubyid_available_values'>available_values</span><span class='comma'>,</span>
+         <span class='const'><span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available_values'><span class='object_link'><a href="Priority.html#available_values-class_method" title="Test::Unit::Priority.available_values (method)">available_values</a></span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Uses PRIORITY as default priority</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'>Priority</span><span class='period'>.</span><span class='id identifier rubyid_available_values'>available_values</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_priority'>priority</span><span class='op'>|</span>
-      <span class='const'>Priority</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span> <span class='op'>=</span> <span class='id identifier rubyid_priority'>priority</span>
+         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available_values'><span class='object_link'><a href="Priority.html#available_values-class_method" title="Test::Unit::Priority.available_values (method)">available_values</a></span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_priority'>priority</span><span class='op'>|</span>
+      <span class='const'><span class='object_link'><a href="Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="Priority.html#default-class_method" title="Test::Unit::Priority.default (method)">default</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_priority'>priority</span>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-I</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--load-path=DIR[</span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='embexpr_end'>}</span><span class='tstring_content'>DIR...]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -2792,7 +2790,7 @@
       <span class='gvar'>$LOAD_PATH</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_dirs'>dirs</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>File</span><span class='op'>::</span><span class='const'>PATH_SEPARATOR</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='id identifier rubyid_color_schemes'>color_schemes</span> <span class='op'>=</span> <span class='const'>ColorScheme</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+    <span class='id identifier rubyid_color_schemes'>color_schemes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ColorScheme.html" title="Test::Unit::ColorScheme (class)">ColorScheme</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'><span class='object_link'><a href="ColorScheme.html#all-class_method" title="Test::Unit::ColorScheme.all (method)">all</a></span></span>
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--color-scheme=SCHEME</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_schemes'>color_schemes</span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use SCHEME as color scheme.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='id identifier rubyid_color_schemes'>color_schemes</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_scheme'>scheme</span><span class='op'>|</span>
@@ -2804,13 +2802,13 @@
       <span class='id identifier rubyid_load_config'>load_config</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--order=ORDER</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>TestCase</span><span class='op'>::</span><span class='const'>AVAILABLE_ORDERS</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--order=ORDER</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TestCase.html#AVAILABLE_ORDERS-constant" title="Test::Unit::TestCase::AVAILABLE_ORDERS (constant)">AVAILABLE_ORDERS</a></span></span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Run tests in a test case in ORDER order.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'>TestCase</span><span class='op'>::</span><span class='const'>AVAILABLE_ORDERS</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_order'>order</span><span class='op'>|</span>
-      <span class='const'>TestCase</span><span class='period'>.</span><span class='id identifier rubyid_test_order'>test_order</span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span>
+         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_keyword_display'>keyword_display</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TestCase.html#AVAILABLE_ORDERS-constant" title="Test::Unit::TestCase::AVAILABLE_ORDERS (constant)">AVAILABLE_ORDERS</a></span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_order'>order</span><span class='op'>|</span>
+      <span class='const'><span class='object_link'><a href="TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_test_order'><span class='object_link'><a href="TestCase.html#test_order-class_method" title="Test::Unit::TestCase.test_order (method)">test_order</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span>
     <span class='kw'>end</span>
 
-    <span class='id identifier rubyid_assertion_message_class'>assertion_message_class</span> <span class='op'>=</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>Assertions</span><span class='op'>::</span><span class='const'>AssertionMessage</span>
+    <span class='id identifier rubyid_assertion_message_class'>assertion_message_class</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Assertions.html" title="Test::Unit::Assertions (module)">Assertions</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Assertions/AssertionMessage.html" title="Test::Unit::Assertions::AssertionMessage (class)">AssertionMessage</a></span></span>
     <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--max-diff-target-string-size=SIZE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shows diff if both expected result string size and </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>actual result string size are </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
@@ -2819,7 +2817,7 @@
       <span class='id identifier rubyid_assertion_message_class'>assertion_message_class</span><span class='period'>.</span><span class='id identifier rubyid_max_diff_target_string_size'>max_diff_target_string_size</span> <span class='op'>=</span> <span class='id identifier rubyid_size'>size</span>
     <span class='kw'>end</span>
 
-    <span class='const'>ADDITIONAL_OPTIONS</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_option_builder'>option_builder</span><span class='op'>|</span>
+    <span class='const'><span class='object_link'><a href="#ADDITIONAL_OPTIONS-constant" title="Test::Unit::AutoRunner::ADDITIONAL_OPTIONS (constant)">ADDITIONAL_OPTIONS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_option_builder'>option_builder</span><span class='op'>|</span>
       <span class='id identifier rubyid_option_builder'>option_builder</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_o'>o</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
@@ -2838,7 +2836,7 @@
       <span class='ivar'>@runner</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_runner'>runner</span><span class='lparen'>(</span><span class='symbol'>:console</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
-    <span class='kw'>if</span> <span class='const'>RUNNERS</span><span class='lbracket'>[</span><span class='symbol'>:fox</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="#RUNNERS-constant" title="Test::Unit::AutoRunner::RUNNERS (constant)">RUNNERS</a></span></span><span class='lbracket'>[</span><span class='symbol'>:fox</span><span class='rbracket'>]</span>
       <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on_tail'>on_tail</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--fox</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Fox runner (use --runner).</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
         <span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Deprecated option (--fox).</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
         <span class='ivar'>@runner</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_runner'>runner</span><span class='lparen'>(</span><span class='symbol'>:fox</span><span class='rparen'>)</span>
@@ -2878,7 +2876,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
-  <span class='const'>PREPARE_HOOKS</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_handler'>handler</span><span class='op'>|</span>
+  <span class='const'><span class='object_link'><a href="#PREPARE_HOOKS-constant" title="Test::Unit::AutoRunner::PREPARE_HOOKS (constant)">PREPARE_HOOKS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_handler'>handler</span><span class='op'>|</span>
     <span class='id identifier rubyid_handler'>handler</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -2966,7 +2964,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 392</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'><span class='object_link'><a href="../../top-level-namespace.html#run-instance_method" title="#run (method)">run</a></span></span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_need_auto_run'>need_auto_run</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='id identifier rubyid_suite'>suite</span> <span class='op'>=</span> <span class='ivar'>@collector</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_suite'>suite</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -3043,9 +3041,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:57 2017 by
+  Generated on Tue May 23 12:38:48 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

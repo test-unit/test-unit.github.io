@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::Collector::Descendant
   
@@ -197,7 +195,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../Collector.html" title="Test::Unit::Collector (module)">Test::Unit::Collector</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Collector.html#add_suite-instance_method" title="Test::Unit::Collector#add_suite (method)">#add_suite</a></span>, <span class='object_link'><a href="../Collector.html#add_test_cases-instance_method" title="Test::Unit::Collector#add_test_cases (method)">#add_test_cases</a></span>, <span class='object_link'><a href="../Collector.html#filter%3D-instance_method" title="Test::Unit::Collector#filter= (method)">#filter=</a></span>, <span class='object_link'><a href="../Collector.html#include%3F-instance_method" title="Test::Unit::Collector#include? (method)">#include?</a></span>, <span class='object_link'><a href="../Collector.html#initialize-instance_method" title="Test::Unit::Collector#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Collector.html#sort-instance_method" title="Test::Unit::Collector#sort (method)">#sort</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Collector.html#add_suite-instance_method" title="Test::Unit::Collector#add_suite (method)">#add_suite</a></span>, <span class='object_link'><a href="../Collector.html#add_test_cases-instance_method" title="Test::Unit::Collector#add_test_cases (method)">#add_test_cases</a></span>, <span class='object_link'><a href="../Collector.html#filter=-instance_method" title="Test::Unit::Collector#filter= (method)">#filter=</a></span>, <span class='object_link'><a href="../Collector.html#include%3F-instance_method" title="Test::Unit::Collector#include? (method)">#include?</a></span>, <span class='object_link'><a href="../Collector.html#initialize-instance_method" title="Test::Unit::Collector#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Collector.html#sort-instance_method" title="Test::Unit::Collector#sort (method)">#sort</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -229,8 +227,8 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/collector/descendant.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='op'>=</span><span class='const'>NAME</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_suite'>suite</span> <span class='op'>=</span> <span class='const'>TestSuite</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_add_test_cases'>add_test_cases</span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='const'>TestCase</span><span class='op'>::</span><span class='const'>DESCENDANTS</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_suite'>suite</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../TestSuite.html" title="Test::Unit::TestSuite (class)">TestSuite</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../TestSuite.html#initialize-instance_method" title="Test::Unit::TestSuite#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_add_test_cases'>add_test_cases</span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TestCase.html#DESCENDANTS-constant" title="Test::Unit::TestCase::DESCENDANTS (constant)">DESCENDANTS</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_suite'>suite</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -243,9 +241,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:57 2017 by
+  Generated on Tue May 23 12:38:49 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

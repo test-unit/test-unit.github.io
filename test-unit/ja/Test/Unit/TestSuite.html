@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::TestSuite
   
@@ -361,7 +359,7 @@ meaningful TestSuite instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3C%3C-instance_method" title="#&lt;&lt; (instance method)">#<strong>&lt;&lt;</strong>(test)  &#x21d2; Object </a>
+      <a href="#<<-instance_method" title="#&lt;&lt; (instance method)">#<strong>&lt;&lt;</strong>(test)  &#x21d2; Object </a>
     
 
     
@@ -384,7 +382,7 @@ meaningful TestSuite instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -1213,21 +1211,21 @@ TestSuite.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 46</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'><span class='object_link'><a href="../../top-level-namespace.html#run-instance_method" title="#run (method)">run</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
   <span class='ivar'>@start_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>STARTED</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>STARTED_OBJECT</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STARTED-constant" title="Test::Unit::TestSuite::STARTED (constant)">STARTED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STARTED_OBJECT-constant" title="Test::Unit::TestSuite::STARTED_OBJECT (constant)">STARTED_OBJECT</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_run_startup'>run_startup</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
   <span class='kw'>while</span> <span class='id identifier rubyid_test'>test</span> <span class='op'>=</span> <span class='ivar'>@tests</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
     <span class='ivar'>@n_tests</span> <span class='op'>+=</span> <span class='id identifier rubyid_test'>test</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
-    <span class='id identifier rubyid_run_test'>run_test</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_run_test'><span class='object_link'><a href="../../top-level-namespace.html#run_test-instance_method" title="#run_test (method)">run_test</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
     <span class='ivar'>@passed</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_test'>test</span><span class='period'>.</span><span class='id identifier rubyid_passed?'>passed?</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_run_shutdown'>run_shutdown</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
 <span class='kw'>ensure</span>
   <span class='ivar'>@elapsed_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='ivar'>@start_time</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>FINISHED</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>FINISHED_OBJECT</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED-constant" title="Test::Unit::TestSuite::FINISHED (constant)">FINISHED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED_OBJECT-constant" title="Test::Unit::TestSuite::FINISHED_OBJECT (constant)">FINISHED_OBJECT</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1326,9 +1324,9 @@ creation.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:58 2017 by
+  Generated on Tue May 23 12:38:50 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

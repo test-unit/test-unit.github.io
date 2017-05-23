@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="file_list.html"></iframe>
+      <iframe id="nav" src="file_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -86,8 +86,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="file_list.html"></iframe>
 
       <div id="content"><div id='filecontents'><h2 id="first-step-of-the-test-unit">1. First step of the <code>test-unit</code></h2>
 
@@ -225,7 +223,7 @@ This file originally templates for <code>minitest</code>.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test_helper</span><span class='tstring_end'>&#39;</span></span>
 
-<span class='kw'>class</span> <span class='const'>SampleTest</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>TestCase</span> <span class='comment'># &lt;- After modification
+<span class='kw'>class</span> <span class='const'>SampleTest</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Test/Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Test/Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span> <span class='comment'># &lt;- After modification
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_test_that_it_has_a_version_number'>test_that_it_has_a_version_number</span>
     <span class='id identifier rubyid_refute_nil'>refute_nil</span> <span class='op'>::</span><span class='const'>Sample</span><span class='op'>::</span><span class='const'>VERSION</span>
   <span class='kw'>end</span>
@@ -296,7 +294,7 @@ Tasks: TOP =&gt; test
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test_helper</span><span class='tstring_end'>&#39;</span></span>
 
 <span class='kw'>module</span> <span class='const'>Sub</span>
-  <span class='kw'>class</span> <span class='const'>Sample2Test</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>TestCase</span>
+  <span class='kw'>class</span> <span class='const'>Sample2Test</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Test/Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Test/Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
     <span class='kw'>def</span> <span class='id identifier rubyid_test_that_it_has_a_version_number'>test_that_it_has_a_version_number</span>
       <span class='id identifier rubyid_refute_nil'>refute_nil</span> <span class='op'>::</span><span class='const'>Sample</span><span class='op'>::</span><span class='const'>VERSION</span>
     <span class='kw'>end</span>

@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Module: Test::Unit::AutoRunnerLoader
   
@@ -189,7 +187,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='id identifier rubyid_test_case'>test_case</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@loaded</span>
-  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'>TestSuiteCreator</span><span class='period'>.</span><span class='id identifier rubyid_test_method?'>test_method?</span><span class='lparen'>(</span><span class='id identifier rubyid_test_case'>test_case</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="TestSuiteCreator.html" title="Test::Unit::TestSuiteCreator (class)">TestSuiteCreator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_test_method?'><span class='object_link'><a href="TestSuiteCreator.html#test_method%3F-class_method" title="Test::Unit::TestSuiteCreator.test_method? (method)">test_method?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_test_case'>test_case</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test/unit</span><span class='tstring_end'>&quot;</span></span>
   <span class='ivar'>@loaded</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
@@ -203,9 +201,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:56 2017 by
+  Generated on Tue May 23 12:38:48 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

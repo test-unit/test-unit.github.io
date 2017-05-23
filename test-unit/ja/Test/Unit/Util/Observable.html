@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../../class_list.html"></iframe>
 
       <div id="content"><h1>Module: Test::Unit::Util::Observable
   
@@ -305,9 +303,9 @@ itself as the listener_key:</p>
   <span class='kw'>end</span>
       
   <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_listener_key'>listener_key</span>
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_listener_key'>listener_key</span> <span class='op'>==</span> <span class='const'>NOTHING</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_listener_key'>listener_key</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#NOTHING-constant" title="Test::Unit::Util::Observable::NOTHING (constant)">NOTHING</a></span></span><span class='rparen'>)</span>
     <span class='id identifier rubyid_listener_key'>listener_key</span> <span class='op'>=</span> <span class='id identifier rubyid_listener'>listener</span>
-    <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'>ProcWrapper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ProcWrapper.html" title="Test::Unit::Util::ProcWrapper (class)">ProcWrapper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProcWrapper.html#initialize-instance_method" title="Test::Unit::Util::ProcWrapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
       
   <span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='id identifier rubyid_channel_name'>channel_name</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -425,7 +423,7 @@ nil if none was found.</p>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_listener_key'>listener_key</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_listener_key'>listener_key</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'>Proc</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'>ProcWrapper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_listener_key'>listener_key</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ProcWrapper.html" title="Test::Unit::Util::ProcWrapper (class)">ProcWrapper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ProcWrapper.html#initialize-instance_method" title="Test::Unit::Util::ProcWrapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_listener_key'>listener_key</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -442,9 +440,9 @@ nil if none was found.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:56 2017 by
+  Generated on Tue May 23 12:38:48 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::TestResult
   
@@ -979,7 +977,7 @@ UI.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_assertion'>add_assertion</span>
   <span class='ivar'>@assertion_count</span> <span class='op'>+=</span> <span class='int'>1</span>
-  <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='const'>PASS_ASSERTION</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PASS_ASSERTION-constant" title="Test::Unit::TestResult::PASS_ASSERTION (constant)">PASS_ASSERTION</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_notify_changed'>notify_changed</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1053,7 +1051,7 @@ UI.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_run'>add_run</span>
   <span class='ivar'>@run_count</span> <span class='op'>+=</span> <span class='int'>1</span>
-  <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='const'>FINISHED</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED-constant" title="Test::Unit::TestResult::FINISHED (constant)">FINISHED</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_notify_changed'>notify_changed</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1333,9 +1331,9 @@ failures and errors in this TestResult.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:58 2017 by
+  Generated on Tue May 23 12:38:50 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

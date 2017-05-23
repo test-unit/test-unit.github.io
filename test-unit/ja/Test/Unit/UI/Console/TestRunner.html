@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::UI::Console::TestRunner
   
@@ -296,12 +294,12 @@ STDOUT.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
-  <span class='ivar'>@output_level</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:output_level</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>NORMAL</span>
+  <span class='ivar'>@output_level</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:output_level</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="OutputLevel.html#NORMAL-constant" title="Test::Unit::UI::Console::OutputLevel::NORMAL (constant)">NORMAL</a></span></span>
   <span class='ivar'>@output</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>STDOUT</span>
   <span class='ivar'>@use_color</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:use_color</span><span class='rbracket'>]</span>
   <span class='ivar'>@use_color</span> <span class='op'>=</span> <span class='id identifier rubyid_guess_color_availability'>guess_color_availability</span> <span class='kw'>if</span> <span class='ivar'>@use_color</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='ivar'>@color_scheme</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:color_scheme</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>ColorScheme</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
-  <span class='ivar'>@reset_color</span> <span class='op'>=</span> <span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reset</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@color_scheme</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:color_scheme</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../../ColorScheme.html" title="Test::Unit::ColorScheme (class)">ColorScheme</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="../../ColorScheme.html#default-class_method" title="Test::Unit::ColorScheme.default (method)">default</a></span></span>
+  <span class='ivar'>@reset_color</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Color.html" title="Test::Unit::Color (class)">Color</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Color.html#initialize-instance_method" title="Test::Unit::Color#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reset</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@progress_row</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='ivar'>@progress_row_max</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:progress_row_max</span><span class='rbracket'>]</span>
   <span class='ivar'>@progress_row_max</span> <span class='op'>||=</span> <span class='id identifier rubyid_guess_progress_row_max'>guess_progress_row_max</span>
@@ -310,9 +308,9 @@ STDOUT.</p>
   <span class='ivar'>@already_outputted</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='ivar'>@indent</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='ivar'>@top_level</span> <span class='op'>=</span> <span class='kw'>true</span>
-  <span class='ivar'>@current_output_level</span> <span class='op'>=</span> <span class='const'>NORMAL</span>
+  <span class='ivar'>@current_output_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="OutputLevel.html#NORMAL-constant" title="Test::Unit::UI::Console::OutputLevel::NORMAL (constant)">NORMAL</a></span></span>
   <span class='ivar'>@faults</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@code_snippet_fetcher</span> <span class='op'>=</span> <span class='const'>CodeSnippetFetcher</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@code_snippet_fetcher</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../CodeSnippetFetcher.html" title="Test::Unit::CodeSnippetFetcher (class)">CodeSnippetFetcher</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../CodeSnippetFetcher.html#initialize-instance_method" title="Test::Unit::CodeSnippetFetcher#initialize (method)">new</a></span></span>
   <span class='ivar'>@test_suites</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -326,9 +324,9 @@ STDOUT.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:58 2017 by
+  Generated on Tue May 23 12:38:50 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

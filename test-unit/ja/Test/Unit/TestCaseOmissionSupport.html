@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html"></iframe>
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Module: Test::Unit::TestCaseOmissionSupport
   
@@ -268,11 +266,11 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_omit'>omit</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>omitted.</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
-    <span class='id identifier rubyid_omission'>omission</span> <span class='op'>=</span> <span class='const'>Omission</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_filter_backtrace'>filter_backtrace</span><span class='lparen'>(</span><span class='id identifier rubyid_caller'>caller</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_omission'>omission</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Omission.html" title="Test::Unit::Omission (class)">Omission</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Omission.html#initialize-instance_method" title="Test::Unit::Omission#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_filter_backtrace'>filter_backtrace</span><span class='lparen'>(</span><span class='id identifier rubyid_caller'>caller</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span>
                             <span class='symbol'>:method_name</span> <span class='op'>=&gt;</span> <span class='ivar'>@method_name</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_add_omission'>add_omission</span><span class='lparen'>(</span><span class='id identifier rubyid_omission'>omission</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>OmittedError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="OmittedError.html" title="Test::Unit::OmittedError (class)">OmittedError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -415,9 +413,9 @@ not true.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:56 2017 by
+  Generated on Tue May 23 12:38:48 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     

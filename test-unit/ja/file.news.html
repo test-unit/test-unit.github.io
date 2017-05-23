@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="file_list.html"></iframe>
+      <iframe id="nav" src="file_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -87,20 +87,116 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="file_list.html"></iframe>
-
       <div id="content"><div id='filecontents'><h1 id="news">News</h1>
+
+<h2 id="version-3-2-4">3.2.4 - 2017-05-23</h2>
+
+<h3 id="section">改良</h3>
+
+<ul>
+  <li>
+    <p>Updated tests for Ruby 2.4. [GitHUb#136][Patch by Kazuki Tsujimoto]</p>
+  </li>
+  <li>
+    <p>Supported power_assert 1.0.0. [GitHub#137][Patch by Kazuki Tsujimoto]</p>
+  </li>
+  <li>
+    <p>Added the getting started document.
+[GitHub#139][GitHub#141][Patch by Hiroyuki Sato]</p>
+  </li>
+  <li>
+    <p>Added the document for <code>attribute</code>.
+[GitHub#143][Patch by Fumiaki MATSUSHIMA]</p>
+  </li>
+  <li>
+    <p>Improved a link for GitHub. [GitHub#144][Patch by rochefort]</p>
+  </li>
+  <li>
+    <p>Updated <code>.travis.yml</code>. [GitHub#145][Patch by Jun Aruga]</p>
+  </li>
+</ul>
+
+<h3 id="section-1">修正</h3>
+
+<ul>
+  <li>
+    <p>Fixed a contributor name. [GitHub#131][Patch by Akira Matsuda]</p>
+  </li>
+  <li>
+    <p>Fixed typos in document. [GitHub#132][Patch by Akira Matsuda]</p>
+  </li>
+  <li>
+    <p>Fixed typos in document. [GitHub#134][Patch by Yuji Yaginuma]</p>
+  </li>
+  <li>
+    <p>Fixed a bug that data label with “(“ isn’t supported.
+[GitHub#135][Reported by Kazuki Tsujimoto]</p>
+  </li>
+  <li>
+    <p>Fixed assertion message in English.
+[GitHub#133][Reported by Khalil Fazal]</p>
+  </li>
+  <li>
+    <p>Fixed a typo in typo fix. [GitHub#138][Patch by kami]</p>
+  </li>
+  <li>
+    <p>Fixed a bug that target location finder may return wrong
+location. [GitHub#146][Patch by Yuki Ito]</p>
+  </li>
+  <li>
+    <p>Fixed a bug that <code>--no-show-detail-immediately</code> raises an error.
+[GitHub#147][Reported by MSP-Greg]</p>
+  </li>
+</ul>
+
+<h3 id="section-2">感謝</h3>
+
+<ul>
+  <li>
+    <p>Akira Matsuda</p>
+  </li>
+  <li>
+    <p>Yuji Yaginuma</p>
+  </li>
+  <li>
+    <p>Kazuki Tsujimoto</p>
+  </li>
+  <li>
+    <p>Khalil Fazal</p>
+  </li>
+  <li>
+    <p>kami</p>
+  </li>
+  <li>
+    <p>Hiroyuki Sato</p>
+  </li>
+  <li>
+    <p>Fumiaki MATSUSHIMA</p>
+  </li>
+  <li>
+    <p>rochefort</p>
+  </li>
+  <li>
+    <p>Jun Aruga</p>
+  </li>
+  <li>
+    <p>Yuki Ito</p>
+  </li>
+  <li>
+    <p>MSP-Greg</p>
+  </li>
+</ul>
 
 <h2 id="version-3-2-3">3.2.3 - 2016-11-25</h2>
 
-<h3 id="section">修正</h3>
+<h3 id="section-3">修正</h3>
 
 <ul>
   <li>Fixed a bug that <code>--order</code> isn’t applied.
 [GitHub#129][Reported by Vít Ondruch]</li>
 </ul>
 
-<h3 id="section-1">感謝</h3>
+<h3 id="section-4">感謝</h3>
 
 <ul>
   <li>Vít Ondruch</li>
@@ -108,12 +204,12 @@
 
 <h2 id="version-3-2-2">3.2.2 - 2016-11-02</h2>
 
-<h3 id="section-2">改良</h3>
+<h3 id="section-5">改良</h3>
 
 <ul>
   <li>
     <p>Improved Travis CI configuration.
-[GitHub#123][Patch by Ryunosuke SATO]</p>
+[GitHub#123][Patch by Ryunosuke Sato]</p>
   </li>
   <li>
     <p>Supported Java native exception.
@@ -121,7 +217,7 @@
   </li>
 </ul>
 
-<h3 id="section-3">修正</h3>
+<h3 id="section-6">修正</h3>
 
 <ul>
   <li>
@@ -146,7 +242,7 @@ fixtures are defined before any tests:</p>
   </li>
 </ul>
 
-<h3 id="section-4">感謝</h3>
+<h3 id="section-7">感謝</h3>
 
 <ul>
   <li>
@@ -165,7 +261,7 @@ fixtures are defined before any tests:</p>
 
 <h2 id="version-3-2-1">3.2.1 - 2016-07-19</h2>
 
-<h3 id="section-5">改良</h3>
+<h3 id="section-8">改良</h3>
 
 <ul>
   <li>
@@ -180,7 +276,7 @@ parameter.
   </li>
 </ul>
 
-<h3 id="section-6">感謝</h3>
+<h3 id="section-9">感謝</h3>
 
 <ul>
   <li>
@@ -193,14 +289,14 @@ parameter.
 
 <h2 id="version-3-2-0">3.2.0 - 2016-06-12</h2>
 
-<h3 id="section-7">改良</h3>
+<h3 id="section-10">改良</h3>
 
 <ul>
   <li>Supported rxvt family terminals as color available terminals.
 [GitHub#121][Reported by Ippei Kishida]</li>
 </ul>
 
-<h3 id="section-8">感謝</h3>
+<h3 id="section-11">感謝</h3>
 
 <ul>
   <li>Ippei Kishida</li>
@@ -208,7 +304,7 @@ parameter.
 
 <h2 id="version-3-1-9">3.1.9 - 2016-05-20</h2>
 
-<h3 id="section-9">修正</h3>
+<h3 id="section-12">修正</h3>
 
 <ul>
   <li>
@@ -220,7 +316,7 @@ parameter.
   </li>
 </ul>
 
-<h3 id="section-10">感謝</h3>
+<h3 id="section-13">感謝</h3>
 
 <ul>
   <li>Kazuki Tsujimoto</li>
@@ -228,7 +324,7 @@ parameter.
 
 <h2 id="version-3-1-8">3.1.8 - 2016-03-19</h2>
 
-<h3 id="section-11">改良</h3>
+<h3 id="section-14">改良</h3>
 
 <ul>
   <li>Added <code>--stop-on-failure</code> command line option. With this option,
@@ -238,7 +334,7 @@ or an error is raised in one test.</li>
 
 <h2 id="version-3-1-7">3.1.7 - 2016-01-17</h2>
 
-<h3 id="section-12">修正</h3>
+<h3 id="section-15">修正</h3>
 
 <ul>
   <li>Added a missing require.</li>
@@ -248,7 +344,7 @@ or an error is raised in one test.</li>
 
 <p>Railsと一緒に使いやすくなったリリースです。</p>
 
-<h3 id="section-13">改良</h3>
+<h3 id="section-16">改良</h3>
 
 <ul>
   <li>Filtered backtrace of power_assert.
@@ -295,7 +391,7 @@ example, the following command line runs a test that is defined in
   </li>
 </ul>
 
-<h3 id="section-14">修正</h3>
+<h3 id="section-17">修正</h3>
 
 <ul>
   <li>Fixed a bug that test isn’t ran. The test has the same name as
@@ -307,7 +403,7 @@ data driven test that is defined in parent test case.
 
 <p>Rackと一緒に使いやすくなったリリースです。</p>
 
-<h3 id="section-15">改良</h3>
+<h3 id="section-18">改良</h3>
 
 <ul>
   <li>Renamed experimental top-level <code>run</code> method to <code>run_test</code> method
@@ -315,7 +411,7 @@ because <code>run</code> is conflicted with Rack.
 [GitHub#32][GitHub:basecamp/pow#303] [Reported by Yevhen Viktorov]</li>
 </ul>
 
-<h3 id="section-16">感謝</h3>
+<h3 id="section-19">感謝</h3>
 
 <ul>
   <li>Yevhen Viktorov</li>
@@ -325,7 +421,7 @@ because <code>run</code> is conflicted with Rack.
 
 <p>微改良リリースです。</p>
 
-<h3 id="section-17">改良</h3>
+<h3 id="section-20">改良</h3>
 
 <ul>
   <li>Updated sample code. [GitHub#109][Patch by takiy33]</li>
@@ -338,7 +434,7 @@ because <code>run</code> is conflicted with Rack.
 [GitHub#113][Patch by NARUSE, Yui]</li>
 </ul>
 
-<h3 id="section-18">感謝</h3>
+<h3 id="section-21">感謝</h3>
 
 <ul>
   <li>takiy33</li>
@@ -349,13 +445,13 @@ because <code>run</code> is conflicted with Rack.
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-19">改良</h3>
+<h3 id="section-22">改良</h3>
 
 <ul>
   <li>Removed unused <code>TODO</code> file. [GitHub#108][Patch by takiy33]</li>
 </ul>
 
-<h3 id="section-20">修正</h3>
+<h3 id="section-23">修正</h3>
 
 <ul>
   <li>
@@ -374,7 +470,7 @@ test script is specified as relative path. [Reported by TOMITA Masahiro]</p>
   </li>
 </ul>
 
-<h3 id="section-21">感謝</h3>
+<h3 id="section-24">感謝</h3>
 
 <ul>
   <li>takiy33</li>
@@ -385,7 +481,7 @@ test script is specified as relative path. [Reported by TOMITA Masahiro]</p>
 
 <p>It’s command line option improvements fix release.</p>
 
-<h3 id="section-22">改良</h3>
+<h3 id="section-25">改良</h3>
 
 <ul>
   <li><code>--location</code>: Made path match rule more strict.
@@ -415,7 +511,7 @@ and the specified patterns are used.
 [Suggested by kimura wataru]</li>
 </ul>
 
-<h3 id="section-23">感謝</h3>
+<h3 id="section-26">感謝</h3>
 
 <ul>
   <li>kimura wataru</li>
@@ -425,7 +521,7 @@ and the specified patterns are used.
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-24">修正</h3>
+<h3 id="section-27">修正</h3>
 
 <ul>
   <li>Fixed a bug that <code>--location</code> detects tests not only in sub test
@@ -433,7 +529,7 @@ case but also parent test case.
 [GitHub#105][Reported by wanabe]</li>
 </ul>
 
-<h3 id="section-25">感謝</h3>
+<h3 id="section-28">感謝</h3>
 
 <ul>
   <li>wanabe</li>
@@ -443,13 +539,13 @@ case but also parent test case.
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-26">改良</h3>
+<h3 id="section-29">改良</h3>
 
 <ul>
   <li>[ui][console] Removed needless new line.</li>
 </ul>
 
-<h3 id="section-27">修正</h3>
+<h3 id="section-30">修正</h3>
 
 <ul>
   <li>Fixed a bug that priority mode can’t be used on Windows.
@@ -467,7 +563,7 @@ exception such as <code>Interrupt</code> is raised.
 [GitHub#104][Reported by wanabe]</li>
 </ul>
 
-<h3 id="section-28">感謝</h3>
+<h3 id="section-31">感謝</h3>
 
 <ul>
   <li>Daniel Berger</li>
@@ -482,7 +578,7 @@ exception such as <code>Interrupt</code> is raised.
 
 <p>It’s a release that improves colors.</p>
 
-<h3 id="section-29">改良</h3>
+<h3 id="section-32">改良</h3>
 
 <ul>
   <li>Added a work around for Ruby 1.8. (Note: Ruby 1.8 isn’t
@@ -494,7 +590,7 @@ http://www.a-k-r.org/d/2014-12.html#a2014_12_27_1
 [Suggested by Tanaka Akira]</li>
 </ul>
 
-<h3 id="section-30">感謝</h3>
+<h3 id="section-33">感謝</h3>
 
 <ul>
   <li>Aaron Stone</li>
@@ -506,7 +602,7 @@ http://www.a-k-r.org/d/2014-12.html#a2014_12_27_1
 
 <p>It’s a release that supports Ruby 2.2.0 preview2.</p>
 
-<h3 id="section-31">改良</h3>
+<h3 id="section-34">改良</h3>
 
 <ul>
   <li>Added a link for YARD in README.
@@ -517,7 +613,7 @@ http://www.a-k-r.org/d/2014-12.html#a2014_12_27_1
 <code>assert_nothing_thrown</code>.</li>
 </ul>
 
-<h3 id="section-32">修正</h3>
+<h3 id="section-35">修正</h3>
 
 <ul>
   <li>Fixed a bug that error report is failed when source encoding and
@@ -525,7 +621,7 @@ locale encoding are different.
 [GitHub#87][Reported by scivola]</li>
 </ul>
 
-<h3 id="section-33">感謝</h3>
+<h3 id="section-36">感謝</h3>
 
 <ul>
   <li>sunnyone</li>
@@ -536,7 +632,7 @@ locale encoding are different.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-34">修正</h3>
+<h3 id="section-37">修正</h3>
 
 <ul>
   <li>Fixed a bug that teardown blocks aren’t called with sub class to
@@ -544,7 +640,7 @@ parent class order.
 [GitHub#85][Reported by TOMITA Masahiro]</li>
 </ul>
 
-<h3 id="section-35">感謝</h3>
+<h3 id="section-38">感謝</h3>
 
 <ul>
   <li>TOMITA Masahiro</li>
@@ -554,14 +650,14 @@ parent class order.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-36">改良</h3>
+<h3 id="section-39">改良</h3>
 
 <ul>
   <li>Improved code snippet location.
 [GitHub#84][Patch by Yuki Kurihara]</li>
 </ul>
 
-<h3 id="section-37">感謝</h3>
+<h3 id="section-40">感謝</h3>
 
 <ul>
   <li>Yuki Kurihara</li>
@@ -571,7 +667,7 @@ parent class order.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-38">修正</h3>
+<h3 id="section-41">修正</h3>
 
 <ul>
   <li>Fixed a bug that startup/shutdown of parent test case isn’t called
@@ -579,7 +675,7 @@ when the test case includes one or more modules.
 [GitHub#83][Reported by Chadderton Odwazny]</li>
 </ul>
 
-<h3 id="section-39">感謝</h3>
+<h3 id="section-42">感謝</h3>
 
 <ul>
   <li>Chadderton Odwazny</li>
@@ -589,7 +685,7 @@ when the test case includes one or more modules.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-40">改良</h3>
+<h3 id="section-43">改良</h3>
 
 <ul>
   <li>Stopped to remove JRuby and Rubinius internal backtrace entries from
@@ -597,7 +693,7 @@ backtrace on failure/error.
 [GitHub#82][Patch by Charles Oliver Nutter]</li>
 </ul>
 
-<h3 id="section-41">感謝</h3>
+<h3 id="section-44">感謝</h3>
 
 <ul>
   <li>Charles Oliver Nutter</li>
@@ -607,7 +703,7 @@ backtrace on failure/error.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-42">改良</h3>
+<h3 id="section-45">改良</h3>
 
 <ul>
   <li>Improved <code>Test::Unit::TestCase.test</code> performance.
@@ -616,14 +712,14 @@ backtrace on failure/error.
 [Sugested by Nobuyoshi Nakada]</li>
 </ul>
 
-<h3 id="section-43">修正</h3>
+<h3 id="section-46">修正</h3>
 
 <ul>
   <li>Fixed markup in document.
 [GitHub#81][Patch by Masafumi Yokoyama]</li>
 </ul>
 
-<h3 id="section-44">感謝</h3>
+<h3 id="section-47">感謝</h3>
 
 <ul>
   <li>Masafumi Yokoyama</li>
@@ -634,7 +730,7 @@ backtrace on failure/error.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-45">改良</h3>
+<h3 id="section-48">改良</h3>
 
 <ul>
   <li>Supported broken <code>==</code> implementation.
@@ -648,14 +744,14 @@ backtrace on failure/error.
 [GitHub#78][Patch by Vít Ondruch]</li>
 </ul>
 
-<h3 id="section-46">修正</h3>
+<h3 id="section-49">修正</h3>
 
 <ul>
   <li>Removed needless executable bit from README file.
 [GitHub#79][Patch by Vít Ondruch]</li>
 </ul>
 
-<h3 id="section-47">感謝</h3>
+<h3 id="section-50">感謝</h3>
 
 <ul>
   <li>Emily</li>
@@ -667,7 +763,7 @@ backtrace on failure/error.
 
 <p>マイナーアップデートリリースです。</p>
 
-<h3 id="section-48">改良</h3>
+<h3 id="section-51">改良</h3>
 
 <ul>
   <li>Improved Ruby 1.8.7 support. Note that we don’t support Ruby 1.8.7
@@ -675,7 +771,7 @@ actively. We just support if its support is painless.
 [GitHub#71][Patch by estolfo]</li>
 </ul>
 
-<h3 id="section-49">感謝</h3>
+<h3 id="section-52">感謝</h3>
 
 <ul>
   <li>estolfo</li>
@@ -685,7 +781,7 @@ actively. We just support if its support is painless.
 
 <p>Power Assertをサポートしたリリースです！</p>
 
-<h3 id="section-50">改良</h3>
+<h3 id="section-53">改良</h3>
 
 <ul>
   <li>Improved Rubinius support. [Ryo Onodera]</li>
@@ -727,7 +823,7 @@ recommend using Power Assert for equality check assertion.
 [Kazuki Tsujimoto]</li>
 </ul>
 
-<h3 id="section-51">修正</h3>
+<h3 id="section-54">修正</h3>
 
 <ul>
   <li>Fixed a bug that test case defined by block has wrong location.
@@ -737,7 +833,7 @@ super-class are also collected.
 [GitHub#62][GitHub#63][Patch by Karol Bucek]</li>
 </ul>
 
-<h3 id="section-52">感謝</h3>
+<h3 id="section-55">感謝</h3>
 
 <ul>
   <li>Ryo Onodera</li>
@@ -753,7 +849,7 @@ super-class are also collected.
 
 <p>It’s Ruby 2.0.0 supported release!</p>
 
-<h3 id="section-53">改良</h3>
+<h3 id="section-56">改良</h3>
 
 <ul>
   <li>Supported Ruby 2.0.0. [GitHub#54] [Reported by mtasaka]</li>
@@ -761,7 +857,7 @@ super-class are also collected.
 [GitHub#55] [Reported by Tom Miller]</li>
 </ul>
 
-<h3 id="section-54">修正</h3>
+<h3 id="section-57">修正</h3>
 
 <ul>
   <li>Fixed a typo in document.
@@ -771,7 +867,7 @@ as expected if expected value is negative value.
 [Ruby Bug #8317] [Reported by Nobuhiro IMAI]</li>
 </ul>
 
-<h3 id="section-55">感謝</h3>
+<h3 id="section-58">感謝</h3>
 
 <ul>
   <li>Baptiste Fontaine</li>
@@ -784,7 +880,7 @@ as expected if expected value is negative value.
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-56">改良</h3>
+<h3 id="section-59">改良</h3>
 
 <ul>
   <li>Added documents for data driven test functionality.</li>
@@ -792,7 +888,7 @@ as expected if expected value is negative value.
   <li>Support tag inspection on JRuby.</li>
 </ul>
 
-<h3 id="section-57">修正</h3>
+<h3 id="section-60">修正</h3>
 
 <ul>
   <li>Fixed a bug. It is too slow to filter tests when there are many
@@ -801,7 +897,7 @@ tests. [GitHub#46]</li>
 [GitHub:#49] [Reported by Matthew Rudy Jacobs]</li>
 </ul>
 
-<h3 id="section-58">感謝</h3>
+<h3 id="section-61">感謝</h3>
 
 <ul>
   <li>Matthew Rudy Jacobs</li>
@@ -811,7 +907,7 @@ tests. [GitHub#46]</li>
 
 <p>minitestとの互換製の改良とバグフィックスのリリースです。</p>
 
-<h3 id="section-59">改良</h3>
+<h3 id="section-62">改良</h3>
 
 <ul>
   <li>Supported diff in invalid encoding.</li>
@@ -821,7 +917,7 @@ tests. [GitHub#46]</li>
 [test-unit-users-en:00098] [Suggested by Piotr Nestorow]</li>
 </ul>
 
-<h3 id="section-60">修正</h3>
+<h3 id="section-63">修正</h3>
 
 <ul>
   <li>Allowed use of test for inheritance in ActionController::TestCase.
@@ -835,7 +931,7 @@ above “def test_name” or with Symbol specifying test_name.
 [GitHub#45] [Reported by Piotr Nestorow]</li>
 </ul>
 
-<h3 id="section-61">感謝</h3>
+<h3 id="section-64">感謝</h3>
 
 <ul>
   <li>Michael Grosser</li>
@@ -848,7 +944,7 @@ above “def test_name” or with Symbol specifying test_name.
 
 <p>とみたさん用に改良したリリースです。 <code>--location</code> はRSpecの <code>--line_number</code> と似た機能です。 <code>sub_test_case</code> はshoulda-contextとRSpecの <code>context</code> と似た機能です。</p>
 
-<h3 id="section-62">改良</h3>
+<h3 id="section-65">改良</h3>
 
 <ul>
   <li>Cleaned up tests.
@@ -871,7 +967,7 @@ The sub test case name isn’t limited Ruby’s constant name rule. You can
 specify the sub test case name in free form.</li>
 </ul>
 
-<h3 id="section-63">感謝</h3>
+<h3 id="section-66">感謝</h3>
 
 <ul>
   <li>Michael Grosser</li>
@@ -883,7 +979,7 @@ specify the sub test case name in free form.</li>
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-64">改良</h3>
+<h3 id="section-67">改良</h3>
 
 <ul>
   <li>Supported installing from GitHub.
@@ -893,7 +989,7 @@ specify the sub test case name in free form.</li>
   <li>[ui][console] Improved multiline falut message display.</li>
 </ul>
 
-<h3 id="section-65">修正</h3>
+<h3 id="section-68">修正</h3>
 
 <ul>
   <li>[ui][console] 期待値と実測値が空になる問題を修正。
@@ -904,7 +1000,7 @@ specify the sub test case name in free form.</li>
 [RubyForge#29595] [Reported by Jean-Denis Koeck]</li>
 </ul>
 
-<h3 id="section-66">感謝</h3>
+<h3 id="section-69">感謝</h3>
 
 <ul>
   <li>Michael Grosser</li>
@@ -917,14 +1013,14 @@ specify the sub test case name in free form.</li>
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-67">修正</h3>
+<h3 id="section-70">修正</h3>
 
 <ul>
   <li>2.4.9で入った <code>TestUnitMediator#run_suite</code> の後方非互換な変更を修正しました。
 [GitHub#28] [Vladislav Rassokhinさんが報告]</li>
 </ul>
 
-<h3 id="section-68">感謝</h3>
+<h3 id="section-71">感謝</h3>
 
 <ul>
   <li>Vladislav Rassokhinさん</li>
@@ -934,7 +1030,7 @@ specify the sub test case name in free form.</li>
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-69">改良</h3>
+<h3 id="section-72">改良</h3>
 
 <ul>
   <li><code>Test::Unit.run?</code> -&gt;
@@ -951,7 +1047,7 @@ available terminal.
 as 256 color supported terminal.</li>
 </ul>
 
-<h3 id="section-70">修正</h3>
+<h3 id="section-73">修正</h3>
 
 <ul>
   <li>Fixed a bug that <code>--workdir</code> doesn’t work.</li>
@@ -962,7 +1058,7 @@ says.
 [GitHub#25] [Reported by Stephan Kulow]</li>
 </ul>
 
-<h3 id="section-71">感謝</h3>
+<h3 id="section-74">感謝</h3>
 
 <ul>
   <li>Bob Saveland</li>
@@ -974,7 +1070,7 @@ says.
 
 <p>バグフィックスリリースです。</p>
 
-<h3 id="section-72">改良</h3>
+<h3 id="section-75">改良</h3>
 
 <ul>
   <li>Delayed at_exit registration until Test::Unit is used.
@@ -983,7 +1079,7 @@ says.
 [GitHub:#22] [Reported by Cédric Boutillier]</li>
 </ul>
 
-<h3 id="section-73">修正</h3>
+<h3 id="section-76">修正</h3>
 
 <ul>
   <li>JRuby上でテスト失敗時のコード表示時に発生していたエラーを修正した。
@@ -991,7 +1087,7 @@ says.
 [Jørgen P. Tjernøさんが報告][Junegunn Choiさんがパッチ提供]</li>
 </ul>
 
-<h3 id="section-74">感謝</h3>
+<h3 id="section-77">感謝</h3>
 
 <ul>
   <li>Jørgen P. Tjernø</li>
@@ -1003,7 +1099,7 @@ says.
 
 <p>失敗時のコード表示を改良したリリースです。</p>
 
-<h3 id="section-75">改良</h3>
+<h3 id="section-78">改良</h3>
 
 <ul>
   <li>失敗時だけでなくエラー時などでもコードの一部を表示するようにした。</li>
@@ -1013,7 +1109,7 @@ says.
 
 <p>TAPランナーサポートを分離したリリースです。</p>
 
-<h3 id="section-76">改良</h3>
+<h3 id="section-79">改良</h3>
 
 <ul>
   <li>Moved TAP runner to test-unit-runner-tap gem from test-unit gem.</li>
@@ -1024,7 +1120,7 @@ says.
 
 <p>失敗時のメッセージの読みやすさを改良したリリースです。</p>
 
-<h3 id="section-77">改良</h3>
+<h3 id="section-80">改良</h3>
 
 <ul>
   <li>失敗時に例外の内容を示すテキストから不必要な情報を削除した。これは例外の内容を読みやすくするためである。</li>
@@ -1035,7 +1131,7 @@ says.
 
 <p>Railsと一緒に使いやすくなったリリースです。</p>
 
-<h3 id="section-78">改良</h3>
+<h3 id="section-81">改良</h3>
 
 <ul>
   <li>[ui][console] Don’t break progress display when a test is failed.</li>
@@ -1048,7 +1144,7 @@ message in progress to improve visibility.</li>
   <li>Supported a block style setup/teardown/cleanup.</li>
 </ul>
 
-<h3 id="section-79">感謝</h3>
+<h3 id="section-82">感謝</h3>
 
 <ul>
   <li>Josh Kalderimis</li>
@@ -1057,7 +1153,7 @@ message in progress to improve visibility.</li>
 
 <h2 id="version-2-4-3">2.4.3 - 2011-12-11</h2>
 
-<h3 id="section-80">改良</h3>
+<h3 id="section-83">改良</h3>
 
 <ul>
   <li>自動テストランナー内で <code>ARGV</code> を変更しないようにしてSimpleCov連携を改良した。
@@ -1066,7 +1162,7 @@ message in progress to improve visibility.</li>
   <li>Improved JRuby integration by removing JRuby internal backtrace.</li>
 </ul>
 
-<h3 id="section-81">感謝</h3>
+<h3 id="section-84">感謝</h3>
 
 <ul>
   <li>Nikos Dimitrakopoulosさん</li>
@@ -1074,38 +1170,38 @@ message in progress to improve visibility.</li>
 
 <h2 id="version-2-4-2">2.4.2 - 2011-11-26</h2>
 
-<h3 id="section-82">改良</h3>
+<h3 id="section-85">改良</h3>
 
 <ul>
   <li><code>--name</code> がデータのラベルも比較するようになった。</li>
 </ul>
 
-<h2 id="section-83">2.4.1 - 2011-11-09</h2>
+<h2 id="section-86">2.4.1 - 2011-11-09</h2>
 
-<h3 id="section-84">改良</h3>
+<h3 id="section-87">改良</h3>
 
 <ul>
   <li>アサーションに指定するメッセージにAssertionMessageも使えるようにした。これはactionpack内のassert_selectで使われている。
 [David Heathさんが報告]</li>
 </ul>
 
-<h3 id="section-85">修正</h3>
+<h3 id="section-88">修正</h3>
 
 <ul>
   <li>Fixed test failure on LANG=C. #11 [Reported by boutil]</li>
   <li>Suppress warnings on Ruby 1.9.2.</li>
 </ul>
 
-<h3 id="section-86">感謝</h3>
+<h3 id="section-89">感謝</h3>
 
 <ul>
   <li>boutil</li>
   <li>David Heath</li>
 </ul>
 
-<h2 id="section-87">2.4.0 - 2011-09-18</h2>
+<h2 id="section-90">2.4.0 - 2011-09-18</h2>
 
-<h3 id="section-88">改良</h3>
+<h3 id="section-91">改良</h3>
 
 <ul>
   <li>Supported Travis CI. #5 [Suggested by James Mead]</li>
@@ -1116,7 +1212,7 @@ message in progress to improve visibility.</li>
   <li>[ui][console] Supported 256 colors.</li>
 </ul>
 
-<h3 id="section-89">修正</h3>
+<h3 id="section-92">修正</h3>
 
 <ul>
   <li>Added missing fixture file. #7 [Reported by grafi-tt]</li>
@@ -1126,7 +1222,7 @@ message in progress to improve visibility.</li>
 [Reported by Marc Seeger (Acquia)]</li>
 </ul>
 
-<h3 id="section-90">感謝</h3>
+<h3 id="section-93">感謝</h3>
 
 <ul>
   <li>James Mead</li>
@@ -1134,17 +1230,17 @@ message in progress to improve visibility.</li>
   <li>Marc Seeger (Acquia)</li>
 </ul>
 
-<h2 id="section-91">2.3.2 - 2011-08-15</h2>
+<h2 id="section-94">2.3.2 - 2011-08-15</h2>
 
 <p>バグフィックスリリース。</p>
 
-<h3 id="section-92">改良</h3>
+<h3 id="section-95">改良</h3>
 
 <ul>
   <li>[ui][console] 読み易くするために改行を追加。</li>
 </ul>
 
-<h3 id="section-93">修正</h3>
+<h3 id="section-96">修正</h3>
 
 <ul>
   <li>[ui][console] Worked –verbose again.</li>
@@ -1152,7 +1248,7 @@ message in progress to improve visibility.</li>
 [James Meadさんが報告]</li>
 </ul>
 
-<h3 id="section-94">感謝</h3>
+<h3 id="section-97">感謝</h3>
 
 <ul>
   <li>James Meadさん</li>
@@ -1162,7 +1258,7 @@ message in progress to improve visibility.</li>
 
 <p>Output improvement release!</p>
 
-<h3 id="section-95">改良</h3>
+<h3 id="section-98">改良</h3>
 
 <ul>
   <li>[ui][console] Outputs omissions and notifications in short.</li>
@@ -1176,7 +1272,7 @@ message in progress to improve visibility.</li>
 fault details when a fault is occurred.</li>
 </ul>
 
-<h3 id="section-96">修正</h3>
+<h3 id="section-99">修正</h3>
 
 <ul>
   <li>[pull request #1] Fixed a problem that load collector
@@ -1186,7 +1282,7 @@ override by declarative style test definition.
 [Reported by Jeremy Stephens]</li>
 </ul>
 
-<h3 id="section-97">感謝</h3>
+<h3 id="section-100">感謝</h3>
 
 <ul>
   <li>grafi-tt</li>
@@ -1194,7 +1290,7 @@ override by declarative style test definition.
   <li>Hans de Graaff</li>
 </ul>
 
-<h2 id="section-98">2.3.0 / 2011-04-17</h2>
+<h2 id="section-101">2.3.0 / 2011-04-17</h2>
 
 <ul>
   <li>13 enhancements
@@ -1224,7 +1320,7 @@ override by declarative style test definition.
   </li>
 </ul>
 
-<h2 id="section-99">2.2.0 / 2011-02-14</h2>
+<h2 id="section-102">2.2.0 / 2011-02-14</h2>
 
 <ul>
   <li>22 enhancements
@@ -1273,7 +1369,7 @@ override by declarative style test definition.
   </li>
 </ul>
 
-<h2 id="section-100">2.1.2 / 2010-11-25</h2>
+<h2 id="section-103">2.1.2 / 2010-11-25</h2>
 
 <ul>
   <li>1 enhancement
@@ -1283,7 +1379,7 @@ override by declarative style test definition.
   </li>
 </ul>
 
-<h2 id="section-101">2.1.1 / 2010-07-29</h2>
+<h2 id="section-104">2.1.1 / 2010-07-29</h2>
 
 <ul>
   <li>1 bug fix
@@ -1315,7 +1411,7 @@ override by declarative style test definition.
   </li>
 </ul>
 
-<h2 id="section-102">2.0.8 / 2010-06-02</h2>
+<h2 id="section-105">2.0.8 / 2010-06-02</h2>
 
 <ul>
   <li>5 major enchancements
@@ -1350,7 +1446,7 @@ error for long test name (&gt;= 61).</li>
   </li>
 </ul>
 
-<h2 id="section-103">2.0.7 / 2010-03-09</h2>
+<h2 id="section-106">2.0.7 / 2010-03-09</h2>
 
 <ul>
   <li>4 major enhancements
@@ -1389,7 +1485,7 @@ mode users. [Suggested by David MARCHALAND]</li>
   </li>
 </ul>
 
-<h2 id="section-104">2.0.6 / 2010-01-09</h2>
+<h2 id="section-107">2.0.6 / 2010-01-09</h2>
 
 <ul>
   <li>3 major enhancements
@@ -1426,7 +1522,7 @@ TEST_UNIT_MAX_DIFF_TARGET_STRING_SIZE environment variable.</li>
   </li>
 </ul>
 
-<h2 id="section-105">2.0.5 / 2009-10-18</h2>
+<h2 id="section-108">2.0.5 / 2009-10-18</h2>
 
 <ul>
   <li>1 bug fixes
@@ -1441,7 +1537,7 @@ TEST_UNIT_MAX_DIFF_TARGET_STRING_SIZE environment variable.</li>
   </li>
 </ul>
 
-<h2 id="section-106">2.0.4 / 2009-10-17</h2>
+<h2 id="section-109">2.0.4 / 2009-10-17</h2>
 
 <ul>
   <li>4 major enhancements
@@ -1474,7 +1570,7 @@ DelegateClass subclasses [Mike Pomraning]</li>
   </li>
 </ul>
 
-<h2 id="section-107">2.0.3 / 2009-07-19</h2>
+<h2 id="section-110">2.0.3 / 2009-07-19</h2>
 
 <ul>
   <li>6 major enhancements
@@ -1511,7 +1607,7 @@ DelegateClass subclasses [Mike Pomraning]</li>
   </li>
 </ul>
 
-<h2 id="section-108">2.0.2 / 2008-12-21</h2>
+<h2 id="section-111">2.0.2 / 2008-12-21</h2>
 
 <ul>
   <li>
@@ -1542,7 +1638,7 @@ DelegateClass subclasses [Mike Pomraning]</li>
   </li>
 </ul>
 
-<h2 id="section-109">2.0.1 / 2008-11-09</h2>
+<h2 id="section-112">2.0.1 / 2008-11-09</h2>
 
 <ul>
   <li>
@@ -1581,7 +1677,7 @@ exception is raised. [#22602] [Daniel Berger]</li>
   </li>
 </ul>
 
-<h2 id="section-110">2.0.0 / 2008-06-18</h2>
+<h2 id="section-113">2.0.0 / 2008-06-18</h2>
 
 <ul>
   <li>
@@ -1617,7 +1713,7 @@ exception is raised. [#22602] [Daniel Berger]</li>
   </li>
 </ul>
 
-<h2 id="section-111">1.2.3 / 2008-02-25</h2>
+<h2 id="section-114">1.2.3 / 2008-02-25</h2>
 
 <ul>
   <li>
@@ -1631,9 +1727,9 @@ exception is raised. [#22602] [Daniel Berger]</li>
 </div></div>
 
       <div id="footer">
-  Generated on Sun Apr  2 14:00:55 2017 by
+  Generated on Tue May 23 12:38:47 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.9 (ruby-2.3.3).
 </div>
 
     
