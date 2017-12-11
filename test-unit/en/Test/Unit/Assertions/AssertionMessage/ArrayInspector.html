@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::Assertions::AssertionMessage::ArrayInspector
   
@@ -341,7 +339,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_array'>array</span><span class='comma'>,</span> <span class='id identifier rubyid_inspected_objects'>inspected_objects</span><span class='rparen'>)</span>
   <span class='ivar'>@inspected_objects</span> <span class='op'>=</span> <span class='id identifier rubyid_inspected_objects'>inspected_objects</span>
   <span class='ivar'>@array</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_element'>element</span><span class='op'>|</span>
-    <span class='const'>Inspector</span><span class='period'>.</span><span class='id identifier rubyid_cached_new'>cached_new</span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='comma'>,</span> <span class='ivar'>@inspected_objects</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="Inspector.html" title="Test::Unit::Assertions::AssertionMessage::Inspector (class)">Inspector</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cached_new'><span class='object_link'><a href="Inspector.html#cached_new-class_method" title="Test::Unit::Assertions::AssertionMessage::Inspector.cached_new (method)">cached_new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='comma'>,</span> <span class='ivar'>@inspected_objects</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>

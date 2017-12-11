@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../../class_list.html"></iframe>
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,8 +88,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Test::Unit::AutoRunner::StopOnFailureListener
   
@@ -205,7 +203,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 524</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attach_to_mediator'>attach_to_mediator</span><span class='lparen'>(</span><span class='id identifier rubyid_mediator'>mediator</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_mediator'>mediator</span><span class='period'>.</span><span class='id identifier rubyid_add_listener'>add_listener</span><span class='lparen'>(</span><span class='const'>TestResult</span><span class='op'>::</span><span class='const'>FINISHED</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span>
+  <span class='id identifier rubyid_mediator'>mediator</span><span class='period'>.</span><span class='id identifier rubyid_add_listener'>add_listener</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../TestResult.html" title="Test::Unit::TestResult (class)">TestResult</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../TestResult.html#FINISHED-constant" title="Test::Unit::TestResult::FINISHED (constant)">FINISHED</a></span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_result'>result</span><span class='op'>|</span>
     <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span> <span class='kw'>unless</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_passed?'>passed?</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
