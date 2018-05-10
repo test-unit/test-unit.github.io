@@ -1,0 +1,1 @@
+RedirectMatch permanent ^/test-unit-rails/$ http://test-unit.rubyforge.org/#test-unit-railstest-unit-rails/en/
