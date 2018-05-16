@@ -1,23 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../test-unit.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>
   File: news
   
     &mdash; test-unit-rr
   
-</title>
+ - test-unit</title>
+
 
   <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "news";
   relpath = '';
-  framesUrl = "frames.html#!file.news.html";
 </script>
 
 
@@ -28,92 +31,171 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
-  
-    <a href="_index.html">Index</a> &raquo; 
-    <span class="title">File: news</span>
-  
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
 
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+    <div id="main" tabindex="-1">
+<div class="header">
+  <div class="title">
+    <a href="../../">
+      <span class="title">
+  File: news
+  
+    &mdash; test-unit-rr
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">test-unit</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../test-unit/ja/file.news.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../test-unit-rr/en/">Reference Manual</a></li>
+    <li id="menu-install"><a href="../../#test-unit-rr-install">Install</a></li>
+    <li id="menu-developer"><a href="../../#developer">Developers</a></li>
+  </ul>
 </div>
 
-      <div id="search">
+<div class="content">
+
+
+      <div id="header">
+        <div id="menu">
+  
+    <a href="alphabetical_index.html">Index</a> &raquo; 
+    <span class="title">File: news</span>
+  
+</div>
+
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <div id="content"><div id='filecontents'><h1 id="news">News</h1>
 
-    <div id="content"><div id='filecontents'><h1>News</h1>
+<h2 id="version-1-0-5">1.0.5: 2016-01-18</h2>
 
-<h2>1.0.3: 2013-07-07</h2>
-
-<h3>Improvements</h3>
+<h3 id="fixes">Fixes</h3>
 
 <ul>
-<li>Supported rr 1.1.1 or later. Older rr support is dropped.
+  <li>Fixed a bug that needless backtrace is showed in <code>assert_receive</code>.</li>
+</ul>
+
+<h2 id="version-1-0-4">1.0.4: 2016-01-17</h2>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+  <li>Added a workaround for RR’s auto testing framework adaptation.
+TODO: It should be fixed in RR.</li>
+</ul>
+
+<h2 id="section">1.0.3: 2013-07-07</h2>
+
+<h3 id="improvements-1">Improvements</h3>
+
+<ul>
+  <li>Supported rr 1.1.1 or later. Older rr support is dropped.
 [Reported by Youhei SASAKI] [GitHub#2]</li>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <ul>
-<li>Youhei SASAKI</li>
+  <li>Youhei SASAKI</li>
 </ul>
 
-<h2>1.0.2: 2012-11-04</h2>
+<h2 id="section-1">1.0.2: 2012-11-04</h2>
 
-<h3>Improvements</h3>
+<h3 id="improvements-2">Improvements</h3>
 
 <ul>
-<li>Added <code>assert_rr</code>.</li>
+  <li>Added <code>assert_rr</code>.</li>
 </ul>
 
-<h3>Fixes</h3>
+<h3 id="fixes-1">Fixes</h3>
 
 <ul>
-<li>Fixed wrong license notation in source header.
+  <li>Fixed wrong license notation in source header.
 [Reported by mtasaka] [GitHub#1]</li>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks-1">Thanks</h3>
 
 <ul>
-<li>mtasaka</li>
+  <li>mtasaka</li>
 </ul>
 
-<h2>1.0.1: 2011-02-09</h2>
+<h2 id="section-2">1.0.1: 2011-02-09</h2>
 
-<h3>Improvements</h3>
+<h3 id="improvements-3">Improvements</h3>
 
 <ul>
-<li>run setup for RR before test case&#39;s setup and teardown
-for RR after test cases&#39; teardown.</li>
+  <li>run setup for RR before test case’s setup and teardown
+for RR after test cases’ teardown.</li>
 </ul>
 
-<h2>1.0.0: 2011-02-09</h2>
+<h2 id="section-3">1.0.0: 2011-02-09</h2>
 
 <p>The first release!!!</p>
 </div></div>
 
-    <div id="footer"></div>
+      <div id="footer">
+    </div>
 
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="https://github.com/test-unit/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="The test-unit project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../famfamfam-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</div>
   </body>
 </html>
