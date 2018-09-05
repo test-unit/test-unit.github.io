@@ -696,22 +696,24 @@ UI.</p>
       <pre class="lines">
 
 
-42
-43
 44
 45
 46
 47
-48</pre>
+48
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@run_count</span><span class='comma'>,</span> <span class='ivar'>@pass_count</span><span class='comma'>,</span> <span class='ivar'>@assertion_count</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
   <span class='ivar'>@summary_generators</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@problem_checkers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@faults</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@stop_tag</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='id identifier rubyid_initialize_containers'>initialize_containers</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -966,14 +968,14 @@ UI.</p>
       <pre class="lines">
 
 
-62
-63
-64
 65
-66</pre>
+66
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_assertion'>add_assertion</span>
   <span class='ivar'>@assertion_count</span> <span class='op'>+=</span> <span class='int'>1</span>
@@ -1000,12 +1002,12 @@ UI.</p>
       <pre class="lines">
 
 
-57
-58
-59</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_pass'>add_pass</span>
   <span class='ivar'>@pass_count</span> <span class='op'>+=</span> <span class='int'>1</span>
@@ -1040,14 +1042,14 @@ UI.</p>
       <pre class="lines">
 
 
-51
-52
-53
 54
-55</pre>
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_run'>add_run</span>
   <span class='ivar'>@run_count</span> <span class='op'>+=</span> <span class='int'>1</span>
@@ -1074,17 +1076,17 @@ UI.</p>
       <pre class="lines">
 
 
-105
-106
-107
-108
-109
-110
-111
-112</pre>
+112
+113
+114
+115
+116
+117
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pass_percentage'>pass_percentage</span>
   <span class='id identifier rubyid_n_tests'>n_tests</span> <span class='op'>=</span> <span class='ivar'>@run_count</span> <span class='op'>-</span> <span class='id identifier rubyid_omission_count'>omission_count</span>
@@ -1138,15 +1140,15 @@ successful completion.</p>
       <pre class="lines">
 
 
-101
-102
-103</pre>
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
-  <span class='ivar'>@problem_checkers</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_checker'>checker</span><span class='op'>|</span> <span class='kw'>not</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_checker'>checker</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+  <span class='ivar'>@problem_checkers</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_checker'>checker</span><span class='op'>|</span> <span class='kw'>not</span> <span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_checker'>checker</span><span class='rparen'>)</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1178,9 +1180,6 @@ successful completion.</p>
       <pre class="lines">
 
 
-77
-78
-79
 80
 81
 82
@@ -1194,10 +1193,13 @@ successful completion.</p>
 90
 91
 92
-93</pre>
+93
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_passed?'>passed?</span>
@@ -1277,19 +1279,19 @@ failures and errors in this TestResult.</p>
       <pre class="lines">
 
 
-70
-71
-72
 73
-74</pre>
+74
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_summary'>summary</span>
   <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_run_count'>run_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> tests</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_assertion_count'>assertion_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> assertions</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-   <span class='op'>*</span><span class='ivar'>@summary_generators</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_generator'>generator</span><span class='op'>|</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_generator'>generator</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+   <span class='op'>*</span><span class='ivar'>@summary_generators</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_generator'>generator</span><span class='op'>|</span> <span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_generator'>generator</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1311,12 +1313,12 @@ failures and errors in this TestResult.</p>
       <pre class="lines">
 
 
-95
-96
-97</pre>
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testresult.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_summary'>summary</span>
@@ -1331,9 +1333,9 @@ failures and errors in this TestResult.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:55 2017 by
+  Generated on Wed Sep  5 14:12:22 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.12 (ruby-2.3.7).
 </div>
 
     

@@ -124,9 +124,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/assertions.rb<span class="defines">,<br />
-  lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb</span>
-</dd>
+    <dd>lib/test/unit/assertions.rb</dd>
   </dl>
   
 </div>
@@ -258,15 +256,15 @@
       <pre class="lines">
 
 
-2108
-2109
-2110
-2111
-2112
-2113</pre>
+2140
+2141
+2142
+2143
+2144
+2145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2108</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_test_case'>test_case</span><span class='comma'>,</span> <span class='id identifier rubyid_expected_exceptions'>expected_exceptions</span><span class='rparen'>)</span>
   <span class='ivar'>@test_case</span> <span class='op'>=</span> <span class='id identifier rubyid_test_case'>test_case</span>
@@ -324,15 +322,15 @@
       <pre class="lines">
 
 
-2130
-2131
-2132
-2133
-2134
-2135</pre>
+2162
+2163
+2164
+2165
+2166
+2167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2130</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_expected?'>expected?</span><span class='lparen'>(</span><span class='id identifier rubyid_actual_exception'>actual_exception</span><span class='comma'>,</span> <span class='id identifier rubyid_equality'>equality</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_equality'>equality</span> <span class='op'>||=</span> <span class='symbol'>:instance_of?</span>
@@ -360,23 +358,23 @@
       <pre class="lines">
 
 
-2115
-2116
-2117
-2118
-2119
-2120
-2121
-2122
-2123
-2124
-2125
-2126
-2127
-2128</pre>
+2147
+2148
+2149
+2150
+2151
+2152
+2153
+2154
+2155
+2156
+2157
+2158
+2159
+2160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2115</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_expected_exceptions'>expected_exceptions</span>
   <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>=</span> <span class='ivar'>@expected_exceptions</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_exception'>exception</span><span class='op'>|</span>

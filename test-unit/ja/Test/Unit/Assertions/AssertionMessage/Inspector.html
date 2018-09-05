@@ -129,9 +129,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/assertions.rb<span class="defines">,<br />
-  lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb</span>
-</dd>
+    <dd>lib/test/unit/assertions.rb</dd>
   </dl>
   
 </div>
@@ -467,15 +465,15 @@
       <pre class="lines">
 
 
-1804
-1805
-1806
-1807
-1808
-1809</pre>
+1834
+1835
+1836
+1837
+1838
+1839</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1804</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1834</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_inspected_objects'>inspected_objects</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@inspected_objects</span> <span class='op'>=</span> <span class='id identifier rubyid_inspected_objects'>inspected_objects</span>
@@ -520,12 +518,12 @@
       <pre class="lines">
 
 
-1803
-1804
-1805</pre>
+1833
+1834
+1835</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1803</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1833</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_object'>object</span>
   <span class='ivar'>@object</span>
@@ -557,13 +555,13 @@
       <pre class="lines">
 
 
-1784
-1785
-1786
-1787</pre>
+1814
+1815
+1816
+1817</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1784</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1814</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cached_new'>cached_new</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_inspected_objects'>inspected_objects</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_inspected_objects'>inspected_objects</span><span class='lbracket'>[</span><span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rbracket'>]</span> <span class='op'>||=</span>
@@ -589,12 +587,12 @@
       <pre class="lines">
 
 
-1790
-1791
-1792</pre>
+1820
+1821
+1822</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1790</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1820</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspector_classes'>inspector_classes</span>
   <span class='cvar'>@@inspector_classes</span>
@@ -619,12 +617,12 @@
       <pre class="lines">
 
 
-1794
-1795
-1796</pre>
+1824
+1825
+1826</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1794</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1824</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_inspector_class'>register_inspector_class</span><span class='lparen'>(</span><span class='id identifier rubyid_inspector_class'>inspector_class</span><span class='rparen'>)</span>
   <span class='cvar'>@@inspector_classes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_inspector_class'>inspector_class</span>
@@ -649,12 +647,12 @@
       <pre class="lines">
 
 
-1798
-1799
-1800</pre>
+1828
+1829
+1830</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1798</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1828</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unregister_inspector_class'>unregister_inspector_class</span><span class='lparen'>(</span><span class='id identifier rubyid_inspector_class'>inspector_class</span><span class='rparen'>)</span>
   <span class='cvar'>@@inspector_classes</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_inspector_class'>inspector_class</span><span class='rparen'>)</span>
@@ -685,16 +683,16 @@
       <pre class="lines">
 
 
-1824
-1825
-1826
-1827
-1828
-1829
-1830</pre>
+1854
+1855
+1856
+1857
+1858
+1859
+1860</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1824</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1854</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span>
@@ -723,12 +721,12 @@
       <pre class="lines">
 
 
-1812
-1813
-1814</pre>
+1842
+1843
+1844</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1812</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1842</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='ivar'>@inspect_target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
@@ -753,16 +751,12 @@
       <pre class="lines">
 
 
-1811
-1812
-1813</pre>
+1841</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1811</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1841</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
-  <span class='ivar'>@inspect_target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
-<span class='kw'>end</span></pre>
+<span class='id identifier rubyid_alias_method'>alias_method</span> <span class='symbol'>:native_inspect</span><span class='comma'>,</span> <span class='symbol'>:inspect</span></pre>
     </td>
   </tr>
 </table>
@@ -783,12 +777,12 @@
       <pre class="lines">
 
 
-1816
-1817
-1818</pre>
+1846
+1847
+1848</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1816</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1846</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
   <span class='ivar'>@inspect_target</span><span class='period'>.</span><span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
@@ -813,12 +807,12 @@
       <pre class="lines">
 
 
-1820
-1821
-1822</pre>
+1850
+1851
+1852</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1820</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1850</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pretty_print_cycle'>pretty_print_cycle</span><span class='lparen'>(</span><span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
   <span class='ivar'>@inspect_target</span><span class='period'>.</span><span class='id identifier rubyid_pretty_print_cycle'>pretty_print_cycle</span><span class='lparen'>(</span><span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
@@ -833,9 +827,9 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:53 2017 by
+  Generated on Wed Sep  5 14:12:19 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.12 (ruby-2.3.7).
 </div>
 
     

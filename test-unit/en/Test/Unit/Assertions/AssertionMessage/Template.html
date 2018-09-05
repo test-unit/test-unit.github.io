@@ -124,9 +124,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/assertions.rb<span class="defines">,<br />
-  lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb</span>
-</dd>
+    <dd>lib/test/unit/assertions.rb</dd>
   </dl>
   
 </div>
@@ -290,13 +288,13 @@
       <pre class="lines">
 
 
-2007
-2008
-2009
-2010</pre>
+2037
+2038
+2039
+2040</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2007</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2037</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_parts'>parts</span><span class='rparen'>)</span>
   <span class='ivar'>@parts</span> <span class='op'>=</span> <span class='id identifier rubyid_parts'>parts</span>
@@ -339,12 +337,12 @@
       <pre class="lines">
 
 
-2005
-2006
-2007</pre>
+2035
+2036
+2037</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2005</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2035</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span>
   <span class='ivar'>@count</span>
@@ -376,13 +374,13 @@
       <pre class="lines">
 
 
-2000
-2001
-2002
-2003</pre>
+2030
+2031
+2032
+2033</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2000</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2030</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parts'>parts</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span> <span class='op'>?</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?=[^\\])\?|(?:\\\?|[^\?])+</span><span class='regexp_end'>/m</span></span><span class='rparen'>)</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -414,22 +412,28 @@
       <pre class="lines">
 
 
-2012
-2013
-2014
-2015
-2016
-2017
-2018
-2019
-2020
-2021
-2022
-2023
-2024</pre>
+2042
+2043
+2044
+2045
+2046
+2047
+2048
+2049
+2050
+2051
+2052
+2053
+2054
+2055
+2056
+2057
+2058
+2059
+2060</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2012</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 2042</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result'>result</span><span class='lparen'>(</span><span class='id identifier rubyid_parameters'>parameters</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The number of parameters does not match the number of substitutions.</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_parameters'>parameters</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>!=</span> <span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
@@ -437,9 +441,15 @@
   <span class='id identifier rubyid_expanded_template'>expanded_template</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
   <span class='ivar'>@parts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_part'>part</span><span class='op'>|</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_part'>part</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span>
-      <span class='id identifier rubyid_encoding_safe_concat'>encoding_safe_concat</span><span class='lparen'>(</span><span class='id identifier rubyid_expanded_template'>expanded_template</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_param'>param</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+      <span class='kw'>if</span> <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_const_defined?'>const_defined?</span><span class='lparen'>(</span><span class='symbol'>:Encoding</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_expanded_template'>expanded_template</span> <span class='op'>+=</span> <span class='id identifier rubyid_concatenatable'>concatenatable</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='comma'>,</span>
+                                            <span class='id identifier rubyid_expanded_template'>expanded_template</span><span class='period'>.</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_expanded_template'>expanded_template</span> <span class='op'>+=</span> <span class='id identifier rubyid_param'>param</span>
+      <span class='kw'>end</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_expanded_template'>expanded_template</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\\\?</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_expanded_template'>expanded_template</span> <span class='op'>+=</span> <span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\\\?</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_expanded_template'>expanded_template</span>

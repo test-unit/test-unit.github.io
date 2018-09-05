@@ -131,9 +131,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/ui/console/testrunner.rb<span class="defines">,<br />
-  lib/test/unit/ui/console/testrunner.rb</span>
-</dd>
+    <dd>lib/test/unit/ui/console/testrunner.rb</dd>
   </dl>
   
 </div>
@@ -267,11 +265,6 @@ STDOUT.</p>
       <pre class="lines">
 
 
-32
-33
-34
-35
-36
 37
 38
 39
@@ -287,10 +280,17 @@ STDOUT.</p>
 49
 50
 51
-52</pre>
+52
+53
+54
+55
+56
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/console/testrunner.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/console/testrunner.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -305,6 +305,8 @@ STDOUT.</p>
   <span class='ivar'>@progress_row_max</span> <span class='op'>||=</span> <span class='id identifier rubyid_guess_progress_row_max'>guess_progress_row_max</span>
   <span class='ivar'>@show_detail_immediately</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:show_detail_immediately</span><span class='rbracket'>]</span>
   <span class='ivar'>@show_detail_immediately</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@show_detail_immediately</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@reverse_output</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:reverse_output</span><span class='rbracket'>]</span>
+  <span class='ivar'>@reverse_output</span> <span class='op'>=</span> <span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_tty?'>tty?</span> <span class='kw'>if</span> <span class='ivar'>@reverse_output</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='ivar'>@already_outputted</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='ivar'>@indent</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='ivar'>@top_level</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -324,9 +326,9 @@ STDOUT.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:56 2017 by
+  Generated on Wed Sep  5 14:12:22 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.12 (ruby-2.3.7).
 </div>
 
     

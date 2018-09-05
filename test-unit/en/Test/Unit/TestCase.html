@@ -129,9 +129,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/testcase.rb<span class="defines">,<br />
-  lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb</span>
-</dd>
+    <dd>lib/test/unit/testcase.rb</dd>
   </dl>
   
 </div>
@@ -326,17 +324,12 @@ end
       </dt>
       <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:alphabetic</span><span class='comma'>,</span> <span class='symbol'>:random</span><span class='comma'>,</span> <span class='symbol'>:defined</span><span class='rbracket'>]</span></pre></dd>
     
-      <dt id="added_methods-classvariable" class="">@@added_methods =
+      <dt id="added_method_names-classvariable" class="">@@added_method_names =
         
       </dt>
       <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
     
       <dt id="test_orders-classvariable" class="">@@test_orders =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-    
-      <dt id="added_method_names-classvariable" class="">@@added_method_names =
         
       </dt>
       <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
@@ -406,29 +399,6 @@ end
   <span class="summary_signature">
     
       <a href="#added_method_names-class_method" title="added_method_names (class method)">.<strong>added_method_names</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#added_methods-class_method" title="added_methods (class method)">.<strong>added_methods</strong>  &#x21d2; Object </a>
     
 
     
@@ -1378,13 +1348,13 @@ test represented by test_method_name.</p>
       <pre class="lines">
 
 
-401
-402
-403
-404</pre>
+461
+462
+463
+464</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 401</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 461</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_test_method_name'>test_method_name</span><span class='rparen'>)</span>
   <span class='ivar'>@method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_test_method_name'>test_method_name</span>
@@ -1427,12 +1397,12 @@ test represented by test_method_name.</p>
       <pre class="lines">
 
 
-397
-398
-399</pre>
+457
+458
+459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 397</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 457</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_name'>method_name</span>
   <span class='ivar'>@method_name</span>
@@ -1474,55 +1444,15 @@ test represented by test_method_name.</p>
       <pre class="lines">
 
 
-135
-136
-137</pre>
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_added_method_names'>added_method_names</span> <span class='comment'># :nodoc:
 </span>  <span class='lparen'>(</span><span class='cvar'>@@added_method_names</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="added_methods-class_method">
-  
-    .<strong>added_methods</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-136
-137
-138</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 136</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_added_methods'>added_methods</span> <span class='comment'># :nodoc:
-</span>  <span class='cvar'>@@added_methods</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1563,13 +1493,13 @@ test.</p>
       <pre class="lines">
 
 
-298
-299
-300
-301</pre>
+331
+332
+333
+334</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 298</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 331</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_targets'>targets</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_target'>target</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
@@ -1595,25 +1525,6 @@ test.</p>
       <pre class="lines">
 
 
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
 397
 398
 399
@@ -1621,10 +1532,30 @@ test.</p>
 401
 402
 403
-404</pre>
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 378</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 397</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_locations'>find_locations</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_query_path'>query_path</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
@@ -1645,7 +1576,8 @@ test.</p>
   <span class='kw'>end</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_query_method_name'>query_method_name</span>
     <span class='id identifier rubyid_available_location'>available_location</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
-      <span class='id identifier rubyid_query_method_name'>query_method_name</span> <span class='op'>==</span> <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:test_case</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='kw'>self</span> <span class='kw'>and</span>
+        <span class='id identifier rubyid_query_method_name'>query_method_name</span> <span class='op'>==</span> <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
     <span class='kw'>end</span>
     <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_available_location'>available_location</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
     <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_available_location'>available_location</span><span class='rbracket'>]</span>
@@ -1683,18 +1615,16 @@ test.</p>
       <pre class="lines">
 
 
-106
-107
-108
-109
-110</pre>
+128
+129
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inherited'>inherited</span><span class='lparen'>(</span><span class='id identifier rubyid_sub_class'>sub_class</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
-</span>  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test/unit</span><span class='tstring_end'>&quot;</span></span>
-  <span class='const'><span class='object_link'><a href="#DESCENDANTS-constant" title="Test::Unit::TestCase::DESCENDANTS (constant)">DESCENDANTS</a></span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_sub_class'>sub_class</span>
+</span>  <span class='const'><span class='object_link'><a href="#DESCENDANTS-constant" title="Test::Unit::TestCase::DESCENDANTS (constant)">DESCENDANTS</a></span></span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_sub_class'>sub_class</span>
   <span class='kw'>super</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1727,53 +1657,63 @@ test.</p>
       <pre class="lines">
 
 
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134</pre>
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_added'>method_added</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>super</span>
-  <span class='id identifier rubyid__added_methods'>_added_methods</span> <span class='op'>=</span> <span class='id identifier rubyid_added_methods'>added_methods</span>
+  <span class='id identifier rubyid_added_method_names'>added_method_names</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='cvar'>@@added_method_names</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_stringified_name'>stringified_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid__added_methods'>_added_methods</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_added_method_names'>added_method_names</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='symbol'>:redefined</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:backtrace</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_caller'>caller</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid__attributes'>_attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes_table'>attributes_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_source_location'>source_location</span> <span class='op'>=</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lbracket'>[</span><span class='symbol'>:source_location</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_source_location'>source_location</span> <span class='op'>=</span> <span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='comma'>,</span> <span class='symbol'>:source_location</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_source_location'>source_location</span>
     <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_source_location'>source_location</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:caller_locations</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='id identifier rubyid_caller_locations'>caller_locations</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_location'>location</span><span class='period'>.</span><span class='id identifier rubyid_absolute_path'>absolute_path</span> <span class='op'>||</span> <span class='id identifier rubyid_location'>location</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span>
+    <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_location'>location</span><span class='period'>.</span><span class='id identifier rubyid_lineno'>lineno</span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>:(\d+)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='int'>2</span><span class='rparen'>)</span>
+    <span class='comment'># TODO: Remove me when Ruby 1.9 support is dropped
+</span>    <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>:(\d+)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_line'>line</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_method_locations'>method_locations</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:method_name</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='comma'>,</span>
-    <span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span>
+    <span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='comma'>,</span>
     <span class='symbol'>:line</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span>
   <span class='rbrace'>}</span>
-  <span class='id identifier rubyid__added_methods'>_added_methods</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_stringified_name'>stringified_name</span>
+  <span class='id identifier rubyid_added_method_names'>added_method_names</span><span class='lbracket'>[</span><span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='const'><span class='object_link'><a href="AutoRunnerLoader.html" title="Test::Unit::AutoRunnerLoader (module)">AutoRunnerLoader</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check'><span class='object_link'><a href="AutoRunnerLoader.html#check-class_method" title="Test::Unit::AutoRunnerLoader.check (method)">check</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1837,11 +1777,11 @@ should be worked in any order.</p>
       <pre class="lines">
 
 
-218
-219</pre>
+244
+245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 244</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_shutdown'>shutdown</span>
 <span class='kw'>end</span></pre>
@@ -1908,11 +1848,11 @@ should be worked in any order.</p>
       <pre class="lines">
 
 
-182
-183</pre>
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_startup'>startup</span>
 <span class='kw'>end</span></pre>
@@ -2030,26 +1970,26 @@ case class context.</p>
       <pre class="lines">
 
 
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348</pre>
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 338</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 371</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sub_test_case'>sub_test_case</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parent_test_case'>parent_test_case</span> <span class='op'>=</span> <span class='kw'>self</span>
   <span class='id identifier rubyid_sub_test_case'>sub_test_case</span> <span class='op'>=</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_singleton_class'>singleton_class</span> <span class='op'>=</span> <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>end</span>
-    <span class='id identifier rubyid_singleton_class'>singleton_class</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:define_method</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_singleton_class'>singleton_class</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='symbol'>:define_method</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='rparen'>)</span> <span class='kw'>do</span>
       <span class='lbracket'>[</span><span class='id identifier rubyid_parent_test_case'>parent_test_case</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
@@ -2088,13 +2028,13 @@ each method.</p>
       <pre class="lines">
 
 
-143
-144
-145
-146</pre>
+169
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_suite'>suite</span>
   <span class='id identifier rubyid_suite_creator'>suite_creator</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TestSuiteCreator.html" title="Test::Unit::TestSuiteCreator (class)">TestSuiteCreator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TestSuiteCreator.html#initialize-instance_method" title="Test::Unit::TestSuiteCreator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -2151,32 +2091,35 @@ treated as a test method:</p>
       <pre class="lines">
 
 
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286</pre>
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 264</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test'>test</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_test_description_or_targets'>test_description_or_targets</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -2199,6 +2142,9 @@ treated as a test method:</p>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_targets'>targets</span> <span class='op'>=</span> <span class='id identifier rubyid_test_description_or_targets'>test_description_or_targets</span>
     <span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='symbol'>:test</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_targets'>targets</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_targets'>targets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_target'>target</span><span class='op'>|</span>
+      <span class='const'><span class='object_link'><a href="AutoRunnerLoader.html" title="Test::Unit::AutoRunnerLoader (module)">AutoRunnerLoader</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check'><span class='object_link'><a href="AutoRunnerLoader.html#check-class_method" title="Test::Unit::AutoRunnerLoader.check (method)">check</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2318,65 +2264,17 @@ defined.</p>
       <pre class="lines">
 
 
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386</pre>
+392
+393
+394
+395</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 359</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 392</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_defined?'>test_defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_query_path'>query_path</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_query_line'>query_line</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:line</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_query_method_name'>query_method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
-
-  <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='id identifier rubyid_method_locations'>method_locations</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_query_path'>query_path</span>
-    <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
-      <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_end_with?'>end_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_query_path'>query_path</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_query_line'>query_line</span>
-    <span class='id identifier rubyid_available_location'>available_location</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
-      <span class='id identifier rubyid_query_line'>query_line</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:line</span><span class='rbracket'>]</span>
-    <span class='kw'>end</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_available_location'>available_location</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_available_location'>available_location</span><span class='rbracket'>]</span>
-  <span class='kw'>end</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_query_method_name'>query_method_name</span>
-    <span class='id identifier rubyid_available_location'>available_location</span> <span class='op'>=</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_location'>location</span><span class='op'>|</span>
-      <span class='id identifier rubyid_query_method_name'>query_method_name</span> <span class='op'>==</span> <span class='id identifier rubyid_location'>location</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
-    <span class='kw'>end</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_available_location'>available_location</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='id identifier rubyid_available_locations'>available_locations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_available_location'>available_location</span><span class='rbracket'>]</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>not</span> <span class='id identifier rubyid_available_locations'>available_locations</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='id identifier rubyid_locations'>locations</span> <span class='op'>=</span> <span class='id identifier rubyid_find_locations'>find_locations</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+  <span class='kw'>not</span> <span class='id identifier rubyid_locations'>locations</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2409,15 +2307,23 @@ defined.</p>
       <pre class="lines">
 
 
-225
-226
-227</pre>
+251
+252
+253
+254
+255
+256
+257</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 251</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_order'>test_order</span>
-  <span class='cvar'>@@test_orders</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#AVAILABLE_ORDERS-constant" title="Test::Unit::TestCase::AVAILABLE_ORDERS (constant)">AVAILABLE_ORDERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+  <span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_order'>order</span> <span class='op'>=</span> <span class='cvar'>@@test_orders</span><span class='lbracket'>[</span><span class='id identifier rubyid_ancestor'>ancestor</span><span class='rbracket'>]</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_order'>order</span> <span class='kw'>if</span> <span class='id identifier rubyid_order'>order</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="#AVAILABLE_ORDERS-constant" title="Test::Unit::TestCase::AVAILABLE_ORDERS (constant)">AVAILABLE_ORDERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2457,12 +2363,12 @@ defined.</p>
       <pre class="lines">
 
 
-238
-239
-240</pre>
+268
+269
+270</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 238</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 268</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_order='>test_order=</span><span class='lparen'>(</span><span class='id identifier rubyid_order'>order</span><span class='rparen'>)</span>
   <span class='cvar'>@@test_orders</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span>
@@ -2503,15 +2409,15 @@ defined.</p>
       <pre class="lines">
 
 
-631
-632
-633
-634
-635
-636</pre>
+715
+716
+717
+718
+719
+720</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 631</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 715</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span>
@@ -2555,12 +2461,12 @@ example, we may add a new hook in #run.</p>
       <pre class="lines">
 
 
-680
-681
-682</pre>
+764
+765
+766</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 680</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 764</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_pass'>add_pass</span>
   <span class='id identifier rubyid_current_result'>current_result</span><span class='period'>.</span><span class='id identifier rubyid_add_pass'>add_pass</span>
@@ -2595,12 +2501,12 @@ example, we may add a new hook in #run.</p>
       <pre class="lines">
 
 
-407
-408
-409</pre>
+467
+468
+469</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 407</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 467</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assign_test_data'>assign_test_data</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
 </span>  <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_assign_test_data'>assign_test_data</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
@@ -2676,11 +2582,11 @@ end   end
       <pre class="lines">
 
 
-545
-546</pre>
+620
+621</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 545</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 620</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cleanup'>cleanup</span>
 <span class='kw'>end</span></pre>
@@ -2716,12 +2622,12 @@ test isn’t associated with any test data, it returns
       <pre class="lines">
 
 
-602
-603
-604</pre>
+677
+678
+679</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 602</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 677</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_data_label'>data_label</span>
   <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_test_data_label'>test_data_label</span>
@@ -2746,12 +2652,12 @@ test isn’t associated with any test data, it returns
       <pre class="lines">
 
 
-591
-592
-593</pre>
+666
+667
+668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 591</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 666</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_test'>default_test</span>
   <span class='id identifier rubyid_flunk'>flunk</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No tests were specified</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2790,12 +2696,12 @@ Test::Unit::TestCase.description.</p>
       <pre class="lines">
 
 
-621
-622
-623</pre>
+705
+706
+707</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 621</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 705</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
   <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_name'>name</span>
@@ -2830,12 +2736,12 @@ Test::Unit::TestCase.description.</p>
       <pre class="lines">
 
 
-644
-645
-646</pre>
+728
+729
+730</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 644</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 728</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_elapsed_time'>elapsed_time</span>
   <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_elapsed_time'>elapsed_time</span>
@@ -2883,12 +2789,12 @@ Test::Unit::TestCase.description.</p>
       <pre class="lines">
 
 
-649
-650
-651</pre>
+733
+734
+735</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 649</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 733</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_interrupted?'>interrupted?</span>
   <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_interrupted?'>interrupted?</span>
@@ -2927,16 +2833,16 @@ class name.</p>
       <pre class="lines">
 
 
-672
-673
-674
-675
-676
-677
-678</pre>
+692
+693
+694
+695
+696
+697
+698</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 672</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 692</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_local_name'>local_name</span>
   <span class='kw'>if</span> <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_have_test_data?'>have_test_data?</span>
@@ -2976,23 +2882,15 @@ this instance of TestCase represents.</p>
       <pre class="lines">
 
 
-608
-609
-610
-611
-612
-613
-614</pre>
+683
+684
+685</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 608</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 683</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
-  <span class='kw'>if</span> <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_have_test_data?'>have_test_data?</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@method_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_data_label'>data_label</span><span class='embexpr_end'>}</span><span class='tstring_content'>](</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>else</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@method_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_local_name'>local_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3039,12 +2937,12 @@ can be left behind if the test fails.</p>
       <pre class="lines">
 
 
-656
-657
-658</pre>
+740
+741
+742</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 656</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 740</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
   <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_passed?'>passed?</span>
@@ -3083,12 +2981,12 @@ suites, the test process exits with failure exit status.</p>
       <pre class="lines">
 
 
-667
-668
-669</pre>
+751
+752
+753</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 667</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 751</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_problem_occurred'>problem_occurred</span>
   <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_problem_occurred'>problem_occurred</span>
@@ -3125,53 +3023,87 @@ and errors in result.</p>
       <pre class="lines">
 
 
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458</pre>
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 430</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 488</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_run'><span class='object_link'><a href="../../top-level-namespace.html#run-instance_method" title="#run (method)">run</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
   <span class='kw'>begin</span>
     <span class='ivar'>@_result</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span>
     <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_test_started'>test_started</span>
     <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STARTED-constant" title="Test::Unit::TestCase::STARTED (constant)">STARTED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
     <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STARTED_OBJECT-constant" title="Test::Unit::TestCase::STARTED_OBJECT (constant)">STARTED_OBJECT</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_processed_exception_in_setup'>processed_exception_in_setup</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='kw'>begin</span>
-      <span class='id identifier rubyid_run_setup'>run_setup</span>
-      <span class='id identifier rubyid_run_test'><span class='object_link'><a href="../../top-level-namespace.html#run_test-instance_method" title="#run_test (method)">run_test</a></span></span>
-      <span class='id identifier rubyid_run_cleanup'>run_cleanup</span>
-      <span class='id identifier rubyid_add_pass'>add_pass</span>
+      <span class='id identifier rubyid_catch'>catch</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tag'>tag</span><span class='op'>|</span>
+        <span class='id identifier rubyid_run_setup'>run_setup</span> <span class='kw'>do</span>
+          <span class='kw'>begin</span>
+            <span class='id identifier rubyid_run_test'><span class='object_link'><a href="../../top-level-namespace.html#run_test-instance_method" title="#run_test (method)">run_test</a></span></span>
+            <span class='id identifier rubyid_run_cleanup'>run_cleanup</span>
+            <span class='id identifier rubyid_add_pass'>add_pass</span>
+          <span class='kw'>rescue</span> <span class='const'>Exception</span>
+            <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_interrupted'>interrupted</span>
+            <span class='kw'>unless</span> <span class='id identifier rubyid_handle_exception'>handle_exception</span><span class='lparen'>(</span><span class='gvar'>$!</span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_processed_exception_in_setup'>processed_exception_in_setup</span> <span class='op'>=</span> <span class='kw'>true</span>
+              <span class='id identifier rubyid_raise'>raise</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_throw'>throw</span><span class='lparen'>(</span><span class='id identifier rubyid_tag'>tag</span><span class='rparen'>)</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
     <span class='kw'>rescue</span> <span class='const'>Exception</span>
-      <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_interrupted'>interrupted</span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='kw'>unless</span> <span class='id identifier rubyid_handle_exception'>handle_exception</span><span class='lparen'>(</span><span class='gvar'>$!</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_processed_exception_in_setup'>processed_exception_in_setup</span>
+        <span class='id identifier rubyid_raise'>raise</span>
+      <span class='kw'>else</span>
+        <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_interrupted'>interrupted</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='kw'>unless</span> <span class='id identifier rubyid_handle_exception'>handle_exception</span><span class='lparen'>(</span><span class='gvar'>$!</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
     <span class='kw'>ensure</span>
       <span class='kw'>begin</span>
         <span class='id identifier rubyid_run_teardown'>run_teardown</span>
@@ -3256,11 +3188,11 @@ end   end
       <pre class="lines">
 
 
-500
-501</pre>
+575
+576</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 500</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 575</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
 <span class='kw'>end</span></pre>
@@ -3284,12 +3216,12 @@ end   end
       <pre class="lines">
 
 
-595
-596
-597</pre>
+670
+671
+672</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 595</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 670</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
   <span class='int'>1</span>
@@ -3324,12 +3256,12 @@ end   end
       <pre class="lines">
 
 
-639
-640
-641</pre>
+723
+724
+725</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 639</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 723</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_time'>start_time</span>
   <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_start_time'>start_time</span>
@@ -3403,11 +3335,11 @@ end   end
       <pre class="lines">
 
 
-588
-589</pre>
+663
+664</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 588</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 663</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
 <span class='kw'>end</span></pre>
@@ -3441,12 +3373,12 @@ end   end
       <pre class="lines">
 
 
-626
-627
-628</pre>
+710
+711
+712</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 626</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 710</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_name'>name</span>
@@ -3494,30 +3426,26 @@ end   end
       <pre class="lines">
 
 
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425</pre>
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 412</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 472</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span> <span class='comment'># :nodoc:
 </span>  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='ivar'>@method_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_test_method'>test_method</span> <span class='op'>=</span> <span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='ivar'>@method_name</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_have_test_data?'>have_test_data?</span>
-    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_test_method'>test_method</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>==</span> <span class='int'>1</span>
-  <span class='kw'>else</span>
+  <span class='kw'>unless</span> <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_have_test_data?'>have_test_data?</span>
     <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_test_method'>test_method</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_owner'>owner</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Util.html" title="Test::Unit::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util/MethodOwnerFinder.html" title="Test::Unit::Util::MethodOwnerFinder (module)">MethodOwnerFinder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Util/MethodOwnerFinder.html#find-class_method" title="Test::Unit::Util::MethodOwnerFinder.find (method)">find</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='ivar'>@method_name</span><span class='rparen'>)</span>

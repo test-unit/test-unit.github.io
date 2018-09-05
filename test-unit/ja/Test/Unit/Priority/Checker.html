@@ -731,7 +731,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_need_to_run?'>need_to_run?</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_priority'>priority</span> <span class='op'>=</span> <span class='id identifier rubyid_test'>test</span><span class='lbracket'>[</span><span class='symbol'>:priority</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Priority.html" title="Test::Unit::Priority (module)">Priority</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="../Priority.html#default-class_method" title="Test::Unit::Priority.default (method)">default</a></span></span>
   <span class='kw'>if</span> <span class='id identifier rubyid_have_priority?'>have_priority?</span><span class='lparen'>(</span><span class='id identifier rubyid_priority'>priority</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_priority_check_method_name'>priority_check_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_priority'>priority</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_priority_check_method_name'>priority_check_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_priority'>priority</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='kw'>true</span>
   <span class='kw'>end</span>
@@ -1175,7 +1175,7 @@
       <pre class="code"><span class="info file"># File 'lib/test/unit/priority.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
-  <span class='kw'>if</span> <span class='ivar'>@test</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:passed?</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@test</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='symbol'>:passed?</span><span class='rparen'>)</span>
     <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_touch'>touch</span><span class='lparen'>(</span><span class='id identifier rubyid_passed_file'>passed_file</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='const'>FileUtils</span><span class='period'>.</span><span class='id identifier rubyid_rm_f'>rm_f</span><span class='lparen'>(</span><span class='id identifier rubyid_passed_file'>passed_file</span><span class='rparen'>)</span>
@@ -1191,9 +1191,9 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:55 2017 by
+  Generated on Wed Sep  5 14:12:21 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.12 (ruby-2.3.7).
 </div>
 
     

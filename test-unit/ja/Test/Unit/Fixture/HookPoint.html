@@ -124,9 +124,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/fixture.rb<span class="defines">,<br />
-  lib/test/unit/fixture.rb,<br /> lib/test/unit/fixture.rb</span>
-</dd>
+    <dd>lib/test/unit/fixture.rb</dd>
   </dl>
   
 </div>
@@ -150,29 +148,6 @@
   <span class="summary_signature">
     
       <a href="#after_append_callbacks-instance_method" title="#after_append_callbacks (instance method)">#<strong>after_append_callbacks</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#after_callbacks-instance_method" title="#after_callbacks (instance method)">#<strong>after_callbacks</strong>  &#x21d2; Object </a>
     
 
     
@@ -219,29 +194,6 @@
   <span class="summary_signature">
     
       <a href="#before_append_callbacks-instance_method" title="#before_append_callbacks (instance method)">#<strong>before_append_callbacks</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#before_callbacks-instance_method" title="#before_callbacks (instance method)">#<strong>before_callbacks</strong>  &#x21d2; Object </a>
     
 
     
@@ -386,20 +338,28 @@
       <pre class="lines">
 
 
-71
-72
-73
-74
-75
-76</pre>
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 102</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_default_options'>default_options</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_test_case'>test_case</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_default_options'>default_options</span><span class='rparen'>)</span>
+  <span class='ivar'>@test_case</span> <span class='op'>=</span> <span class='id identifier rubyid_test_case'>test_case</span>
+  <span class='ivar'>@type</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@default_options</span> <span class='op'>=</span> <span class='id identifier rubyid_default_options'>default_options</span>
-  <span class='ivar'>@before_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@after_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@before_prepend_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@before_append_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@after_prepend_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@after_append_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@unregistered_callbacks</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -429,45 +389,15 @@
       <pre class="lines">
 
 
-134
-135
-136</pre>
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_append_callbacks'>after_append_callbacks</span>
   <span class='ivar'>@after_append_callbacks</span> <span class='op'>-</span> <span class='ivar'>@unregistered_callbacks</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="after_callbacks-instance_method">
-  
-    #<strong>after_callbacks</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-111
-112
-113</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 111</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_after_callbacks'>after_callbacks</span>
-  <span class='ivar'>@after_callbacks</span> <span class='op'>-</span> <span class='ivar'>@unregistered_callbacks</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -489,12 +419,12 @@
       <pre class="lines">
 
 
-130
-131
-132</pre>
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_prepend_callbacks'>after_prepend_callbacks</span>
   <span class='ivar'>@after_prepend_callbacks</span> <span class='op'>-</span> <span class='ivar'>@unregistered_callbacks</span>
@@ -519,45 +449,15 @@
       <pre class="lines">
 
 
-126
-127
-128</pre>
+154
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_append_callbacks'>before_append_callbacks</span>
   <span class='ivar'>@before_append_callbacks</span> <span class='op'>-</span> <span class='ivar'>@unregistered_callbacks</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="before_callbacks-instance_method">
-  
-    #<strong>before_callbacks</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-107
-108
-109</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 107</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_before_callbacks'>before_callbacks</span>
-  <span class='ivar'>@before_callbacks</span> <span class='op'>-</span> <span class='ivar'>@unregistered_callbacks</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -579,12 +479,12 @@
       <pre class="lines">
 
 
-122
-123
-124</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_prepend_callbacks'>before_prepend_callbacks</span>
   <span class='ivar'>@before_prepend_callbacks</span> <span class='op'>-</span> <span class='ivar'>@unregistered_callbacks</span>
@@ -609,33 +509,35 @@
       <pre class="lines">
 
 
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101</pre>
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -651,15 +553,17 @@
   <span class='kw'>end</span>
   <span class='id identifier rubyid_before_how'>before_how</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:before</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_after_how'>after_how</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:after</span><span class='rbracket'>]</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_before_how'>before_how</span>
-    <span class='ivar'>@before_callbacks</span> <span class='op'>=</span> <span class='id identifier rubyid_add_callback'>add_callback</span><span class='lparen'>(</span><span class='ivar'>@before_callbacks</span><span class='comma'>,</span>
-                                     <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span><span class='comma'>,</span>
-                                     <span class='id identifier rubyid_before_how'>before_how</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_callback'>callback</span> <span class='op'>=</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span>
+    <span class='id identifier rubyid_method_name'>method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_callback_method_name'>callback_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+    <span class='ivar'>@test_case</span><span class='period'>.</span><span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='symbol'>:source_location</span><span class='comma'>,</span>
+                         <span class='id identifier rubyid_callback'>callback</span><span class='period'>.</span><span class='id identifier rubyid_source_location'>source_location</span><span class='comma'>,</span>
+                         <span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+    <span class='ivar'>@test_case</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='symbol'>:define_method</span><span class='comma'>,</span> <span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='ivar'>@after_callbacks</span> <span class='op'>=</span> <span class='id identifier rubyid_add_callback'>add_callback</span><span class='lparen'>(</span><span class='ivar'>@after_callbacks</span><span class='comma'>,</span>
-                                    <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span><span class='comma'>,</span>
-                                    <span class='id identifier rubyid_after_how'>after_how</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_method_name'>method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span>
   <span class='kw'>end</span>
+  <span class='id identifier rubyid_add_callback'>add_callback</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_before_how'>before_how</span><span class='comma'>,</span> <span class='id identifier rubyid_after_how'>after_how</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -681,15 +585,27 @@
       <pre class="lines">
 
 
-103
-104
-105</pre>
+140
+141
+142
+143
+144
+145
+146
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/fixture.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span><span class='rparen'>)</span>
-  <span class='ivar'>@unregistered_callbacks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_callback'>callback</span> <span class='op'>=</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span>
+    <span class='id identifier rubyid_method_name'>method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_callback_method_name'>callback_method_name</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_method_name'>method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_method_name_or_callback'>method_name_or_callback</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@unregistered_callbacks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_method_name'>method_name</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -701,9 +617,9 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:56 2017 by
+  Generated on Wed Sep  5 14:12:21 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.12 (ruby-2.3.7).
 </div>
 
     
