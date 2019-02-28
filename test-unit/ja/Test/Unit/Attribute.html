@@ -215,15 +215,15 @@
       <pre class="lines">
 
 
-125
-126
-127</pre>
+217
+218
+219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 217</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_find_attribute'>find_attribute</span><span class='lparen'>(</span><span class='ivar'>@method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -245,12 +245,12 @@
       <pre class="lines">
 
 
-121
-122
-123</pre>
+213
+214
+215</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/attribute.rb', line 213</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lparen'>(</span><span class='ivar'>@method_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="Attribute/StringifyKeyHash.html" title="Test::Unit::Attribute::StringifyKeyHash (class)">StringifyKeyHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -265,9 +265,9 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:52 2017 by
+  Generated on Thu Feb 28 22:09:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.18 (ruby-2.3.8).
 </div>
 
     

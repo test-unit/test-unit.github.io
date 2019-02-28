@@ -113,7 +113,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/ui/testrunnerutilities.rb</dd>
+    <dd>lib/test/unit/ui/testrunnerutilities.rb<span class="defines">,<br />
+  lib/test/unit/ui/testrunnerutilities.rb</span>
+</dd>
   </dl>
   
 </div>
@@ -230,14 +232,14 @@ runners.</p>
       <pre class="lines">
 
 
-23
-24
-25</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/testrunnerutilities.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/testrunnerutilities.rb', line 17</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_run'><span class='object_link'><a href="../../../top-level-namespace.html#run-instance_method" title="#run (method)">run</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_suite'>suite</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -272,17 +274,17 @@ TestRunners from the command line.</p>
       <pre class="lines">
 
 
+24
+25
+26
+27
+28
+29
 30
-31
-32
-33
-34
-35
-36
-37</pre>
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/testrunnerutilities.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/ui/testrunnerutilities.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_command_line_test'>start_command_line_test</span>
   <span class='kw'>if</span> <span class='const'>ARGV</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -302,9 +304,9 @@ TestRunners from the command line.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:52 2017 by
+  Generated on Thu Feb 28 22:09:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.18 (ruby-2.3.8).
 </div>
 
     

@@ -124,7 +124,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/testsuite.rb</dd>
+    <dd>lib/test/unit/testsuite.rb<span class="defines">,<br />
+  lib/test/unit/testsuite.rb</span>
+</dd>
   </dl>
   
 </div>
@@ -146,30 +148,36 @@ meaningful TestSuite instance.</p>
   
 
 </div>
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="STARTED-constant" class="">STARTED =
-        
-      </dt>
-      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-      <dt id="STARTED_OBJECT-constant" class="">STARTED_OBJECT =
-        
-      </dt>
-      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-      <dt id="FINISHED-constant" class="">FINISHED =
-        
-      </dt>
-      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-      <dt id="FINISHED_OBJECT-constant" class="">FINISHED_OBJECT =
-        
-      </dt>
-      <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="STARTED-constant" class="">STARTED =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="STARTED_OBJECT-constant" class="">STARTED_OBJECT =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::STARTED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="FINISHED-constant" class="">FINISHED =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="FINISHED_OBJECT-constant" class="">FINISHED_OBJECT =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>::FINISHED::OBJECT</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -619,19 +627,19 @@ meaningful TestSuite instance.</p>
       <pre class="lines">
 
 
+26
+27
+28
+29
+30
+31
+32
 33
 34
-35
-36
-37
-38
-39
-40
-41
-42</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unnamed TestSuite</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_test_case'>test_case</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
@@ -680,12 +688,12 @@ meaningful TestSuite instance.</p>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_elapsed_time'>elapsed_time</span>
   <span class='ivar'>@elapsed_time</span>
@@ -722,12 +730,12 @@ meaningful TestSuite instance.</p>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -765,12 +773,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-25
-26
-27</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_priority'>priority</span>
   <span class='ivar'>@priority</span>
@@ -807,12 +815,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_time'>start_time</span>
   <span class='ivar'>@start_time</span>
@@ -849,12 +857,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_case'>test_case</span>
   <span class='ivar'>@test_case</span>
@@ -891,12 +899,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-21
-22
-23</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tests'>tests</span>
   <span class='ivar'>@tests</span>
@@ -938,13 +946,13 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-64
-65
-66
-67</pre>
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
   <span class='ivar'>@tests</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_test'>test</span>
@@ -980,14 +988,14 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-97
-98
-99
-100
-101</pre>
+93
+94
+95
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1014,12 +1022,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-69
-70
-71</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
   <span class='ivar'>@tests</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='rparen'>)</span>
@@ -1044,12 +1052,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-73
-74
-75</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_tests'>delete_tests</span><span class='lparen'>(</span><span class='id identifier rubyid_tests'>tests</span><span class='rparen'>)</span>
   <span class='ivar'>@tests</span> <span class='op'>-=</span> <span class='id identifier rubyid_tests'>tests</span>
@@ -1097,12 +1105,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-86
-87
-88</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_empty?'>empty?</span>
   <span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
@@ -1150,12 +1158,12 @@ test suites that have lower priority.</p>
       <pre class="lines">
 
 
-103
-104
-105</pre>
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
   <span class='ivar'>@passed</span>
@@ -1191,6 +1199,13 @@ TestSuite.</p>
       <pre class="lines">
 
 
+39
+40
+41
+42
+43
+44
+45
 46
 47
 48
@@ -1202,16 +1217,12 @@ TestSuite.</p>
 54
 55
 56
-57
-58
-59
-60
-61</pre>
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 39</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_run'><span class='object_link'><a href="../../top-level-namespace.html#run-instance_method" title="#run (method)">run</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
   <span class='ivar'>@start_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STARTED-constant" title="Test::Unit::TestSuite::STARTED (constant)">STARTED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#STARTED_OBJECT-constant" title="Test::Unit::TestSuite::STARTED_OBJECT (constant)">STARTED_OBJECT</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
@@ -1221,11 +1232,14 @@ TestSuite.</p>
     <span class='id identifier rubyid_run_test'><span class='object_link'><a href="../../top-level-namespace.html#run_test-instance_method" title="#run_test (method)">run_test</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_test'>test</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_progress_block'>progress_block</span><span class='rparen'>)</span>
     <span class='ivar'>@passed</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_test'>test</span><span class='period'>.</span><span class='id identifier rubyid_passed?'>passed?</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_run_shutdown'>run_shutdown</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
 <span class='kw'>ensure</span>
-  <span class='ivar'>@elapsed_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='ivar'>@start_time</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED-constant" title="Test::Unit::TestSuite::FINISHED (constant)">FINISHED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED_OBJECT-constant" title="Test::Unit::TestSuite::FINISHED_OBJECT (constant)">FINISHED_OBJECT</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_run_shutdown'>run_shutdown</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='kw'>ensure</span>
+    <span class='ivar'>@elapsed_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='ivar'>@start_time</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED-constant" title="Test::Unit::TestSuite::FINISHED (constant)">FINISHED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#FINISHED_OBJECT-constant" title="Test::Unit::TestSuite::FINISHED_OBJECT (constant)">FINISHED_OBJECT</a></span></span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1259,14 +1273,14 @@ tests within those suites, not the suites themselves.</p>
       <pre class="lines">
 
 
-80
-81
-82
-83
-84</pre>
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
   <span class='id identifier rubyid_total_size'>total_size</span> <span class='op'>=</span> <span class='ivar'>@n_tests</span>
@@ -1304,12 +1318,12 @@ creation.</p>
       <pre class="lines">
 
 
-92
-93
-94</pre>
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='ivar'>@name</span>
@@ -1324,9 +1338,9 @@ creation.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:56 2017 by
+  Generated on Thu Feb 28 22:09:13 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.18 (ruby-2.3.8).
 </div>
 
     

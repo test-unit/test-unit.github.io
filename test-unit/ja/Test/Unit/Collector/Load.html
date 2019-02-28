@@ -375,7 +375,6 @@
       <pre class="lines">
 
 
-14
 15
 16
 17
@@ -383,10 +382,12 @@
 19
 20
 21
-22</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/collector/load.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/collector/load.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span>
@@ -395,6 +396,7 @@
   <span class='ivar'>@patterns</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\Atest[_\-].+\.rb\z</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[_\-]test\.rb\z</span><span class='regexp_end'>/</span></span><span class='rbracket'>]</span>
   <span class='ivar'>@excludes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@base</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@default_test_paths</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@require_failed_infos</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -597,14 +599,6 @@
       <pre class="lines">
 
 
-29
-30
-31
-32
-33
-34
-35
-36
 37
 38
 39
@@ -624,13 +618,23 @@
 53
 54
 55
-56</pre>
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/collector/load.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/collector/load.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_froms'>froms</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_add_load_path'>add_load_path</span><span class='lparen'>(</span><span class='ivar'>@base</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_froms'>froms</span> <span class='op'>=</span> <span class='ivar'>@default_test_paths</span> <span class='kw'>if</span> <span class='id identifier rubyid_froms'>froms</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='id identifier rubyid_froms'>froms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_froms'>froms</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='id identifier rubyid_test_suites'>test_suites</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_already_gathered'>already_gathered</span> <span class='op'>=</span> <span class='id identifier rubyid_find_test_cases'>find_test_cases</span>
@@ -677,17 +681,17 @@
       <pre class="lines">
 
 
-58
-59
-60
-61
-62
-63
-64
-65</pre>
+67
+68
+69
+70
+71
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/collector/load.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/collector/load.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_test_cases'>find_test_cases</span><span class='lparen'>(</span><span class='id identifier rubyid_ignore'>ignore</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_test_cases'>test_cases</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -707,9 +711,9 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:53 2017 by
+  Generated on Thu Feb 28 22:09:14 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.18 (ruby-2.3.8).
 </div>
 
     
