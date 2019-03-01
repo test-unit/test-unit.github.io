@@ -7,8 +7,8 @@ test_unit_activesupport_version: 1.0.9
 test_unit_activesupport_release_date: 2017-06-26
 test_unit_full_version: 0.0.5
 test_unit_full_release_date: 2016-10-16
-test_unit_capybara_version: 1.0.5
-test_unit_capybara_release_date: 2016-01-18
+test_unit_capybara_version: 1.0.7
+test_unit_capybara_release_date: 2018-08-27
 test_unit_rr_version: 1.0.5
 test_unit_rr_release_date: 2016-01-18
 
