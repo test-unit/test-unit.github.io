@@ -124,7 +124,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/failure.rb</dd>
+    <dd>lib/test/unit/failure.rb<span class="defines">,<br />
+  lib/test/unit/failure.rb</span>
+</dd>
   </dl>
   
 </div>
@@ -141,20 +143,26 @@ when an assertion fails.</p>
   
 
 </div>
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="SINGLE_CHARACTER-constant" class="">SINGLE_CHARACTER =
-        
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>F</span><span class='tstring_end'>&#39;</span></span></pre></dd>
-    
-      <dt id="LABEL-constant" class="">LABEL =
-        
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failure</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="SINGLE_CHARACTER-constant" class="">SINGLE_CHARACTER =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>F</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="LABEL-constant" class="">LABEL =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failure</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -673,21 +681,21 @@ message.</p>
       <pre class="lines">
 
 
+17
+18
+19
+20
+21
+22
 23
 24
 25
 26
 27
-28
-29
-30
-31
-32
-33
-34</pre>
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_test_name'>test_name</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@test_name</span> <span class='op'>=</span> <span class='id identifier rubyid_test_name'>test_name</span>
@@ -738,12 +746,12 @@ message.</p>
       <pre class="lines">
 
 
-15
-16
-17</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_actual'>actual</span>
   <span class='ivar'>@actual</span>
@@ -780,12 +788,12 @@ message.</p>
       <pre class="lines">
 
 
-15
-16
-17</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_expected'>expected</span>
   <span class='ivar'>@expected</span>
@@ -822,12 +830,12 @@ message.</p>
       <pre class="lines">
 
 
-16
-17
-18</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspected_actual'>inspected_actual</span>
   <span class='ivar'>@inspected_actual</span>
@@ -864,12 +872,12 @@ message.</p>
       <pre class="lines">
 
 
-16
-17
-18</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspected_expected'>inspected_expected</span>
   <span class='ivar'>@inspected_expected</span>
@@ -906,12 +914,12 @@ message.</p>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_location'>location</span>
   <span class='ivar'>@location</span>
@@ -948,12 +956,12 @@ message.</p>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_message'>message</span>
   <span class='ivar'>@message</span>
@@ -990,12 +998,12 @@ message.</p>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+8
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_name'>method_name</span>
   <span class='ivar'>@method_name</span>
@@ -1032,12 +1040,12 @@ message.</p>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+8
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_location'>source_location</span>
   <span class='ivar'>@source_location</span>
@@ -1074,12 +1082,12 @@ message.</p>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_name'>test_name</span>
   <span class='ivar'>@test_name</span>
@@ -1116,12 +1124,12 @@ message.</p>
       <pre class="lines">
 
 
-15
-16
-17</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_message'>user_message</span>
   <span class='ivar'>@user_message</span>
@@ -1176,12 +1184,12 @@ message.</p>
       <pre class="lines">
 
 
-65
-66
-67</pre>
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_critical?'>critical?</span>
   <span class='kw'>true</span>
@@ -1206,12 +1214,12 @@ message.</p>
       <pre class="lines">
 
 
-69
-70
-71</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_diff'>diff</span>
   <span class='ivar'>@diff</span> <span class='op'>||=</span> <span class='id identifier rubyid_compute_diff'>compute_diff</span>
@@ -1236,12 +1244,12 @@ message.</p>
       <pre class="lines">
 
 
-41
-42
-43</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_label'>label</span>
   <span class='const'><span class='object_link'><a href="#LABEL-constant" title="Test::Unit::Failure::LABEL (constant)">LABEL</a></span></span>
@@ -1276,17 +1284,17 @@ message.</p>
       <pre class="lines">
 
 
+45
+46
+47
+48
+49
+50
 51
-52
-53
-54
-55
-56
-57
-58</pre>
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_long_display'>long_display</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_location'>location</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span>
@@ -1326,12 +1334,12 @@ message.</p>
       <pre class="lines">
 
 
-46
-47
-48</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_short_display'>short_display</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embvar'>#</span><span class='ivar'>@test_name</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@message</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1366,12 +1374,12 @@ message.</p>
       <pre class="lines">
 
 
-37
-38
-39</pre>
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_single_character_display'>single_character_display</span>
   <span class='const'><span class='object_link'><a href="#SINGLE_CHARACTER-constant" title="Test::Unit::Failure::SINGLE_CHARACTER (constant)">SINGLE_CHARACTER</a></span></span>
@@ -1406,12 +1414,12 @@ message.</p>
       <pre class="lines">
 
 
-61
-62
-63</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/failure.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_long_display'>long_display</span>
@@ -1426,9 +1434,9 @@ message.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:54 2017 by
+  Generated on Thu Feb 28 22:09:12 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.18 (ruby-2.3.8).
 </div>
 
     

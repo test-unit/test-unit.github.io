@@ -113,7 +113,9 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/util/observable.rb</dd>
+    <dd>lib/test/unit/util/observable.rb<span class="defines">,<br />
+  lib/test/unit/util/observable.rb</span>
+</dd>
   </dl>
   
 </div>
@@ -131,11 +133,16 @@ events.</p>
   
 
 </div>
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="NOTHING-constant" class="">NOTHING =
-        <div class="docstring">
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="NOTHING-constant" class="">NOTHING =
+          <div class="docstring">
   <div class="discussion">
     <p>We use this for defaults since nil might mean something</p>
 
@@ -146,10 +153,11 @@ events.</p>
   
 
 </div>
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NOTHING/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___id__'>__id__</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-    
-  </dl>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NOTHING/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid___id__'>__id__</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -278,6 +286,12 @@ itself as the listener_key:</p>
       <pre class="lines">
 
 
+25
+26
+27
+28
+29
+30
 31
 32
 33
@@ -286,16 +300,10 @@ itself as the listener_key:</p>
 36
 37
 38
-39
-40
-41
-42
-43
-44
-45</pre>
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/util/observable.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/util/observable.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_listener'>add_listener</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_name'>channel_name</span><span class='comma'>,</span> <span class='id identifier rubyid_listener_key'>listener_key</span><span class='op'>=</span><span class='const'>NOTHING</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_listener'>listener</span><span class='rparen'>)</span> <span class='comment'># :yields: value
 </span>  <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_block_given?'>block_given?</span><span class='rparen'>)</span>
@@ -351,16 +359,16 @@ method directly?</p>
       <pre class="lines">
 
 
-74
-75
-76
-77
-78
-79
-80</pre>
+68
+69
+70
+71
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/util/observable.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/util/observable.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_notify_listeners'>notify_listeners</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_name'>channel_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_arguments'>arguments</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='id identifier rubyid_channel_name'>channel_name</span><span class='rbracket'>]</span>
@@ -402,21 +410,21 @@ nil if none was found.</p>
       <pre class="lines">
 
 
+45
+46
+47
+48
+49
+50
 51
 52
 53
 54
 55
-56
-57
-58
-59
-60
-61
-62</pre>
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/util/observable.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/util/observable.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_listener'>remove_listener</span><span class='lparen'>(</span><span class='id identifier rubyid_channel_name'>channel_name</span><span class='comma'>,</span> <span class='id identifier rubyid_listener_key'>listener_key</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='id identifier rubyid_channels'>channels</span><span class='lbracket'>[</span><span class='id identifier rubyid_channel_name'>channel_name</span><span class='rbracket'>]</span>
@@ -440,9 +448,9 @@ nil if none was found.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 12 00:24:52 2017 by
+  Generated on Thu Feb 28 22:09:11 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.5.0).
+  0.9.18 (ruby-2.3.8).
 </div>
 
     
