@@ -150,9 +150,9 @@ failure.</li>
 </div></p>
       
       <pre class="example code"><code>
-<span class='kw'>def</span> <span class='id identifier rubyid_deny'>deny</span><span class='lparen'>(</span><span class='id identifier rubyid_boolean'>boolean</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_build_message'>build_message</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;?&gt; is not false or nil.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_boolean'>boolean</span>
-  <span class='id identifier rubyid_assert_block'>assert_block</span> <span class='id identifier rubyid_message'>message</span> <span class='kw'>do</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_deny'>deny</span><span class='lparen'>(</span><span class='id identifier rubyid_boolean'>boolean</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_build_message'>build_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;?&gt; is not false or nil.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_boolean'>boolean</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_block'>assert_block</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='kw'>not</span> <span class='id identifier rubyid_boolean'>boolean</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></code></pre>
@@ -544,7 +544,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_instance_of-instance_method" title="#assert_instance_of (instance method)">#<strong>assert_instance_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_instance_of-instance_method" title="#assert_instance_of (instance method)">#<strong>assert_instance_of</strong>(klass, object, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -567,7 +567,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_kind_of-instance_method" title="#assert_kind_of (instance method)">#<strong>assert_kind_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_kind_of-instance_method" title="#assert_kind_of (instance method)">#<strong>assert_kind_of</strong>(klass, object, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -590,7 +590,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_match-instance_method" title="#assert_match (instance method)">#<strong>assert_match</strong>(pattern, string, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_match-instance_method" title="#assert_match (instance method)">#<strong>assert_match</strong>(pattern, string, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -613,7 +613,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_nil-instance_method" title="#assert_nil (instance method)">#<strong>assert_nil</strong>(object, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_nil-instance_method" title="#assert_nil (instance method)">#<strong>assert_nil</strong>(object, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -707,7 +707,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_equal-instance_method" title="#assert_not_equal (instance method)">#<strong>assert_not_equal</strong>(expected, actual, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_equal-instance_method" title="#assert_not_equal (instance method)">#<strong>assert_not_equal</strong>(expected, actual, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -807,7 +807,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_instance_of-instance_method" title="#assert_not_instance_of (instance method)">#<strong>assert_not_instance_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_instance_of-instance_method" title="#assert_not_instance_of (instance method)">#<strong>assert_not_instance_of</strong>(klass, object, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -832,7 +832,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_kind_of-instance_method" title="#assert_not_kind_of (instance method)">#<strong>assert_not_kind_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_kind_of-instance_method" title="#assert_not_kind_of (instance method)">#<strong>assert_not_kind_of</strong>(klass, object, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -857,7 +857,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_match-instance_method" title="#assert_not_match (instance method)">#<strong>assert_not_match</strong>(regexp, string, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_match-instance_method" title="#assert_not_match (instance method)">#<strong>assert_not_match</strong>(regexp, string, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -882,7 +882,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_nil-instance_method" title="#assert_not_nil (instance method)">#<strong>assert_not_nil</strong>(object, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_nil-instance_method" title="#assert_not_nil (instance method)">#<strong>assert_not_nil</strong>(object, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -907,7 +907,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_operator-instance_method" title="#assert_not_operator (instance method)">#<strong>assert_not_operator</strong>(object1, operator, object2, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_operator-instance_method" title="#assert_not_operator (instance method)">#<strong>assert_not_operator</strong>(object1, operator, object2, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -957,7 +957,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_respond_to-instance_method" title="#assert_not_respond_to (instance method)">#<strong>assert_not_respond_to</strong>(object, method, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_respond_to-instance_method" title="#assert_not_respond_to (instance method)">#<strong>assert_not_respond_to</strong>(object, method, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -982,7 +982,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_not_same-instance_method" title="#assert_not_same (instance method)">#<strong>assert_not_same</strong>(expected, actual, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_not_same-instance_method" title="#assert_not_same (instance method)">#<strong>assert_not_same</strong>(expected, actual, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -1053,7 +1053,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_nothing_thrown-instance_method" title="#assert_nothing_thrown (instance method)">#<strong>assert_nothing_thrown</strong>(message = &quot;&quot;, &amp;proc)  &#x21d2; Object </a>
+      <a href="#assert_nothing_thrown-instance_method" title="#assert_nothing_thrown (instance method)">#<strong>assert_nothing_thrown</strong>(message = nil, &amp;proc)  &#x21d2; Object </a>
     
 
     
@@ -1076,7 +1076,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_operator-instance_method" title="#assert_operator (instance method)">#<strong>assert_operator</strong>(object1, operator, object2, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_operator-instance_method" title="#assert_operator (instance method)">#<strong>assert_operator</strong>(object1, operator, object2, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -1239,7 +1239,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_respond_to-instance_method" title="#assert_respond_to (instance method)">#<strong>assert_respond_to</strong>(object, method, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_respond_to-instance_method" title="#assert_respond_to (instance method)">#<strong>assert_respond_to</strong>(object, method, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -1262,7 +1262,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_same-instance_method" title="#assert_same (instance method)">#<strong>assert_same</strong>(expected, actual, message = &quot;&quot;)  &#x21d2; Object </a>
+      <a href="#assert_same-instance_method" title="#assert_same (instance method)">#<strong>assert_same</strong>(expected, actual, message = nil)  &#x21d2; Object </a>
     
 
     
@@ -1308,7 +1308,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assert_throw-instance_method" title="#assert_throw (instance method)">#<strong>assert_throw</strong>(expected_object, message = &quot;&quot;, &amp;proc)  &#x21d2; Object </a>
+      <a href="#assert_throw-instance_method" title="#assert_throw (instance method)">#<strong>assert_throw</strong>(expected_object, message = nil, &amp;proc)  &#x21d2; Object </a>
     
 
     
@@ -1356,7 +1356,7 @@ failure.</li>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#build_message-instance_method" title="#build_message (instance method)">#<strong>build_message</strong>(head, template = nil, *arguments)  &#x21d2; Object </a>
+      <a href="#build_message-instance_method" title="#build_message (instance method)">#<strong>build_message</strong>(user_message, template = nil, *arguments)  &#x21d2; Object </a>
     
 
     
@@ -2781,7 +2781,7 @@ within +epsilon+ relative error of +expected_float+.</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_instance_of-instance_method">
   
-    #<strong>assert_instance_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_instance_of</strong>(klass, object, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2875,7 +2875,7 @@ satisfies +object.instance_of?(class).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_kind_of-instance_method">
   
-    #<strong>assert_kind_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_kind_of</strong>(klass, object, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2973,7 +2973,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_match-instance_method">
   
-    #<strong>assert_match</strong>(pattern, string, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_match</strong>(pattern, string, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3043,7 +3043,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_nil-instance_method">
   
-    #<strong>assert_nil</strong>(object, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_nil</strong>(object, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3296,7 +3296,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_equal-instance_method">
   
-    #<strong>assert_not_equal</strong>(expected, actual, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_equal</strong>(expected, actual, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3592,7 +3592,7 @@ not equal within +epsilon+ relative error of
       <div class="method_details ">
   <h3 class="signature " id="assert_not_instance_of-instance_method">
   
-    #<strong>assert_not_instance_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_instance_of</strong>(klass, object, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3705,7 +3705,7 @@ satisfies +object.instance_of?(class).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_kind_of-instance_method">
   
-    #<strong>assert_not_kind_of</strong>(klass, object, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_kind_of</strong>(klass, object, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3818,7 +3818,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_match-instance_method">
   
-    #<strong>assert_not_match</strong>(regexp, string, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_match</strong>(regexp, string, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3887,7 +3887,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_nil-instance_method">
   
-    #<strong>assert_not_nil</strong>(object, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_nil</strong>(object, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3945,7 +3945,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_operator-instance_method">
   
-    #<strong>assert_not_operator</strong>(object1, operator, object2, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_operator</strong>(object1, operator, object2, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4110,7 +4110,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_respond_to-instance_method">
   
-    #<strong>assert_not_respond_to</strong>(object, method, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_respond_to</strong>(object, method, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4189,7 +4189,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_not_same-instance_method">
   
-    #<strong>assert_not_same</strong>(expected, actual, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_not_same</strong>(expected, actual, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4445,7 +4445,7 @@ with id &lt;?&gt;.
       <div class="method_details ">
   <h3 class="signature " id="assert_nothing_thrown-instance_method">
   
-    #<strong>assert_nothing_thrown</strong>(message = &quot;&quot;, &amp;proc)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_nothing_thrown</strong>(message = nil, &amp;proc)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -4523,7 +4523,7 @@ with id &lt;?&gt;.
       <div class="method_details ">
   <h3 class="signature " id="assert_operator-instance_method">
   
-    #<strong>assert_operator</strong>(object1, operator, object2, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_operator</strong>(object1, operator, object2, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5073,7 +5073,7 @@ message is +expected+.</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_respond_to-instance_method">
   
-    #<strong>assert_respond_to</strong>(object, method, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_respond_to</strong>(object, method, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5147,7 +5147,7 @@ message is +expected+.</p>
       <div class="method_details ">
   <h3 class="signature " id="assert_same-instance_method">
   
-    #<strong>assert_same</strong>(expected, actual, message = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_same</strong>(expected, actual, message = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5313,7 +5313,7 @@ with id &lt;?&gt;.
       <div class="method_details ">
   <h3 class="signature " id="assert_throw-instance_method">
   
-    #<strong>assert_throw</strong>(expected_object, message = &quot;&quot;, &amp;proc)  &#x21d2; <tt>Object</tt> 
+    #<strong>assert_throw</strong>(expected_object, message = nil, &amp;proc)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5488,7 +5488,7 @@ with id &lt;?&gt;.
       <div class="method_details ">
   <h3 class="signature " id="build_message-instance_method">
   
-    #<strong>build_message</strong>(head, template = nil, *arguments)  &#x21d2; <tt>Object</tt> 
+    #<strong>build_message</strong>(user_message, template = nil, *arguments)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -5496,8 +5496,9 @@ with id &lt;?&gt;.
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Builds a failure message.  +head+ is added before the +template+ and
-+arguments+ replaces the ‘?’s positionally in the template.</p>
+    <p>Builds a failure message.  +user_message+ is added before the
++template+ and +arguments+ replaces the ‘?’s positionally in
+the template.</p>
 
 
   </div>
@@ -5723,7 +5724,7 @@ with id &lt;?&gt;.
 </div>
 
       <div id="footer">
-  Generated on Thu Feb 28 22:09:11 2019 by
+  Generated on Wed Apr 10 11:16:31 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.3.8).
 </div>
