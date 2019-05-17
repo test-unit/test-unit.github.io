@@ -131,20 +131,26 @@
   
 </p>
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="enabled-classvariable" class="">@@enabled =
-        
-      </dt>
-      <dd><pre class="code"><span class='kw'>false</span></pre></dd>
-    
-      <dt id="default-classvariable" class="">@@default =
-        
-      </dt>
-      <dd><pre class="code"><span class='symbol'>:normal</span></pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="enabled-classvariable" class="">@@enabled =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>false</span></pre></dd>
+      
+        <dt id="default-classvariable" class="">@@default =
+          
+        </dt>
+        <dd><pre class="code"><span class='symbol'>:normal</span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -279,29 +285,6 @@
   <span class="summary_signature">
     
       <a href="#enabled%3F-class_method" title="enabled? (class method)">.<strong>enabled?</strong>  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#included-class_method" title="included (class method)">.<strong>included</strong>(base)  &#x21d2; Object </a>
     
 
     
@@ -586,46 +569,6 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enabled?'>enabled?</span>
   <span class='cvar'>@@enabled</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="included-class_method">
-  
-    .<strong>included</strong>(base)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-7
-8
-9
-10
-11
-12
-13
-14</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/priority.rb', line 7</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_extend'>extend</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Priority/ClassMethods.html" title="Test::Unit::Priority::ClassMethods (module)">ClassMethods</a></span></span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_setup'>setup</span> <span class='symbol'>:priority_setup</span><span class='comma'>,</span> <span class='symbol'>:before</span> <span class='op'>=&gt;</span> <span class='symbol'>:prepend</span>
-    <span class='id identifier rubyid_teardown'>teardown</span> <span class='symbol'>:priority_teardown</span><span class='comma'>,</span> <span class='symbol'>:after</span> <span class='op'>=&gt;</span> <span class='symbol'>:append</span>
-  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
