@@ -178,20 +178,22 @@
   <div class="discussion">
     <p>Marks the test or part of the test is pending.</p>
 
-<p>Example:
-  def test_pending
-    pend
-    # Not reached here
-  end</p>
+<p>Example:</p>
 
-<p>def test_pending_with_here
-    pend do
-      # Ran here
-      # Fails if the block doesn’t raise any error.
-      # Because it means the block is passed unexpectedly.
-    end
-    # Reached here
-  end</p>
+<pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_test_pending'>test_pending</span>
+  <span class='id identifier rubyid_pend'>pend</span>
+  <span class='comment'># Not reached here
+</span><span class='kw'>end</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_pending_with_here'>test_pending_with_here</span>
+  <span class='id identifier rubyid_pend'>pend</span> <span class='kw'>do</span>
+    <span class='comment'># Ran here
+</span>    <span class='comment'># Fails if the block doesn&#39;t raise any error.
+</span>    <span class='comment'># Because it means the block is passed unexpectedly.
+</span>  <span class='kw'>end</span>
+  <span class='comment'># Reached here
+</span><span class='kw'>end</span>
+</code></pre>
 
 
   </div>
@@ -255,7 +257,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 17 22:06:08 2019 by
+  Generated on Wed May 29 16:38:48 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.3.8).
 </div>

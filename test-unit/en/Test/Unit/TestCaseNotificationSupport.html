@@ -127,38 +127,6 @@
 
   
     <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#included-class_method" title="included (class method)">.<strong>included</strong>(base)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-    <h2>
       Instance Method Summary
       <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
@@ -193,46 +161,6 @@
 
 
 
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="included-class_method">
-  
-    .<strong>included</strong>(base)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60
-61
-62</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/notification.rb', line 58</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="NotificationHandler.html" title="Test::Unit::NotificationHandler (module)">NotificationHandler</a></span></span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
@@ -250,16 +178,20 @@
   <div class="discussion">
     <p>Notify some information.</p>
 
-<p>Example:
-  def test_notification
-    notify(“I’m here!”)
-    # Reached here
-    notify(“Special!”) if special_case?
-    # Reached here too
-  end</p>
+<p>Example:</p>
 
-<p>options:
-  :backtrace override backtrace.</p>
+<pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_test_notification'>test_notification</span>
+  <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I&#39;m here!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'># Reached here
+</span>  <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Special!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_special_case?'>special_case?</span>
+  <span class='comment'># Reached here too
+</span><span class='kw'>end</span>
+</code></pre>
+
+<p>options:</p>
+
+<pre class="code ruby"><code class="ruby">:backtrace override backtrace.
+</code></pre>
 
 
   </div>

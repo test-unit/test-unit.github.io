@@ -127,38 +127,6 @@
 
   
     <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#included-class_method" title="included (class method)">.<strong>included</strong>(base)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-    <h2>
       Instance Method Summary
       <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
@@ -193,46 +161,6 @@
 
 
 
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="included-class_method">
-  
-    .<strong>included</strong>(base)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60
-61
-62</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/pending.rb', line 58</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_base'>base</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="PendingHandler.html" title="Test::Unit::PendingHandler (module)">PendingHandler</a></span></span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
@@ -250,20 +178,22 @@
   <div class="discussion">
     <p>Marks the test or part of the test is pending.</p>
 
-<p>Example:
-  def test_pending
-    pend
-    # Not reached here
-  end</p>
+<p>Example:</p>
 
-<p>def test_pending_with_here
-    pend do
-      # Ran here
-      # Fails if the block doesn’t raise any error.
-      # Because it means the block is passed unexpectedly.
-    end
-    # Reached here
-  end</p>
+<pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_test_pending'>test_pending</span>
+  <span class='id identifier rubyid_pend'>pend</span>
+  <span class='comment'># Not reached here
+</span><span class='kw'>end</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_pending_with_here'>test_pending_with_here</span>
+  <span class='id identifier rubyid_pend'>pend</span> <span class='kw'>do</span>
+    <span class='comment'># Ran here
+</span>    <span class='comment'># Fails if the block doesn&#39;t raise any error.
+</span>    <span class='comment'># Because it means the block is passed unexpectedly.
+</span>  <span class='kw'>end</span>
+  <span class='comment'># Reached here
+</span><span class='kw'>end</span>
+</code></pre>
 
 
   </div>
