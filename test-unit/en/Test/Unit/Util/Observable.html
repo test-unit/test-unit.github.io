@@ -271,8 +271,9 @@ specified, the proc itself is used.</p>
 returned, making it very easy to use the proc
 itself as the listener_key:</p>
 
-<p>listener = add_listener(“Channel”) { … }
- remove_listener(“Channel”, listener)</p>
+<pre class="code ruby"><code class="ruby">listener = add_listener(&quot;Channel&quot;) { ... }
+remove_listener(&quot;Channel&quot;, listener)
+</code></pre>
 
 
   </div>

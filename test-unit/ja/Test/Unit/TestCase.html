@@ -1530,10 +1530,11 @@ test represented by test_method_name.</p>
 normal user” description with “test_register”
 test.</p>
 
-<p>description “register a normal user”
-  def test_register
-    …
-  end</p>
+<pre class="code ruby"><code class="ruby">description &quot;register a normal user&quot;
+def test_register
+  ...
+end
+</code></pre>
 
 
   </div>
@@ -1838,33 +1839,38 @@ test.</p>
     <p>Called after every test case runs. Can be used to tear
 down fixture information used in test case scope.</p>
 
-<p>Here is an example test case:
-  class TestMyClass &lt; Test::Unit::TestCase
-    class « self
-      def shutdown
-        …
-      end
-    end</p>
+<p>Here is an example test case:</p>
 
-<pre class="code ruby"><code class="ruby">def teardown
-  ...
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  class &lt;&lt; self
+    def shutdown
+      ...
+    end
+  end
+
+  def teardown
+    ...
+  end
+
+  def test_my_class1
+    ...
+  end
+
+  def test_my_class2
+    ...
+  end
 end
-
-def test_my_class1
-  ...
-end
-
-def test_my_class2
-  ...
-end   end
 </code></pre>
 
-<p>Here is a call order:
-* test_my_class1 (or test_my_class2)
-* teardown
-* test_my_class2 (or test_my_class1)
-* teardown
-* shutdown</p>
+<p>Here is a call order:</p>
+
+<ul>
+  <li>test_my_class1 (or test_my_class2)</li>
+  <li>teardown</li>
+  <li>test_my_class2 (or test_my_class1)</li>
+  <li>teardown</li>
+  <li>shutdown</li>
+</ul>
 
 <p>Note that you should not assume test order. Tests
 should be worked in any order.</p>
@@ -1909,33 +1915,38 @@ should be worked in any order.</p>
 to set up fixture information used in test case
 scope.</p>
 
-<p>Here is an example test case:
-  class TestMyClass &lt; Test::Unit::TestCase
-    class « self
-      def startup
-        …
-      end
-    end</p>
+<p>Here is an example test case:</p>
 
-<pre class="code ruby"><code class="ruby">def setup
-  ...
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  class &lt;&lt; self
+    def startup
+      ...
+    end
+  end
+
+  def setup
+    ...
+  end
+
+  def test_my_class1
+    ...
+  end
+
+  def test_my_class2
+    ...
+  end
 end
-
-def test_my_class1
-  ...
-end
-
-def test_my_class2
-  ...
-end   end
 </code></pre>
 
-<p>Here is a call order:
-* startup
-* setup
-* test_my_class1 (or test_my_class2)
-* setup
-* test_my_class2 (or test_my_class1)</p>
+<p>Here is a call order:</p>
+
+<ul>
+  <li>startup</li>
+  <li>setup</li>
+  <li>test_my_class1 (or test_my_class2)</li>
+  <li>setup</li>
+  <li>test_my_class2 (or test_my_class1)</li>
+</ul>
 
 <p>Note that you should not assume test order. Tests
 should be worked in any order.</p>
@@ -1981,21 +1992,25 @@ should be worked in any order.</p>
 <p>This is a syntax sugar. The both of the following codes are
 the same in meaning:</p>
 
-<p>Standard:
-  class TestParent &lt; Test::Unit::TestCase
-    class TestChild &lt; self
-      def test_in_child
-      end
-    end
-  end</p>
+<p>Standard:</p>
 
-<p>Syntax sugar:
-  class TestParent &lt; Test::Unit::TestCase
-    sub_test_case(“TestChild”) do
-      def test_in_child
-      end
-    end
-  end</p>
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>TestParent</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
+  <span class='kw'>class</span> <span class='const'>TestChild</span> <span class='op'>&lt;</span> <span class='kw'>self</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_test_in_child'>test_in_child</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>Syntax sugar:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>TestParent</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Unit.html" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
+  <span class='id identifier rubyid_sub_test_case'>sub_test_case</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TestChild</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_test_in_child'>test_in_child</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 
 <p>The difference of them are the following:</p>
 
@@ -2166,22 +2181,24 @@ following method as a test method.</p>
 <p>In declarative syntax usage, the following two
 test definitions are the almost same:</p>
 
-<p>description “register user”
-  def test_register_user
-    …
-  end</p>
+<pre class="code ruby"><code class="ruby">description &quot;register user&quot;
+def test_register_user
+  ...
+end
 
-<p>test “register user” do
-    …
-  end</p>
+test &quot;register user&quot; do
+  ...
+end
+</code></pre>
 
 <p>In test method mark usage, the “my_test_method” is
 treated as a test method:</p>
 
-<p>test
-  def my_test_method
-    assert_equal(“call me”, …)
-  end</p>
+<pre class="code ruby"><code class="ruby">test
+def my_test_method
+  assert_equal(&quot;call me&quot;, ...)
+end
+</code></pre>
 
 
   </div>
@@ -2397,7 +2414,7 @@ defined.</p>
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the current test order. This returns
-+:alphabetic+ by default.</p>
+<code>:alphabetic</code> by default.</p>
 
 
   </div>
@@ -2447,13 +2464,16 @@ defined.</p>
   <div class="discussion">
     <p>Sets the current test order.</p>
 
-<p>Here are the available <em>order</em>:
-[:alphabetic]
-  Default. Tests are sorted in alphabetic order.
-[:random]
-  Tests are sorted in random order.
-[:defined]
-  Tests are sorted in defined order.</p>
+<p>Here are the available <em>order</em>:</p>
+
+<dl>
+  <dt>:alphabetic</dt>
+  <dd>Default. Tests are sorted in alphabetic order.</dd>
+  <dt>:random</dt>
+  <dd>Tests are sorted in random order.</dd>
+  <dt>:defined</dt>
+  <dd>Tests are sorted in defined order.</dd>
+</dl>
 
 
   </div>
@@ -2637,42 +2657,47 @@ clean up and/or verify tested condition.
 e.g. Can be used to verify mock.</p>
 
 <p>You can add additional cleanup tasks by the following
-code:
-  class TestMyClass &lt; Test::Unit::TestCase
-    def cleanup
-      …
-    end</p>
+code:</p>
 
-<pre class="code ruby"><code class="ruby">cleanup
-def my_cleanup1
-  ...
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  def cleanup
+    ...
+  end
+
+  cleanup
+  def my_cleanup1
+    ...
+  end
+
+  cleanup do
+    ... # cleanup callback1
+  end
+
+  cleanup
+  def my_cleanup2
+    ...
+  end
+
+  cleanup do
+    ... # cleanup callback2
+  end
+
+  def test_my_class
+    ...
+  end
 end
-
-cleanup do
-  ... # cleanup callback1
-end
-
-cleanup
-def my_cleanup2
-  ...
-end
-
-cleanup do
-  ... # cleanup callback2
-end
-
-def test_my_class
-  ...
-end   end
 </code></pre>
 
-<p>Here is a call order:
-* test_my_class
-* cleanup callback2
-* my_cleanup2
-* cleanup callback1
-* my_cleanup1
-* cleanup</p>
+<p>Here is a call order:</p>
+
+<ul>
+  <li>test_my_class</li>
+  <li>cleanup callback2</li>
+  <li>my_cleanup2</li>
+  <li>cleanup callback1</li>
+  <li>my_cleanup1</li>
+  <li>cleanup</li>
+</ul>
 
 
   </div>
@@ -2711,7 +2736,7 @@ end   end
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns test data for the test. If the test isn’t associated
-with any test data, it returns +nil+.</p>
+with any test data, it returns <code>nil</code>.</p>
 
 
   </div>
@@ -2753,7 +2778,7 @@ with any test data, it returns +nil+.</p>
   <div class="discussion">
     <p>Returns a label of test data for the test. If the
 test isn’t associated with any test data, it returns
-+nil+.</p>
+<code>nil</code>.</p>
 
 
   </div>
@@ -3284,42 +3309,47 @@ and errors in result.</p>
 to set up fixture information.</p>
 
 <p>You can add additional setup tasks by the following
-code:
-  class TestMyClass &lt; Test::Unit::TestCase
-    def setup
-      …
-    end</p>
+code:</p>
 
-<pre class="code ruby"><code class="ruby">setup
-def my_setup1
-  ...
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  def setup
+    ...
+  end
+
+  setup
+  def my_setup1
+    ...
+  end
+
+  setup do
+    ... # setup callback1
+  end
+
+  setup
+  def my_setup2
+    ...
+  end
+
+  setup do
+    ... # setup callback2
+  end
+
+  def test_my_class
+    ...
+  end
 end
-
-setup do
-  ... # setup callback1
-end
-
-setup
-def my_setup2
-  ...
-end
-
-setup do
-  ... # setup callback2
-end
-
-def test_my_class
-  ...
-end   end
 </code></pre>
 
-<p>Here is a call order:
-* setup
-* my_setup1
-* setup callback1
-* my_setup2
-* setup callback2
-* test_my_class</p>
+<p>Here is a call order:</p>
+
+<ul>
+  <li>setup</li>
+  <li>my_setup1</li>
+  <li>setup callback1</li>
+  <li>my_setup2</li>
+  <li>setup callback2</li>
+  <li>test_my_class</li>
+</ul>
 
 
   </div>
@@ -3431,42 +3461,47 @@ end   end
 down fixture information.</p>
 
 <p>You can add additional teardown tasks by the following
-code:
-  class TestMyClass &lt; Test::Unit::TestCase
-    def teardown
-      …
-    end</p>
+code:</p>
 
-<pre class="code ruby"><code class="ruby">teardown
-def my_teardown1
-  ...
+<pre class="code ruby"><code class="ruby">class TestMyClass &lt; Test::Unit::TestCase
+  def teardown
+    ...
+  end
+
+  teardown
+  def my_teardown1
+    ...
+  end
+
+  teardown do
+    ... # teardown callback1
+  end
+
+  teardown
+  def my_teardown2
+    ...
+  end
+
+  teardown do
+    ... # teardown callback2
+  end
+
+  def test_my_class
+    ...
+  end
 end
-
-teardown do
-  ... # teardown callback1
-end
-
-teardown
-def my_teardown2
-  ...
-end
-
-teardown do
-  ... # teardown callback2
-end
-
-def test_my_class
-  ...
-end   end
 </code></pre>
 
-<p>Here is a call order:
-* test_my_class
-* teardown callback2
-* my_teardown2
-* teardown callback1
-* my_teardown1
-* teardown</p>
+<p>Here is a call order:</p>
+
+<ul>
+  <li>test_my_class</li>
+  <li>teardown callback2</li>
+  <li>my_teardown2</li>
+  <li>teardown callback1</li>
+  <li>my_teardown1</li>
+  <li>teardown</li>
+</ul>
 
 
   </div>
@@ -3609,7 +3644,7 @@ end   end
 </div>
 
       <div id="footer">
-  Generated on Fri May 17 22:06:10 2019 by
+  Generated on Wed May 29 16:38:51 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.3.8).
 </div>
