@@ -14,11 +14,11 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Test::Unit::ColorScheme";
   relpath = '../../';
 </script>
@@ -135,25 +135,50 @@
 </div>
 
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="default_for_8_colors-classvariable" class="">@@default_for_8_colors =
-        
-      </dt>
-      <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
-    
-      <dt id="default_for_256_colors-classvariable" class="">@@default_for_256_colors =
-        
-      </dt>
-      <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
-    
-      <dt id="schemes-classvariable" class="">@@schemes =
-        
-      </dt>
-      <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
-    
-  </dl>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TERM_256-constant" class="">TERM_256 =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>
+[+-]256color|
+\A(?:
+  alacritty|
+  iTerm\s?\d*\.app|
+  kitty|
+  mintty|
+  ms-terminal|
+  nsterm-build\d+|
+  nsterm|
+  terminator|
+  terminology(?:-[0-9.]+)?|
+  termite|
+  vscode
+)\z</span><span class='regexp_end'>/x</span></span></pre></dd>
+      
+        <dt id="default_for_8_colors-classvariable" class="">@@default_for_8_colors =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="default_for_256_colors-classvariable" class="">@@default_for_256_colors =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="schemes-classvariable" class="">@@schemes =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
 
 
 
@@ -474,7 +499,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of ColorScheme</p>
+    <p>Returns a new instance of ColorScheme.</p>
 
 
   </div>
