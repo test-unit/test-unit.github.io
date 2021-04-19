@@ -14,11 +14,11 @@
  - test-unit-capybara</title>
 
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Test::Unit::Capybara::Assertions";
   relpath = '../../../';
 </script>
@@ -424,6 +424,8 @@ from @node@.</p>
       <pre class="lines">
 
 
+283
+284
 285
 286
 287
@@ -447,12 +449,10 @@ from @node@.</p>
 305
 306
 307
-308
-309
-310</pre>
+308</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/capybara.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/capybara.rb', line 283</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -686,6 +686,8 @@ normalized compared responses.</p>
       <pre class="lines">
 
 
+203
+204
 205
 206
 207
@@ -701,12 +703,10 @@ normalized compared responses.</p>
 217
 218
 219
-220
-221
-222</pre>
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/capybara.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/capybara.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_body'>assert_body</span><span class='lparen'>(</span><span class='id identifier rubyid_expected'>expected</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_content_type'>content_type</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:content_type</span><span class='rbracket'>]</span>
@@ -922,6 +922,8 @@ from the current node.</p>
       <pre class="lines">
 
 
+380
+381
 382
 383
 384
@@ -957,7 +959,7 @@ from the current node.</p>
 414</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/test/unit/capybara.rb', line 382</span>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/capybara.rb', line 380</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assert_not_find'>assert_not_find</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_node'>node</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -965,9 +967,11 @@ from the current node.</p>
   <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_page_finder_arguments'>normalize_page_finder_arguments</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>begin</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_node'>node</span>
-      <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:finder_arguments</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:finder_arguments</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                           <span class='op'>**</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:finder_options</span><span class='rbracket'>]</span><span class='rparen'>)</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:finder_arguments</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_first'>first</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:finder_arguments</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                      <span class='op'>**</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:finder_options</span><span class='rbracket'>]</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>rescue</span> <span class='op'>::</span><span class='const'>Capybara</span><span class='op'>::</span><span class='const'>ExpectationNotMet</span>
     <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='kw'>nil</span>
