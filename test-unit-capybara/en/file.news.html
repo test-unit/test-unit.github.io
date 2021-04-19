@@ -14,11 +14,11 @@
  - test-unit-capybara</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "news";
   relpath = '';
 </script>
@@ -87,11 +87,58 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>News</h1>
+      <div id="content"><div id='filecontents'><h1 id="news">News</h1>
 
-<h2>1.0.7 - 2018-08-27</h2>
+<h2 id="1-1-1-2021-03-15">1.1.1 - 2021-03-15</h2>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+<li>Added support for Ruby 3.0.0.</li>
+</ul>
+
+<h2 id="1-1-0-2021-03-15">1.1.0 - 2021-03-15</h2>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+<li>Suppressed a keyword argument warning with Ruby 2.7 or later.</li>
+</ul>
+
+<h2 id="1-0-9-2019-07-11">1.0.9 - 2019-07-11</h2>
+
+<h3 id="fixes">Fixes</h3>
+
+<ul>
+<li>Fixed a bug that this doesn&#39;t work with <code>Rack::Test</code>.</li>
+</ul>
+
+<h2 id="1-0-8-2019-07-11">1.0.8 - 2019-07-11</h2>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+<li><p>Added support for Selenium element.</p></li>
+<li><p>Updated CI configurations.
+[GitHub#14][Patch by neko maho]</p></li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+
+<ul>
+<li>Fixed documents.
+[GitHub#12][GitHub#13][Patch by Akira Matsuda]</li>
+</ul>
+
+<h3 id="thanks">Thanks</h3>
+
+<ul>
+<li>Akira Matsuda</li>
+</ul>
+
+<h2 id="1-0-7-2018-08-27">1.0.7 - 2018-08-27</h2>
+
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li><p>Converted document format to Markdown.
@@ -102,16 +149,16 @@
 [GitHub#11][Patch by neko maho]</p></li>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <ul>
 <li><p>okkez</p></li>
 <li><p>neko maho</p></li>
 </ul>
 
-<h2>1.0.6 - 2018-06-06</h2>
+<h2 id="1-0-6-2018-06-06">1.0.6 - 2018-06-06</h2>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li><p>Improved release script.
@@ -122,7 +169,7 @@
 [GitHub#7] [Patch by neko maho]</p></li>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <ul>
 <li><p>Hiroyuki Sato</p></li>
@@ -130,19 +177,19 @@
 <li><p>neko maho</p></li>
 </ul>
 
-<h2>1.0.5 - 2016-01-18</h2>
+<h2 id="1-0-5-2016-01-18">1.0.5 - 2016-01-18</h2>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li>Stopped to register auto test runner.</li>
 </ul>
 
-<h2>1.0.4 - 2013-05-15</h2>
+<h2 id="1-0-4-2013-05-15">1.0.4 - 2013-05-15</h2>
 
 <p>A Capybara 2.1.0 support release.</p>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li>Supported Capybara 2.1.0.
@@ -151,17 +198,17 @@ Notice: Capybara &lt; 2.1.0 aren&#39;t supported from this release.
 [GitHub#2] [Reported by thelastinuit]</li>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <ul>
 <li>thelastinuit</li>
 </ul>
 
-<h2>1.0.3 - 2012-11-29</h2>
+<h2 id="1-0-3-2012-11-29">1.0.3 - 2012-11-29</h2>
 
 <p>A support Capybara 2.0.1 release.</p>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li>Supported Capybara 2.0.1.
@@ -169,21 +216,21 @@ It requires Capybara &gt;= 2.0.1 and test-unit &gt;= 2.5.3.
 Notice: Capybara 1.X aren&#39;t supported yet from this release.</li>
 </ul>
 
-<h2>1.0.2 - 2012-03-12</h2>
+<h2 id="1-0-2-2012-03-12">1.0.2 - 2012-03-12</h2>
 
 <p>A Capybara integration improvement release.</p>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li>Supported Capybara 1.1.2 again.</li>
 </ul>
 
-<h2>1.0.1 - 2012-01-16</h2>
+<h2 id="1-0-1-2012-01-16">1.0.1 - 2012-01-16</h2>
 
 <p>A Capybara integration improvement release.</p>
 
-<h3>Improvements</h3>
+<h3 id="improvements">Improvements</h3>
 
 <ul>
 <li>Added <span class='object_link'><a href="Test/Unit/Capybara/Assertions.html#assert_all-instance_method" title="Test::Unit::Capybara::Assertions#assert_all (method)">Test::Unit::Capybara::Assertions#assert_all</a></span>.</li>
@@ -191,7 +238,7 @@ Notice: Capybara 1.X aren&#39;t supported yet from this release.</li>
 <li>Supported Capybara::ElementNotFound as a failure.</li>
 </ul>
 
-<h2>1.0.0 - 2011-05-01</h2>
+<h2 id="1-0-0-2011-05-01">1.0.0 - 2011-05-01</h2>
 
 <p>The first release!!!</p>
 </div></div>
