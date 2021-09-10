@@ -114,7 +114,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/test/unit/assertions.rb<span class="defines">,<br />
-  lib/test/unit/assertions.rb</span>
+  lib/test/unit/assertions.rb,<br /> lib/test/unit/assertions.rb</span>
 </dd>
   </dl>
   
@@ -374,7 +374,7 @@ failure.</li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Passes if expression “<code>expected</code> <code>operator</code> <code>actual</code>” is true.</p>
+    <span class="summary_desc"><div class='inline'><p>Passes if expression “<code>expected</code> <code>operator</code> <code>actual</code>” is not false nor nil.</p>
 </div></span>
   
 </li>
@@ -652,13 +652,13 @@ failure.</li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Passes if <code>object</code> is nil.</p>
+    <span class="summary_desc"><div class='inline'><p>Passes if <code>object</code>.nil?.</p>
 </div></span>
   
 </li>
 
       
-        <li class="public ">
+        <li class="public deprecated">
   <span class="summary_signature">
     
       <a href="#assert_no_match-instance_method" title="#assert_no_match (instance method)">#<strong>assert_no_match</strong>(regexp, string, message = &quot;&quot;)  &#x21d2; Object </a>
@@ -671,11 +671,11 @@ failure.</li>
   
   
   
-  
+  <span class="deprecated note title">deprecated</span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deprecated.</p>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'><a href="#assert_not_match-instance_method" title="Test::Unit::Assertions#assert_not_match (method)">#assert_not_match</a></span> instead.</p>
 </div></span>
   
 </li>
@@ -973,7 +973,7 @@ failure.</li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Passes if <code>object</code>.<code>predicate</code> is not <em>true</em>.</p>
+    <span class="summary_desc"><div class='inline'><p>Passes if <code>object</code>.<code>predicate</code> is false or nil.</p>
 </div></span>
   
 </li>
@@ -1046,7 +1046,30 @@ failure.</li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Passes if the method send doesn’t return a true value.</p>
+    <span class="summary_desc"><div class='inline'><p>Passes if the method <code>__send__</code> returns false or nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assert_nothing_leaked_memory-instance_method" title="#assert_nothing_leaked_memory (instance method)">#<strong>assert_nothing_leaked_memory</strong>(max_increasable_size, target = :physical, message = nil) { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Asserts that increased memory usage by <code>block.call</code> is less than <code>max_increasable_size</code>.</p>
 </div></span>
   
 </li>
@@ -1184,7 +1207,7 @@ failure.</li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Passes if <code>object</code>.<code>predicate</code> is <em>true</em>.</p>
+    <span class="summary_desc"><div class='inline'><p>Passes if <code>object</code>.<code>predicate</code> is not false nor nil.</p>
 </div></span>
   
 </li>
@@ -1347,7 +1370,7 @@ failure.</li>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Passes if the method send returns a true value.</p>
+    <span class="summary_desc"><div class='inline'><p>Passes if the method <code>__send__</code> returns not false nor nil.</p>
 </div></span>
   
 </li>
@@ -2054,15 +2077,15 @@ with any <code>block</code>.</p>
         <p class="example_title"><div class='inline'><p>Pass patterns</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_assert_all?'>assert_all?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rbrace'>}</span> <span class='comment'># =&gt; pass
-</span><span class='id identifier rubyid_assert_all?'>assert_all?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:positive?</span><span class='rparen'>)</span>      <span class='comment'># =&gt; pass
-</span><span class='id identifier rubyid_assert_all?'>assert_all?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>false</span><span class='rbrace'>}</span>           <span class='comment'># =&gt; pass</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rbrace'>}</span> <span class='comment'># =&gt; pass
+</span><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:positive?</span><span class='rparen'>)</span>      <span class='comment'># =&gt; pass
+</span><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>false</span><span class='rbrace'>}</span>           <span class='comment'># =&gt; pass</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Failure pattern</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_assert_all?'>assert_all?</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:zero?</span><span class='rparen'>)</span> <span class='comment'># =&gt; failure</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:zero?</span><span class='rparen'>)</span> <span class='comment'># =&gt; failure</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2227,7 +2250,7 @@ showed when the assertion is failed.</p>
 </h3><div class="docstring">
   <div class="discussion">
     <p>The assertion upon which all other assertions are based. Passes if the
-block yields true.</p>
+block yields not false nor nil.</p>
 
 
   </div>
@@ -2347,7 +2370,7 @@ block yields true.</p>
 </h3><div class="docstring">
   <div class="discussion">
     <p>Passes if expression “<code>expected</code> <code>operator</code>
-<code>actual</code>” is true.</p>
+<code>actual</code>” is not false nor nil.</p>
 
 
   </div>
@@ -3302,7 +3325,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Passes if <code>object</code> is nil.</p>
+    <p>Passes if <code>object</code>.nil?.</p>
 
 
   </div>
@@ -3356,8 +3379,8 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Deprecated. Use #assert_not_match instead.</p>
-
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'><a href="#assert_not_match-instance_method" title="Test::Unit::Assertions#assert_not_match (method)">#assert_not_match</a></span> instead.</p>
+</div></div>
 <p>Passes if <code>regexp</code> !~ <code>string</code></p>
 
 
@@ -4210,7 +4233,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
   <div class="discussion">
     <p>Compares the <code>object1</code> with <code>object2</code> using <code>operator</code>.</p>
 
-<p>Passes if object1.<strong>send</strong>(operator, object2) is not true.</p>
+<p>Passes if object1.<strong>send</strong>(operator, object2) is false or nil.</p>
 
 
   </div>
@@ -4296,7 +4319,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Passes if <code>object</code>.<code>predicate</code> is not <em>true</em>.</p>
+    <p>Passes if <code>object</code>.<code>predicate</code> is false or nil.</p>
 
 
   </div>
@@ -4512,7 +4535,7 @@ with id &lt;?&gt;.
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Passes if the method send doesn’t return a true value.</p>
+    <p>Passes if the method <code>__send__</code> returns false or nil.</p>
 
 <p><code>send_array</code> is composed of:
 * A receiver
@@ -4597,6 +4620,221 @@ with id &lt;?&gt;.
     <span class='id identifier rubyid_assert_block'>assert_block</span><span class='lparen'>(</span><span class='id identifier rubyid_full_message'>full_message</span><span class='rparen'>)</span> <span class='kw'>do</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_receiver'>receiver</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_message_name'>message_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_arguments'>arguments</span><span class='rparen'>)</span>
       <span class='kw'>not</span> <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assert_nothing_leaked_memory-instance_method">
+  
+    #<strong>assert_nothing_leaked_memory</strong>(max_increasable_size, target = :physical, message = nil) { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Asserts that increased memory usage by <code>block.call</code> is less
+than <code>max_increasable_size</code>. <code>GC.start</code> is called before and
+after <code>block.call</code>.</p>
+
+<p>This assertion may be fragile. Because memory usage is
+depends on the current Ruby process’s memory
+usage. Launching a new Ruby process for this will produce
+more stable result but we need to specify target code as
+<code>String</code> instead of block for the approach. We choose easy
+to write API approach rather than more stable result
+approach for this case.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Pass pattern</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>objspace</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_size_per_object'>size_per_object</span> <span class='op'>=</span> <span class='const'>ObjectSpace</span><span class='period'>.</span><span class='id identifier rubyid_memsize_of'>memsize_of</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># If memory isn&#39;t leaked, physical memory of almost created objects
+</span><span class='comment'># (1000 - 10 objects) must be freed.
+</span><span class='id identifier rubyid_assert_nothing_leaked_memory'>assert_nothing_leaked_memory</span><span class='lparen'>(</span><span class='id identifier rubyid_size_per_object'>size_per_object</span> <span class='op'>*</span> <span class='int'>10</span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='int'>1_000</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span> <span class='comment'># =&gt; pass</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Failure pattern</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>objspace</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_size_per_object'>size_per_object</span> <span class='op'>=</span> <span class='const'>ObjectSpace</span><span class='period'>.</span><span class='id identifier rubyid_memsize_of'>memsize_of</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_strings'>strings</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_assert_nothing_leaked_memory'>assert_nothing_leaked_memory</span><span class='lparen'>(</span><span class='id identifier rubyid_size_per_object'>size_per_object</span> <span class='op'>*</span> <span class='int'>10</span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='int'>10_000</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+    <span class='comment'># Created objects aren&#39;t GC-ed because they are referred.
+</span>    <span class='id identifier rubyid_strings'>strings</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span> <span class='comment'># =&gt; failure</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>:physical</tt>, <tt>:virtual</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:physical</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>which memory usage is
+used for comparing. <code>:physical</code> means physical memory usage
+also known as Resident Set Size (RSS). <code>:virtual</code> means
+virtual memory usage.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>[] do anything you want to measure memory usage
+in the block.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Returns:</p>
+<ul class="yieldreturn">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.4.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1779
+1780
+1781
+1782
+1783
+1784
+1785
+1786
+1787
+1788
+1789
+1790
+1791
+1792
+1793
+1794
+1795
+1796
+1797
+1798
+1799
+1800
+1801
+1802
+1803
+1804
+1805
+1806</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/assertions.rb', line 1779</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_assert_nothing_leaked_memory'>assert_nothing_leaked_memory</span><span class='lparen'>(</span><span class='id identifier rubyid_max_increasable_size'>max_increasable_size</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_target'>target</span><span class='op'>=</span><span class='symbol'>:physical</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_message'>message</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid__wrap_assertion'>_wrap_assertion</span> <span class='kw'>do</span>
+    <span class='const'>GC</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
+    <span class='id identifier rubyid_before'>before</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Util.html" title="Test::Unit::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util/MemoryUsage.html" title="Test::Unit::Util::MemoryUsage (class)">MemoryUsage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Util/MemoryUsage.html#initialize-instance_method" title="Test::Unit::Util::MemoryUsage#initialize (method)">new</a></span></span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_before'>before</span><span class='period'>.</span><span class='id identifier rubyid_collected?'>collected?</span>
+      <span class='id identifier rubyid_omit'>omit</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>memory usage collection isn&#39;t supported on this platform</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>yield</span>
+    <span class='const'>GC</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
+    <span class='id identifier rubyid_after'>after</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Util.html" title="Test::Unit::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util/MemoryUsage.html" title="Test::Unit::Util::MemoryUsage (class)">MemoryUsage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Util/MemoryUsage.html#initialize-instance_method" title="Test::Unit::Util::MemoryUsage#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_before_value'>before_value</span> <span class='op'>=</span> <span class='id identifier rubyid_before'>before</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_after_value'>after_value</span> <span class='op'>=</span> <span class='id identifier rubyid_after'>after</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_actual_increased_size'>actual_increased_size</span> <span class='op'>=</span> <span class='id identifier rubyid_after_value'>after_value</span> <span class='op'>-</span> <span class='id identifier rubyid_before_value'>before_value</span>
+    <span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-TEMPLATE</span>
+<span class='tstring_content'>&lt;?&gt; was expected to be less than
+&lt;?&gt;.
+</span><span class='heredoc_end'>    TEMPLATE
+</span>    <span class='id identifier rubyid_full_message'>full_message</span> <span class='op'>=</span> <span class='id identifier rubyid_build_message'>build_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_template'>template</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_actual_increased_size'>actual_increased_size</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_max_increasable_size'>max_increasable_size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_assert_block'>assert_block</span><span class='lparen'>(</span><span class='id identifier rubyid_full_message'>full_message</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_actual_increased_size'>actual_increased_size</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_increasable_size'>max_increasable_size</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -4784,7 +5022,7 @@ with id &lt;?&gt;.
   <div class="discussion">
     <p>Compares the <code>object1</code> with <code>object2</code> using <code>operator</code>.</p>
 
-<p>Passes if object1.<strong>send</strong>(operator, object2) is true.</p>
+<p>Passes if object1.<strong>send</strong>(operator, object2) is not false nor nil.</p>
 
 
   </div>
@@ -4978,7 +5216,7 @@ with id &lt;?&gt;.
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Passes if <code>object</code>.<code>predicate</code> is <em>true</em>.</p>
+    <p>Passes if <code>object</code>.<code>predicate</code> is not false nor nil.</p>
 
 
   </div>
@@ -5634,7 +5872,7 @@ with id &lt;?&gt;.
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Passes if the method send returns a true value.</p>
+    <p>Passes if the method <code>__send__</code> returns not false nor nil.</p>
 
 <p><code>send_array</code> is composed of:
 * A receiver
