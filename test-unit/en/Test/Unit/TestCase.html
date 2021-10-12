@@ -544,6 +544,29 @@ end
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#ractor-class_method" title="ractor (class method)">.<strong>ractor</strong>(options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Declares that the following test uses Ractor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#shutdown-class_method" title="shutdown (class method)">.<strong>shutdown</strong>  &#x21d2; Object </a>
     
 
@@ -1819,6 +1842,109 @@ end
   <span class='rbrace'>}</span>
   <span class='id identifier rubyid_added_method_names'>added_method_names</span><span class='lbracket'>[</span><span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='const'><span class='object_link'><a href="AutoRunnerLoader.html" title="Test::Unit::AutoRunnerLoader (module)">AutoRunnerLoader</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check'><span class='object_link'><a href="AutoRunnerLoader.html#check-class_method" title="Test::Unit::AutoRunnerLoader.check (method)">check</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_stringified_name'>stringified_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ractor-class_method">
+  
+    .<strong>ractor</strong>(options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Declares that the following test uses Ractor.</p>
+
+<p>Tests that use Ractor are executed at the end. Because multi
+Ractor mode is enabled in the current process and it’s not
+disabled even when only one Ractor is running after running
+a test that uses Ractor on Ruby 3.0. It will be solved in
+Ruby 3.1.</p>
+
+<p>This is implemented by setting the <code>:ractor</code> attribute of
+the test to <code>true</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Declares that test_do_something_with_ractor uses Ractor</p>
+</div></p>
+      
+      <pre class="example code"><code>
+<span class='id identifier rubyid_ractor'>ractor</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_test_do_something_with_ractor'>test_do_something_with_ractor</span>
+  <span class='const'>Ractor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>See <span class='object_link'><a href="Attribute/ClassMethods.html#attribute-instance_method" title="Test::Unit::Attribute::ClassMethods#attribute (method)">Attribute::ClassMethods#attribute</a></span>
+for details.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.4.6</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+380
+381
+382</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 380</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ractor'>ractor</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='symbol'>:ractor</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
