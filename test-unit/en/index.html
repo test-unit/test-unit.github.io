@@ -14,11 +14,11 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
-<script type="text/javascript">
+<script type="text/javascript" charset="utf-8">
   pathId = "README";
   relpath = '';
 </script>
@@ -90,8 +90,7 @@
       <div id="content"><div id='filecontents'><h1 id="test-unit">test-unit</h1>
 
 <p><a href="http://badge.fury.io/rb/test-unit"><img src="https://badge.fury.io/rb/test-unit.png" alt="Gem Version" /></a>
-<a href="https://github.com/test-unit/test-unit/actions/workflows/test.yml?query=branch%3Amaster+"><img src="https://github.com/test-unit/test-unit/actions/workflows/test.yml/badge.svg?branch=master" alt="Build Status for Ruby 2.1+" /></a>
-<a href="https://travis-ci.com/test-unit/test-unit"><img src="https://travis-ci.com/test-unit/test-unit.svg?branch=master" alt="Build Status for Ruby 1.9 and 2.0" /></a></p>
+<a href="https://github.com/test-unit/test-unit/actions/workflows/test.yml?query=branch%3Amaster+"><img src="https://github.com/test-unit/test-unit/actions/workflows/test.yml/badge.svg?branch=master" alt="Build Status for Ruby 2.1+" /></a></p>
 
 <ul>
   <li>http://test-unit.github.io/</li>
@@ -106,6 +105,19 @@
 principles. These were originally designed by Kent Beck, creator of extreme
 programming software development methodology, for Smalltalk’s SUnit. It allows
 writing tests, checking results and automated testing in Ruby.</p>
+
+<p>test-unit ships as part of Ruby as a bundled gem. To check which version is included, see https://stdgems.org/test-unit/.
+It’s only necessary to install the gem if you need a newer version.</p>
+
+<p>test-unit is the original Ruby unit testing library, and is still active.
+It is one of two unit testing libraries bundled with Ruby, the other being <a href="https://github.com/seattlerb/minitest">minitest</a>.</p>
+
+<p>When deciding which to use, consider:</p>
+
+<ul>
+  <li>test-unit is strict about backwards compatibility. A backwards-incompatible change would be considered a bug.</li>
+  <li>test-unit aims to support old Ruby versions, even if EOL.</li>
+</ul>
 
 <h2 id="features">Features</h2>
 
