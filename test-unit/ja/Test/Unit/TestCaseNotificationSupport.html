@@ -181,11 +181,11 @@
 <p>Example:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>def</span> <span class='id identifier rubyid_test_notification'>test_notification</span>
-  <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I&#39;m here!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='comment'># Reached here
-</span>  <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Special!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_special_case?'>special_case?</span>
-  <span class='comment'># Reached here too
-</span><span class='kw'>end</span>
+  <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I&#39;m here!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>  <span class='comment'># Reached here
+</span>
+  <span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Special!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_special_case?'>special_case?</span>  <span class='comment'># Reached here too
+</span>
+<span class='kw'>end</span>
 </code></pre>
 
 <p>options:</p>
@@ -231,9 +231,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jan 25 20:40:20 2023 by
+  Generated on Mon May  8 18:01:39 2023 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.18 (ruby-2.6.6).
+  0.9.18 (ruby-3.1.2).
 </div>
 
     
