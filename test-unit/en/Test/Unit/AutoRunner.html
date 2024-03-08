@@ -14,11 +14,11 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
-<script type="text/javascript">
+<script type="text/javascript" charset="utf-8">
   pathId = "Test::Unit::AutoRunner";
   relpath = '../../';
 </script>
@@ -135,7 +135,7 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="AutoRunner/StopOnFailureListener.html" title="Test::Unit::AutoRunner::StopOnFailureListener (class)">StopOnFailureListener</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="AutoRunner/GCStressListener.html" title="Test::Unit::AutoRunner::GCStressListener (class)">GCStressListener</a></span>, <span class='object_link'><a href="AutoRunner/StopOnFailureListener.html" title="Test::Unit::AutoRunner::StopOnFailureListener (class)">StopOnFailureListener</a></span>
     
   
 </p>
@@ -368,6 +368,34 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Returns the value of attribute filters.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gc_stress=-instance_method" title="#gc_stress= (instance method)">#<strong>gc_stress</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the attribute gc_stress.</p>
 </div></span>
   
 </li>
@@ -1136,7 +1164,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of AutoRunner.</p>
+    <p>Returns a new instance of AutoRunner</p>
 
 
   </div>
@@ -1564,6 +1592,67 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_filters'>filters</span>
   <span class='ivar'>@filters</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="gc_stress=-instance_method">
+  
+    #<strong>gc_stress=</strong>(value)  &#x21d2; <tt>Object</tt>  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the attribute gc_stress</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the value to set the attribute gc_stress to.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/autorunner.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gc_stress='>gc_stress=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@gc_stress</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
