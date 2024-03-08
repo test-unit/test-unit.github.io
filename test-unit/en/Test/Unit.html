@@ -303,10 +303,10 @@ commented out to indicate that they are completely optional):</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>test/unit</span><span class='tstring_end'>&#39;</span></span>
 
-<span class='kw'>class</span> <span class='const'>MyTest</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
-  <span class='comment'># def setup
+<span class='kw'>class</span> <span class='const'>MyTest</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>  <span class='comment'># def setup
 </span>  <span class='comment'># end
 </span>
+
   <span class='comment'># def teardown
 </span>  <span class='comment'># end
 </span>
@@ -465,7 +465,7 @@ missing points, etc., in this document (or any other).</p>
         <dt id="VERSION-constant" class="">VERSION =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>3.5.8</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>3.6.3</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
         <dt id="at_start_hooks-classvariable" class="">@@at_start_hooks =
           <div class="docstring">
@@ -691,42 +691,42 @@ To register multiple hooks, call this method multiple times.</p>
 
 <span class='kw'>class</span> <span class='const'>TestMyClass1</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_shutdown'>shutdown</span>
-      <span class='comment'># ...
-</span>    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_shutdown'>shutdown</span>      <span class='comment'># ...
+</span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span>
 
 <span class='kw'>class</span> <span class='const'>TestMyClass2</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_shutdown'>shutdown</span>
-      <span class='comment'># ...
-</span>    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_shutdown'>shutdown</span>      <span class='comment'># ...
+</span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span>
 </code></pre>
 
@@ -850,42 +850,42 @@ To register multiple hooks, call this method multiple times.</p>
 
 <span class='kw'>class</span> <span class='const'>TestMyClass1</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_startup'>startup</span>
-      <span class='comment'># ...
-</span>    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_startup'>startup</span>      <span class='comment'># ...
+</span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span>
 
 <span class='kw'>class</span> <span class='const'>TestMyClass2</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Test.html" title="Test (module)">Test</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Test::Unit (module)">Unit</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Unit/TestCase.html" title="Test::Unit::TestCase (class)">TestCase</a></span></span>
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_startup'>startup</span>
-      <span class='comment'># ...
-</span>    <span class='kw'>end</span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_startup'>startup</span>      <span class='comment'># ...
+</span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class1'>test_my_class1</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 
-  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_my_class2'>test_my_class2</span>    <span class='comment'># ...
+</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span>
 </code></pre>
 
