@@ -14,11 +14,11 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Test::Unit::Collector::XML::Listener";
   relpath = '../../../../';
 </script>
@@ -296,7 +296,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Listener</p>
+    <p>Returns a new instance of Listener.</p>
 
 
   </div>
@@ -449,9 +449,9 @@
   <span class='id identifier rubyid_uri'>uri</span><span class='comma'>,</span> <span class='id identifier rubyid_local'>local</span> <span class='op'>=</span> <span class='ivar'>@tag_stack</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
   <span class='id identifier rubyid_no_action_states'>no_action_states</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:root</span><span class='comma'>,</span> <span class='symbol'>:stream</span><span class='rbracket'>]</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_state'>state</span>
-  <span class='kw'>when</span> <span class='op'>*</span><span class='id identifier rubyid_no_action_states'>no_action_states</span>    <span class='comment'># do nothing
-</span>
-  <span class='kw'>when</span> <span class='symbol'>:test_suite</span>
+  <span class='kw'>when</span> <span class='op'>*</span><span class='id identifier rubyid_no_action_states'>no_action_states</span>
+    <span class='comment'># do nothing
+</span>  <span class='kw'>when</span> <span class='symbol'>:test_suite</span>
     <span class='id identifier rubyid_test_suite_end'>test_suite_end</span>
   <span class='kw'>when</span> <span class='symbol'>:complete_test_case</span>
     <span class='ivar'>@test_suites</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@test_case</span><span class='period'>.</span><span class='id identifier rubyid_suite'>suite</span>
@@ -557,9 +557,9 @@
   <span class='ivar'>@state_stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='ivar'>@values</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_state'>state</span>
-  <span class='kw'>when</span> <span class='symbol'>:test_suite</span><span class='comma'>,</span> <span class='symbol'>:test_case</span>    <span class='comment'># do nothing
-</span>
-  <span class='kw'>when</span> <span class='symbol'>:test</span>
+  <span class='kw'>when</span> <span class='symbol'>:test_suite</span><span class='comma'>,</span> <span class='symbol'>:test_case</span>
+    <span class='comment'># do nothing
+</span>  <span class='kw'>when</span> <span class='symbol'>:test</span>
     <span class='ivar'>@n_pass_assertions</span> <span class='op'>=</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid__parent_tag'>_parent_tag</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>start-test</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>when</span> <span class='symbol'>:backtrace</span>
     <span class='ivar'>@backtrace</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -606,9 +606,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Mar  8 11:43:34 2024 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.18 (ruby-3.1.2).
+  Generated on Mon Mar 10 06:37:16 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.2).
 </div>
 
     

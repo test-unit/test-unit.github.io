@@ -14,11 +14,11 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Test::Unit::Assertions";
   relpath = '../../';
 </script>
@@ -143,11 +143,11 @@ failure.</li>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Example Custom Assertion</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Example Custom Assertion</p>
+</div></h5>
       
       <pre class="example code"><code>
 <span class='kw'>def</span> <span class='id identifier rubyid_deny'>deny</span><span class='lparen'>(</span><span class='id identifier rubyid_boolean'>boolean</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
@@ -1633,18 +1633,18 @@ specific assertions such as #assert_equal and
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Pass patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span>               <span class='comment'># =&gt; pass
 </span><span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># =&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>                <span class='comment'># =&gt; failure
 </span><span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>              <span class='comment'># =&gt; failure
@@ -1719,11 +1719,11 @@ check. You should use #assert_equal for the case. Because
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Power Assert</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Power Assert</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_coins'>coins</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_target_coin'>target_coin</span> <span class='op'>=</span> <span class='int'>10</span>
@@ -1738,15 +1738,15 @@ check. You should use #assert_equal for the case. Because
 </span><span class='comment'>#  [1, 5, 50]</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Pass patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert'>assert</span> <span class='lbrace'>{</span><span class='kw'>true</span><span class='rbrace'>}</span>               <span class='comment'># =&gt; pass
 </span><span class='id identifier rubyid_assert'>assert</span> <span class='lbrace'>{</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='rbrace'>}</span> <span class='comment'># =&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert'>assert</span> <span class='lbrace'>{</span><span class='kw'>nil</span><span class='rbrace'>}</span>                <span class='comment'># =&gt; failure
 </span><span class='id identifier rubyid_assert'>assert</span> <span class='lbrace'>{</span><span class='kw'>false</span><span class='rbrace'>}</span>              <span class='comment'># =&gt; failure
@@ -1932,7 +1932,7 @@ showed when the assertion is failed.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_alias_method'>assert_alias_method</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:length</span><span class='comma'>,</span> <span class='symbol'>:size</span><span class='rparen'>)</span>  <span class='comment'># -&gt; pass
@@ -2071,19 +2071,19 @@ with any <code>block</code>.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Pass patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rbrace'>}</span> <span class='comment'># =&gt; pass
 </span><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:positive?</span><span class='rparen'>)</span>      <span class='comment'># =&gt; pass
 </span><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>false</span><span class='rbrace'>}</span>           <span class='comment'># =&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure pattern</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure pattern</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_all'>assert_all</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='symbol'>:zero?</span><span class='rparen'>)</span> <span class='comment'># =&gt; failure</span></code></pre>
     
@@ -2258,7 +2258,7 @@ block yields not false nor nil.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_block'>assert_block</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Couldn&#39;t do the thing</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
@@ -2316,7 +2316,7 @@ block yields not false nor nil.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_boolean'>assert_boolean</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -2378,7 +2378,7 @@ block yields not false nor nil.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_compare'>assert_compare</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>  <span class='comment'># -&gt; pass
@@ -2473,7 +2473,7 @@ block yields not false nor nil.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_const_defined'>assert_const_defined</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Test.html" title="Test (module)">Test</a></span></span><span class='comma'>,</span> <span class='symbol'>:Unit</span><span class='rparen'>)</span>          <span class='comment'># -&gt; pass
@@ -2536,7 +2536,7 @@ block yields not false nor nil.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_empty'>assert_empty</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                       <span class='comment'># -&gt; pass
@@ -2611,7 +2611,7 @@ values of expected and actual.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MY STRING</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my string</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span></code></pre>
@@ -2705,7 +2705,7 @@ values of expected and actual.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_fail_assertion'>assert_fail_assertion</span> <span class='lbrace'>{</span><span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>B</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>  <span class='comment'># -&gt; pass
@@ -2776,7 +2776,7 @@ values of expected and actual.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_false'>assert_false</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>  <span class='comment'># -&gt; pass
@@ -2838,7 +2838,7 @@ within <code>delta</code> tolerance.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_in_delta'>assert_in_delta</span> <span class='float'>0.05</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='float'>50000.0</span> <span class='op'>/</span> <span class='int'>10</span><span class='op'>**</span><span class='int'>6</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='float'>0.00001</span></code></pre>
@@ -2909,7 +2909,7 @@ within <code>epsilon</code> relative error of <code>expected_float</code>.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_in_epsilon'>assert_in_epsilon</span><span class='lparen'>(</span><span class='float'>10000.0</span><span class='comma'>,</span> <span class='float'>9900.0</span><span class='comma'>,</span> <span class='float'>0.1</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -3000,7 +3000,7 @@ within <code>epsilon</code> relative error of <code>expected_float</code>.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_include'>assert_include</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>10</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>            <span class='comment'># -&gt; pass
@@ -3073,7 +3073,7 @@ satisfies +object.instance_of?(class).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_instance_of'>assert_instance_of</span><span class='lparen'>(</span><span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>            <span class='comment'># -&gt; pass
@@ -3167,7 +3167,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_kind_of'>assert_kind_of</span><span class='lparen'>(</span><span class='const'>Object</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>                <span class='comment'># -&gt; pass
@@ -3263,7 +3263,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_match'>assert_match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\d+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>five, 6, seven</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
@@ -3333,7 +3333,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_nil'>assert_nil</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_uniq!'>uniq!</span></code></pre>
@@ -3389,7 +3389,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_no_match'>assert_no_match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>two</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>one 2 three</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>   <span class='comment'># -&gt; pass
@@ -3448,7 +3448,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_const_defined'>assert_not_const_defined</span><span class='lparen'>(</span><span class='const'>Object</span><span class='comma'>,</span> <span class='symbol'>:Nonexistent</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -3515,7 +3515,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_empty'>assert_not_empty</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                      <span class='comment'># -&gt; pass
@@ -3590,7 +3590,7 @@ class or module satisfies +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_equal'>assert_not_equal</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some string</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>5</span></code></pre>
@@ -3649,7 +3649,7 @@ not equal within <code>delta</code> tolerance.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_in_delta'>assert_not_in_delta</span><span class='lparen'>(</span><span class='float'>0.05</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='float'>50000.0</span> <span class='op'>/</span> <span class='int'>10</span><span class='op'>**</span><span class='int'>6</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='float'>0.00002</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -3728,7 +3728,7 @@ not equal within <code>epsilon</code> relative error of
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_in_epsilon'>assert_not_in_epsilon</span><span class='lparen'>(</span><span class='float'>10000.0</span><span class='comma'>,</span> <span class='float'>9900.0</span><span class='comma'>,</span> <span class='float'>0.1</span><span class='rparen'>)</span> <span class='comment'># -&gt; fail
@@ -3811,7 +3811,7 @@ not equal within <code>epsilon</code> relative error of
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_include'>assert_not_include</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>10</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>5</span><span class='rparen'>)</span>            <span class='comment'># -&gt; pass
@@ -3888,7 +3888,7 @@ satisfies +object.instance_of?(class).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_instance_of'>assert_not_instance_of</span><span class='lparen'>(</span><span class='const'>String</span><span class='comma'>,</span> <span class='int'>100</span><span class='rparen'>)</span>                <span class='comment'># -&gt; pass
@@ -4001,7 +4001,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_kind_of'>assert_not_kind_of</span><span class='lparen'>(</span><span class='const'>Fixnum</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>           <span class='comment'># -&gt; pass
@@ -4112,7 +4112,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_match'>assert_not_match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>two</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>one 2 three</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>   <span class='comment'># -&gt; pass
@@ -4181,7 +4181,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_nil'>assert_not_nil</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1 two 3</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>two</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
@@ -4241,7 +4241,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_operator'>assert_not_operator</span><span class='lparen'>(</span><span class='int'>5</span><span class='comma'>,</span> <span class='symbol'>:&lt;</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='comment'># =&gt; pass
@@ -4327,7 +4327,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_predicate'>assert_not_predicate</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:empty?</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -4404,7 +4404,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_respond_to'>assert_not_respond_to</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bugbear</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:nonexistence</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -4483,7 +4483,7 @@ classes (and modules) do not satisfy +object.kind_of?(class_or_module).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_same'>assert_not_same</span> <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></code></pre>
@@ -4548,7 +4548,7 @@ with id &lt;?&gt;.
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_not_send'>assert_not_send</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:member?</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'># -&gt; fail
@@ -4666,11 +4666,11 @@ approach for this case.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Pass pattern</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass pattern</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>objspace</span><span class='tstring_end'>&quot;</span></span>
 <span class='id identifier rubyid_size_per_object'>size_per_object</span> <span class='op'>=</span> <span class='const'>ObjectSpace</span><span class='period'>.</span><span class='id identifier rubyid_memsize_of'>memsize_of</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -4683,8 +4683,8 @@ approach for this case.</p>
 <span class='kw'>end</span> <span class='comment'># =&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure pattern</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure pattern</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>objspace</span><span class='tstring_end'>&quot;</span></span>
 <span class='id identifier rubyid_size_per_object'>size_per_object</span> <span class='op'>=</span> <span class='const'>ObjectSpace</span><span class='period'>.</span><span class='id identifier rubyid_memsize_of'>memsize_of</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -4862,7 +4862,7 @@ in the block.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_nothing_raised'>assert_nothing_raised</span> <span class='kw'>do</span>
@@ -4950,7 +4950,7 @@ in the block.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_nothing_thrown'>assert_nothing_thrown</span> <span class='kw'>do</span>
@@ -5030,7 +5030,7 @@ in the block.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_operator'>assert_operator</span> <span class='int'>5</span><span class='comma'>,</span> <span class='symbol'>:&gt;=</span><span class='comma'>,</span> <span class='int'>4</span></code></pre>
@@ -5096,7 +5096,7 @@ in the block.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_path_exist'>assert_path_exist</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>          <span class='comment'># -&gt; pass
@@ -5160,7 +5160,7 @@ in the block.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_path_not_exist'>assert_path_not_exist</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/nonexistent</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>  <span class='comment'># -&gt; pass
@@ -5224,7 +5224,7 @@ in the block.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_predicate'>assert_predicate</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:empty?</span><span class='rparen'>)</span>  <span class='comment'># -&gt; pass
@@ -5303,7 +5303,7 @@ object, passes if expected_exception == actual_exception.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise'>assert_raise</span><span class='lparen'>(</span><span class='const'>RuntimeError</span><span class='comma'>,</span> <span class='const'>LoadError</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -5398,7 +5398,7 @@ exceptions or sub exceptions of the given exceptions.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise_kind_of'>assert_raise_kind_of</span><span class='lparen'>(</span><span class='const'>SystemCallError</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -5471,7 +5471,7 @@ message is <code>expected</code>.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise_message'>assert_raise_message</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exception</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exception</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>  <span class='comment'># -&gt; pass
@@ -5580,35 +5580,35 @@ message is <code>expected</code>.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Pass pattern: String</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass pattern: String</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise_with_message'>assert_raise_with_message</span><span class='lparen'>(</span><span class='const'>RuntimeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Boom!!!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Boom!!!</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span> <span class='comment'># -&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Pass pattern: Regexp</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass pattern: Regexp</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise_with_message'>assert_raise_with_message</span><span class='lparen'>(</span><span class='const'>RuntimeError</span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>!!!</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Boom!!!</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span> <span class='comment'># -&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure pattern: Exception class isn’t matched</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure pattern: Exception class isn’t matched</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise_with_message'>assert_raise_with_message</span><span class='lparen'>(</span><span class='const'>RuntimeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Boom!!!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Boom!!!</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span> <span class='comment'># -&gt; failure</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure pattern: Exception message isn’t matched</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure pattern: Exception message isn’t matched</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_raise_with_message'>assert_raise_with_message</span><span class='lparen'>(</span><span class='const'>RuntimeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Boom!!!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span>
@@ -5744,7 +5744,7 @@ message is <code>expected</code>.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_respond_to'>assert_respond_to</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bugbear</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:slice</span></code></pre>
@@ -5819,7 +5819,7 @@ instance).</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_o'>o</span> <span class='op'>=</span> <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -5885,7 +5885,7 @@ with id &lt;?&gt;.
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_send'>assert_send</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:member?</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'># -&gt; pass
@@ -5988,7 +5988,7 @@ with id &lt;?&gt;.
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_throw'>assert_throw</span><span class='lparen'>(</span><span class='symbol'>:done</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -6098,7 +6098,7 @@ with id &lt;?&gt;.
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_assert_true'>assert_true</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span>  <span class='comment'># -&gt; pass
@@ -6203,7 +6203,7 @@ the template.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_flunk'>flunk</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Not done testing yet.</span><span class='tstring_end'>&#39;</span></span></code></pre>
@@ -6258,18 +6258,18 @@ the template.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Pass patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pass patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_refute'>refute</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>    <span class='comment'># =&gt; pass
 </span><span class='id identifier rubyid_refute'>refute</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span>      <span class='comment'># =&gt; pass</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failure patterns</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Failure patterns</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_refute'>refute</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span>     <span class='comment'># =&gt; failure
 </span><span class='id identifier rubyid_refute'>refute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>string</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; failure</span></code></pre>
