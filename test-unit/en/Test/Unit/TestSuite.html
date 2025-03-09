@@ -125,7 +125,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/test/unit/testsuite.rb<span class="defines">,<br />
-  lib/test/unit/testsuite.rb</span>
+  lib/test/unit/testsuite.rb,<br /> lib/test/unit/testsuite.rb</span>
 </dd>
   </dl>
   
@@ -507,6 +507,29 @@ meaningful TestSuite instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#parallel_safe%3F-instance_method" title="#parallel_safe? (instance method)">#<strong>parallel_safe?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#passed%3F-instance_method" title="#passed? (instance method)">#<strong>passed?</strong>  &#x21d2; Boolean </a>
     
 
@@ -530,7 +553,7 @@ meaningful TestSuite instance.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>(result, &amp;progress_block)  &#x21d2; Object </a>
+      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>(result, run_context: nil, &amp;progress_block)  &#x21d2; Object </a>
     
 
     
@@ -1121,6 +1144,61 @@ test suites that have lower priority.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="parallel_safe?-instance_method">
+  
+    #<strong>parallel_safe?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testsuite.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parallel_safe?'>parallel_safe?</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='ivar'>@test_case</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@test_case</span><span class='period'>.</span><span class='id identifier rubyid_parallel_safe?'>parallel_safe?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="passed?-instance_method">
   
     #<strong>passed?</strong>  &#x21d2; <tt>Boolean</tt> 
@@ -1176,7 +1254,7 @@ test suites that have lower priority.</p>
       <div class="method_details ">
   <h3 class="signature " id="run-instance_method">
   
-    #<strong>run</strong>(result, &amp;progress_block)  &#x21d2; <tt>Object</tt> 
+    #<strong>run</strong>(result, run_context: nil, &amp;progress_block)  &#x21d2; <tt>Object</tt> 
   
 
   
