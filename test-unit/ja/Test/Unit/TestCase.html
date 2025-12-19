@@ -771,6 +771,52 @@ end
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#worker_id-class_method" title="worker_id (class method)">.<strong>worker_id</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a current worker ID for the test case.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#worker_id=-class_method" title="worker_id= (class method)">.<strong>worker_id=</strong>(worker_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
     <h2>
@@ -1061,6 +1107,52 @@ end
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#marshal_dump-instance_method" title="#marshal_dump (instance method)">#<strong>marshal_dump</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marshal_load-instance_method" title="#marshal_load (instance method)">#<strong>marshal_load</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
     
 
@@ -1130,7 +1222,7 @@ end
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>(result, run_context: nil)  &#x21d2; Object </a>
+      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>(worker_context)  &#x21d2; Object </a>
     
 
     
@@ -1306,6 +1398,29 @@ end
 
   
     <span class="summary_desc"><div class='inline'><p>Returns the test is valid test.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#worker_id-instance_method" title="#worker_id (instance method)">#<strong>worker_id</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a current worker ID for the test.</p>
 </div></span>
   
 </li>
@@ -2030,6 +2145,17 @@ the test to <code>true</code>.</p>
 </span>  <span class='kw'>end</span>
 <span class='kw'>end</span></code></pre>
     
+      
+        <h5 class="example_title"><div class='inline'><p>Declares that test_do_something_with_ractor uses Ractor in one line</p>
+</div></h5>
+      
+      <pre class="example code"><code>
+<span class='id identifier rubyid_ractor'>ractor</span> <span class='kw'>def</span> <span class='id identifier rubyid_test_do_something_with_ractor'>test_do_something_with_ractor</span>
+  <span class='const'>Ractor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
@@ -2281,8 +2407,9 @@ the same in meaning:</p>
 <p>The difference of them are the following:</p>
 
 <ul>
-  <li>Test case created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> is an anonymous class.
-So you can’t refer the test case by name.</li>
+  <li>Test case created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> is backed by an anonymous class,
+but it is assigned to an auto generated constant. So it can be referred
+to by name (e.g. for <code>Marshal.dump</code> and across process use).</li>
   <li>The class name of class style must follow
 constant naming rule in Ruby. But the name of test case
 created by <span class='object_link'><a href="#sub_test_case-class_method" title="Test::Unit::TestCase.sub_test_case (method)">sub_test_case</a></span> doesn’t need to follow the rule.
@@ -2762,6 +2889,124 @@ defined.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_order='>test_order=</span><span class='lparen'>(</span><span class='id identifier rubyid_order'>order</span><span class='rparen'>)</span>
   <span class='cvar'>@@test_orders</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_order'>order</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="worker_id-class_method">
+  
+    .<strong>worker_id</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a current worker ID for the test case. This return depends on
+how tests are run:</p>
+
+<ul>
+  <li>
+    <p>Sequential: always returns <code>0</code></p>
+  </li>
+  <li>
+    <p>Parallel: returns a one-based to the number of workers.</p>
+  </li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.7.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+514
+515
+516</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 514</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_worker_id'>worker_id</span>
+  <span class='ivar'>@worker_id</span> <span class='op'>||</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="worker_id=-class_method">
+  
+    .<strong>worker_id=</strong>(worker_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+518
+519
+520</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 518</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_worker_id='>worker_id=</span><span class='lparen'>(</span><span class='id identifier rubyid_worker_id'>worker_id</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='ivar'>@worker_id</span> <span class='op'>=</span> <span class='id identifier rubyid_worker_id'>worker_id</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3293,6 +3538,74 @@ class name.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="marshal_dump-instance_method">
+  
+    #<strong>marshal_dump</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+929
+930
+931
+932
+933
+934</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 929</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_marshal_dump'>marshal_dump</span>
+  <span class='lbrace'>{</span>
+    <span class='label'>method_name:</span> <span class='ivar'>@method_name</span><span class='comma'>,</span>
+    <span class='label'>internal_data:</span> <span class='ivar'>@internal_data</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="marshal_load-instance_method">
+  
+    #<strong>marshal_load</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+936
+937
+938
+939</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 936</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_marshal_load'>marshal_load</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='ivar'>@method_name</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:method_name</span><span class='rbracket'>]</span>
+  <span class='ivar'>@internal_data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:internal_data</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="name-instance_method">
   
     #<strong>name</strong>  &#x21d2; <tt>Object</tt> 
@@ -3435,7 +3748,7 @@ suites, the test process exits with failure exit status.</p>
       <div class="method_details ">
   <h3 class="signature " id="run-instance_method">
   
-    #<strong>run</strong>(result, run_context: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>run</strong>(worker_context)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -3945,12 +4258,81 @@ end
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="worker_id-instance_method">
+  
+    #<strong>worker_id</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a current worker ID for the test. See <span class='object_link'><a href="#worker_id-class_method" title="Test::Unit::TestCase.worker_id (method)">worker_id</a></span>
+for details.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.7.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+820
+821
+822</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 820</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_worker_id'>worker_id</span>
+  <span class='ivar'>@internal_data</span><span class='period'>.</span><span class='id identifier rubyid_worker_id'>worker_id</span> <span class='op'>||</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Mon Mar 10 06:37:16 2025 by
+  Generated on Fri Dec 19 09:36:38 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.2).
 </div>

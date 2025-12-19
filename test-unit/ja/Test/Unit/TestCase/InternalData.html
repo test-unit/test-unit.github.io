@@ -125,7 +125,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/test/unit/testcase.rb<span class="defines">,<br />
-  lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb</span>
+  lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb,<br /> lib/test/unit/testcase.rb</span>
 </dd>
   </dl>
   
@@ -276,6 +276,32 @@
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#worker_id-instance_method" title="#worker_id (instance method)">#<strong>worker_id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute worker_id.</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -387,6 +413,52 @@
   <span class="summary_signature">
     
       <a href="#interrupted%3F-instance_method" title="#interrupted? (instance method)">#<strong>interrupted?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marshal_dump-instance_method" title="#marshal_dump (instance method)">#<strong>marshal_dump</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marshal_load-instance_method" title="#marshal_load (instance method)">#<strong>marshal_load</strong>(data)  &#x21d2; Object </a>
     
 
     
@@ -769,6 +841,48 @@
 </table>
 </div>
     
+      
+      <span id="worker_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="worker_id-instance_method">
+  
+    #<strong>worker_id</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute worker_id.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+989
+990
+991</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 989</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_worker_id'>worker_id</span>
+  <span class='ivar'>@worker_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 
@@ -945,6 +1059,86 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="marshal_dump-instance_method">
+  
+    #<strong>marshal_dump</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1034
+1035
+1036
+1037
+1038
+1039
+1040
+1041
+1042</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 1034</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_marshal_dump'>marshal_dump</span>
+  <span class='lbrace'>{</span>
+    <span class='label'>start_time:</span> <span class='ivar'>@start_time</span><span class='comma'>,</span>
+    <span class='label'>elapsed_time:</span> <span class='ivar'>@elapsed_time</span><span class='comma'>,</span>
+    <span class='label'>passed:</span> <span class='ivar'>@passed</span><span class='comma'>,</span>
+    <span class='label'>interrupted:</span> <span class='ivar'>@interrupted</span><span class='comma'>,</span>
+    <span class='label'>test_data_label:</span> <span class='ivar'>@test_data_label</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="marshal_load-instance_method">
+  
+    #<strong>marshal_load</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1044
+1045
+1046
+1047
+1048
+1049
+1050</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/test/unit/testcase.rb', line 1044</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_marshal_load'>marshal_load</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='ivar'>@start_time</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:start_time</span><span class='rbracket'>]</span>
+  <span class='ivar'>@elapsed_time</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:elapsed_time</span><span class='rbracket'>]</span>
+  <span class='ivar'>@passed</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:passed</span><span class='rbracket'>]</span>
+  <span class='ivar'>@interrupted</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:interrupted</span><span class='rbracket'>]</span>
+  <span class='ivar'>@test_data_label</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:test_data_label</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="passed?-instance_method">
   
     #<strong>passed?</strong>  &#x21d2; <tt>Boolean</tt> 
@@ -1092,7 +1286,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Mar 10 06:37:16 2025 by
+  Generated on Fri Dec 19 09:36:38 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.2).
 </div>
