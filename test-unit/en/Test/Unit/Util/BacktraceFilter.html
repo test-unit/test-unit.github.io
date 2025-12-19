@@ -14,11 +14,11 @@
  - test-unit</title>
 
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Test::Unit::Util::BacktraceFilter";
   relpath = '../../../';
 </script>
@@ -113,38 +113,46 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/test/unit/util/backtracefilter.rb</dd>
+    <dd>lib/test/unit/util/backtracefilter.rb<span class="defines">,<br />
+  lib/test/unit/util/backtracefilter.rb</span>
+</dd>
   </dl>
   
 </div>
 
 
-  <h2>Constant Summary</h2>
-  <dl class="constants">
-    
-      <dt id="TESTUNIT_FILE_SEPARATORS-constant" class="">TESTUNIT_FILE_SEPARATORS =
-        
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>[\\/:]</span><span class='regexp_end'>}</span></span></pre></dd>
-    
-      <dt id="TESTUNIT_PREFIX-constant" class="">TESTUNIT_PREFIX =
-        
-      </dt>
-      <dd><pre class="code"><span class='kw'>__FILE__</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#TESTUNIT_FILE_SEPARATORS-constant" title="Test::Unit::Util::BacktraceFilter::TESTUNIT_FILE_SEPARATORS (constant)">TESTUNIT_FILE_SEPARATORS</a></span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>3</span><span class='rbracket'>]</span></pre></dd>
-    
-      <dt id="TESTUNIT_RB_FILE-constant" class="">TESTUNIT_RB_FILE =
-        
-      </dt>
-      <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.rb\Z</span><span class='regexp_end'>/</span></span></pre></dd>
-    
-      <dt id="POWERASSERT_PREFIX-constant" class="">POWERASSERT_PREFIX =
-        
-      </dt>
-      <dd><pre class="code"><span class='kw'>defined?</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>PowerAssert</span><span class='rparen'>)</span> <span class='op'>?</span>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="TESTUNIT_FILE_SEPARATORS-constant" class="">TESTUNIT_FILE_SEPARATORS =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>[\\/:]</span><span class='regexp_end'>}</span></span></pre></dd>
+      
+        <dt id="TESTUNIT_PREFIX-constant" class="">TESTUNIT_PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>__FILE__</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#TESTUNIT_FILE_SEPARATORS-constant" title="Test::Unit::Util::BacktraceFilter::TESTUNIT_FILE_SEPARATORS (constant)">TESTUNIT_FILE_SEPARATORS</a></span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>3</span><span class='rbracket'>]</span></pre></dd>
+      
+        <dt id="TESTUNIT_RB_FILE-constant" class="">TESTUNIT_RB_FILE =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.rb\Z</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="POWERASSERT_PREFIX-constant" class="">POWERASSERT_PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>defined?</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>PowerAssert</span><span class='rparen'>)</span> <span class='op'>?</span>
 <span class='op'>::</span><span class='const'>PowerAssert</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:start</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_source_location'>source_location</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#TESTUNIT_FILE_SEPARATORS-constant" title="Test::Unit::Util::BacktraceFilter::TESTUNIT_FILE_SEPARATORS (constant)">TESTUNIT_FILE_SEPARATORS</a></span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>:</span>
 <span class='kw'>nil</span></pre></dd>
-    
-  </dl>
+      
+    </dl>
+  
 
 
 
